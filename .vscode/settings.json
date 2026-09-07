@@ -1,0 +1,6 @@
+{
+  "python.defaultInterpreterPath": "/home/yzk/cap_plan/venv/bin/python",
+  "python.testing.unittestEnabled": true,
+  "python.testing.pytestEnabled": false,
+  "python.testing.unittestArgs": ["-v", "-s", "tests", "-p", "test_*.py"]
+}

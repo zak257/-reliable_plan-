@@ -1,0 +1,5 @@
+# Run with /home/yzk/cap_plan/venv/bin/python; these are already installed there.
+gurobipy==13.0.1
+numpy==2.4.3
+pandas==3.0.1
+scipy==1.17.1

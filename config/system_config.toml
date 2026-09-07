@@ -1,0 +1,71 @@
+# CSV inputs remain in cap_plan. All power is kW and energy is kWh.
+data_root = "/home/yzk/cap_plan/data"
+case = "changcheng"
+start_hour = 0
+hours = 8760
+load_scale = 1.0
+
+[modules]
+wind = 100.0
+pv = 100.0
+diesel = 300.0
+battery_energy = 50.0
+pcs = 50.0
+
+[unit_commitment]
+enabled = true
+min_output_fraction = 0.2
+min_up_hours = 3.0
+min_down_hours = 3.0
+startup_cost_yuan = 0.0
+
+[planning]
+max_iterations = 100
+# Optional coordinate lifting uses additional oracle calls to strengthen cuts.
+lift_cuts = true
+
+[reliability]
+samples = 128
+seed = 20260906
+validation_samples = 256
+validation_seed = 20260907
+# Both limits apply to total unserved energy over each selected horizon.
+eens_limit_kwh = 100.0
+cvar_limit_kwh = 1000.0
+cvar_alpha = 0.95
+comparison_tolerance_kwh = 0.00001
+
+[weather]
+enabled = false
+normal_to_extreme_rate_per_hour = 0.002
+extreme_to_normal_rate_per_hour = 0.041666666666666664
+extreme_wind_factor = 1.0
+extreme_pv_factor = 1.0
+extreme_load_factor = 1.0
+
+# These are illustrative research assumptions, NOT measurements from cap_plan.
+# Two-state hourly chains, independent modules conditional on common weather.
+# Battery cells are ideal in this baseline; PCS failures interrupt access to them.
+[failures.wind]
+normal_rate_per_hour = 0.00001
+extreme_rate_per_hour = 0.00005
+mean_repair_hours = 24.0
+extreme_repair_multiplier = 2.0
+
+[failures.pv]
+normal_rate_per_hour = 0.00001
+extreme_rate_per_hour = 0.00005
+mean_repair_hours = 24.0
+extreme_repair_multiplier = 2.0
+
+[failures.diesel]
+normal_rate_per_hour = 0.0001
+extreme_rate_per_hour = 0.0005
+mean_repair_hours = 48.0
+extreme_repair_multiplier = 2.0
+
+[failures.pcs]
+normal_rate_per_hour = 0.00001
+extreme_rate_per_hour = 0.00005
+mean_repair_hours = 24.0
+extreme_repair_multiplier = 2.0

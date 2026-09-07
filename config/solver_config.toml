@@ -1,0 +1,6 @@
+time_limit = 120.0
+oracle_time_limit = 60.0
+mip_gap = 0.0001
+threads = 2
+seed = 0
+output_flag = false
