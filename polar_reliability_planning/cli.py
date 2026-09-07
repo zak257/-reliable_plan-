@@ -186,7 +186,8 @@ def run(args, output: Path) -> int:
                 _log(f"EENS={result.eens_kwh:.6f}, CVaR={result.cvar_kwh:.6f}, feasible={result.feasible}")
                 return 0
             result = optimize_reliability(data, oracle, options, max_iterations, lift_cuts, on_iteration, env)
-            summary = {**base, "status": result.status, "elapsed_seconds": result.elapsed_seconds,
+            summary = {**base, "status": result.status, "validation_status": "pending",
+                       "elapsed_seconds": result.elapsed_seconds,
                        "solution": result.solution.summary() if result.solution else None,
                        "reliability": result.reliability.summary() if result.reliability else None,
                        "lower_bound_yuan": result.lower_bound_yuan, "iterations": len(result.history),
@@ -204,7 +205,9 @@ def run(args, output: Path) -> int:
             write_dispatch(output / "dispatch.csv", data, result.solution)
             write_csv(output / "scenario_losses.csv", [{"scenario": s, "probability": pool.probabilities[s], "loss_kwh": q}
                                                        for s, q in enumerate(result.reliability.losses_kwh)])
+            _log("标称运行审计：复核物理约束与固定容量成本，经济复算允许报告时限内可行解及下界")
             summary["audit"] = audit_nominal_solution(data, result.solution, options, env)
+            write_json(output / "summary.json", summary)
             count = reliability_config["validation_samples"]
             if count:
                 validation_seed = reliability_config["validation_seed"]

@@ -9,10 +9,11 @@ import numpy as np
 from polar_reliability_planning.config import SolverOptions, UnitCommitmentOptions, ReliabilityLimits
 from polar_reliability_planning.data import COMPONENTS
 from polar_reliability_planning.reliability import ReliabilityOracle
-from polar_reliability_planning.reliability.operation_model import OperationModel, add_dispatch
+from polar_reliability_planning.reliability.operation_model import OperationModel, OptimizationError, add_dispatch
 from polar_reliability_planning.reliability.unit_commitment import add_unit_commitment, audit_commitment
 from polar_reliability_planning.scenario_generation import Scenario
 from polar_reliability_planning.validation.small_system import small_system
+from polar_reliability_planning.validation.monte_carlo_validation import audit_physical_dispatch
 from polar_reliability_planning.planning.optimizer import optimize_reliability
 
 
@@ -117,6 +118,53 @@ class UnitCommitmentTests(unittest.TestCase):
             cost, dispatch = operation.solve(units, Scenario.nominal(data, units), True, objective="nominal_cost")
             self.assertAlmostEqual(cost, data.demand_kwh * data.fuel_cost_per_kwh + 7)
             self.assertEqual(round(float(dispatch["diesel_startup_units"].sum())), 1)
+        finally:
+            operation.close()
+
+    def test_limited_economic_incumbent_is_usable_but_never_labelled_optimal(self):
+        data, _, _ = small_system(True)
+        units = dict(zip(COMPONENTS, [1, 1, 2, 1, 1]))
+        operation = OperationModel(data, self.options, self.env)
+        try:
+            scenario = Scenario.nominal(data, units)
+            _, start = operation.solve(units, scenario, True)
+            # A deterministic solver limit after the feasible MIP start avoids
+            # a flaky wall-clock timeout in this regression.
+            operation.model.Params.Presolve = 0
+            operation.model.Params.SolutionLimit = 1
+            cost, dispatch = operation.solve(units, scenario, True, objective="nominal_cost", warm_start=start)
+            self.assertEqual(operation.last_solve_summary["status"], GRB.SOLUTION_LIMIT)
+            self.assertFalse(operation.last_solve_summary["optimal"])
+            self.assertTrue(audit_physical_dispatch(data, units, scenario, dispatch)["passed"])
+            self.assertAlmostEqual(cost, data.fuel_cost_per_kwh * data.dt_hours * dispatch["diesel_kw"].sum())
+        finally:
+            operation.close()
+
+    def test_limited_positive_loss_cannot_be_used_as_exact_reliability(self):
+        data, pool, _ = small_system(True)
+        units = dict(zip(COMPONENTS, [1, 1, 1, 0, 0]))
+        operation = OperationModel(data, self.options, self.env)
+        try:
+            operation.model.Params.Presolve = 0
+            operation.model.Params.SolutionLimit = 1
+            with self.assertRaisesRegex(OptimizationError, "optimal losses are required"):
+                operation.solve(units, pool.scenario(data, units, 1))
+            self.assertIsNone(operation.last_solve_summary)
+        finally:
+            operation.close()
+
+    def test_physical_audit_detects_corrupted_power_and_energy(self):
+        data, _, _ = small_system(True)
+        units = dict(zip(COMPONENTS, [1, 1, 2, 1, 1]))
+        operation = OperationModel(data, self.options, self.env)
+        try:
+            scenario = Scenario.nominal(data, units)
+            _, dispatch = operation.solve(units, scenario, True)
+            self.assertTrue(audit_physical_dispatch(data, units, scenario, dispatch)["passed"])
+            for key in ("diesel_kw", "usable_energy_kwh"):
+                corrupt = {k: v.copy() for k, v in dispatch.items()}
+                corrupt[key][1] += 0.25
+                self.assertFalse(audit_physical_dispatch(data, units, scenario, corrupt)["passed"])
         finally:
             operation.close()
 

@@ -100,9 +100,13 @@ class OperationModel:
         self.full_mip_solves = 0
         self.zero_loss_certificates = 0
         self.last_audit = None
+        self.last_solve_summary = None
 
     def solve(self, units: dict[str, int], scenario: Scenario, return_dispatch: bool = False,
-              objective: str = "eens") -> tuple[float, dict[str, np.ndarray] | None]:
+              objective: str = "eens", warm_start: dict | None = None
+              ) -> tuple[float, dict[str, np.ndarray] | None]:
+        self.last_solve_summary = None
+        self.model.NumStart = 0
         capacity = self.data.capacities(units)
         commitment = self.block.commitment
         available = None
@@ -134,6 +138,13 @@ class OperationModel:
             self.model.setObjective(cost, GRB.MINIMIZE)
         else:
             raise ValueError(f"Unknown operation objective {objective}")
+        if warm_start is not None:
+            for name, variable in self.block.variables.items():
+                if name in warm_start:
+                    variable.Start = warm_start[name]
+            if commitment is not None:
+                for name in ("online", "startup", "shutdown"):
+                    getattr(commitment, name).Start = warm_start[f"diesel_unit_{name}"]
         # A feasible zero-loss UC dispatch meets the universal lower bound Q>=0.
         # This is an exact certificate, never an LP relaxation passed off as UC.
         if objective == "eens" and commitment is not None:
@@ -153,6 +164,9 @@ class OperationModel:
                 self.last_audit = audit_commitment(self.data, units, scenario, dispatch)
                 if not self.last_audit["passed"]:
                     raise OptimizationError(f"Zero-loss dispatch failed physical audit: {self.last_audit}")
+                self.last_solve_summary = {"status": int(self.model.Status), "optimal": True,
+                    "objective_value": 0.0, "lower_bound": 0.0, "gap": 0.0,
+                    "certificate": "audited_zero_loss_dispatch"}
                 return 0.0, dispatch if return_dispatch else None
             # The policy was only a feasible probe; release it completely before optimization.
             commitment.online.LB = 0
@@ -162,13 +176,26 @@ class OperationModel:
         self.model.optimize()
         self.solve_count += 1
         self.full_mip_solves += int(self.data.unit_commitment.enabled)
-        if self.model.Status != GRB.OPTIMAL:
-            raise OptimizationError(f"Operation {'MILP' if self.data.unit_commitment.enabled else 'LP'} status={self.model.Status}; optimal losses are required before cutting")
+        optimal = self.model.Status == GRB.OPTIMAL
+        # Economic re-optimization is an audit, not a loss oracle. A limited
+        # feasible cost is an upper bound and must never be labelled optimal.
+        limited_cost = objective == "nominal_cost" and self.model.SolCount > 0 and self.model.Status in (
+            GRB.TIME_LIMIT, GRB.NODE_LIMIT, GRB.ITERATION_LIMIT, GRB.SOLUTION_LIMIT, GRB.INTERRUPTED)
+        if not optimal and not limited_cost:
+            requirement = "optimal losses are required before cutting" if objective == "eens" else "no usable economic incumbent"
+            raise OptimizationError(f"Operation {objective} status={self.model.Status}; {requirement}")
         value = max(0.0, float(self.model.ObjVal))
         dispatch = dispatch_values(self.block, self.data, capacity["battery_energy"])
         self.last_audit = audit_commitment(self.data, units, scenario, dispatch)
         if not self.last_audit["passed"]:
             raise OptimizationError(f"Operation dispatch failed UC audit: {self.last_audit}")
+        bound = float(self.model.ObjBound) if self.model.IsMIP else (value if optimal else None)
+        if bound is not None and not math.isfinite(bound):
+            bound = None
+        self.last_solve_summary = {"status": int(self.model.Status), "optimal": optimal,
+            "objective_value": value, "lower_bound": bound,
+            "gap": max(0.0, value - bound) / max(abs(value), 1e-10) if bound is not None else None,
+            "runtime_seconds": float(self.model.Runtime)}
         return value, dispatch if return_dispatch else None
 
     def close(self):

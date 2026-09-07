@@ -89,4 +89,6 @@ cd /home/yzk/reliable_plan
 
 `sample_optimal_within_gap` 只表示当前固定样本和容量网格上的成本 gap；`sample_feasible` 表示风险通过但成本 gap 尚未满足。独立验证另报 `holdout_passed` / `holdout_failed`。退出码为 0 完成、1 配置/求解错误、2 无可行规划结果、3 独立验证失败。
 
+标称运行审计独立复核功率平衡、储能动态与边界、机组启停，并用主问题调度热启动固定容量成本复算。经济复算触及时限时保留可行成本、下界和 gap，`fixed_capacity_optimal_cost_yuan` 留空，继续独立可靠性验证；正失供量的可靠性子问题仍要求严格最优。中途写出的摘要以 `validation_status=pending` 表明验证尚未完成。
+
 当前采用完全预见的场景调度，电芯理想、PCS 可故障；没有跨场景非预见性、频率安全或自适应统计置信停止。无 UC 的旧结果保存在 [历史验证记录](docs/validation_results.md)，不能当作当前版本数值。
