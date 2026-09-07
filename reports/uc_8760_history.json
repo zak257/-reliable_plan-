@@ -1,0 +1,74 @@
+[
+  {
+    "iteration": 1,
+    "units": {
+      "wind": 5,
+      "pv": 4,
+      "diesel": 1,
+      "battery_energy": 15,
+      "pcs": 3
+    },
+    "objective_yuan": 1743364.5462554235,
+    "lower_bound_yuan": 1722452.1510735082,
+    "master_gap": 0.011995423003658665,
+    "master_seconds": 120.0223970413208,
+    "eens_kwh": 116.54371351111108,
+    "cvar_kwh": 2330.87427022222,
+    "feasible": false,
+    "standard_error_kwh": null,
+    "samples": 128,
+    "elapsed_seconds": 1.984457217156887,
+    "sample_fingerprint": "6165749e127afe7944122939d15ea64c09d98c17244d556c749c167e42a822e2",
+    "eens_feasible": false,
+    "cvar_feasible": false,
+    "metrics_are_lower_bounds": true,
+    "losses_are_relaxation_bounds": true,
+    "evaluated_scenarios": 20,
+    "violated_constraints": [
+      "EENS",
+      "CVaR"
+    ],
+    "cut": {
+      "bad_units": {
+        "wind": 8,
+        "pv": 6,
+        "diesel": 1,
+        "battery_energy": 80,
+        "pcs": 20
+      },
+      "sample_fingerprint": "6165749e127afe7944122939d15ea64c09d98c17244d556c749c167e42a822e2",
+      "eens_kwh": 62.88417544083335,
+      "cvar_kwh": 1257.6835088166658,
+      "metrics_are_lower_bounds": true,
+      "evaluated_scenarios": 42,
+      "losses_are_relaxation_bounds": true
+    }
+  },
+  {
+    "iteration": 2,
+    "units": {
+      "wind": 5,
+      "pv": 3,
+      "diesel": 2,
+      "battery_energy": 16,
+      "pcs": 3
+    },
+    "objective_yuan": 1756226.7974798307,
+    "lower_bound_yuan": 1737400.888533897,
+    "master_gap": 0.010719520379115437,
+    "master_seconds": 120.04938101768494,
+    "eens_kwh": 0.0,
+    "cvar_kwh": 0.0,
+    "feasible": true,
+    "standard_error_kwh": 0.0,
+    "samples": 128,
+    "elapsed_seconds": 24.777737535070628,
+    "sample_fingerprint": "6165749e127afe7944122939d15ea64c09d98c17244d556c749c167e42a822e2",
+    "eens_feasible": true,
+    "cvar_feasible": true,
+    "metrics_are_lower_bounds": false,
+    "losses_are_relaxation_bounds": false,
+    "evaluated_scenarios": 128,
+    "violated_constraints": []
+  }
+]

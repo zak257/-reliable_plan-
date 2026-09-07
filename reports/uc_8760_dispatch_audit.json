@@ -1,0 +1,13 @@
+{
+  "rows": 8760,
+  "power_balance_max_abs_kw": 6.252776074688882e-13,
+  "energy_transition_max_abs_kwh": 8.270717444247566e-12,
+  "energy_continuity_max_abs_kwh": 0.0,
+  "cyclic_energy_abs_kwh": 0.0,
+  "simultaneous_charge_discharge_max_kw": 0.0,
+  "annual_shedding_kwh": 0.0,
+  "startups": 375.0,
+  "shutdowns": 375.0,
+  "reconstructed_total_cost_yuan": 1756226.797479832,
+  "cost_difference_yuan": 1.3969838619232178e-09
+}

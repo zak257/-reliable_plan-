@@ -1,0 +1,864 @@
+{
+  "code_commit": "b86d296164032c6391757e0906136f463570bd6b",
+  "command": "./run.sh validate-small --output outputs/uc_dual_published_small",
+  "result": {
+    "passed": true,
+    "unit_commitment": true,
+    "eens_limit_kwh": 0.05,
+    "cvar_limit_kwh": 0.5,
+    "objective_difference_yuan": 0.0,
+    "grid": {
+      "grid_points": 48,
+      "best": {
+        "units": {
+          "wind": 1,
+          "pv": 1,
+          "diesel": 2,
+          "battery_energy": 0,
+          "pcs": 0
+        },
+        "capacities": {
+          "wind": 2.0,
+          "pv": 3.0,
+          "diesel": 8.0,
+          "battery_energy": 0.0,
+          "pcs": 0.0
+        },
+        "objective_yuan": 12.1,
+        "investment_yuan": 4.3,
+        "fuel_yuan": 7.8,
+        "startup_yuan": 0.0,
+        "lower_bound_yuan": 12.1,
+        "gap": 0.0,
+        "status": 2,
+        "runtime_seconds": 0.0008540153503417969
+      },
+      "rows": [
+        {
+          "units": {
+            "wind": 0,
+            "pv": 0,
+            "diesel": 0,
+            "battery_energy": 0,
+            "pcs": 0
+          },
+          "nominal_feasible": false,
+          "reliability_feasible": null
+        },
+        {
+          "units": {
+            "wind": 0,
+            "pv": 0,
+            "diesel": 0,
+            "battery_energy": 0,
+            "pcs": 1
+          },
+          "nominal_feasible": false,
+          "reliability_feasible": null
+        },
+        {
+          "units": {
+            "wind": 0,
+            "pv": 0,
+            "diesel": 0,
+            "battery_energy": 1,
+            "pcs": 0
+          },
+          "nominal_feasible": false,
+          "reliability_feasible": null
+        },
+        {
+          "units": {
+            "wind": 0,
+            "pv": 0,
+            "diesel": 0,
+            "battery_energy": 1,
+            "pcs": 1
+          },
+          "nominal_feasible": false,
+          "reliability_feasible": null
+        },
+        {
+          "units": {
+            "wind": 0,
+            "pv": 0,
+            "diesel": 1,
+            "battery_energy": 0,
+            "pcs": 0
+          },
+          "nominal_feasible": true,
+          "reliability_feasible": false,
+          "objective_yuan": 14.8,
+          "eens_kwh": 3.6999999999999997,
+          "cvar_kwh": 10.0
+        },
+        {
+          "units": {
+            "wind": 0,
+            "pv": 0,
+            "diesel": 1,
+            "battery_energy": 0,
+            "pcs": 1
+          },
+          "nominal_feasible": true,
+          "reliability_feasible": false,
+          "objective_yuan": 15.1,
+          "eens_kwh": 3.6999999999999997,
+          "cvar_kwh": 10.0
+        },
+        {
+          "units": {
+            "wind": 0,
+            "pv": 0,
+            "diesel": 1,
+            "battery_energy": 1,
+            "pcs": 0
+          },
+          "nominal_feasible": true,
+          "reliability_feasible": false,
+          "objective_yuan": 15.3,
+          "eens_kwh": 3.6999999999999997,
+          "cvar_kwh": 10.0
+        },
+        {
+          "units": {
+            "wind": 0,
+            "pv": 0,
+            "diesel": 1,
+            "battery_energy": 1,
+            "pcs": 1
+          },
+          "nominal_feasible": true,
+          "reliability_feasible": false,
+          "objective_yuan": 15.6,
+          "eens_kwh": 3.6189999999999998,
+          "cvar_kwh": 10.0
+        },
+        {
+          "units": {
+            "wind": 0,
+            "pv": 0,
+            "diesel": 2,
+            "battery_energy": 0,
+            "pcs": 0
+          },
+          "nominal_feasible": true,
+          "reliability_feasible": false,
+          "objective_yuan": 15.6,
+          "eens_kwh": 0.3,
+          "cvar_kwh": 3.0
+        },
+        {
+          "units": {
+            "wind": 0,
+            "pv": 0,
+            "diesel": 2,
+            "battery_energy": 0,
+            "pcs": 1
+          },
+          "nominal_feasible": true,
+          "reliability_feasible": false,
+          "objective_yuan": 15.899999999999999,
+          "eens_kwh": 0.3,
+          "cvar_kwh": 3.0
+        },
+        {
+          "units": {
+            "wind": 0,
+            "pv": 0,
+            "diesel": 2,
+            "battery_energy": 1,
+            "pcs": 0
+          },
+          "nominal_feasible": true,
+          "reliability_feasible": false,
+          "objective_yuan": 16.1,
+          "eens_kwh": 0.3,
+          "cvar_kwh": 3.0
+        },
+        {
+          "units": {
+            "wind": 0,
+            "pv": 0,
+            "diesel": 2,
+            "battery_energy": 1,
+            "pcs": 1
+          },
+          "nominal_feasible": true,
+          "reliability_feasible": false,
+          "objective_yuan": 16.4,
+          "eens_kwh": 0.21899999999999997,
+          "cvar_kwh": 2.19
+        },
+        {
+          "units": {
+            "wind": 0,
+            "pv": 1,
+            "diesel": 0,
+            "battery_energy": 0,
+            "pcs": 0
+          },
+          "nominal_feasible": false,
+          "reliability_feasible": null
+        },
+        {
+          "units": {
+            "wind": 0,
+            "pv": 1,
+            "diesel": 0,
+            "battery_energy": 0,
+            "pcs": 1
+          },
+          "nominal_feasible": false,
+          "reliability_feasible": null
+        },
+        {
+          "units": {
+            "wind": 0,
+            "pv": 1,
+            "diesel": 0,
+            "battery_energy": 1,
+            "pcs": 0
+          },
+          "nominal_feasible": false,
+          "reliability_feasible": null
+        },
+        {
+          "units": {
+            "wind": 0,
+            "pv": 1,
+            "diesel": 0,
+            "battery_energy": 1,
+            "pcs": 1
+          },
+          "nominal_feasible": false,
+          "reliability_feasible": null
+        },
+        {
+          "units": {
+            "wind": 0,
+            "pv": 1,
+            "diesel": 1,
+            "battery_energy": 0,
+            "pcs": 0
+          },
+          "nominal_feasible": true,
+          "reliability_feasible": false,
+          "objective_yuan": 13.8,
+          "eens_kwh": 2.5,
+          "cvar_kwh": 7.0
+        },
+        {
+          "units": {
+            "wind": 0,
+            "pv": 1,
+            "diesel": 1,
+            "battery_energy": 0,
+            "pcs": 1
+          },
+          "nominal_feasible": true,
+          "reliability_feasible": false,
+          "objective_yuan": 14.1,
+          "eens_kwh": 2.5,
+          "cvar_kwh": 7.0
+        },
+        {
+          "units": {
+            "wind": 0,
+            "pv": 1,
+            "diesel": 1,
+            "battery_energy": 1,
+            "pcs": 0
+          },
+          "nominal_feasible": true,
+          "reliability_feasible": false,
+          "objective_yuan": 14.3,
+          "eens_kwh": 2.5,
+          "cvar_kwh": 7.0
+        },
+        {
+          "units": {
+            "wind": 0,
+            "pv": 1,
+            "diesel": 1,
+            "battery_energy": 1,
+            "pcs": 1
+          },
+          "nominal_feasible": true,
+          "reliability_feasible": false,
+          "objective_yuan": 13.952000000000002,
+          "eens_kwh": 2.419,
+          "cvar_kwh": 7.0
+        },
+        {
+          "units": {
+            "wind": 0,
+            "pv": 1,
+            "diesel": 2,
+            "battery_energy": 0,
+            "pcs": 0
+          },
+          "nominal_feasible": true,
+          "reliability_feasible": true,
+          "objective_yuan": 14.6,
+          "eens_kwh": 0.0,
+          "cvar_kwh": 0.0
+        },
+        {
+          "units": {
+            "wind": 0,
+            "pv": 1,
+            "diesel": 2,
+            "battery_energy": 0,
+            "pcs": 1
+          },
+          "nominal_feasible": true,
+          "reliability_feasible": true,
+          "objective_yuan": 14.899999999999999,
+          "eens_kwh": 0.0,
+          "cvar_kwh": 0.0
+        },
+        {
+          "units": {
+            "wind": 0,
+            "pv": 1,
+            "diesel": 2,
+            "battery_energy": 1,
+            "pcs": 0
+          },
+          "nominal_feasible": true,
+          "reliability_feasible": true,
+          "objective_yuan": 15.1,
+          "eens_kwh": 0.0,
+          "cvar_kwh": 0.0
+        },
+        {
+          "units": {
+            "wind": 0,
+            "pv": 1,
+            "diesel": 2,
+            "battery_energy": 1,
+            "pcs": 1
+          },
+          "nominal_feasible": true,
+          "reliability_feasible": true,
+          "objective_yuan": 14.751999999999999,
+          "eens_kwh": 0.0,
+          "cvar_kwh": 0.0
+        },
+        {
+          "units": {
+            "wind": 1,
+            "pv": 0,
+            "diesel": 0,
+            "battery_energy": 0,
+            "pcs": 0
+          },
+          "nominal_feasible": false,
+          "reliability_feasible": null
+        },
+        {
+          "units": {
+            "wind": 1,
+            "pv": 0,
+            "diesel": 0,
+            "battery_energy": 0,
+            "pcs": 1
+          },
+          "nominal_feasible": false,
+          "reliability_feasible": null
+        },
+        {
+          "units": {
+            "wind": 1,
+            "pv": 0,
+            "diesel": 0,
+            "battery_energy": 1,
+            "pcs": 0
+          },
+          "nominal_feasible": false,
+          "reliability_feasible": null
+        },
+        {
+          "units": {
+            "wind": 1,
+            "pv": 0,
+            "diesel": 0,
+            "battery_energy": 1,
+            "pcs": 1
+          },
+          "nominal_feasible": false,
+          "reliability_feasible": null
+        },
+        {
+          "units": {
+            "wind": 1,
+            "pv": 0,
+            "diesel": 1,
+            "battery_energy": 0,
+            "pcs": 0
+          },
+          "nominal_feasible": true,
+          "reliability_feasible": false,
+          "objective_yuan": 12.3,
+          "eens_kwh": 2.7,
+          "cvar_kwh": 7.0
+        },
+        {
+          "units": {
+            "wind": 1,
+            "pv": 0,
+            "diesel": 1,
+            "battery_energy": 0,
+            "pcs": 1
+          },
+          "nominal_feasible": true,
+          "reliability_feasible": false,
+          "objective_yuan": 12.6,
+          "eens_kwh": 2.7,
+          "cvar_kwh": 7.0
+        },
+        {
+          "units": {
+            "wind": 1,
+            "pv": 0,
+            "diesel": 1,
+            "battery_energy": 1,
+            "pcs": 0
+          },
+          "nominal_feasible": true,
+          "reliability_feasible": false,
+          "objective_yuan": 12.8,
+          "eens_kwh": 2.7,
+          "cvar_kwh": 7.0
+        },
+        {
+          "units": {
+            "wind": 1,
+            "pv": 0,
+            "diesel": 1,
+            "battery_energy": 1,
+            "pcs": 1
+          },
+          "nominal_feasible": true,
+          "reliability_feasible": false,
+          "objective_yuan": 13.1,
+          "eens_kwh": 2.133,
+          "cvar_kwh": 6.190000000000001
+        },
+        {
+          "units": {
+            "wind": 1,
+            "pv": 0,
+            "diesel": 2,
+            "battery_energy": 0,
+            "pcs": 0
+          },
+          "nominal_feasible": true,
+          "reliability_feasible": false,
+          "objective_yuan": 13.1,
+          "eens_kwh": 0.3,
+          "cvar_kwh": 3.0
+        },
+        {
+          "units": {
+            "wind": 1,
+            "pv": 0,
+            "diesel": 2,
+            "battery_energy": 0,
+            "pcs": 1
+          },
+          "nominal_feasible": true,
+          "reliability_feasible": false,
+          "objective_yuan": 13.399999999999999,
+          "eens_kwh": 0.3,
+          "cvar_kwh": 3.0
+        },
+        {
+          "units": {
+            "wind": 1,
+            "pv": 0,
+            "diesel": 2,
+            "battery_energy": 1,
+            "pcs": 0
+          },
+          "nominal_feasible": true,
+          "reliability_feasible": false,
+          "objective_yuan": 13.6,
+          "eens_kwh": 0.3,
+          "cvar_kwh": 3.0
+        },
+        {
+          "units": {
+            "wind": 1,
+            "pv": 0,
+            "diesel": 2,
+            "battery_energy": 1,
+            "pcs": 1
+          },
+          "nominal_feasible": true,
+          "reliability_feasible": false,
+          "objective_yuan": 13.899999999999999,
+          "eens_kwh": 0.09999999999999999,
+          "cvar_kwh": 1.0
+        },
+        {
+          "units": {
+            "wind": 1,
+            "pv": 1,
+            "diesel": 0,
+            "battery_energy": 0,
+            "pcs": 0
+          },
+          "nominal_feasible": false,
+          "reliability_feasible": null
+        },
+        {
+          "units": {
+            "wind": 1,
+            "pv": 1,
+            "diesel": 0,
+            "battery_energy": 0,
+            "pcs": 1
+          },
+          "nominal_feasible": false,
+          "reliability_feasible": null
+        },
+        {
+          "units": {
+            "wind": 1,
+            "pv": 1,
+            "diesel": 0,
+            "battery_energy": 1,
+            "pcs": 0
+          },
+          "nominal_feasible": false,
+          "reliability_feasible": null
+        },
+        {
+          "units": {
+            "wind": 1,
+            "pv": 1,
+            "diesel": 0,
+            "battery_energy": 1,
+            "pcs": 1
+          },
+          "nominal_feasible": false,
+          "reliability_feasible": null
+        },
+        {
+          "units": {
+            "wind": 1,
+            "pv": 1,
+            "diesel": 1,
+            "battery_energy": 0,
+            "pcs": 0
+          },
+          "nominal_feasible": true,
+          "reliability_feasible": false,
+          "objective_yuan": 11.3,
+          "eens_kwh": 1.5,
+          "cvar_kwh": 4.0
+        },
+        {
+          "units": {
+            "wind": 1,
+            "pv": 1,
+            "diesel": 1,
+            "battery_energy": 0,
+            "pcs": 1
+          },
+          "nominal_feasible": true,
+          "reliability_feasible": false,
+          "objective_yuan": 11.6,
+          "eens_kwh": 1.5,
+          "cvar_kwh": 4.0
+        },
+        {
+          "units": {
+            "wind": 1,
+            "pv": 1,
+            "diesel": 1,
+            "battery_energy": 1,
+            "pcs": 0
+          },
+          "nominal_feasible": true,
+          "reliability_feasible": false,
+          "objective_yuan": 11.8,
+          "eens_kwh": 1.5,
+          "cvar_kwh": 4.0
+        },
+        {
+          "units": {
+            "wind": 1,
+            "pv": 1,
+            "diesel": 1,
+            "battery_energy": 1,
+            "pcs": 1
+          },
+          "nominal_feasible": true,
+          "reliability_feasible": false,
+          "objective_yuan": 11.452,
+          "eens_kwh": 1.0570000000000002,
+          "cvar_kwh": 3.1900000000000013
+        },
+        {
+          "units": {
+            "wind": 1,
+            "pv": 1,
+            "diesel": 2,
+            "battery_energy": 0,
+            "pcs": 0
+          },
+          "nominal_feasible": true,
+          "reliability_feasible": true,
+          "objective_yuan": 12.1,
+          "eens_kwh": 0.0,
+          "cvar_kwh": 0.0
+        },
+        {
+          "units": {
+            "wind": 1,
+            "pv": 1,
+            "diesel": 2,
+            "battery_energy": 0,
+            "pcs": 1
+          },
+          "nominal_feasible": true,
+          "reliability_feasible": true,
+          "objective_yuan": 12.399999999999999,
+          "eens_kwh": 0.0,
+          "cvar_kwh": 0.0
+        },
+        {
+          "units": {
+            "wind": 1,
+            "pv": 1,
+            "diesel": 2,
+            "battery_energy": 1,
+            "pcs": 0
+          },
+          "nominal_feasible": true,
+          "reliability_feasible": true,
+          "objective_yuan": 12.6,
+          "eens_kwh": 0.0,
+          "cvar_kwh": 0.0
+        },
+        {
+          "units": {
+            "wind": 1,
+            "pv": 1,
+            "diesel": 2,
+            "battery_energy": 1,
+            "pcs": 1
+          },
+          "nominal_feasible": true,
+          "reliability_feasible": true,
+          "objective_yuan": 12.251999999999999,
+          "eens_kwh": 0.0,
+          "cvar_kwh": 0.0
+        }
+      ],
+      "oracle_evaluations": 32,
+      "elapsed_seconds": 0.21656094794161618
+    },
+    "boundary": {
+      "status": "sample_optimal_within_gap",
+      "solution": {
+        "units": {
+          "wind": 1,
+          "pv": 1,
+          "diesel": 2,
+          "battery_energy": 0,
+          "pcs": 0
+        },
+        "capacities": {
+          "wind": 2.0,
+          "pv": 3.0,
+          "diesel": 8.0,
+          "battery_energy": 0.0,
+          "pcs": 0.0
+        },
+        "objective_yuan": 12.1,
+        "investment_yuan": 4.3,
+        "fuel_yuan": 7.8,
+        "startup_yuan": 0.0,
+        "lower_bound_yuan": 12.1,
+        "gap": 0.0,
+        "status": 2,
+        "runtime_seconds": 0.022231101989746094
+      },
+      "reliability": {
+        "eens_kwh": 0.0,
+        "cvar_kwh": 0.0,
+        "feasible": true,
+        "standard_error_kwh": null,
+        "samples": 3,
+        "elapsed_seconds": 0.004184596939012408,
+        "sample_fingerprint": "224e803be18f8b07ae6c6e2b1f10e1d9d4ed4b84efc0c1292d8a550bc09d54a3",
+        "eens_feasible": true,
+        "cvar_feasible": true,
+        "metrics_are_lower_bounds": false,
+        "losses_are_relaxation_bounds": false,
+        "evaluated_scenarios": 3,
+        "violated_constraints": []
+      },
+      "iterations": 3,
+      "cuts": [
+        {
+          "bad_units": {
+            "wind": 1,
+            "pv": 1,
+            "diesel": 1,
+            "battery_energy": 0,
+            "pcs": 0
+          },
+          "sample_fingerprint": "224e803be18f8b07ae6c6e2b1f10e1d9d4ed4b84efc0c1292d8a550bc09d54a3",
+          "eens_kwh": 0.6,
+          "cvar_kwh": 2.0,
+          "metrics_are_lower_bounds": true,
+          "evaluated_scenarios": 2,
+          "losses_are_relaxation_bounds": true
+        },
+        {
+          "bad_units": {
+            "wind": 1,
+            "pv": 1,
+            "diesel": 1,
+            "battery_energy": 1,
+            "pcs": 1
+          },
+          "sample_fingerprint": "224e803be18f8b07ae6c6e2b1f10e1d9d4ed4b84efc0c1292d8a550bc09d54a3",
+          "eens_kwh": 0.9570000000000002,
+          "cvar_kwh": 3.1900000000000013,
+          "metrics_are_lower_bounds": true,
+          "evaluated_scenarios": 2,
+          "losses_are_relaxation_bounds": false
+        }
+      ],
+      "history": [
+        {
+          "iteration": 1,
+          "units": {
+            "wind": 1,
+            "pv": 1,
+            "diesel": 1,
+            "battery_energy": 0,
+            "pcs": 0
+          },
+          "objective_yuan": 11.3,
+          "lower_bound_yuan": 11.3,
+          "master_gap": 0.0,
+          "master_seconds": 0.00580286979675293,
+          "eens_kwh": 0.6,
+          "cvar_kwh": 2.0,
+          "feasible": false,
+          "standard_error_kwh": null,
+          "samples": 3,
+          "elapsed_seconds": 0.0014086789451539516,
+          "sample_fingerprint": "224e803be18f8b07ae6c6e2b1f10e1d9d4ed4b84efc0c1292d8a550bc09d54a3",
+          "eens_feasible": false,
+          "cvar_feasible": false,
+          "metrics_are_lower_bounds": true,
+          "losses_are_relaxation_bounds": true,
+          "evaluated_scenarios": 2,
+          "violated_constraints": [
+            "EENS",
+            "CVaR"
+          ],
+          "cut": {
+            "bad_units": {
+              "wind": 1,
+              "pv": 1,
+              "diesel": 1,
+              "battery_energy": 0,
+              "pcs": 0
+            },
+            "sample_fingerprint": "224e803be18f8b07ae6c6e2b1f10e1d9d4ed4b84efc0c1292d8a550bc09d54a3",
+            "eens_kwh": 0.6,
+            "cvar_kwh": 2.0,
+            "metrics_are_lower_bounds": true,
+            "evaluated_scenarios": 2,
+            "losses_are_relaxation_bounds": true
+          }
+        },
+        {
+          "iteration": 2,
+          "units": {
+            "wind": 1,
+            "pv": 1,
+            "diesel": 1,
+            "battery_energy": 1,
+            "pcs": 1
+          },
+          "objective_yuan": 11.452,
+          "lower_bound_yuan": 11.452000000000002,
+          "master_gap": 0.0,
+          "master_seconds": 0.014490842819213867,
+          "eens_kwh": 0.9570000000000002,
+          "cvar_kwh": 3.1900000000000013,
+          "feasible": false,
+          "standard_error_kwh": null,
+          "samples": 3,
+          "elapsed_seconds": 0.004208286991342902,
+          "sample_fingerprint": "224e803be18f8b07ae6c6e2b1f10e1d9d4ed4b84efc0c1292d8a550bc09d54a3",
+          "eens_feasible": false,
+          "cvar_feasible": false,
+          "metrics_are_lower_bounds": true,
+          "losses_are_relaxation_bounds": false,
+          "evaluated_scenarios": 2,
+          "violated_constraints": [
+            "EENS",
+            "CVaR"
+          ],
+          "cut": {
+            "bad_units": {
+              "wind": 1,
+              "pv": 1,
+              "diesel": 1,
+              "battery_energy": 1,
+              "pcs": 1
+            },
+            "sample_fingerprint": "224e803be18f8b07ae6c6e2b1f10e1d9d4ed4b84efc0c1292d8a550bc09d54a3",
+            "eens_kwh": 0.9570000000000002,
+            "cvar_kwh": 3.1900000000000013,
+            "metrics_are_lower_bounds": true,
+            "evaluated_scenarios": 2,
+            "losses_are_relaxation_bounds": false
+          }
+        },
+        {
+          "iteration": 3,
+          "units": {
+            "wind": 1,
+            "pv": 1,
+            "diesel": 2,
+            "battery_energy": 0,
+            "pcs": 0
+          },
+          "objective_yuan": 12.1,
+          "lower_bound_yuan": 12.1,
+          "master_gap": 0.0,
+          "master_seconds": 0.022231101989746094,
+          "eens_kwh": 0.0,
+          "cvar_kwh": 0.0,
+          "feasible": true,
+          "standard_error_kwh": null,
+          "samples": 3,
+          "elapsed_seconds": 0.004184596939012408,
+          "sample_fingerprint": "224e803be18f8b07ae6c6e2b1f10e1d9d4ed4b84efc0c1292d8a550bc09d54a3",
+          "eens_feasible": true,
+          "cvar_feasible": true,
+          "metrics_are_lower_bounds": false,
+          "losses_are_relaxation_bounds": false,
+          "evaluated_scenarios": 3,
+          "violated_constraints": []
+        }
+      ],
+      "oracle_evaluations": 3,
+      "elapsed_seconds": 0.07821756112389266
+    },
+    "feasible_points_wrongly_excluded": 0,
+    "scope": "exact finite scenario distribution and 48-point capacity grid"
+  }
+}
