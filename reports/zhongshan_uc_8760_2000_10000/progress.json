@@ -1,0 +1,7 @@
+{
+  "stage": "complete",
+  "updated_at": "2026-09-08T00:57:26.259987",
+  "elapsed_seconds": 783.0512096108869,
+  "status": "sample_optimal_within_gap",
+  "validation_status": "holdout_passed"
+}

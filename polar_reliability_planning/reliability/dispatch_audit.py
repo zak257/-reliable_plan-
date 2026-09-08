@@ -30,4 +30,3 @@ def audit_physical_dispatch(data: CaseData, units: dict[str, int], scenario: Sce
               "cyclic_energy_abs_kwh": float(abs(energy[-1] - energy[0])),
               "bound_max_violation": max(bounds)}
     return {"passed": max(result.values()) <= 1e-5, **result}
-

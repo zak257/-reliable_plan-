@@ -1,0 +1,169 @@
+{
+  "command": "plan",
+  "python": "/home/yzk/cap_plan/venv/bin/python",
+  "gurobi_version": [
+    13,
+    0,
+    1
+  ],
+  "case": "zhongshan",
+  "hours": 8760,
+  "demand_kwh": 2038009.3968339,
+  "unit_bounds": {
+    "wind": [
+      0,
+      7
+    ],
+    "pv": [
+      0,
+      3
+    ],
+    "diesel": [
+      0,
+      5
+    ],
+    "battery_energy": [
+      0,
+      140
+    ],
+    "pcs": [
+      0,
+      20
+    ]
+  },
+  "module_sizes": {
+    "wind": 100.0,
+    "pv": 100.0,
+    "diesel": 300.0,
+    "battery_energy": 50.0,
+    "pcs": 50.0
+  },
+  "annual_cost_per_unit": {
+    "wind": 106666.66666666667,
+    "pv": 45000.0,
+    "diesel": 150000.0,
+    "battery_energy": 12500.0,
+    "pcs": 10416.666666666666
+  },
+  "solver": {
+    "time_limit": 3600.0,
+    "oracle_time_limit": 3600.0,
+    "mip_gap": 0.01,
+    "threads": 2,
+    "seed": 0,
+    "output_flag": false
+  },
+  "limits": {
+    "eens_kwh": 100.0,
+    "cvar_kwh": 1000.0,
+    "alpha": 0.95,
+    "tolerance_kwh": 1e-05
+  },
+  "solver_semantics": {
+    "economic_mip_gap": 0.01,
+    "reliability_mip_gap": 0.0,
+    "time_limit_scope": "per_optimization_call"
+  },
+  "unit_commitment": {
+    "enabled": true,
+    "min_output_fraction": 0.2,
+    "min_up_hours": 3.0,
+    "min_down_hours": 3.0,
+    "startup_cost_yuan": 0.0
+  },
+  "reliability": {
+    "samples": 2000,
+    "seed": 20260906,
+    "validation_samples": 10000,
+    "validation_seed": 20260907,
+    "eens_limit_kwh": 100.0,
+    "cvar_limit_kwh": 1000.0,
+    "cvar_alpha": 0.95,
+    "comparison_tolerance_kwh": 1e-05
+  },
+  "weather": {
+    "enabled": false,
+    "normal_to_extreme_rate_per_hour": 0.002,
+    "extreme_to_normal_rate_per_hour": 0.041666666666666664,
+    "extreme_wind_factor": 1.0,
+    "extreme_pv_factor": 1.0,
+    "extreme_load_factor": 1.0
+  },
+  "failures": {
+    "wind": {
+      "normal_rate_per_hour": 1e-05,
+      "extreme_rate_per_hour": 5e-05,
+      "mean_repair_hours": 24.0,
+      "extreme_repair_multiplier": 2.0
+    },
+    "pv": {
+      "normal_rate_per_hour": 1e-05,
+      "extreme_rate_per_hour": 5e-05,
+      "mean_repair_hours": 24.0,
+      "extreme_repair_multiplier": 2.0
+    },
+    "diesel": {
+      "normal_rate_per_hour": 0.0001,
+      "extreme_rate_per_hour": 0.0005,
+      "mean_repair_hours": 48.0,
+      "extreme_repair_multiplier": 2.0
+    },
+    "pcs": {
+      "normal_rate_per_hour": 1e-05,
+      "extreme_rate_per_hour": 5e-05,
+      "mean_repair_hours": 24.0,
+      "extreme_repair_multiplier": 2.0
+    }
+  },
+  "planning": {
+    "max_iterations": 100,
+    "lift_cuts": true
+  },
+  "source_config": "/home/yzk/reliable_plan/config/zhongshan_2000.toml",
+  "scenario_source": null,
+  "actual_training_pool": {
+    "samples": 2000,
+    "fingerprint": "b417d46415b1f5afcb02befe8bb4b4501a8f59e175d332052589f60fa7e27ab3",
+    "metadata": {
+      "seed": 20260906,
+      "dt_hours": 1.0,
+      "failures": {
+        "wind": {
+          "normal_rate_per_hour": 1e-05,
+          "extreme_rate_per_hour": 5e-05,
+          "mean_repair_hours": 24.0,
+          "extreme_repair_multiplier": 2.0
+        },
+        "pv": {
+          "normal_rate_per_hour": 1e-05,
+          "extreme_rate_per_hour": 5e-05,
+          "mean_repair_hours": 24.0,
+          "extreme_repair_multiplier": 2.0
+        },
+        "diesel": {
+          "normal_rate_per_hour": 0.0001,
+          "extreme_rate_per_hour": 0.0005,
+          "mean_repair_hours": 48.0,
+          "extreme_repair_multiplier": 2.0
+        },
+        "pcs": {
+          "normal_rate_per_hour": 1e-05,
+          "extreme_rate_per_hour": 5e-05,
+          "mean_repair_hours": 24.0,
+          "extreme_repair_multiplier": 2.0
+        }
+      },
+      "weather": {
+        "enabled": false,
+        "normal_to_extreme_rate_per_hour": 0.002,
+        "extreme_to_normal_rate_per_hour": 0.041666666666666664,
+        "extreme_wind_factor": 1.0,
+        "extreme_pv_factor": 1.0,
+        "extreme_load_factor": 1.0
+      },
+      "initial_state": "hourly_stationary_conditional_on_initial_weather",
+      "battery_cells": "ideal",
+      "schema_version": 1
+    }
+  }
+}
