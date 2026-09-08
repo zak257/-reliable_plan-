@@ -32,10 +32,15 @@ def generate_failure(weather: np.ndarray, parameters: FailureParameters,
     available = bool(rng.random() >= failed_probability)
     draws = rng.random(len(weather) - 1)
     states = np.empty(len(weather), dtype=np.uint8)
-    states[0] = available
-    for t in range(1, len(weather)):
+    # Skip draws that cannot change either state. Keep the original random
+    # stream and hourly chain exactly, including weather-conditioned rates.
+    candidates = np.flatnonzero(draws < max(*failure_prob, *repair_prob)) + 1
+    start = 0
+    for t in candidates:
         w = int(weather[t])
         if draws[t - 1] < (failure_prob[w] if available else repair_prob[w]):
+            states[start:t] = available
             available = not available
-        states[t] = available
+            start = t
+    states[start:] = available
     return states

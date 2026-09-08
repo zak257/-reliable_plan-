@@ -31,6 +31,10 @@ cd /home/yzk/reliable_plan
 # 中山站：8760 小时、256 个规划场景及 256 个独立验证场景
 ./run.sh plan --case zhongshan --hours 8760 --samples 256 --validation-samples 256
 
+# 中山站大样本版本：2000 个规划场景、10000 个独立验证场景
+# 每次求解时限 3600 秒；经济主问题及成本复算 gap 1%，正失供评价 gap 0
+./run.sh plan --config config/zhongshan_2000.toml --solver-config config/solver_3600_1pct.toml
+
 # 自定义限值、尾部水平与样本数
 ./run.sh plan --eens-limit 100 --cvar-limit 1000 --alpha 0.95 --samples 128 --validation-samples 256
 
@@ -93,6 +97,10 @@ cd /home/yzk/reliable_plan
 - `validation/`：完整穷举、独立验证及敏感性。
 
 每次输出包括实际配置、输入 SHA256、固定场景、逐轮历史、最终场景损失和 `summary.json`。`dispatch.csv` 包含小时出力、电量、充放电状态及每台柴油机的在线/启动/停机状态，成本单列资本、燃油和启动项。
+
+大样本运行另提供 `progress.json` 阶段进度，以及 `training_checkpoint.jsonl`、`validation_checkpoint.jsonl` 逐场景精确损失存档。存档可用于检查已完成的场景；当前不自动恢复中断的规划。正常可供电场景可直接构造合法调度，经功率、储能和启停审计后证明零失供；需要储能时先尝试固定启停及充放电模式的可行调度，其余场景仍求完整 MILP。故障生成和备用策略按状态变化事件加速，原有随机轨迹保持一致。
+
+经济成本求解的 `optimal_within_gap` 表示达到所设 gap；只有上下界闭合时才填写固定容量最优成本。3600 秒是每次 Gurobi 优化调用的时限，整个场景实验可能更长。
 
 `sample_optimal_within_gap` 只表示当前固定样本和容量网格上的成本 gap；`sample_feasible` 表示风险通过但成本 gap 尚未满足。独立验证另报 `holdout_passed` / `holdout_failed`。退出码为 0 完成、1 配置/求解错误、2 无可行规划结果、3 独立验证失败。
 

@@ -113,7 +113,7 @@ class ScenarioPool:
 
 
 def generate_pool(data: CaseData, samples: int, seed: int, failures: dict,
-                  weather_config: dict | None = None) -> ScenarioPool:
+                  weather_config: dict | None = None, on_progress=None) -> ScenarioPool:
     if samples < 1 or int(samples) != samples or seed < 0 or int(seed) != seed:
         raise ValueError("samples must be positive and seed nonnegative integers")
     unknown = set(failures) - set(FAILABLE_COMPONENTS)
@@ -133,6 +133,8 @@ def generate_pool(data: CaseData, samples: int, seed: int, failures: dict,
                 # Stream identifiers preserve paths when samples/module bounds grow.
                 rng = np.random.default_rng(np.random.SeedSequence([seed, component_index, s, module]))
                 paths[s, module] = generate_failure(weather[s], parameters, rng, data.dt_hours)
+            if on_progress and (s == 0 or (s + 1) % max(1, samples // 20) == 0 or s + 1 == samples):
+                on_progress(key, s + 1, samples)
         availability[key] = paths
     factors = {key: np.where(weather == 1, float(weather_config.get(f"extreme_{key}_factor", 1.0)), 1.0)
                for key in ("wind", "pv", "load")}

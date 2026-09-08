@@ -24,6 +24,11 @@ def write_json(path: Path, value):
     temporary.replace(path)
 
 
+def append_jsonl(path: Path, value):
+    with path.open("a", encoding="utf-8") as stream:
+        stream.write(json.dumps(value, ensure_ascii=False, allow_nan=False, default=_json_default) + "\n")
+
+
 def write_csv(path: Path, rows: list[dict]):
     if not rows:
         return

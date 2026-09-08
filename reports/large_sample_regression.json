@@ -1,0 +1,13 @@
+{
+  "tests_passed": 44,
+  "reference_commit": "85cea15",
+  "sample_fingerprint": "5061452de78c9f16e829d8aa84feb72fd1de9713541d91ce3848c39f0ba6ce95",
+  "regenerated_scenario_fingerprint_matches": true,
+  "scenario_count": 256,
+  "maximum_loss_difference_kwh": 9.094947017729282e-13,
+  "reference_evaluation_seconds": 282.97577976994216,
+  "accelerated_evaluation_seconds": 13.946521074976772,
+  "observed_speedup": 20.290062177417493,
+  "EENS_kwh": 43.161468724479164,
+  "CVaR_kwh": 863.2293744895827
+}

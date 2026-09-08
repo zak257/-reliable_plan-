@@ -42,13 +42,14 @@ class ReliabilityResult:
 
 class ReliabilityOracle:
     def __init__(self, data: CaseData, pool: ScenarioPool, limits: ReliabilityLimits,
-                 options: SolverOptions | None = None, env: gp.Env | None = None, on_progress=None):
+                 options: SolverOptions | None = None, env: gp.Env | None = None, on_progress=None, on_scenario=None):
         pool.check_data(data)
         self.data, self.pool, self.limits = data, pool, limits
         self.operation = OperationModel(data, options or SolverOptions(), env)
         self.cache: dict[tuple[int, ...], ReliabilityResult] = {}
         self.cache_hits = 0
         self.on_progress = on_progress
+        self.on_scenario = on_scenario
         self._options, self._env = options, env
         self.relaxation_oracle = None
 
@@ -87,10 +88,13 @@ class ReliabilityOracle:
         for i in range(self.pool.samples):
             if losses[i] is None:
                 losses[i] = self.operation.solve(units, self.pool.scenario(self.data, units, i))[0]
+                if self.on_scenario:
+                    self.on_scenario(units, i, float(self.pool.probabilities[i]), losses[i], self.operation.last_solve_summary)
             bound_losses = [q if q is not None else 0.0 for q in losses]
             eens = calculate_EENS(bound_losses, self.pool.probabilities)
             cvar = calculate_CVaR(bound_losses, self.limits.alpha, self.pool.probabilities)
-            if self.on_progress and (i == 0 or (i + 1) % 16 == 0 or i + 1 == self.pool.samples):
+            interval = max(16, min(256, self.pool.samples // 20))
+            if self.on_progress and (i == 0 or (i + 1) % interval == 0 or i + 1 == self.pool.samples):
                 self.on_progress(i + 1, self.pool.samples, eens, cvar)
             if certify_infeasible_early and (eens > self.limits.eens_kwh + self.limits.tolerance_kwh or
                     (self.limits.cvar_kwh is not None and cvar > self.limits.cvar_kwh + self.limits.tolerance_kwh)):

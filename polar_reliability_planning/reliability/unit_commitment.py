@@ -91,7 +91,11 @@ def standby_commitment(availability: np.ndarray, min_down_steps: int, target_onl
     online = np.zeros_like(availability)
     active = np.zeros(count, dtype=bool)
     may_restart_at = np.zeros(count, dtype=int)
-    for t in range(hours):
+    changes = np.flatnonzero(np.any(availability[:, 1:] != availability[:, :-1], axis=0)) + 1
+    outages = np.flatnonzero(np.any((availability[:, 1:] == 0) & (availability[:, :-1] != 0), axis=0)) + 1
+    events = np.unique(np.r_[0, changes, outages + min_down_steps])
+    events = events[events < hours]
+    for event, t in enumerate(events):
         trips = active & (availability[:, t] == 0)
         may_restart_at[trips] = t + min_down_steps
         active[trips] = False
@@ -100,7 +104,8 @@ def standby_commitment(availability: np.ndarray, min_down_steps: int, target_onl
                 break
             if not active[i] and availability[i, t] and t >= may_restart_at[i]:
                 active[i] = True
-        online[:, t] = active
+        end = events[event + 1] if event + 1 < len(events) else hours
+        online[:, t:end] = active[:, None]
     return online
 
 

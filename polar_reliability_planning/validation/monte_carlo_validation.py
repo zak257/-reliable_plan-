@@ -2,50 +2,30 @@
 from __future__ import annotations
 
 import gurobipy as gp
-import numpy as np
 
 from ..config import ReliabilityLimits, SolverOptions
 from ..data import CaseData
 from ..reliability import ReliabilityOracle
 from ..reliability.operation_model import OperationModel, OptimizationError
 from ..reliability.unit_commitment import audit_commitment
+from ..reliability.dispatch_audit import audit_physical_dispatch
 from ..scenario_generation import Scenario, ScenarioPool
 
 
 def validate_capacity(data: CaseData, units: dict[str, int], pool: ScenarioPool,
-                       limits: ReliabilityLimits, options: SolverOptions, env: gp.Env | None = None) -> dict:
-    oracle = ReliabilityOracle(data, pool, limits, options, env)
+                       limits: ReliabilityLimits, options: SolverOptions, env: gp.Env | None = None,
+                       on_progress=None, on_scenario=None) -> dict:
+    oracle = ReliabilityOracle(data, pool, limits, options, env, on_progress, on_scenario)
     try:
         result = oracle.evaluate(units)
         return {**result.summary(), "losses_kwh": list(result.losses_kwh), "sample_role": "independent_holdout",
+                "solver_calls": oracle.operation.solver_calls,
+                "full_mip_solves": oracle.operation.full_mip_solves,
+                "direct_zero_loss_certificates": oracle.operation.direct_zero_loss_certificates,
+                "storage_zero_loss_certificates": oracle.operation.storage_zero_loss_certificates,
                 "interpretation": "empirical check, not a confidence-certified population reliability claim"}
     finally:
         oracle.close()
-
-
-def audit_physical_dispatch(data: CaseData, units: dict[str, int], scenario: Scenario, dispatch: dict) -> dict:
-    """Recompute balance, storage dynamics and bounds from the exported values."""
-    power_names = ("wind_kw", "pv_kw", "diesel_kw", "charge_kw", "discharge_kw", "shed_kw")
-    if any(np.shape(dispatch[k]) != (data.hours,) or not np.isfinite(dispatch[k]).all() for k in power_names):
-        return {"passed": False, "error": "Invalid power array"}
-    energy = dispatch["usable_energy_kwh"]
-    if np.shape(energy) != (data.hours + 1,) or not np.isfinite(energy).all():
-        return {"passed": False, "error": "Invalid energy array"}
-    wind, pv, diesel, charge, discharge, shed = (dispatch[k] for k in power_names)
-    capacity = data.capacities(units)
-    balance = wind + pv + diesel + discharge + shed - scenario.load_kw - charge
-    transition = energy[1:] - energy[:-1] - data.dt_hours * (data.efficiency * charge - discharge / data.efficiency)
-    bounds = [0.0, float(-energy.min()), float(energy.max() -
-        (data.soc_max - data.soc_min) * capacity["battery_energy"])]
-    bounds.extend(float(-dispatch[k].min()) for k in power_names)
-    bounds.extend(float(np.max(value)) for value in (wind - scenario.wind_available_kw,
-        pv - scenario.pv_available_kw, diesel - scenario.diesel_available_kw,
-        charge + discharge - scenario.pcs_available_kw, shed - scenario.load_kw))
-    result = {"power_balance_max_abs_kw": float(np.max(np.abs(balance))),
-              "energy_transition_max_abs_kwh": float(np.max(np.abs(transition))),
-              "cyclic_energy_abs_kwh": float(abs(energy[-1] - energy[0])),
-              "bound_max_violation": max(bounds)}
-    return {"passed": max(result.values()) <= 1e-5, **result}
 
 
 def audit_nominal_solution(data: CaseData, solution, options: SolverOptions,
