@@ -1,0 +1,154 @@
+{
+  "sources": [
+    {
+      "id": "NREL2023",
+      "title": "Distributed Energy Resource (DER) Reliability for Backup Electric Power Systems",
+      "authors": [
+        "Jeffrey Marqusee",
+        "Andrew Stringer"
+      ],
+      "year": 2023,
+      "report": "NREL/TP-7A40-83132",
+      "doi": "10.2172/1964053",
+      "url": "https://www.osti.gov/biblio/1964053",
+      "fulltext_url": "https://docs.nlr.gov/docs/fy23osti/83132.pdf",
+      "locations": "Table 3, p. 12; Appendix A, pp. 18-20; Appendix C, pp. 26-30; Appendix D, pp. 31-33; Appendix E, pp. 33-34",
+      "retrieved_pdf_sha256": "8e4e72d8da536f3a2030bb5d2435aca348606794db9febae4056f9b78396bc9f"
+    },
+    {
+      "id": "MarquseeJenket2020",
+      "title": "Reliability of emergency and standby diesel generators: Impact on energy resiliency solutions",
+      "authors": [
+        "Jeffrey Marqusee",
+        "Donald Jenket II"
+      ],
+      "year": 2020,
+      "journal": "Applied Energy",
+      "volume": 268,
+      "article": 114918,
+      "doi": "10.1016/j.apenergy.2020.114918",
+      "url": "https://doi.org/10.1016/j.apenergy.2020.114918",
+      "fulltext_url": "https://www.osti.gov/servlets/purl/1659849",
+      "locations": "Section 3, Tables 2-4; Figure 4 and repair discussion",
+      "retrieved_pdf_sha256": "79a93369de8e120f39b3acf0704677d19236081b912f61a022927638d54e6d03"
+    },
+    {
+      "id": "NREL2020",
+      "title": "Emergency Diesel Generator Reliability and Installation Energy Security",
+      "authors": [
+        "Jeffrey Marqusee",
+        "Sean Ericson",
+        "Donald Jenket"
+      ],
+      "year": 2020,
+      "report": "NREL/TP-5C00-76553",
+      "doi": "10.2172/1659892",
+      "url": "https://www.osti.gov/biblio/1659892",
+      "fulltext_url": "https://www.osti.gov/servlets/purl/1659892",
+      "locations": "Tables 3-5 and pp. 13-15",
+      "retrieved_pdf_sha256": "5ae2a0faa309cd907b84e1228fa92eda909ffaec0a6e5dfc7d7c9e74370c134a"
+    }
+  ],
+  "metrics": {
+    "original": {
+      "wind": {
+        "failure_rate_per_hour": 1e-05,
+        "nominal_mttf_hours": 99999.99999999999,
+        "mean_repair_hours_input": 24.0,
+        "hourly_failure_transition_probability": 9.999950000166666e-06,
+        "hourly_repair_transition_probability": 0.040810542890861806,
+        "stationary_initial_unavailability": 0.0002449734693424157,
+        "sampled_mean_up_spell_hours": 100000.50000083333,
+        "sampled_mean_down_spell_hours": 24.503472121756985
+      },
+      "pv": {
+        "failure_rate_per_hour": 1e-05,
+        "nominal_mttf_hours": 99999.99999999999,
+        "mean_repair_hours_input": 24.0,
+        "hourly_failure_transition_probability": 9.999950000166666e-06,
+        "hourly_repair_transition_probability": 0.040810542890861806,
+        "stationary_initial_unavailability": 0.0002449734693424157,
+        "sampled_mean_up_spell_hours": 100000.50000083333,
+        "sampled_mean_down_spell_hours": 24.503472121756985
+      },
+      "diesel": {
+        "failure_rate_per_hour": 0.0001,
+        "nominal_mttf_hours": 10000.0,
+        "mean_repair_hours_input": 48.0,
+        "hourly_failure_transition_probability": 9.999500016666251e-05,
+        "hourly_repair_transition_probability": 0.020617818668759835,
+        "stationary_initial_unavailability": 0.004826522806151088,
+        "sampled_mean_up_spell_hours": 10000.500008333333,
+        "sampled_mean_down_spell_hours": 48.50173609855257
+      },
+      "pcs": {
+        "failure_rate_per_hour": 1e-05,
+        "nominal_mttf_hours": 99999.99999999999,
+        "mean_repair_hours_input": 24.0,
+        "hourly_failure_transition_probability": 9.999950000166666e-06,
+        "hourly_repair_transition_probability": 0.040810542890861806,
+        "stationary_initial_unavailability": 0.0002449734693424157,
+        "sampled_mean_up_spell_hours": 100000.50000083333,
+        "sampled_mean_down_spell_hours": 24.503472121756985
+      }
+    },
+    "literature_reference": {
+      "wind": {
+        "failure_rate_per_hour": 0.0001326259946949602,
+        "nominal_mttf_hours": 7540.000000000001,
+        "mean_repair_hours_input": 87,
+        "hourly_failure_transition_probability": 0.00013261720025652045,
+        "hourly_repair_transition_probability": 0.011428446322702158,
+        "stationary_initial_unavailability": 0.011471020809907407,
+        "sampled_mean_up_spell_hours": 7540.500011052168,
+        "sampled_mean_down_spell_hours": 87.50095785229698
+      },
+      "pv": {
+        "failure_rate_per_hour": 7.407407407407407e-05,
+        "nominal_mttf_hours": 13500.0,
+        "mean_repair_hours_input": 275.5102040816329,
+        "hourly_failure_transition_probability": 7.40713306575882e-05,
+        "hourly_repair_transition_probability": 0.003623050486363653,
+        "stationary_initial_unavailability": 0.020034863421748764,
+        "sampled_mean_up_spell_hours": 13500.50000617284,
+        "sampled_mean_down_spell_hours": 276.01050655070225
+      },
+      "diesel": {
+        "failure_rate_per_hour": 0.0009090909090909091,
+        "nominal_mttf_hours": 1100.0,
+        "mean_repair_hours_input": 37.3,
+        "hourly_failure_transition_probability": 0.000908677811141093,
+        "hourly_repair_transition_probability": 0.026453462963785958,
+        "stationary_initial_unavailability": 0.033209309849532985,
+        "sampled_mean_up_spell_hours": 1100.5000757575747,
+        "sampled_mean_down_spell_hours": 37.802234110859956
+      },
+      "pcs": {
+        "failure_rate_per_hour": 1e-05,
+        "nominal_mttf_hours": 99999.99999999999,
+        "mean_repair_hours_input": 24.0,
+        "hourly_failure_transition_probability": 9.999950000166666e-06,
+        "hourly_repair_transition_probability": 0.040810542890861806,
+        "stationary_initial_unavailability": 0.0002449734693424157,
+        "sampled_mean_up_spell_hours": 100000.50000083333,
+        "sampled_mean_down_spell_hours": 24.503472121756985
+      }
+    }
+  },
+  "parameter_mapping": {
+    "wind": "MTTF 7540 h from NREL2023 Table 3; corrective MTTR 87 h from Fig. D-3; not fitted to 97% total operational availability.",
+    "diesel": "MTTF 1100 operating h from NREL2023 Table 3 and Appendix A; MTTR 37.3 h from Table A-2. Used as a continuous calendar exposure proxy, not calibrated to the duty cycle of standby units.",
+    "pv": "One inverter per independent 100 kW AC block; MTTF 13500 h from Table 3/C-1. Effective MTTR = 13500*(1-0.98)/0.98 = 275.51 h, a two-state equivalent of the 98% availability assumption, not measured hardware repair time.",
+    "pcs": "Unchanged research assumption. Whole BESS availability and MTTF cannot be transferred directly to an individual 50 kW PCS module."
+  },
+  "assumption_limits": [
+    "Not Zhongshan operational data",
+    "Perfect foresight dispatch",
+    "Failure hazard independent of commitment",
+    "No fail-to-start events",
+    "No common-cause outages",
+    "Ideal battery cells",
+    "No climate-dependent calibration"
+  ],
+  "retrieved_on": "2026-09-08"
+}

@@ -1,0 +1,82 @@
+# CSV inputs remain in cap_plan. All power is kW and energy is kWh.
+data_root = "/home/yzk/cap_plan/data"
+case = "zhongshan"
+start_hour = 0
+hours = 8760
+load_scale = 1.0
+
+[modules]
+wind = 100.0
+pv = 100.0
+diesel = 300.0
+battery_energy = 50.0
+pcs = 50.0
+
+[unit_commitment]
+enabled = true
+min_output_fraction = 0.2
+min_up_hours = 3.0
+min_down_hours = 3.0
+startup_cost_yuan = 0.0
+
+[planning]
+max_iterations = 100
+# Optional coordinate lifting uses additional oracle calls to strengthen cuts.
+lift_cuts = true
+
+[reliability]
+samples = 2000
+seed = 20260906
+validation_samples = 10000
+validation_seed = 20260907
+# Both limits apply to total unserved energy over each selected horizon.
+eens_limit_kwh = 100.0
+cvar_limit_kwh = 1000.0
+cvar_alpha = 0.95
+comparison_tolerance_kwh = 0.00001
+
+[weather]
+enabled = false
+normal_to_extreme_rate_per_hour = 0.002
+extreme_to_normal_rate_per_hour = 0.041666666666666664
+extreme_wind_factor = 1.0
+extreme_pv_factor = 1.0
+extreme_load_factor = 1.0
+
+# Literature-reference sensitivity case; NOT calibrated Zhongshan failure data.
+# Sources and conversions: docs/failure_parameter_review.md.
+# NREL/TP-7A40-83132 (2023), doi:10.2172/1964053.
+# Calendar-time, capacity-independent availability chains remain unchanged.
+# Diesel runtime MTTF is used as continuous-exposure proxy, including standby units.
+# Wind repair input is corrective MTTR, not total operational downtime.
+# Each 100 kW PV block is assumed to have its own inverter; PV MTTR is derived
+# from 98% availability and 13,500 h MTTF, not a measured repair-time estimate.
+# PCS parameters remain explicitly uncalibrated research assumptions: the cited
+# BESS system-level metrics cannot be assigned directly to a 50 kW PCS module.
+# Battery cells remain ideal; no start-failure or common-cause model is claimed.
+[failures.wind]
+normal_rate_per_hour = 0.0001326259946949602
+# Weather is disabled in this reference case; no climate multiplier is calibrated.
+extreme_rate_per_hour = 0.0001326259946949602
+mean_repair_hours = 87
+extreme_repair_multiplier = 1.0
+
+[failures.pv]
+normal_rate_per_hour = 7.407407407407407e-05
+# Weather is disabled in this reference case; no climate multiplier is calibrated.
+extreme_rate_per_hour = 7.407407407407407e-05
+mean_repair_hours = 275.5102040816329
+extreme_repair_multiplier = 1.0
+
+[failures.diesel]
+normal_rate_per_hour = 0.0009090909090909091
+# Weather is disabled in this reference case; no climate multiplier is calibrated.
+extreme_rate_per_hour = 0.0009090909090909091
+mean_repair_hours = 37.3
+extreme_repair_multiplier = 1.0
+
+[failures.pcs]
+normal_rate_per_hour = 0.00001
+extreme_rate_per_hour = 0.00005
+mean_repair_hours = 24.0
+extreme_repair_multiplier = 2.0
