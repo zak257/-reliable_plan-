@@ -8,6 +8,8 @@
 
 当前版本已完成全年运行及独立验证，见 [UC + 双风险验证报告](docs/uc_validation_results.md)。本次方案为风电 500 kW、光伏 300 kW、柴油 600 kW、电池 800 kWh、PCS 150 kW；128 个规划样本 EENS/CVaR 均为零，256 个独立样本分别为 26.022918 / 520.458354 kWh，低于 100 / 1000 kWh 的限值。主规划成本 1,756,226.80 元/年、有效成本下界 1,737,400.89 元/年，gap 1.071952%，状态为样本可行，尚未证明最优。38 项测试及 48 点穷举对照均通过。
 
+中山站也已完成 [8760 小时、256 个规划场景运行](docs/zhongshan_validation_results.md)：风电 700 kW、光伏 300 kW、柴油 600 kW、电池 1000 kWh、PCS 400 kW，主规划成本 3,376,864.54 元/年，gap 1.409050%。规划 EENS/CVaR 为 5.138991 / 102.779818 kWh，另 256 个独立验证场景为 43.161469 / 863.229374 kWh，双约束均通过。报告含月度发电图和完整场景损失表。
+
 ## 环境与运行
 
 本地 `run.sh` 默认使用 `/home/yzk/cap_plan/venv/bin/python`，求解器为 Gurobi 13.0.1。数据直接读取 `/home/yzk/cap_plan/data`，原项目未被修改。
@@ -25,6 +27,9 @@ cd /home/yzk/reliable_plan
 
 # 全年双指标可靠性规划
 ./run.sh plan --case changcheng
+
+# 中山站：8760 小时、256 个规划场景及 256 个独立验证场景
+./run.sh plan --case zhongshan --hours 8760 --samples 256 --validation-samples 256
 
 # 自定义限值、尾部水平与样本数
 ./run.sh plan --eens-limit 100 --cvar-limit 1000 --alpha 0.95 --samples 128 --validation-samples 256

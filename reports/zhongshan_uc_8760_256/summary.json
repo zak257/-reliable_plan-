@@ -1,0 +1,178 @@
+{
+  "code_commit": "3eb166f04a9ec9c295d02fb26c551717a5fe3ba8",
+  "command": "./run.sh plan --case zhongshan --hours 8760 --samples 256 --validation-samples 256 --output outputs/zhongshan_uc_8760_256",
+  "result": {
+    "case": "zhongshan",
+    "hours": 8760,
+    "demand_kwh": 2038009.3968339,
+    "limits": {
+      "eens_kwh": 100.0,
+      "cvar_kwh": 1000.0,
+      "alpha": 0.95,
+      "tolerance_kwh": 1e-05
+    },
+    "cost_basis": "straight_line_annual_capital_times_hours_over_8760_plus_nominal_fuel_and_startups",
+    "unit_commitment": {
+      "enabled": true,
+      "min_output_fraction": 0.2,
+      "min_up_hours": 3.0,
+      "min_down_hours": 3.0,
+      "startup_cost_yuan": 0.0
+    },
+    "reliability_basis": "perfect_foresight_minimum_unserved_energy_on_fixed_samples",
+    "status": "sample_feasible",
+    "validation_status": "holdout_passed",
+    "elapsed_seconds": 632.5808463140856,
+    "solution": {
+      "units": {
+        "wind": 7,
+        "pv": 3,
+        "diesel": 2,
+        "battery_energy": 20,
+        "pcs": 8
+      },
+      "capacities": {
+        "wind": 700.0,
+        "pv": 300.0,
+        "diesel": 600.0,
+        "battery_energy": 1000.0,
+        "pcs": 400.0
+      },
+      "objective_yuan": 3376864.5351309003,
+      "investment_yuan": 1515000.0,
+      "fuel_yuan": 1861864.5351308996,
+      "startup_yuan": 0.0,
+      "lower_bound_yuan": 3329282.8233062173,
+      "gap": 0.014090500619634289,
+      "status": 9,
+      "runtime_seconds": 120.075767993927
+    },
+    "reliability": {
+      "eens_kwh": 5.138990885416667,
+      "cvar_kwh": 102.77981770833324,
+      "feasible": true,
+      "standard_error_kwh": 5.138990885416668,
+      "samples": 256,
+      "elapsed_seconds": 351.32827267609537,
+      "sample_fingerprint": "23129cd29dbafae83c4a526052c25138b26dfb926570ba5a8601fff545a4b96a",
+      "eens_feasible": true,
+      "cvar_feasible": true,
+      "metrics_are_lower_bounds": false,
+      "losses_are_relaxation_bounds": false,
+      "evaluated_scenarios": 256,
+      "violated_constraints": []
+    },
+    "lower_bound_yuan": 3329282.8233062173,
+    "iterations": 2,
+    "cuts": [
+      {
+        "bad_units": {
+          "wind": 7,
+          "pv": 3,
+          "diesel": 1,
+          "battery_energy": 140,
+          "pcs": 20
+        },
+        "sample_fingerprint": "23129cd29dbafae83c4a526052c25138b26dfb926570ba5a8601fff545a4b96a",
+        "eens_kwh": 60.6194584570159,
+        "cvar_kwh": 1212.3891691403169,
+        "metrics_are_lower_bounds": true,
+        "evaluated_scenarios": 20,
+        "losses_are_relaxation_bounds": true
+      }
+    ],
+    "oracle_evaluations": 13,
+    "oracle_scenario_solves": 256,
+    "oracle_relaxation_lp_solves": 1003,
+    "oracle_full_mip_solves": 26,
+    "oracle_zero_loss_certificates": 230,
+    "audit": {
+      "no_failure_eens_kwh": 0.0,
+      "fixed_capacity_optimal_cost_yuan": null,
+      "fixed_capacity_feasible_cost_yuan": 3371979.4433381176,
+      "fixed_capacity_cost_lower_bound_yuan": 3368655.571198408,
+      "economic_solve": {
+        "status": 9,
+        "optimal": false,
+        "objective_value": 1856979.4433381176,
+        "lower_bound": 1853655.571198408,
+        "gap": 0.001789934806028075,
+        "runtime_seconds": 60.025317907333374
+      },
+      "master_cost_difference_yuan": 4885.091792782769,
+      "no_shedding_passed": true,
+      "unit_commitment": {
+        "enabled": true,
+        "passed": true,
+        "max_violation": 0.0,
+        "startups": 609,
+        "shutdowns": 609,
+        "forced_shutdowns": 0
+      },
+      "physical_dispatch": {
+        "passed": true,
+        "power_balance_max_abs_kw": 2.432898327242583e-10,
+        "energy_transition_max_abs_kwh": 4.1183056964655407e-10,
+        "cyclic_energy_abs_kwh": 0.0,
+        "bound_max_violation": 1.1809220268332865e-10
+      },
+      "dispatch_cost_consistent": false
+    },
+    "validation": {
+      "eens_kwh": 43.161468724479164,
+      "cvar_kwh": 863.2293744895827,
+      "feasible": true,
+      "standard_error_kwh": 29.553372871094783,
+      "samples": 256,
+      "elapsed_seconds": 282.97577976994216,
+      "sample_fingerprint": "5061452de78c9f16e829d8aa84feb72fd1de9713541d91ce3848c39f0ba6ce95",
+      "eens_feasible": true,
+      "cvar_feasible": true,
+      "metrics_are_lower_bounds": false,
+      "losses_are_relaxation_bounds": false,
+      "evaluated_scenarios": 256,
+      "violated_constraints": [],
+      "sample_role": "independent_holdout",
+      "interpretation": "empirical check, not a confidence-certified population reliability claim"
+    }
+  },
+  "export_audit": {
+    "power_balance_max_abs_kw": 2.432898327242583e-10,
+    "energy_transition_max_abs_kwh": 4.1180214793712366e-10,
+    "energy_continuity_max_abs_kwh": 0.0,
+    "cyclic_energy_abs_kwh": 0.0,
+    "simultaneous_charge_discharge_max_kw": 0.0,
+    "annual_shedding_kwh": 0.0,
+    "cost_difference_yuan": 9.313225746154785e-10
+  },
+  "scenario_statistics": {
+    "training": {
+      "positive_scenarios": 1,
+      "maximum_loss_kwh": 1315.5816666666667,
+      "positive_losses": [
+        {
+          "scenario": 186,
+          "loss_kwh": 1315.5816666666667
+        }
+      ]
+    },
+    "independent_holdout": {
+      "positive_scenarios": 3,
+      "maximum_loss_kwh": 6166.860925366667,
+      "positive_losses": [
+        {
+          "scenario": 62,
+          "loss_kwh": 6166.860925366667
+        },
+        {
+          "scenario": 114,
+          "loss_kwh": 499.1866666666666
+        },
+        {
+          "scenario": 184,
+          "loss_kwh": 4383.288401433333
+        }
+      ]
+    }
+  }
+}
