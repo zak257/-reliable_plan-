@@ -1,0 +1,65 @@
+{
+  "files": [
+    {
+      "path": "/home/yzk/cap_plan/data/zhongshan/input/curve.csv",
+      "sha256": "4d58f2a72062c615af26e93c2e1a0c06d8f3dd50b97795fb899f85b520ec2348",
+      "rows": 8784
+    },
+    {
+      "path": "/home/yzk/cap_plan/data/zhongshan/input/es_para.csv",
+      "sha256": "8ba2e364b5631d010fa8b4d1f2e95d4f8b63085f4e092707d10601fed3cbac53",
+      "rows": 1
+    },
+    {
+      "path": "/home/yzk/cap_plan/data/zhongshan/input/pv_para.csv",
+      "sha256": "051621ced45a3f2df57236183029db6e66e6462f33eb510bfb10dcc568737cec",
+      "rows": 1
+    },
+    {
+      "path": "/home/yzk/cap_plan/data/zhongshan/input/ts_para.csv",
+      "sha256": "b5661bcb899dc0414500677b5d16e1bcce2e7c42c4f8b70d194c5c529fd1c25f",
+      "rows": 1
+    },
+    {
+      "path": "/home/yzk/cap_plan/data/zhongshan/input/wd_para.csv",
+      "sha256": "e7c44c38fb0e5668596e3e8a486c8b189b9aac80e208dea8fe3fd32750e4abd5",
+      "rows": 1
+    }
+  ],
+  "metadata": {
+    "start_hour": 0,
+    "hours": 8760,
+    "available_rows": 8784,
+    "imputed_values_in_full_csv": {
+      "风速(m/s)": 0,
+      "单位面积太阳辐射(W/m^2)": 374,
+      "用电功率(kW)": 0
+    },
+    "load_scale": 1.0,
+    "continuous_cyclic_soc": true,
+    "battery_failure_model": "ideal_cells_with_failable_pcs",
+    "diesel_dispatch": "module_unit_commitment",
+    "capacity_bounds_source": {
+      "wind": [
+        0.0,
+        700.0
+      ],
+      "pv": [
+        0.0,
+        300.0
+      ],
+      "diesel": [
+        0.0,
+        1500.0
+      ],
+      "battery_energy": [
+        0.0,
+        7000.0
+      ],
+      "pcs": [
+        0.0,
+        1000.0
+      ]
+    }
+  }
+}

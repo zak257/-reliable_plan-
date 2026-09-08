@@ -1,0 +1,73 @@
+[
+  {
+    "iteration": 1,
+    "units": {
+      "wind": 7,
+      "pv": 3,
+      "diesel": 1,
+      "battery_energy": 24,
+      "pcs": 6
+    },
+    "objective_yuan": 3204172.5000392175,
+    "lower_bound_yuan": 3176251.306412107,
+    "master_gap": 0.008714010755278919,
+    "master_seconds": 90.55031704902649,
+    "eens_kwh": 56.906387084344296,
+    "cvar_kwh": 1138.1277416868847,
+    "feasible": false,
+    "standard_error_kwh": null,
+    "samples": 2000,
+    "elapsed_seconds": 1.4909228230826557,
+    "sample_fingerprint": "fd0c2f7cc7bf5e3a3bf9b5bd1599dc8493dccc046fb35af2b070c134799a1fdc",
+    "eens_feasible": null,
+    "cvar_feasible": false,
+    "metrics_are_lower_bounds": true,
+    "losses_are_relaxation_bounds": true,
+    "evaluated_scenarios": 6,
+    "violated_constraints": [
+      "CVaR"
+    ],
+    "cut": {
+      "bad_units": {
+        "wind": 7,
+        "pv": 3,
+        "diesel": 2,
+        "battery_energy": 140,
+        "pcs": 20
+      },
+      "sample_fingerprint": "fd0c2f7cc7bf5e3a3bf9b5bd1599dc8493dccc046fb35af2b070c134799a1fdc",
+      "eens_kwh": 50.006620926712586,
+      "cvar_kwh": 1000.1324185342509,
+      "metrics_are_lower_bounds": true,
+      "evaluated_scenarios": 806,
+      "losses_are_relaxation_bounds": true
+    }
+  },
+  {
+    "iteration": 2,
+    "units": {
+      "wind": 7,
+      "pv": 3,
+      "diesel": 3,
+      "battery_energy": 24,
+      "pcs": 6
+    },
+    "objective_yuan": 3508931.701516906,
+    "lower_bound_yuan": 3477024.053574805,
+    "master_gap": 0.009093265602264936,
+    "master_seconds": 23.10347890853882,
+    "eens_kwh": 23.00738147444103,
+    "cvar_kwh": 460.14762948882026,
+    "feasible": true,
+    "standard_error_kwh": 6.960007751752131,
+    "samples": 2000,
+    "elapsed_seconds": 111.18942521093413,
+    "sample_fingerprint": "fd0c2f7cc7bf5e3a3bf9b5bd1599dc8493dccc046fb35af2b070c134799a1fdc",
+    "eens_feasible": true,
+    "cvar_feasible": true,
+    "metrics_are_lower_bounds": false,
+    "losses_are_relaxation_bounds": false,
+    "evaluated_scenarios": 2000,
+    "violated_constraints": []
+  }
+]

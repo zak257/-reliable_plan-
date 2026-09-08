@@ -1,0 +1,722 @@
+{
+  "training": {
+    "pool_file": "training_scenarios.npz",
+    "installed_units": {
+      "wind": 7,
+      "pv": 3,
+      "diesel": 2,
+      "battery_energy": 29,
+      "pcs": 6
+    },
+    "components": {
+      "wind": {
+        "scenarios_with_any_installed_module_unavailable": 902,
+        "installed_module_hours_unavailable": 28592.0,
+        "module_statistics": [
+          {
+            "module_number": 1,
+            "installed": true,
+            "scenarios_with_unavailability": 155,
+            "initial_unavailable_scenarios": 0,
+            "unavailable_hours": 3605.0,
+            "unavailability_fraction": 0.0002057648401826484,
+            "failure_transitions": 159
+          },
+          {
+            "module_number": 2,
+            "installed": true,
+            "scenarios_with_unavailability": 153,
+            "initial_unavailable_scenarios": 0,
+            "unavailable_hours": 3585.0,
+            "unavailability_fraction": 0.00020462328767123289,
+            "failure_transitions": 163
+          },
+          {
+            "module_number": 3,
+            "installed": true,
+            "scenarios_with_unavailability": 172,
+            "initial_unavailable_scenarios": 0,
+            "unavailable_hours": 4730.0,
+            "unavailability_fraction": 0.0002699771689497717,
+            "failure_transitions": 182
+          },
+          {
+            "module_number": 4,
+            "installed": true,
+            "scenarios_with_unavailability": 180,
+            "initial_unavailable_scenarios": 1,
+            "unavailable_hours": 4389.0,
+            "unavailability_fraction": 0.000250513698630137,
+            "failure_transitions": 190
+          },
+          {
+            "module_number": 5,
+            "installed": true,
+            "scenarios_with_unavailability": 168,
+            "initial_unavailable_scenarios": 0,
+            "unavailable_hours": 4020.0,
+            "unavailability_fraction": 0.00022945205479452054,
+            "failure_transitions": 175
+          },
+          {
+            "module_number": 6,
+            "installed": true,
+            "scenarios_with_unavailability": 169,
+            "initial_unavailable_scenarios": 0,
+            "unavailable_hours": 4229.0,
+            "unavailability_fraction": 0.0002413812785388128,
+            "failure_transitions": 178
+          },
+          {
+            "module_number": 7,
+            "installed": true,
+            "scenarios_with_unavailability": 152,
+            "initial_unavailable_scenarios": 0,
+            "unavailable_hours": 4034.0,
+            "unavailability_fraction": 0.0002302511415525114,
+            "failure_transitions": 158
+          }
+        ]
+      },
+      "pv": {
+        "scenarios_with_any_installed_module_unavailable": 448,
+        "installed_module_hours_unavailable": 11705.0,
+        "module_statistics": [
+          {
+            "module_number": 1,
+            "installed": true,
+            "scenarios_with_unavailability": 160,
+            "initial_unavailable_scenarios": 3,
+            "unavailable_hours": 4193.0,
+            "unavailability_fraction": 0.00023932648401826483,
+            "failure_transitions": 164
+          },
+          {
+            "module_number": 2,
+            "installed": true,
+            "scenarios_with_unavailability": 154,
+            "initial_unavailable_scenarios": 0,
+            "unavailable_hours": 3376.0,
+            "unavailability_fraction": 0.00019269406392694063,
+            "failure_transitions": 157
+          },
+          {
+            "module_number": 3,
+            "installed": true,
+            "scenarios_with_unavailability": 168,
+            "initial_unavailable_scenarios": 0,
+            "unavailable_hours": 4136.0,
+            "unavailability_fraction": 0.0002360730593607306,
+            "failure_transitions": 174
+          }
+        ]
+      },
+      "diesel": {
+        "scenarios_with_any_installed_module_unavailable": 1648,
+        "installed_module_hours_unavailable": 167427.0,
+        "module_statistics": [
+          {
+            "module_number": 1,
+            "installed": true,
+            "scenarios_with_unavailability": 1191,
+            "initial_unavailable_scenarios": 12,
+            "unavailable_hours": 80978.0,
+            "unavailability_fraction": 0.0046220319634703196,
+            "failure_transitions": 1758
+          },
+          {
+            "module_number": 2,
+            "installed": true,
+            "scenarios_with_unavailability": 1160,
+            "initial_unavailable_scenarios": 8,
+            "unavailable_hours": 86449.0,
+            "unavailability_fraction": 0.0049343036529680365,
+            "failure_transitions": 1722
+          },
+          {
+            "module_number": 3,
+            "installed": false,
+            "scenarios_with_unavailability": 1187,
+            "initial_unavailable_scenarios": 8,
+            "unavailable_hours": 84577.0,
+            "unavailability_fraction": 0.0048274543378995435,
+            "failure_transitions": 1749
+          },
+          {
+            "module_number": 4,
+            "installed": false,
+            "scenarios_with_unavailability": 1204,
+            "initial_unavailable_scenarios": 7,
+            "unavailable_hours": 91183.0,
+            "unavailability_fraction": 0.005204509132420091,
+            "failure_transitions": 1864
+          },
+          {
+            "module_number": 5,
+            "installed": false,
+            "scenarios_with_unavailability": 1202,
+            "initial_unavailable_scenarios": 13,
+            "unavailable_hours": 90138.0,
+            "unavailability_fraction": 0.00514486301369863,
+            "failure_transitions": 1831
+          }
+        ]
+      },
+      "pcs": {
+        "scenarios_with_any_installed_module_unavailable": 800,
+        "installed_module_hours_unavailable": 24681.0,
+        "module_statistics": [
+          {
+            "module_number": 1,
+            "installed": true,
+            "scenarios_with_unavailability": 169,
+            "initial_unavailable_scenarios": 1,
+            "unavailable_hours": 4434.0,
+            "unavailability_fraction": 0.0002530821917808219,
+            "failure_transitions": 174
+          },
+          {
+            "module_number": 2,
+            "installed": true,
+            "scenarios_with_unavailability": 171,
+            "initial_unavailable_scenarios": 0,
+            "unavailable_hours": 4082.0,
+            "unavailability_fraction": 0.0002329908675799087,
+            "failure_transitions": 179
+          },
+          {
+            "module_number": 3,
+            "installed": true,
+            "scenarios_with_unavailability": 167,
+            "initial_unavailable_scenarios": 0,
+            "unavailable_hours": 4203.0,
+            "unavailability_fraction": 0.0002398972602739726,
+            "failure_transitions": 174
+          },
+          {
+            "module_number": 4,
+            "installed": true,
+            "scenarios_with_unavailability": 170,
+            "initial_unavailable_scenarios": 2,
+            "unavailable_hours": 4009.0,
+            "unavailability_fraction": 0.00022882420091324202,
+            "failure_transitions": 175
+          },
+          {
+            "module_number": 5,
+            "installed": true,
+            "scenarios_with_unavailability": 135,
+            "initial_unavailable_scenarios": 0,
+            "unavailable_hours": 3957.0,
+            "unavailability_fraction": 0.00022585616438356164,
+            "failure_transitions": 144
+          },
+          {
+            "module_number": 6,
+            "installed": true,
+            "scenarios_with_unavailability": 173,
+            "initial_unavailable_scenarios": 0,
+            "unavailable_hours": 3996.0,
+            "unavailability_fraction": 0.0002280821917808219,
+            "failure_transitions": 182
+          },
+          {
+            "module_number": 7,
+            "installed": false,
+            "scenarios_with_unavailability": 155,
+            "initial_unavailable_scenarios": 0,
+            "unavailable_hours": 3922.0,
+            "unavailability_fraction": 0.00022385844748858447,
+            "failure_transitions": 158
+          },
+          {
+            "module_number": 8,
+            "installed": false,
+            "scenarios_with_unavailability": 167,
+            "initial_unavailable_scenarios": 1,
+            "unavailable_hours": 4622.0,
+            "unavailability_fraction": 0.00026381278538812784,
+            "failure_transitions": 172
+          },
+          {
+            "module_number": 9,
+            "installed": false,
+            "scenarios_with_unavailability": 166,
+            "initial_unavailable_scenarios": 0,
+            "unavailable_hours": 3815.0,
+            "unavailability_fraction": 0.0002177511415525114,
+            "failure_transitions": 171
+          },
+          {
+            "module_number": 10,
+            "installed": false,
+            "scenarios_with_unavailability": 173,
+            "initial_unavailable_scenarios": 0,
+            "unavailable_hours": 4394.0,
+            "unavailability_fraction": 0.0002507990867579909,
+            "failure_transitions": 181
+          },
+          {
+            "module_number": 11,
+            "installed": false,
+            "scenarios_with_unavailability": 165,
+            "initial_unavailable_scenarios": 1,
+            "unavailable_hours": 4398.0,
+            "unavailability_fraction": 0.00025102739726027396,
+            "failure_transitions": 175
+          },
+          {
+            "module_number": 12,
+            "installed": false,
+            "scenarios_with_unavailability": 171,
+            "initial_unavailable_scenarios": 0,
+            "unavailable_hours": 4175.0,
+            "unavailability_fraction": 0.00023829908675799088,
+            "failure_transitions": 175
+          },
+          {
+            "module_number": 13,
+            "installed": false,
+            "scenarios_with_unavailability": 153,
+            "initial_unavailable_scenarios": 0,
+            "unavailable_hours": 3665.0,
+            "unavailability_fraction": 0.00020918949771689497,
+            "failure_transitions": 157
+          },
+          {
+            "module_number": 14,
+            "installed": false,
+            "scenarios_with_unavailability": 156,
+            "initial_unavailable_scenarios": 1,
+            "unavailable_hours": 4061.0,
+            "unavailability_fraction": 0.00023179223744292237,
+            "failure_transitions": 159
+          },
+          {
+            "module_number": 15,
+            "installed": false,
+            "scenarios_with_unavailability": 180,
+            "initial_unavailable_scenarios": 1,
+            "unavailable_hours": 4942.0,
+            "unavailability_fraction": 0.00028207762557077627,
+            "failure_transitions": 189
+          },
+          {
+            "module_number": 16,
+            "installed": false,
+            "scenarios_with_unavailability": 166,
+            "initial_unavailable_scenarios": 1,
+            "unavailable_hours": 3842.0,
+            "unavailability_fraction": 0.00021929223744292237,
+            "failure_transitions": 170
+          },
+          {
+            "module_number": 17,
+            "installed": false,
+            "scenarios_with_unavailability": 153,
+            "initial_unavailable_scenarios": 0,
+            "unavailable_hours": 3620.0,
+            "unavailability_fraction": 0.00020662100456621005,
+            "failure_transitions": 158
+          },
+          {
+            "module_number": 18,
+            "installed": false,
+            "scenarios_with_unavailability": 179,
+            "initial_unavailable_scenarios": 0,
+            "unavailable_hours": 4599.0,
+            "unavailability_fraction": 0.0002625,
+            "failure_transitions": 191
+          },
+          {
+            "module_number": 19,
+            "installed": false,
+            "scenarios_with_unavailability": 153,
+            "initial_unavailable_scenarios": 1,
+            "unavailable_hours": 4747.0,
+            "unavailability_fraction": 0.00027094748858447486,
+            "failure_transitions": 162
+          },
+          {
+            "module_number": 20,
+            "installed": false,
+            "scenarios_with_unavailability": 172,
+            "initial_unavailable_scenarios": 0,
+            "unavailable_hours": 4587.0,
+            "unavailability_fraction": 0.0002618150684931507,
+            "failure_transitions": 183
+          }
+        ]
+      }
+    },
+    "samples": 2000,
+    "hours": 8760,
+    "simultaneous_diesel_outages": {
+      "2": {
+        "scenarios": 22,
+        "hours_across_all_scenarios": 522.0
+      }
+    },
+    "scenarios_with_any_equipment_unavailable": 1902
+  },
+  "independent_holdout": {
+    "pool_file": "validation_scenarios.npz",
+    "installed_units": {
+      "wind": 7,
+      "pv": 3,
+      "diesel": 2,
+      "battery_energy": 29,
+      "pcs": 6
+    },
+    "components": {
+      "wind": {
+        "scenarios_with_any_installed_module_unavailable": 4553,
+        "installed_module_hours_unavailable": 150761.0,
+        "module_statistics": [
+          {
+            "module_number": 1,
+            "installed": true,
+            "scenarios_with_unavailability": 837,
+            "initial_unavailable_scenarios": 1,
+            "unavailable_hours": 18825.0,
+            "unavailability_fraction": 0.0002148972602739726,
+            "failure_transitions": 882
+          },
+          {
+            "module_number": 2,
+            "installed": true,
+            "scenarios_with_unavailability": 808,
+            "initial_unavailable_scenarios": 4,
+            "unavailable_hours": 21665.0,
+            "unavailability_fraction": 0.0002473173515981735,
+            "failure_transitions": 841
+          },
+          {
+            "module_number": 3,
+            "installed": true,
+            "scenarios_with_unavailability": 827,
+            "initial_unavailable_scenarios": 4,
+            "unavailable_hours": 20485.0,
+            "unavailability_fraction": 0.0002338470319634703,
+            "failure_transitions": 860
+          },
+          {
+            "module_number": 4,
+            "installed": true,
+            "scenarios_with_unavailability": 849,
+            "initial_unavailable_scenarios": 4,
+            "unavailable_hours": 22696.0,
+            "unavailability_fraction": 0.00025908675799086756,
+            "failure_transitions": 892
+          },
+          {
+            "module_number": 5,
+            "installed": true,
+            "scenarios_with_unavailability": 827,
+            "initial_unavailable_scenarios": 3,
+            "unavailable_hours": 22311.0,
+            "unavailability_fraction": 0.0002546917808219178,
+            "failure_transitions": 865
+          },
+          {
+            "module_number": 6,
+            "installed": true,
+            "scenarios_with_unavailability": 865,
+            "initial_unavailable_scenarios": 2,
+            "unavailable_hours": 21880.0,
+            "unavailability_fraction": 0.0002497716894977169,
+            "failure_transitions": 901
+          },
+          {
+            "module_number": 7,
+            "installed": true,
+            "scenarios_with_unavailability": 848,
+            "initial_unavailable_scenarios": 0,
+            "unavailable_hours": 22899.0,
+            "unavailability_fraction": 0.0002614041095890411,
+            "failure_transitions": 885
+          }
+        ]
+      },
+      "pv": {
+        "scenarios_with_any_installed_module_unavailable": 2365,
+        "installed_module_hours_unavailable": 64517.0,
+        "module_statistics": [
+          {
+            "module_number": 1,
+            "installed": true,
+            "scenarios_with_unavailability": 834,
+            "initial_unavailable_scenarios": 1,
+            "unavailable_hours": 21904.0,
+            "unavailability_fraction": 0.0002500456621004566,
+            "failure_transitions": 865
+          },
+          {
+            "module_number": 2,
+            "installed": true,
+            "scenarios_with_unavailability": 880,
+            "initial_unavailable_scenarios": 5,
+            "unavailable_hours": 22137.0,
+            "unavailability_fraction": 0.0002527054794520548,
+            "failure_transitions": 910
+          },
+          {
+            "module_number": 3,
+            "installed": true,
+            "scenarios_with_unavailability": 835,
+            "initial_unavailable_scenarios": 2,
+            "unavailable_hours": 20476.0,
+            "unavailability_fraction": 0.00023374429223744293,
+            "failure_transitions": 869
+          }
+        ]
+      },
+      "diesel": {
+        "scenarios_with_any_installed_module_unavailable": 8250,
+        "installed_module_hours_unavailable": 831330.0,
+        "module_statistics": [
+          {
+            "module_number": 1,
+            "installed": true,
+            "scenarios_with_unavailability": 5855,
+            "initial_unavailable_scenarios": 48,
+            "unavailable_hours": 417713.0,
+            "unavailability_fraction": 0.004768413242009132,
+            "failure_transitions": 8769
+          },
+          {
+            "module_number": 2,
+            "installed": true,
+            "scenarios_with_unavailability": 5852,
+            "initial_unavailable_scenarios": 37,
+            "unavailable_hours": 413617.0,
+            "unavailability_fraction": 0.004721655251141553,
+            "failure_transitions": 8655
+          },
+          {
+            "module_number": 3,
+            "installed": false,
+            "scenarios_with_unavailability": 5780,
+            "initial_unavailable_scenarios": 53,
+            "unavailable_hours": 421848.0,
+            "unavailability_fraction": 0.004815616438356165,
+            "failure_transitions": 8567
+          },
+          {
+            "module_number": 4,
+            "installed": false,
+            "scenarios_with_unavailability": 5938,
+            "initial_unavailable_scenarios": 37,
+            "unavailable_hours": 425789.0,
+            "unavailability_fraction": 0.00486060502283105,
+            "failure_transitions": 8913
+          },
+          {
+            "module_number": 5,
+            "installed": false,
+            "scenarios_with_unavailability": 5907,
+            "initial_unavailable_scenarios": 50,
+            "unavailable_hours": 426823.0,
+            "unavailability_fraction": 0.004872408675799087,
+            "failure_transitions": 8744
+          }
+        ]
+      },
+      "pcs": {
+        "scenarios_with_any_installed_module_unavailable": 4067,
+        "installed_module_hours_unavailable": 127097.0,
+        "module_statistics": [
+          {
+            "module_number": 1,
+            "installed": true,
+            "scenarios_with_unavailability": 842,
+            "initial_unavailable_scenarios": 3,
+            "unavailable_hours": 21091.0,
+            "unavailability_fraction": 0.0002407648401826484,
+            "failure_transitions": 873
+          },
+          {
+            "module_number": 2,
+            "installed": true,
+            "scenarios_with_unavailability": 832,
+            "initial_unavailable_scenarios": 1,
+            "unavailable_hours": 21993.0,
+            "unavailability_fraction": 0.00025106164383561645,
+            "failure_transitions": 870
+          },
+          {
+            "module_number": 3,
+            "installed": true,
+            "scenarios_with_unavailability": 807,
+            "initial_unavailable_scenarios": 0,
+            "unavailable_hours": 19690.0,
+            "unavailability_fraction": 0.0002247716894977169,
+            "failure_transitions": 841
+          },
+          {
+            "module_number": 4,
+            "installed": true,
+            "scenarios_with_unavailability": 860,
+            "initial_unavailable_scenarios": 4,
+            "unavailable_hours": 22466.0,
+            "unavailability_fraction": 0.00025646118721461185,
+            "failure_transitions": 893
+          },
+          {
+            "module_number": 5,
+            "installed": true,
+            "scenarios_with_unavailability": 821,
+            "initial_unavailable_scenarios": 3,
+            "unavailable_hours": 21624.0,
+            "unavailability_fraction": 0.00024684931506849315,
+            "failure_transitions": 858
+          },
+          {
+            "module_number": 6,
+            "installed": true,
+            "scenarios_with_unavailability": 822,
+            "initial_unavailable_scenarios": 2,
+            "unavailable_hours": 20233.0,
+            "unavailability_fraction": 0.0002309703196347032,
+            "failure_transitions": 850
+          },
+          {
+            "module_number": 7,
+            "installed": false,
+            "scenarios_with_unavailability": 843,
+            "initial_unavailable_scenarios": 0,
+            "unavailable_hours": 21228.0,
+            "unavailability_fraction": 0.00024232876712328768,
+            "failure_transitions": 883
+          },
+          {
+            "module_number": 8,
+            "installed": false,
+            "scenarios_with_unavailability": 820,
+            "initial_unavailable_scenarios": 4,
+            "unavailable_hours": 20675.0,
+            "unavailability_fraction": 0.0002360159817351598,
+            "failure_transitions": 850
+          },
+          {
+            "module_number": 9,
+            "installed": false,
+            "scenarios_with_unavailability": 891,
+            "initial_unavailable_scenarios": 1,
+            "unavailable_hours": 23626.0,
+            "unavailability_fraction": 0.00026970319634703194,
+            "failure_transitions": 928
+          },
+          {
+            "module_number": 10,
+            "installed": false,
+            "scenarios_with_unavailability": 886,
+            "initial_unavailable_scenarios": 1,
+            "unavailable_hours": 22859.0,
+            "unavailability_fraction": 0.0002609474885844749,
+            "failure_transitions": 933
+          },
+          {
+            "module_number": 11,
+            "installed": false,
+            "scenarios_with_unavailability": 835,
+            "initial_unavailable_scenarios": 2,
+            "unavailable_hours": 20203.0,
+            "unavailability_fraction": 0.00023062785388127855,
+            "failure_transitions": 872
+          },
+          {
+            "module_number": 12,
+            "installed": false,
+            "scenarios_with_unavailability": 813,
+            "initial_unavailable_scenarios": 1,
+            "unavailable_hours": 19924.0,
+            "unavailability_fraction": 0.00022744292237442923,
+            "failure_transitions": 844
+          },
+          {
+            "module_number": 13,
+            "installed": false,
+            "scenarios_with_unavailability": 819,
+            "initial_unavailable_scenarios": 4,
+            "unavailable_hours": 20338.0,
+            "unavailability_fraction": 0.0002321689497716895,
+            "failure_transitions": 853
+          },
+          {
+            "module_number": 14,
+            "installed": false,
+            "scenarios_with_unavailability": 851,
+            "initial_unavailable_scenarios": 4,
+            "unavailable_hours": 21408.0,
+            "unavailability_fraction": 0.00024438356164383564,
+            "failure_transitions": 882
+          },
+          {
+            "module_number": 15,
+            "installed": false,
+            "scenarios_with_unavailability": 820,
+            "initial_unavailable_scenarios": 3,
+            "unavailable_hours": 21373.0,
+            "unavailability_fraction": 0.00024398401826484018,
+            "failure_transitions": 855
+          },
+          {
+            "module_number": 16,
+            "installed": false,
+            "scenarios_with_unavailability": 875,
+            "initial_unavailable_scenarios": 3,
+            "unavailable_hours": 21230.0,
+            "unavailability_fraction": 0.00024235159817351598,
+            "failure_transitions": 915
+          },
+          {
+            "module_number": 17,
+            "installed": false,
+            "scenarios_with_unavailability": 864,
+            "initial_unavailable_scenarios": 2,
+            "unavailable_hours": 22183.0,
+            "unavailability_fraction": 0.00025323059360730596,
+            "failure_transitions": 902
+          },
+          {
+            "module_number": 18,
+            "installed": false,
+            "scenarios_with_unavailability": 834,
+            "initial_unavailable_scenarios": 3,
+            "unavailable_hours": 21163.0,
+            "unavailability_fraction": 0.00024158675799086757,
+            "failure_transitions": 879
+          },
+          {
+            "module_number": 19,
+            "installed": false,
+            "scenarios_with_unavailability": 848,
+            "initial_unavailable_scenarios": 5,
+            "unavailable_hours": 20576.0,
+            "unavailability_fraction": 0.00023488584474885845,
+            "failure_transitions": 872
+          },
+          {
+            "module_number": 20,
+            "installed": false,
+            "scenarios_with_unavailability": 811,
+            "initial_unavailable_scenarios": 5,
+            "unavailable_hours": 21057.0,
+            "unavailability_fraction": 0.00024037671232876712,
+            "failure_transitions": 835
+          }
+        ]
+      }
+    },
+    "samples": 10000,
+    "hours": 8760,
+    "simultaneous_diesel_outages": {
+      "2": {
+        "scenarios": 88,
+        "hours_across_all_scenarios": 2326.0
+      }
+    },
+    "scenarios_with_any_equipment_unavailable": 9558
+  }
+}
