@@ -127,7 +127,8 @@ def run(args, output: Path) -> int:
         case = args.case or config["case"]
         data = load_case(args.data_root or config["data_root"], case,
                          args.start_hour if args.start_hour is not None else config["start_hour"],
-                         args.hours if args.hours is not None else config["hours"], config["modules"], config.get("load_scale", 1.0), commitment)
+                         args.hours if args.hours is not None else config["hours"], config["modules"], config.get("load_scale", 1.0), commitment,
+                         max_units=config.get("max_units"))
         reliability_config = dict(config["reliability"])
         for key in ("samples", "seed", "validation_samples", "validation_seed"):
             if getattr(args, key) is not None:

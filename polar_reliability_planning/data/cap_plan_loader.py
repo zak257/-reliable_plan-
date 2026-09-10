@@ -120,7 +120,8 @@ def _fill_like_cap_plan(values: np.ndarray) -> tuple[np.ndarray, int]:
 
 def load_case(data_root: str | Path, case: str, start_hour: int = 0, hours: int = 8760,
               modules: Mapping[str, float] | None = None, load_scale: float = 1.0,
-              unit_commitment: UnitCommitmentOptions | None = None) -> CaseData:
+              unit_commitment: UnitCommitmentOptions | None = None,
+              max_units: Mapping[str, int] | None = None) -> CaseData:
     root = Path(data_root).expanduser().resolve()
     directory = (root / case / "input").resolve()
     if not directory.is_relative_to(root):
@@ -177,6 +178,12 @@ def load_case(data_root: str | Path, case: str, start_hour: int = 0, hours: int 
             raise ValueError(f"Invalid source parameters for {key}")
         unit_bounds[key] = (math.ceil(lo / size - 1e-10), math.floor(hi / size + 1e-10))
         annual[key] = size * price / life
+    for key, maximum in (max_units or {}).items():
+        if key not in unit_bounds:
+            raise ValueError(f"Unknown max_units component: {key}")
+        if isinstance(maximum, bool) or not isinstance(maximum, int) or maximum < unit_bounds[key][0]:
+            raise ValueError(f"Invalid max_units for {key}: {maximum}")
+        unit_bounds[key] = (unit_bounds[key][0], maximum)
     fuel_eff = _value(dg, "柴油机燃油效率(kWh/kg)", "柴油发电效率(kWh/kg)")
     if fuel_eff <= 0:
         raise ValueError("Fuel efficiency must be positive")
@@ -192,4 +199,5 @@ def load_case(data_root: str | Path, case: str, start_hour: int = 0, hours: int 
                                     "imputed_values_in_full_csv": repaired, "load_scale": load_scale,
                                     "continuous_cyclic_soc": True, "battery_failure_model": "ideal_cells_with_failable_pcs",
                                     "diesel_dispatch": "module_unit_commitment" if (unit_commitment or UnitCommitmentOptions()).enabled else "continuous_0_to_available_capacity",
-                                    "capacity_bounds_source": bounds_kw})
+                                    "capacity_bounds_source": bounds_kw,
+                                    "max_units_override": dict(max_units or {})})

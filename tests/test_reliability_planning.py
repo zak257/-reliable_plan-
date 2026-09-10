@@ -251,6 +251,21 @@ class SolverTests(unittest.TestCase):
 
 @unittest.skipUnless(Path("/home/yzk/cap_plan/data/changcheng/input/curve.csv").is_file(), "Optional local cap_plan data is unavailable")
 class CapPlanIntegrationTests(unittest.TestCase):
+    def test_module_upper_override_preserves_inputs_and_costs(self):
+        baseline = load_case("/home/yzk/cap_plan/data", "zhongshan", hours=24)
+        expanded = load_case("/home/yzk/cap_plan/data", "zhongshan", hours=24,
+                             max_units={"wind": 10, "pv": 10})
+        self.assertEqual(expanded.unit_bounds["wind"], (0, 10))
+        self.assertEqual(expanded.unit_bounds["pv"], (0, 10))
+        for key in ("diesel", "battery_energy", "pcs"):
+            self.assertEqual(expanded.unit_bounds[key], baseline.unit_bounds[key])
+        self.assertEqual(expanded.annual_cost_per_unit, baseline.annual_cost_per_unit)
+        self.assertEqual(expanded.manifest, baseline.manifest)
+        np.testing.assert_array_equal(expanded.load_kw, baseline.load_kw)
+        for invalid in ({"wind": -1}, {"wind": 1.5}, {"wind": True}, {"typo": 10}):
+            with self.assertRaises(ValueError):
+                load_case("/home/yzk/cap_plan/data", "zhongshan", hours=24, max_units=invalid)
+
     def test_loader_matches_reference_full_year_inputs_and_costs(self):
         source = Path("/home/yzk/cap_plan/cap_plan_dual_bound_gurobi.py")
         if not source.is_file():

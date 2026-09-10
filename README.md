@@ -45,6 +45,10 @@ cd /home/yzk/reliable_plan
 # 注意：柴油运行 MTTF 按连续日历暴露使用；不是中山站实测参数
 ./run.sh plan --config config/zhongshan_literature_2000.toml --solver-config config/solver_3600_1pct.toml
 
+# 中山站扩展：20000 个规划场景、100000 个独立验证场景，风光各最多 10 台
+# 沿用文献参照故障参数；每次 3600 秒，经济 gap 1%，可靠性子问题 gap 0
+./run.sh plan --config config/zhongshan_literature_20000.toml --solver-config config/solver_3600_1pct.toml
+
 # 自定义限值、尾部水平与样本数
 ./run.sh plan --eens-limit 100 --cvar-limit 1000 --alpha 0.95 --samples 128 --validation-samples 256
 
@@ -85,6 +89,8 @@ cd /home/yzk/reliable_plan
 | 规划 / 验证种子 | 20260906 / 20260907 |
 
 年均资本、燃料成本、容量边界和风光曲线来自 cap_plan。UC 参数沿用其原生 Gurobi 模型中的常数。原 CSV 不提供故障统计，因此故障率、维修时间和天气参数仍是明确的研究假设。
+
+配置可用 `[max_units]` 为指定设备覆盖最大模块数，例如 `wind = 10`、`pv = 10` 各对应 1000 kW。未指定的设备仍使用 CSV 上限；原始 CSV 不会被改写。实际整数边界保存于 `resolved_config.json`，输入记录中的 `max_units_override` 保存覆盖值。
 
 ## 可靠性解释
 
