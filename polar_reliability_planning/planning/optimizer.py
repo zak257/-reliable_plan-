@@ -78,7 +78,8 @@ def optimize_reliability(data: CaseData, oracle: ReliabilityOracle, options: Sol
                                else (candidate.units, reliability))
             cut = ReliabilityCut(tuple(bad[k] for k in COMPONENTS), oracle.pool.fingerprint,
                                   evaluated.eens_kwh, evaluated.cvar_kwh, evaluated.metrics_are_lower_bounds,
-                                  sum(q is not None for q in evaluated.losses_kwh), evaluated.losses_are_relaxation_bounds)
+                                  sum(q is not None for q in evaluated.losses_kwh), evaluated.losses_are_relaxation_bounds,
+                                  information=evaluated.information)
             row["cut"] = cut.as_dict()
             master.add_cut(cut)
             if on_iteration:

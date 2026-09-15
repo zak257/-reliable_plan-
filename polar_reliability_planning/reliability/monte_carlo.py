@@ -1,7 +1,7 @@
 """Fixed-sample EENS/CVaR oracle using certified chronological UC dispatch."""
 from __future__ import annotations
 
-from dataclasses import dataclass, replace
+from dataclasses import dataclass, replace, field
 import time
 
 import gurobipy as gp
@@ -28,6 +28,7 @@ class ReliabilityResult:
     cvar_feasible: bool | None = True
     metrics_are_lower_bounds: bool = False
     losses_are_relaxation_bounds: bool = False
+    information: dict = field(default_factory=dict)
 
     def summary(self) -> dict:
         return {"eens_kwh": self.eens_kwh, "cvar_kwh": self.cvar_kwh, "feasible": self.feasible,
@@ -37,7 +38,8 @@ class ReliabilityResult:
                 "metrics_are_lower_bounds": self.metrics_are_lower_bounds,
                 "losses_are_relaxation_bounds": self.losses_are_relaxation_bounds,
                 "evaluated_scenarios": sum(q is not None for q in self.losses_kwh),
-                "violated_constraints": [name for name, ok in (("EENS", self.eens_feasible), ("CVaR", self.cvar_feasible)) if ok is False]}
+                "violated_constraints": [name for name, ok in (("EENS", self.eens_feasible), ("CVaR", self.cvar_feasible)) if ok is False],
+                **self.information}
 
 
 class ReliabilityOracle:

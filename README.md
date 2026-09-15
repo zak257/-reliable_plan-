@@ -1,5 +1,9 @@
 # 可靠性边界识别容量规划：UC + EENS/CVaR
 
+2026-09-14 更新：默认 `run.sh` 采用 [非预见事故调度](docs/nonanticipative_dispatch.md)，相同已观测历史的场景绑定出力、储能和逐机启停决策，事故初始 SOC 固定为 0.8。EENS/CVaR 由同一套联合策略满足。新默认配置是 `config/zhongshan_nonanticipative.toml`，为全年 16 场景的有限场景树原型；独立验证需要未见历史的控制规则，当前不会把验证集重新优化误报为策略验证。原显式配置和下文历史结果仍对应完全预见模型，不能当作非预见版本的结果。工作区另有的 `run_certified.sh` 不在本次信息结构改动范围内。
+
+快速检查：`./run.sh plan --hours 24 --samples 8 --solver-config config/solver_3600_1pct.toml`。新接口保存完整 `accident_policy.npz` 和非预见性审计；大于 200000 场景小时的联合模型默认要求显式调整资源上限。
+
 当前版本联合规划风电、光伏、柴油、电池和 PCS 容量，规划和故障场景运行均考虑柴油机启停、最低稳定出力、最小开停机时间，以及储能充放电互斥。可靠性同时要求 EENS 与 CVaR 通过。
 
 公开仓库：https://github.com/zak257/-reliable_plan-

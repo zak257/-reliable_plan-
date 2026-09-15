@@ -8,11 +8,16 @@ from ..reliability import ReliabilityOracle
 
 
 def run_sensitivity(data, pool, limits, eens_limits, options, max_iterations=100,
-                     lift_cuts=False, env=None, on_iteration=None):
+                     lift_cuts=False, env=None, on_iteration=None, accident_options=None):
     rows = []
     for limit in eens_limits:
         current_limits = replace(limits, eens_kwh=float(limit))
-        oracle = ReliabilityOracle(data, pool, current_limits, options, env)
+        if accident_options is None:
+            oracle = ReliabilityOracle(data, pool, current_limits, options, env)
+        else:
+            from ..reliability.nonanticipative import NonanticipativeOracle
+            oracle = NonanticipativeOracle(data, pool, current_limits, options, env,
+                                          dispatch_options=accident_options)
         try:
             def callback(row):
                 if on_iteration:

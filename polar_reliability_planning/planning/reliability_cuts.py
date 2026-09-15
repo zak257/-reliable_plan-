@@ -1,7 +1,7 @@
 """Exclude a failed point's complete lower orthant on the five-dimensional grid."""
 from __future__ import annotations
 
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 
 import gurobipy as gp
 from gurobipy import GRB
@@ -18,6 +18,7 @@ class ReliabilityCut:
     metrics_are_lower_bounds: bool = False
     evaluated_scenarios: int | None = None
     losses_are_relaxation_bounds: bool = False
+    information: dict = field(default_factory=dict)
 
     @property
     def point(self) -> dict[str, int]:
@@ -31,7 +32,8 @@ class ReliabilityCut:
                 "eens_kwh": self.eens_kwh, "cvar_kwh": self.cvar_kwh,
                 "metrics_are_lower_bounds": self.metrics_are_lower_bounds,
                 "evaluated_scenarios": self.evaluated_scenarios,
-                "losses_are_relaxation_bounds": self.losses_are_relaxation_bounds}
+                "losses_are_relaxation_bounds": self.losses_are_relaxation_bounds,
+                **({"joint_policy_evidence": self.information} if self.information else {})}
 
 
 def add_reliability_cut(model: gp.Model, unit_vars: dict[str, gp.Var], bounds: dict,

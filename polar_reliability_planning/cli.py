@@ -14,6 +14,7 @@ from .config import ROOT, ReliabilityLimits, SolverOptions, UnitCommitmentOption
 from .data import COMPONENTS, load_case
 from .planning import MasterMILP, optimize_reliability
 from .reliability import ReliabilityOracle
+from .reliability.nonanticipative import NonanticipativeOracle, NonanticipativeOptions
 from .reliability.operation_model import OptimizationError
 from .reporting import append_jsonl, write_csv, write_dispatch, write_json
 from .scenario_generation import ScenarioPool, generate_pool
@@ -25,7 +26,7 @@ from .validation.small_system import validate_small_system
 def parse_args(argv=None):
     parser = argparse.ArgumentParser(description="cap_plan 数据 + Gurobi：可靠性边界识别容量规划")
     parser.add_argument("command", nargs="?", default="plan", choices=("plan", "baseline", "evaluate", "validate-small", "sensitivity"))
-    parser.add_argument("--config", type=Path, default=ROOT / "config/system_config.toml")
+    parser.add_argument("--config", type=Path, default=ROOT / "config/zhongshan_nonanticipative.toml")
     parser.add_argument("--solver-config", type=Path, default=ROOT / "config/solver_config.toml")
     parser.add_argument("--case")
     parser.add_argument("--data-root", type=Path)
@@ -44,6 +45,8 @@ def parse_args(argv=None):
     parser.add_argument("--time-limit", type=float)
     parser.add_argument("--oracle-time-limit", type=float)
     parser.add_argument("--unit-commitment", action=argparse.BooleanOptionalAction, default=None)
+    parser.add_argument("--dispatch-information", choices=("nonanticipative", "perfect_foresight"),
+                        help="Accident dispatch information structure; old configurations retain their historical mode")
     parser.add_argument("--mip-gap", type=float)
     parser.add_argument("--threads", type=int)
     parser.add_argument("--solver-log", action="store_true")
@@ -101,6 +104,12 @@ def run(args, output: Path) -> int:
         overrides["output_flag"] = True
     options = replace(options, **overrides)
     commitment = UnitCommitmentOptions(**config.get("unit_commitment", {}))
+    accident = dict(config.get("accident_dispatch", {}))
+    information_mode = args.dispatch_information or accident.pop("mode", "perfect_foresight")
+    accident.pop("mode", None)
+    if information_mode not in ("perfect_foresight", "nonanticipative"):
+        raise ValueError(f"Unknown accident dispatch mode: {information_mode}")
+    accident_options = NonanticipativeOptions(**accident) if information_mode == "nonanticipative" else None
     if args.unit_commitment is not None:
         commitment = replace(commitment, enabled=args.unit_commitment)
     history = []
@@ -135,6 +144,14 @@ def run(args, output: Path) -> int:
                 reliability_config[key] = getattr(args, key)
         if reliability_config["validation_samples"] < 0:
             raise ValueError("validation_samples cannot be negative")
+        if information_mode == "nonanticipative" and args.command != "baseline":
+            if args.command == "plan" and reliability_config["validation_samples"]:
+                raise ValueError("Nonanticipative policy is defined only on the planning tree. "
+                                 "Re-optimizing validation scenarios would not validate this policy. "
+                                 "Use --validation-samples 0 for this tree experiment; a controller for unseen "
+                                 "histories is required before independent validation.")
+            if args.scenarios is None:
+                NonanticipativeOracle.check_size(reliability_config["samples"], data.hours, accident_options)
         weather = dict(config.get("weather", {}))
         if args.climate is not None:
             weather["enabled"] = args.climate
@@ -153,6 +170,7 @@ def run(args, output: Path) -> int:
                     "solver_semantics": {"economic_mip_gap": options.mip_gap, "reliability_mip_gap": 0.0,
                                          "time_limit_scope": "per_optimization_call"},
                     "unit_commitment": asdict(commitment),
+                    "accident_dispatch": {"mode": information_mode, **(asdict(accident_options) if accident_options else {})},
                     "reliability": reliability_config, "weather": weather, "failures": config.get("failures", {}),
                     "planning": {"max_iterations": max_iterations, "lift_cuts": lift_cuts},
                     "source_config": str(args.config.resolve()), "scenario_source": str(args.scenarios.resolve()) if args.scenarios else None}
@@ -162,7 +180,9 @@ def run(args, output: Path) -> int:
         base = {"case": data.name, "hours": data.hours, "demand_kwh": data.demand_kwh, "limits": asdict(limits),
                 "cost_basis": "straight_line_annual_capital_times_hours_over_8760_plus_nominal_fuel_and_startups",
                 "unit_commitment": asdict(commitment),
-                "reliability_basis": "perfect_foresight_minimum_unserved_energy_on_fixed_samples"}
+                "reliability_basis": ("joint_nonanticipative_risk_policy_on_fixed_tree" if information_mode == "nonanticipative"
+                                      else "perfect_foresight_minimum_unserved_energy_on_fixed_samples"),
+                "accident_dispatch": resolved["accident_dispatch"]}
         if args.command == "baseline":
             master = MasterMILP(data, options, env=env)
             try:
@@ -179,6 +199,8 @@ def run(args, output: Path) -> int:
         pool = ScenarioPool.load(args.scenarios) if args.scenarios else generate_pool(data, reliability_config["samples"],
                    reliability_config["seed"], config.get("failures", {}), weather, generation_progress("training"))
         pool.check_data(data)
+        if information_mode == "nonanticipative":
+            NonanticipativeOracle.check_size(pool.samples, data.hours, accident_options)
         if args.command == "plan" and reliability_config["validation_samples"]:
             if not {"seed", "failures", "weather"}.issubset(pool.metadata):
                 raise ValueError("Loaded pool lacks its generating law; use --validation-samples 0 for a custom finite distribution")
@@ -192,22 +214,33 @@ def run(args, output: Path) -> int:
             if not args.eens_limits:
                 raise ValueError("sensitivity requires --eens-limits")
             values = [float(v) for v in args.eens_limits.split(",")]
-            rows = run_sensitivity(data, pool, limits, values, options, max_iterations, lift_cuts, env, on_iteration)
+            rows = run_sensitivity(data, pool, limits, values, options, max_iterations, lift_cuts, env, on_iteration,
+                                   accident_options=accident_options)
             write_json(output / "summary.json", {**base, "sensitivity": rows, "sample_fingerprint": pool.fingerprint})
             write_csv(output / "sensitivity.csv", rows)
             progress("complete", command=args.command)
             return 0 if all(r["solution"] is not None for r in rows) else 2
         def oracle_progress(done, total, eens, cvar):
+            if information_mode == "nonanticipative":
+                progress("joint_policy_evaluated", completed=done, total=total, eens_kwh=eens, cvar_kwh=cvar)
+                _log(f"联合非预见策略: EENS={eens:.6f}, CVaR={cvar:.6f} kWh")
+                return
             progress("training_oracle", completed=done, total=total, eens_lower_bound_kwh=eens,
                      cvar_lower_bound_kwh=cvar, metrics_are_lower_bounds=True)
             _log(f"Oracle {done}/{total}: 固定样本 EENS下界={eens:.6f}, CVaR下界={cvar:.6f} kWh")
 
-        oracle = ReliabilityOracle(data, pool, limits, options, env, on_progress=oracle_progress,
-                                   on_scenario=scenario_checkpoint("training"))
+        if information_mode == "nonanticipative":
+            oracle = NonanticipativeOracle(data, pool, limits, options, env, on_progress=oracle_progress,
+                                           on_scenario=scenario_checkpoint("training"), dispatch_options=accident_options)
+        else:
+            oracle = ReliabilityOracle(data, pool, limits, options, env, on_progress=oracle_progress,
+                                       on_scenario=scenario_checkpoint("training"))
         try:
             if args.command == "evaluate":
                 units = _read_units(args, data)
                 result = oracle.evaluate(units)
+                if information_mode == "nonanticipative":
+                    oracle.save_policy(output / "accident_policy.npz", units)
                 write_json(output / "summary.json", {**base, "units": units, "capacities": data.capacities(units),
                                                      "reliability": result.summary()})
                 write_csv(output / "scenario_losses.csv", [{"scenario": s, "probability": pool.probabilities[s], "loss_kwh": q}
@@ -222,13 +255,19 @@ def run(args, output: Path) -> int:
                        "solution": result.solution.summary() if result.solution else None,
                        "reliability": result.reliability.summary() if result.reliability else None,
                        "lower_bound_yuan": result.lower_bound_yuan, "iterations": len(result.history),
-                       "cuts": [c.as_dict() for c in result.cuts], "oracle_evaluations": len(oracle.cache),
-                       "oracle_scenario_solves": oracle.operation.solve_count,
+                       "cuts": [c.as_dict() for c in result.cuts], "oracle_evaluations": len(oracle.cache)}
+            if information_mode == "nonanticipative":
+                summary.update(joint_model_solves=oracle.joint_model_solves,
+                               independent_validation_scope="unseen_history_controller_not_implemented")
+                if result.solution is not None:
+                    oracle.save_policy(output / "accident_policy.npz", result.solution.units)
+            else:
+                summary.update({"oracle_scenario_solves": oracle.operation.solve_count,
                        "oracle_relaxation_lp_solves": oracle.relaxation_oracle.operation.solver_calls if oracle.relaxation_oracle else 0,
                        "oracle_full_mip_solves": oracle.operation.full_mip_solves,
                        "oracle_direct_zero_loss_certificates": oracle.operation.direct_zero_loss_certificates,
                        "oracle_storage_zero_loss_certificates": oracle.operation.storage_zero_loss_certificates,
-                       "oracle_zero_loss_certificates": oracle.operation.zero_loss_certificates}
+                       "oracle_zero_loss_certificates": oracle.operation.zero_loss_certificates})
             write_json(output / "summary.json", summary)
             write_csv(output / "oracle_evaluations.csv", [{"units": dict(zip(COMPONENTS, key)), **v.summary()}
                                                          for key, v in oracle.cache.items()])
