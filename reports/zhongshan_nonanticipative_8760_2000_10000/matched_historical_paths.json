@@ -1,0 +1,130 @@
+{
+  "historical_source": "outputs/zhongshan_literature_8760_20000_100000_w10_pv10",
+  "arrays": {
+    "training": {
+      "available_wind.npy": {
+        "prefix_shape": [
+          2000,
+          10,
+          8760
+        ],
+        "equal": true
+      },
+      "available_pv.npy": {
+        "prefix_shape": [
+          2000,
+          10,
+          8760
+        ],
+        "equal": true
+      },
+      "available_diesel.npy": {
+        "prefix_shape": [
+          2000,
+          5,
+          8760
+        ],
+        "equal": true
+      },
+      "available_pcs.npy": {
+        "prefix_shape": [
+          2000,
+          20,
+          8760
+        ],
+        "equal": true
+      },
+      "weather.npy": {
+        "prefix_shape": [
+          2000,
+          8760
+        ],
+        "equal": true
+      },
+      "wind_factor.npy": {
+        "prefix_shape": [
+          2000,
+          8760
+        ],
+        "equal": true
+      },
+      "pv_factor.npy": {
+        "prefix_shape": [
+          2000,
+          8760
+        ],
+        "equal": true
+      },
+      "load_factor.npy": {
+        "prefix_shape": [
+          2000,
+          8760
+        ],
+        "equal": true
+      }
+    },
+    "validation": {
+      "available_wind.npy": {
+        "prefix_shape": [
+          10000,
+          10,
+          8760
+        ],
+        "equal": true
+      },
+      "available_pv.npy": {
+        "prefix_shape": [
+          10000,
+          10,
+          8760
+        ],
+        "equal": true
+      },
+      "available_diesel.npy": {
+        "prefix_shape": [
+          10000,
+          5,
+          8760
+        ],
+        "equal": true
+      },
+      "available_pcs.npy": {
+        "prefix_shape": [
+          10000,
+          20,
+          8760
+        ],
+        "equal": true
+      },
+      "weather.npy": {
+        "prefix_shape": [
+          10000,
+          8760
+        ],
+        "equal": true
+      },
+      "wind_factor.npy": {
+        "prefix_shape": [
+          10000,
+          8760
+        ],
+        "equal": true
+      },
+      "pv_factor.npy": {
+        "prefix_shape": [
+          10000,
+          8760
+        ],
+        "equal": true
+      },
+      "load_factor.npy": {
+        "prefix_shape": [
+          10000,
+          8760
+        ],
+        "equal": true
+      }
+    }
+  },
+  "elapsed_seconds": 24.358884346671402
+}

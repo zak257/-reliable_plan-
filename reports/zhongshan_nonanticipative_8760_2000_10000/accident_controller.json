@@ -1,0 +1,39 @@
+{
+  "controller": {
+    "controller": "causal_cold_reserve_idle_storage_v1",
+    "units": {
+      "wind": 6,
+      "pv": 7,
+      "diesel": 3,
+      "battery_energy": 21,
+      "pcs": 3
+    },
+    "target_online": 2,
+    "initial_soc": 0.8,
+    "storage_rule": "constant_inventory_no_charge_or_discharge",
+    "information_timing": "current_module_availability_then_dispatch",
+    "terminal_energy": "equals_fixed_initial_energy_on_every_path",
+    "unit_commitment": {
+      "enabled": true,
+      "min_output_fraction": 0.2,
+      "min_up_hours": 3.0,
+      "min_down_hours": 3.0,
+      "startup_cost_yuan": 0.0
+    },
+    "module_sizes": {
+      "wind": 100.0,
+      "pv": 100.0,
+      "diesel": 300.0,
+      "battery_energy": 50.0,
+      "pcs": 50.0
+    },
+    "dt_hours": 1.0,
+    "hours": 8760,
+    "declared_load_range_kw": [
+      178.445,
+      323.71
+    ],
+    "nominal_load_sha256": "b9f3c845d38ebda89ad61d1fc14565ff3c15e9768aab9008c0aa16042a301620"
+  },
+  "controller_sha256": "05d3528a4eac921db2a443789a18f038fb72ed19f61dcdc790d2729b01549d9f"
+}

@@ -1,0 +1,18 @@
+{
+  "training": {
+    "EENS": 35.02691561618334,
+    "CVaR": 700.5383123236649,
+    "positive": 85,
+    "maximum": 7711.3916665,
+    "maximum_index": 556,
+    "checkpoints_checked": 2000
+  },
+  "validation": {
+    "EENS": 19.462342734144446,
+    "CVaR": 389.24685468289147,
+    "positive": 396,
+    "maximum": 10025.923333533334,
+    "maximum_index": 3950,
+    "checkpoints_checked": 10000
+  }
+}

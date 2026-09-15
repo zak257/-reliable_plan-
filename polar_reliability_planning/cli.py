@@ -15,6 +15,7 @@ from .data import COMPONENTS, load_case
 from .planning import MasterMILP, optimize_reliability
 from .reliability import ReliabilityOracle
 from .reliability.nonanticipative import NonanticipativeOracle, NonanticipativeOptions
+from .reliability.causal_certificates import NonanticipativeCertificateOracle, evaluate_controller
 from .reliability.operation_model import OptimizationError
 from .reporting import append_jsonl, write_csv, write_dispatch, write_json
 from .scenario_generation import ScenarioPool, generate_pool
@@ -45,12 +46,13 @@ def parse_args(argv=None):
     parser.add_argument("--time-limit", type=float)
     parser.add_argument("--oracle-time-limit", type=float)
     parser.add_argument("--unit-commitment", action=argparse.BooleanOptionalAction, default=None)
-    parser.add_argument("--dispatch-information", choices=("nonanticipative", "perfect_foresight"),
+    parser.add_argument("--dispatch-information", choices=("nonanticipative", "nonanticipative_certificates", "perfect_foresight"),
                         help="Accident dispatch information structure; old configurations retain their historical mode")
     parser.add_argument("--mip-gap", type=float)
     parser.add_argument("--threads", type=int)
     parser.add_argument("--solver-log", action="store_true")
     parser.add_argument("--scenarios", type=Path, help="Reuse an existing training_scenarios.npz")
+    parser.add_argument("--validation-scenarios", type=Path, help="Reuse independent scenarios with the same generating law")
     group = parser.add_mutually_exclusive_group()
     group.add_argument("--units", help="JSON object (or JSON file) with integer module counts")
     group.add_argument("--capacity", help="JSON object (or JSON file) with capacities in kW / kWh")
@@ -107,9 +109,9 @@ def run(args, output: Path) -> int:
     accident = dict(config.get("accident_dispatch", {}))
     information_mode = args.dispatch_information or accident.pop("mode", "perfect_foresight")
     accident.pop("mode", None)
-    if information_mode not in ("perfect_foresight", "nonanticipative"):
+    if information_mode not in ("perfect_foresight", "nonanticipative", "nonanticipative_certificates"):
         raise ValueError(f"Unknown accident dispatch mode: {information_mode}")
-    accident_options = NonanticipativeOptions(**accident) if information_mode == "nonanticipative" else None
+    accident_options = NonanticipativeOptions(**accident) if information_mode != "perfect_foresight" else None
     if args.unit_commitment is not None:
         commitment = replace(commitment, enabled=args.unit_commitment)
     history = []
@@ -144,6 +146,10 @@ def run(args, output: Path) -> int:
                 reliability_config[key] = getattr(args, key)
         if reliability_config["validation_samples"] < 0:
             raise ValueError("validation_samples cannot be negative")
+        if args.validation_scenarios and (args.command != "plan" or not reliability_config["validation_samples"]):
+            raise ValueError("--validation-scenarios requires plan with positive validation_samples")
+        if information_mode == "nonanticipative_certificates" and args.command == "sensitivity":
+            raise ValueError("Use separate plan runs for nonanticipative certificate sensitivity")
         if information_mode == "nonanticipative" and args.command != "baseline":
             if args.command == "plan" and reliability_config["validation_samples"]:
                 raise ValueError("Nonanticipative policy is defined only on the planning tree. "
@@ -180,7 +186,8 @@ def run(args, output: Path) -> int:
         base = {"case": data.name, "hours": data.hours, "demand_kwh": data.demand_kwh, "limits": asdict(limits),
                 "cost_basis": "straight_line_annual_capital_times_hours_over_8760_plus_nominal_fuel_and_startups",
                 "unit_commitment": asdict(commitment),
-                "reliability_basis": ("joint_nonanticipative_risk_policy_on_fixed_tree" if information_mode == "nonanticipative"
+                "reliability_basis": ("nonanticipative_causal_upper_witness_and_relaxation_lower_bound" if information_mode == "nonanticipative_certificates"
+                                      else "joint_nonanticipative_risk_policy_on_fixed_tree" if information_mode == "nonanticipative"
                                       else "perfect_foresight_minimum_unserved_energy_on_fixed_samples"),
                 "accident_dispatch": resolved["accident_dispatch"]}
         if args.command == "baseline":
@@ -221,6 +228,11 @@ def run(args, output: Path) -> int:
             progress("complete", command=args.command)
             return 0 if all(r["solution"] is not None for r in rows) else 2
         def oracle_progress(done, total, eens, cvar):
+            if information_mode == "nonanticipative_certificates":
+                progress("causal_policy_evaluation", completed=done, total=total,
+                         controller_eens_partial_kwh=eens, controller_cvar_partial_kwh=cvar)
+                _log(f"因果策略 {done}/{total}: 固定全样本权重累计 EENS={eens:.6f}, CVaR={cvar:.6f} kWh")
+                return
             if information_mode == "nonanticipative":
                 progress("joint_policy_evaluated", completed=done, total=total, eens_kwh=eens, cvar_kwh=cvar)
                 _log(f"联合非预见策略: EENS={eens:.6f}, CVaR={cvar:.6f} kWh")
@@ -229,7 +241,10 @@ def run(args, output: Path) -> int:
                      cvar_lower_bound_kwh=cvar, metrics_are_lower_bounds=True)
             _log(f"Oracle {done}/{total}: 固定样本 EENS下界={eens:.6f}, CVaR下界={cvar:.6f} kWh")
 
-        if information_mode == "nonanticipative":
+        if information_mode == "nonanticipative_certificates":
+            oracle = NonanticipativeCertificateOracle(data, pool, limits, options, env, on_progress=oracle_progress,
+                                                       on_scenario=scenario_checkpoint("training"), dispatch_options=accident_options)
+        elif information_mode == "nonanticipative":
             oracle = NonanticipativeOracle(data, pool, limits, options, env, on_progress=oracle_progress,
                                            on_scenario=scenario_checkpoint("training"), dispatch_options=accident_options)
         else:
@@ -241,6 +256,8 @@ def run(args, output: Path) -> int:
                 result = oracle.evaluate(units)
                 if information_mode == "nonanticipative":
                     oracle.save_policy(output / "accident_policy.npz", units)
+                elif information_mode == "nonanticipative_certificates" and result.feasible:
+                    oracle.save_policy(output / "accident_controller.json", units)
                 write_json(output / "summary.json", {**base, "units": units, "capacities": data.capacities(units),
                                                      "reliability": result.summary()})
                 write_csv(output / "scenario_losses.csv", [{"scenario": s, "probability": pool.probabilities[s], "loss_kwh": q}
@@ -256,7 +273,14 @@ def run(args, output: Path) -> int:
                        "reliability": result.reliability.summary() if result.reliability else None,
                        "lower_bound_yuan": result.lower_bound_yuan, "iterations": len(result.history),
                        "cuts": [c.as_dict() for c in result.cuts], "oracle_evaluations": len(oracle.cache)}
-            if information_mode == "nonanticipative":
+            if information_mode == "nonanticipative_certificates":
+                summary.update(joint_model_solves=oracle.joint_model_solves,
+                               relaxation_scenario_solves=oracle.lower.operation.solve_count,
+                               causal_candidate_evaluations=len(oracle.witnesses),
+                               independent_validation_scope="same_fixed_causal_controller_on_new_paths")
+                if result.solution is not None:
+                    oracle.save_policy(output / "accident_controller.json", result.solution.units)
+            elif information_mode == "nonanticipative":
                 summary.update(joint_model_solves=oracle.joint_model_solves,
                                independent_validation_scope="unseen_history_controller_not_implemented")
                 if result.solution is not None:
@@ -287,16 +311,33 @@ def run(args, output: Path) -> int:
                 validation_seed = reliability_config["validation_seed"]
                 _log(f"独立验证: {count} 个样本, seed={validation_seed}")
                 # Loaded training pools carry their actual failure/weather law.
-                validation_pool = generate_pool(data, count, validation_seed,
-                    pool.metadata.get("failures", config.get("failures", {})), pool.metadata.get("weather", weather),
-                    generation_progress("validation"))
+                if args.validation_scenarios:
+                    validation_pool = ScenarioPool.load(args.validation_scenarios)
+                    validation_pool.check_data(data)
+                    if validation_pool.samples != count or validation_pool.metadata.get("seed") != validation_seed:
+                        raise ValueError("Validation pool count/seed differs from requested configuration")
+                    if any(validation_pool.metadata.get(k) != pool.metadata.get(k) for k in ("failures", "weather")):
+                        raise ValueError("Validation pool law differs from training pool")
+                else:
+                    validation_pool = generate_pool(data, count, validation_seed,
+                        pool.metadata.get("failures", config.get("failures", {})), pool.metadata.get("weather", weather),
+                        generation_progress("validation"))
                 validation_pool.save(output / "validation_scenarios.npz")
                 def validation_progress(done, total, eens, cvar):
                     progress("validation", completed=done, total=total, eens_lower_bound_kwh=eens,
                              cvar_lower_bound_kwh=cvar, metrics_are_lower_bounds=done < total)
                     _log(f"独立验证 {done}/{total}: EENS下界={eens:.6f}, CVaR下界={cvar:.6f} kWh")
-                validation = validate_capacity(data, result.solution.units, validation_pool, limits, options, env,
-                                               validation_progress, scenario_checkpoint("validation"))
+                if information_mode == "nonanticipative_certificates":
+                    checked = evaluate_controller(data, validation_pool, limits, result.solution.units,
+                                                  accident_options, validation_progress, scenario_checkpoint("validation"),
+                                                  sample_role="independent_holdout")
+                    if checked.information["controller_sha256"] != result.reliability.information["controller_sha256"]:
+                        raise ValueError("Validation controller differs from frozen planning controller")
+                    validation = {**checked.summary(), "losses_kwh": list(checked.losses_kwh),
+                                  "interpretation": "independent evaluation of the same causal controller; not population certification"}
+                else:
+                    validation = validate_capacity(data, result.solution.units, validation_pool, limits, options, env,
+                                                   validation_progress, scenario_checkpoint("validation"))
                 summary["validation"] = {k: v for k, v in validation.items() if k != "losses_kwh"}
                 write_csv(output / "validation_losses.csv", [{"scenario": s, "loss_kwh": q}
                                                              for s, q in enumerate(validation["losses_kwh"])])

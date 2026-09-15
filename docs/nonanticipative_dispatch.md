@@ -1,5 +1,7 @@
 # 事故调度的非预见性约束
 
+全年大样本另提供 [非预见策略证据与独立验证接口](nonanticipative_certificates.md)，可以利用对未见历史也有定义的因果策略进行验证。以下限制针对原 `nonanticipative` 联合场景树接口本身；新证据接口不把验证集上的树重新优化当作验证。
+
 本版本在 `run.sh` 的固定场景规划中实现联合场景树 UC。默认入口读取 `config/zhongshan_nonanticipative.toml`。已有显式历史配置未声明 `accident_dispatch` 时仍按完全预见口径运行，以便复现历史结果；可通过 `--dispatch-information nonanticipative` 显式切换。
 
 工作区另有独立的 `run_certified.sh` 总体置信认证实现；本次修改没有将联合场景树策略当作其独立逐路径 Oracle。两种程序的信息结构和统计保证不能混用。

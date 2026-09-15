@@ -1,0 +1,30 @@
+{
+  "comparison": {
+    "training": {
+      "samples": 2000,
+      "perfect_foresight_EENS": 22.474901451925362,
+      "perfect_foresight_CVaR": 449.4980290385066,
+      "causal_EENS": 35.02691561618334,
+      "causal_CVaR": 700.5383123236649,
+      "EENS_increase_percent": 55.84902870923458
+    },
+    "validation": {
+      "samples": 10000,
+      "perfect_foresight_EENS": 11.447606873540034,
+      "perfect_foresight_CVaR": 228.95213747080032,
+      "causal_EENS": 19.462342734144446,
+      "causal_CVaR": 389.24685468289147,
+      "EENS_increase_percent": 70.01232614940378
+    }
+  },
+  "capacity": {
+    "wind": 600.0,
+    "pv": 700.0,
+    "diesel": 900.0,
+    "battery_energy": 1050.0,
+    "pcs": 150.0
+  },
+  "historical_source": "outputs/zhongshan_literature_8760_20000_100000_w10_pv10",
+  "paths_and_input_files_verified_equal": true,
+  "scope": "Effect of the selected causal idle-storage controller AND initial-state restriction, not the isolated price of nonanticipativity."
+}

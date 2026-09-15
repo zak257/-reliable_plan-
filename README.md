@@ -1,5 +1,9 @@
 # 可靠性边界识别容量规划：UC + EENS/CVaR
 
+全年大样本新增 [非预见可行策略证据接口](docs/nonanticipative_certificates.md)：使用可执行因果策略证明通过、完全预见松弛下界证明失败，证据不足时明确未决。配置 `config/zhongshan_nonanticipative_2000.toml` 使用 2000 个规划场景与 10000 个独立验证场景，并在两组样本上执行同一控制器；保留初始 SOC 0.8 和首尾库存相等。命令：`./run.sh plan --config config/zhongshan_nonanticipative_2000.toml --solver-config config/solver_3600_1pct.toml`。
+
+该全年 [2000/10000 非预见实验已完成](docs/zhongshan_nonanticipative_2000_results.md)：容量为风 600 kW、光 700 kW、柴油 900 kW、电池 1050 kWh、PCS 150 kW；年规划成本 3,285,878.17 元，gap 0.8164%。规划 EENS/CVaR 为 35.026916/700.538312 kWh，独立验证为 19.462343/389.246855 kWh，均通过。报告含同容量同场景的历史对照及两组风险曲线。事故策略采用冷备用且储能保持库存；风险是具体因果策略的表现，成本仍按标称经济调度计算。
+
 2026-09-14 更新：默认 `run.sh` 采用 [非预见事故调度](docs/nonanticipative_dispatch.md)，相同已观测历史的场景绑定出力、储能和逐机启停决策，事故初始 SOC 固定为 0.8。EENS/CVaR 由同一套联合策略满足。新默认配置是 `config/zhongshan_nonanticipative.toml`，为全年 16 场景的有限场景树原型；独立验证需要未见历史的控制规则，当前不会把验证集重新优化误报为策略验证。原显式配置和下文历史结果仍对应完全预见模型，不能当作非预见版本的结果。工作区另有的 `run_certified.sh` 不在本次信息结构改动范围内。
 
 快速检查：`./run.sh plan --hours 24 --samples 8 --solver-config config/solver_3600_1pct.toml`。新接口保存完整 `accident_policy.npz` 和非预见性审计；大于 200000 场景小时的联合模型默认要求显式调整资源上限。
