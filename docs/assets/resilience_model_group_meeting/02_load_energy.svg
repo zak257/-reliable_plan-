@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="800.39952pt" height="353.99952pt" viewBox="0 0 800.39952 353.99952" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-09-23T19:04:52.873040</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 353.99952 
+L 800.39952 353.99952 
+L 800.39952 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 80.2 313.24952 
+L 793.19952 313.24952 
+L 793.19952 24.300375 
+L 80.2 24.300375 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <path d="M 80.2 313.24952 
+L 80.2 24.300375 
+" clip-path="url(#p136108d21e)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_2">
+      <defs>
+       <path id="m795fd2d983" d="M 0 0 
+L 0 3.5 
+" style="stroke: #000000; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m795fd2d983" x="80.2" y="313.24952" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="font-size: 11px; font-family: 'Noto Sans CJK JP'; text-anchor: middle" x="80.2" y="329.004832" transform="rotate(-0 80.2 329.004832)">0</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_3">
+      <path d="M 171.027964 313.24952 
+L 171.027964 24.300375 
+" clip-path="url(#p136108d21e)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#m795fd2d983" x="171.027964" y="313.24952" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="font-size: 11px; font-family: 'Noto Sans CJK JP'; text-anchor: middle" x="171.027964" y="329.004832" transform="rotate(-0 171.027964 329.004832)">200</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_5">
+      <path d="M 261.855929 313.24952 
+L 261.855929 24.300375 
+" clip-path="url(#p136108d21e)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_6">
+      <g>
+       <use xlink:href="#m795fd2d983" x="261.855929" y="313.24952" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="font-size: 11px; font-family: 'Noto Sans CJK JP'; text-anchor: middle" x="261.855929" y="329.004832" transform="rotate(-0 261.855929 329.004832)">400</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_7">
+      <path d="M 352.683893 313.24952 
+L 352.683893 24.300375 
+" clip-path="url(#p136108d21e)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_8">
+      <g>
+       <use xlink:href="#m795fd2d983" x="352.683893" y="313.24952" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="font-size: 11px; font-family: 'Noto Sans CJK JP'; text-anchor: middle" x="352.683893" y="329.004832" transform="rotate(-0 352.683893 329.004832)">600</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_9">
+      <path d="M 443.511857 313.24952 
+L 443.511857 24.300375 
+" clip-path="url(#p136108d21e)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_10">
+      <g>
+       <use xlink:href="#m795fd2d983" x="443.511857" y="313.24952" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="font-size: 11px; font-family: 'Noto Sans CJK JP'; text-anchor: middle" x="443.511857" y="329.004832" transform="rotate(-0 443.511857 329.004832)">800</text>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_11">
+      <path d="M 534.339822 313.24952 
+L 534.339822 24.300375 
+" clip-path="url(#p136108d21e)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_12">
+      <g>
+       <use xlink:href="#m795fd2d983" x="534.339822" y="313.24952" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_6">
+      <text style="font-size: 11px; font-family: 'Noto Sans CJK JP'; text-anchor: middle" x="534.339822" y="329.004832" transform="rotate(-0 534.339822 329.004832)">1000</text>
+     </g>
+    </g>
+    <g id="xtick_7">
+     <g id="line2d_13">
+      <path d="M 625.167786 313.24952 
+L 625.167786 24.300375 
+" clip-path="url(#p136108d21e)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_14">
+      <g>
+       <use xlink:href="#m795fd2d983" x="625.167786" y="313.24952" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_7">
+      <text style="font-size: 11px; font-family: 'Noto Sans CJK JP'; text-anchor: middle" x="625.167786" y="329.004832" transform="rotate(-0 625.167786 329.004832)">1200</text>
+     </g>
+    </g>
+    <g id="xtick_8">
+     <g id="line2d_15">
+      <path d="M 715.99575 313.24952 
+L 715.99575 24.300375 
+" clip-path="url(#p136108d21e)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_16">
+      <g>
+       <use xlink:href="#m795fd2d983" x="715.99575" y="313.24952" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_8">
+      <text style="font-size: 11px; font-family: 'Noto Sans CJK JP'; text-anchor: middle" x="715.99575" y="329.004832" transform="rotate(-0 715.99575 329.004832)">1400</text>
+     </g>
+    </g>
+    <g id="text_9">
+     <text style="font-size: 11px; font-family: 'Noto Sans CJK JP'; text-anchor: middle" x="436.69976" y="344.279832" transform="rotate(-0 436.69976 344.279832)">年基准用电量 / MWh</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_17">
+      <defs>
+       <path id="m16e15339aa" d="M 0 0 
+L -3.5 0 
+" style="stroke: #000000; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m16e15339aa" x="80.2" y="278.836836" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_10">
+      <text style="font-size: 11px; font-family: 'Noto Sans CJK JP'; text-anchor: end" x="73.2" y="283.214492" transform="rotate(-0 73.2 283.214492)">可平移负荷</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_18">
+      <g>
+       <use xlink:href="#m16e15339aa" x="80.2" y="205.462244" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_11">
+      <text style="font-size: 11px; font-family: 'Noto Sans CJK JP'; text-anchor: end" x="73.2" y="209.8399" transform="rotate(-0 73.2 209.8399)">可中断负荷</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_19">
+      <g>
+       <use xlink:href="#m16e15339aa" x="80.2" y="132.087651" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_12">
+      <text style="font-size: 11px; font-family: 'Noto Sans CJK JP'; text-anchor: end" x="73.2" y="136.465308" transform="rotate(-0 73.2 136.465308)">常规刚性负荷</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_20">
+      <g>
+       <use xlink:href="#m16e15339aa" x="80.2" y="58.713059" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_13">
+      <text style="font-size: 11px; font-family: 'Noto Sans CJK JP'; text-anchor: end" x="73.2" y="63.090715" transform="rotate(-0 73.2 63.090715)">核心负荷</text>
+     </g>
+    </g>
+   </g>
+   <g id="patch_3">
+    <path d="M 80.2 300.115468 
+L 183.634886 300.115468 
+L 183.634886 257.558204 
+L 80.2 257.558204 
+z
+" clip-path="url(#p136108d21e)" style="fill: #e5b44f"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 80.2 226.740876 
+L 211.436364 226.740876 
+L 211.436364 184.183612 
+L 80.2 184.183612 
+z
+" clip-path="url(#p136108d21e)" style="fill: #4b9e90"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 80.2 153.366283 
+L 629.31122 153.366283 
+L 629.31122 110.809019 
+L 80.2 110.809019 
+z
+" clip-path="url(#p136108d21e)" style="fill: #4978a6"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 80.2 79.991691 
+L 215.46124 79.991691 
+L 215.46124 37.434427 
+L 80.2 37.434427 
+z
+" clip-path="url(#p136108d21e)" style="fill: #c94e50"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 80.2 313.24952 
+L 80.2 24.300375 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 80.2 313.24952 
+L 793.19952 313.24952 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_14">
+    <text style="font-size: 11px; font-family: 'Noto Sans CJK JP'; text-anchor: start" x="190.446983" y="281.910821" transform="rotate(-0 190.446983 281.910821)">227.760 MWh  |  11.255%</text>
+   </g>
+   <g id="text_15">
+    <text style="font-size: 11px; font-family: 'Noto Sans CJK JP'; text-anchor: start" x="218.248461" y="208.536228" transform="rotate(-0 218.248461 208.536228)">288.978 MWh  |  14.280%</text>
+   </g>
+   <g id="text_16">
+    <text style="font-size: 11px; font-family: 'Noto Sans CJK JP'; text-anchor: start" x="636.123317" y="135.161636" transform="rotate(-0 636.123317 135.161636)">1,209.124 MWh  |  59.748%</text>
+   </g>
+   <g id="text_17">
+    <text style="font-size: 11px; font-family: 'Noto Sans CJK JP'; text-anchor: start" x="222.273337" y="61.787043" transform="rotate(-0 222.273337 61.787043)">297.841 MWh  |  14.718%</text>
+   </g>
+   <g id="text_18">
+    <text style="font-size: 13.2px; font-family: 'Noto Sans CJK JP'; text-anchor: middle" x="436.69976" y="18.300375" transform="rotate(-0 436.69976 18.300375)">各类负荷年电量占比｜全年合计 2,023.702 MWh</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p136108d21e">
+   <rect x="80.2" y="24.300375" width="712.99952" height="288.949145"/>
+  </clipPath>
+ </defs>
+</svg>

@@ -1,5 +1,11 @@
 # 可靠性边界识别容量规划：UC + EENS/CVaR
 
+新增[同一全年联合MILP的两种方法对照](docs/resilience_milp_method_comparison.md)：直接Gurobi与改进后的单调容量搜索＋上下界证书适配版，共享8760小时输入及全部韧性约束，每组15000秒、4个独立CPU核心，同时运行。入口为 `python -m scripts.run_resilience_comparison --output 新目录 --time-limit-seconds 15000 --threads 4`。最终解均由完整年度联合模型校验，原总体统计证书不混用于本次固定场景问题。
+
+2026-09-23 全年时域更正：当前MILP默认执行 [8760小时全年规划＋72小时韧性子场景](docs/resilience_annual_with_stress_windows.md)。全年与子场景共享容量、边界电量、柴发状态及跨边界柔性任务；四个季节的子场景费用替代对应正常运行费用。命令为 `python -m scripts.run_resilience_milp --mode annual --hours 8760 --time-limit-seconds 10000 --output 新目录`。独立短时验证需显式指定 `--mode demo --hours 72`，其容量不能代表全年规划结果。
+
+2026-09-23 更新：新增[直接 Gurobi MILP 与专用应急 UPS 模型](docs/resilience_milp_emergency_ups_model.md)。风光/柴发采用100 kW整数模块，电池、PCS和UPS采用50单位模块；容量和情景调度联合优化。UPS成本高于普通储能，仅事故供核心负荷，默认按无外部电源的独立微电网建模。新入口为 `python -m scripts.run_resilience_milp`；下文其他结果保留为历史版本。
+
 全年大样本新增 [非预见可行策略证据接口](docs/nonanticipative_certificates.md)：使用可执行因果策略证明通过、完全预见松弛下界证明失败，证据不足时明确未决。配置 `config/zhongshan_nonanticipative_2000.toml` 使用 2000 个规划场景与 10000 个独立验证场景，并在两组样本上执行同一控制器；保留初始 SOC 0.8 和首尾库存相等。命令：`./run.sh plan --config config/zhongshan_nonanticipative_2000.toml --solver-config config/solver_3600_1pct.toml`。
 
 该全年 [2000/10000 非预见实验已完成](docs/zhongshan_nonanticipative_2000_results.md)：容量为风 600 kW、光 700 kW、柴油 900 kW、电池 1050 kWh、PCS 150 kW；年规划成本 3,285,878.17 元，gap 0.8164%。规划 EENS/CVaR 为 35.026916/700.538312 kWh，独立验证为 19.462343/389.246855 kWh，均通过。报告含同容量同场景的历史对照及两组风险曲线。事故策略采用冷备用且储能保持库存；风险是具体因果策略的表现，成本仍按标称经济调度计算。

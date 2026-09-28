@@ -1,0 +1,22 @@
+{"action": "instance_verified", "elapsed_seconds": 0.07564291590824723, "instance_sha256": "5f8dbfe35655bafb8a20277f097448f74a7bbaea25449f05cb3ef2aec65f6045", "hours": 8760}
+{"action": "candidate", "elapsed_seconds": 0.08408065186813474, "call": 1, "origin": "reference_candidate", "modules": {"wind_kw": 0, "pv_kw": 0, "diesel_units": 4, "battery_kwh": 74, "pcs_kw": 7, "ups_kwh": 8, "ups_kw": 2}, "visit": 1, "lower_yuan": 0.0}
+{"action": "solver_progress", "elapsed_seconds": 72.9115677839145, "stage": "oracle", "solver_upper_yuan": null, "solver_lower_yuan": 2174088.7318816856, "nodes": 0.0}
+{"action": "solver_progress", "elapsed_seconds": 613.9559986270033, "stage": "oracle", "solver_upper_yuan": null, "solver_lower_yuan": 4259162.928580397, "nodes": 0.0}
+{"action": "solver_progress", "elapsed_seconds": 704.3047555177473, "stage": "oracle", "solver_upper_yuan": null, "solver_lower_yuan": 4259162.928580403, "nodes": 0.0}
+{"action": "solver_progress", "elapsed_seconds": 932.5506831021048, "stage": "oracle", "solver_upper_yuan": null, "solver_lower_yuan": 4259162.928580403, "nodes": 0.0}
+{"action": "point_cost_lower_bound", "elapsed_seconds": 987.3913933709264, "modules": {"wind_kw": 0, "pv_kw": 0, "diesel_units": 4, "battery_kwh": 74, "pcs_kw": 7, "ups_kwh": 8, "ups_kw": 2}, "lower_yuan": 4259162.924321241}
+{"action": "solver_progress", "elapsed_seconds": 1358.3808209537528, "stage": "master", "solver_upper_yuan": null, "solver_lower_yuan": 763627.946465602, "nodes": 0.0}
+{"action": "solver_progress", "elapsed_seconds": 2188.8852915931493, "stage": "master", "solver_upper_yuan": null, "solver_lower_yuan": 763627.946465602, "nodes": 0.0}
+{"action": "master_unresolved", "elapsed_seconds": 2188.936810920015, "lower_yuan": 763627.9457019741}
+{"action": "solver_progress", "elapsed_seconds": 3389.7753768567927, "stage": "master", "solver_upper_yuan": null, "solver_lower_yuan": 763627.946465602, "nodes": 0.0}
+{"action": "master_unresolved", "elapsed_seconds": 3389.7881613280624, "lower_yuan": 763627.9457019741}
+{"action": "solver_progress", "elapsed_seconds": 4590.628330754116, "stage": "master", "solver_upper_yuan": null, "solver_lower_yuan": 763627.946465602, "nodes": 0.0}
+{"action": "master_unresolved", "elapsed_seconds": 4590.647291321773, "lower_yuan": 763627.9457019741}
+{"action": "solver_progress", "elapsed_seconds": 6991.374209518079, "stage": "master", "solver_upper_yuan": null, "solver_lower_yuan": 763627.946465602, "nodes": 0.0}
+{"action": "master_unresolved", "elapsed_seconds": 6991.460503633134, "lower_yuan": 763627.9457019741}
+{"action": "solver_progress", "elapsed_seconds": 9392.242677167058, "stage": "master", "solver_upper_yuan": null, "solver_lower_yuan": 763627.946465602, "nodes": 0.0}
+{"action": "master_unresolved", "elapsed_seconds": 9392.273835222702, "lower_yuan": 763627.9457019741}
+{"action": "solver_progress", "elapsed_seconds": 11793.019136023708, "stage": "master", "solver_upper_yuan": null, "solver_lower_yuan": 763627.946465602, "nodes": 0.0}
+{"action": "master_unresolved", "elapsed_seconds": 11793.094391279854, "lower_yuan": 763627.9457019741}
+{"action": "solver_progress", "elapsed_seconds": 15000.945250941906, "stage": "master", "solver_upper_yuan": null, "solver_lower_yuan": 763627.946465602, "nodes": 0.0}
+{"action": "master_unresolved", "elapsed_seconds": 15000.963343512733, "lower_yuan": 763627.9457019741}

@@ -1,0 +1,2 @@
+role,risk_class,scenario_id,seed,event,start_hour,end_hour
+validation,joint,2,20272939,grid_bus_fault,145,157

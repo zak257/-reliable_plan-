@@ -1,0 +1,20 @@
+{
+  "conclusion": "time_limit_without_integer_feasible_solution",
+  "solver_status": 9,
+  "solution_count": 0,
+  "best_bound_yuan_from_log": 2013285.751439,
+  "mip_gap": null,
+  "build_seconds": 91.58343602111563,
+  "gurobi_runtime_seconds": 9908.761554956436,
+  "model_and_solve_elapsed_seconds": 10000.557348700706,
+  "whole_process_wall_seconds": 10020.253827,
+  "presolve_seconds": 1062.05,
+  "root_relaxation_seconds": 7818.88,
+  "concurrent_spin_seconds_within_solver_time": 3181.65,
+  "explored_nodes": 1,
+  "annual_capacity_result_available": false,
+  "annual_dispatch_result_available": false,
+  "annual_resilience_metrics_available": false,
+  "proven_infeasible": false,
+  "economic_domain_certified": false
+}

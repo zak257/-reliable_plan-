@@ -1,0 +1,36 @@
+{
+  "instance_sha256": "5f8dbfe35655bafb8a20277f097448f74a7bbaea25449f05cb3ef2aec65f6045",
+  "time_limit_seconds_per_method": 15000.0,
+  "results": [
+    {
+      "method": "gurobi",
+      "status": "unresolved_without_incumbent",
+      "selected": null,
+      "objective_yuan": null,
+      "objective_bound_yuan": 2013285.749551565,
+      "mip_gap": null,
+      "first_solver_feasible_seconds": null,
+      "total_elapsed_seconds": 15335.552597982809,
+      "process_wall_seconds": 15354.127637304831,
+      "eens_kwh": null,
+      "cvar_upper_bound_kwh": null,
+      "audit_passed": null,
+      "economic_domain_certified": false
+    },
+    {
+      "method": "proposed",
+      "status": "time_limit_without_incumbent",
+      "selected": null,
+      "objective_yuan": null,
+      "objective_bound_yuan": 763627.9457019741,
+      "mip_gap": null,
+      "first_solver_feasible_seconds": null,
+      "total_elapsed_seconds": 15002.584692413919,
+      "process_wall_seconds": 15003.46387315914,
+      "eens_kwh": null,
+      "cvar_upper_bound_kwh": null,
+      "audit_passed": null,
+      "economic_domain_certified": false
+    }
+  ]
+}

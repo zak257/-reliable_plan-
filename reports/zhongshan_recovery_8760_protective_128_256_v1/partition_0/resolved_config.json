@@ -1,0 +1,345 @@
+{
+  "config": {
+    "schema_version": "recovery-v1",
+    "synthetic": true,
+    "objective_basis": "expected_causal_operation",
+    "data_root": "/home/yzk/cap_plan/data",
+    "case": "zhongshan",
+    "start_hour": 0,
+    "hours": 8760,
+    "load_scale": 1.0,
+    "data_contract": {
+      "load_basis": "assumed_bus_electricity",
+      "load_source": "assumed: CSV 用电功率(kW), metering scope to confirm",
+      "heater_accounting": "additional_auxiliary_assumption",
+      "timezone": "Etc/GMT-8",
+      "timezone_status": "assumed_UTC_plus_08_source_has_no_timezone",
+      "thermal_source": "assumed: sensitivity input, not station engineering data",
+      "container_mapping_source": "assumed: one independent container per diesel module",
+      "crew_source": "assumed: one startup crew, separate calendar repair process",
+      "diesel_rating_source": "assumed: user 100 kW research module",
+      "weather_label_source": "assumed: joint wind/temperature stress rule plus residual ice",
+      "fuel_source": "assumed: inherited cap_plan linear fuel conversion, not module-specific curve"
+    },
+    "modules": {
+      "wind": 100.0,
+      "pv": 100.0,
+      "diesel": 100.0,
+      "battery_energy": 50.0,
+      "pcs": 50.0
+    },
+    "grid": {
+      "wind": [
+        5
+      ],
+      "pv": [
+        2
+      ],
+      "diesel": [
+        4,
+        5,
+        6
+      ],
+      "battery_energy": [
+        20,
+        40
+      ],
+      "pcs": [
+        4,
+        6
+      ]
+    },
+    "planning": {
+      "early_risk_screen": true,
+      "investment_bound_pruning": true
+    },
+    "reliability": {
+      "samples": 128,
+      "seed": 2026091701,
+      "validation_samples": 0,
+      "validation_seed": 2026091703,
+      "eens_limit_kwh": 100.0,
+      "cvar_limit_kwh": 1000.0,
+      "alpha": 0.95
+    },
+    "recovery": {
+      "crews": 1,
+      "prep_hours": 3,
+      "personnel_mode": "arrival_only",
+      "container_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "remote_heat": false,
+      "repair_handover_prepared": true,
+      "initial_soc": 0.8,
+      "warmup_hours": 336,
+      "physical_mode": "R3"
+    },
+    "thermal": {
+      "ua_kw_per_k": 0.15,
+      "c_kwh_per_k": 1.5,
+      "heater_max_kw": 12.0,
+      "ready_temperature_c": 5.0,
+      "initial_temperature_c": -10.0,
+      "efficiency": 1.0,
+      "retained_generator_heat_kw": 0.0
+    },
+    "diesel": {
+      "rating_basis": "research_rating",
+      "mttf_hours": 1662.0,
+      "start_failure_probability": 0.0013,
+      "repair_mean_hours": 37.0,
+      "repair_distribution": "geometric",
+      "fuel_kwh_per_kg": 4.5
+    },
+    "unit_commitment": {
+      "min_output_fraction": 0.2,
+      "min_up_hours": 3,
+      "min_down_hours": 3,
+      "startup_cost_yuan": 0.0
+    },
+    "cost": {
+      "storage_cost_yuan_per_kwh": 0.0
+    },
+    "weather": {
+      "wind_curve_basis": "clean_power_curve",
+      "label_mode": "assumed_stress_case",
+      "wind_mode": "protective_shutdown",
+      "hazard_multiplier": 2.0,
+      "access_wind_threshold_ms": 15.0,
+      "icing_temperature_ceiling_c": 0.0,
+      "residual_icing_hours": 12,
+      "ice_power_factor": 0.5
+    },
+    "failures": {
+      "wind": {
+        "rate_per_hour": 0.0001326259946949602,
+        "repair_mean_hours": 87.0,
+        "source": "config/zhongshan_nonanticipative_2000.toml; literature reference"
+      },
+      "pv": {
+        "rate_per_hour": 7.407407407407407e-05,
+        "repair_mean_hours": 275.5102040816329,
+        "source": "config/zhongshan_nonanticipative_2000.toml; inverter assumption"
+      },
+      "pcs": {
+        "rate_per_hour": 1e-05,
+        "repair_mean_hours": 24.0,
+        "source": "config/zhongshan_nonanticipative_2000.toml; uncalibrated research assumption"
+      }
+    },
+    "policies": [
+      {
+        "name": "load_first_three_online",
+        "online_floor": 3,
+        "reserve_units": 0,
+        "recharge_soc": 0.8,
+        "recharge_kw": 100.0,
+        "heat_priority": false,
+        "keep_standby_warm": true
+      },
+      {
+        "name": "heat_first_four_online",
+        "online_floor": 4,
+        "reserve_units": 0,
+        "recharge_soc": 0.8,
+        "recharge_kw": 100.0,
+        "heat_priority": true,
+        "keep_standby_warm": true
+      }
+    ]
+  },
+  "settings": {
+    "thermal": {
+      "ua_kw_per_k": 0.15,
+      "c_kwh_per_k": 1.5,
+      "heater_max_kw": 12.0,
+      "ready_temperature_c": 5.0,
+      "initial_temperature_c": -10.0,
+      "efficiency": 1.0,
+      "retained_generator_heat_kw": 0.0
+    },
+    "container_ids": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "crews": 1,
+    "prep_hours": 3,
+    "personnel_mode": "arrival_only",
+    "remote_heat": false,
+    "repair_handover_prepared": true,
+    "diesel_mttf_hours": 1662.0,
+    "start_failure_probability": 0.0013,
+    "diesel_repair_mean_hours": 37.0,
+    "repair_distribution": "geometric",
+    "wind_mode": "protective_shutdown",
+    "hazard_multiplier": 2.0,
+    "min_output_fraction": 0.2,
+    "min_up_hours": 3,
+    "min_down_hours": 3,
+    "initial_soc": 0.8,
+    "warmup_hours": 336,
+    "fuel_kwh_per_kg": 4.5,
+    "startup_cost_yuan": 0.0,
+    "storage_cost_yuan_per_kwh": 0.0,
+    "failures": {
+      "wind": {
+        "rate_per_hour": 0.0001326259946949602,
+        "repair_mean_hours": 87.0,
+        "source": "config/zhongshan_nonanticipative_2000.toml; literature reference"
+      },
+      "pv": {
+        "rate_per_hour": 7.407407407407407e-05,
+        "repair_mean_hours": 275.5102040816329,
+        "source": "config/zhongshan_nonanticipative_2000.toml; inverter assumption"
+      },
+      "pcs": {
+        "rate_per_hour": 1e-05,
+        "repair_mean_hours": 24.0,
+        "source": "config/zhongshan_nonanticipative_2000.toml; uncalibrated research assumption"
+      }
+    },
+    "physical_mode": "R3"
+  },
+  "unit_bounds": {
+    "wind": [
+      0,
+      7
+    ],
+    "pv": [
+      0,
+      3
+    ],
+    "diesel": [
+      0,
+      15
+    ],
+    "battery_energy": [
+      0,
+      140
+    ],
+    "pcs": [
+      0,
+      20
+    ]
+  },
+  "annual_cost_per_unit": {
+    "wind": 106666.66666666667,
+    "pv": 45000.0,
+    "diesel": 50000.0,
+    "battery_energy": 12500.0,
+    "pcs": 10416.666666666666
+  },
+  "input_metadata": {
+    "start_hour": 0,
+    "hours": 8760,
+    "available_rows": 8784,
+    "imputed_values_in_full_csv": {
+      "风速(m/s)": 0,
+      "单位面积太阳辐射(W/m^2)": 374,
+      "用电功率(kW)": 0
+    },
+    "load_scale": 1.0,
+    "continuous_cyclic_soc": false,
+    "battery_failure_model": "ideal_cells_with_failable_pcs",
+    "diesel_dispatch": "causal_recovery_v1",
+    "capacity_bounds_source": {
+      "wind": [
+        0.0,
+        700.0
+      ],
+      "pv": [
+        0.0,
+        300.0
+      ],
+      "diesel": [
+        0.0,
+        1500.0
+      ],
+      "battery_energy": [
+        0.0,
+        7000.0
+      ],
+      "pcs": [
+        0.0,
+        1000.0
+      ]
+    },
+    "max_units_override": {},
+    "initial_state": "cold_then_declared_cyclic_weather_warmup",
+    "terminal_state": "free_continuation_no_free_energy_or_repair"
+  },
+  "weather_metadata": {
+    "ambient_source": "/home/yzk/cap_plan/data/zhongshan/input/curve.csv",
+    "weather_label_status": "assumed_stress_case",
+    "timezone_status": "assumed_UTC_plus_08_source_has_no_timezone",
+    "available_source_hours": 8784,
+    "evaluated_hours": 8760,
+    "period_start": "2020-01-01T00:00:00+08:00",
+    "period_end": "2020-12-30T23:00:00+08:00",
+    "climate_scope": "conditional_on_this_weather_sequence",
+    "label_rules": {
+      "wind_curve_basis": "clean_power_curve",
+      "label_mode": "assumed_stress_case",
+      "wind_mode": "protective_shutdown",
+      "hazard_multiplier": 2.0,
+      "access_wind_threshold_ms": 15.0,
+      "icing_temperature_ceiling_c": 0.0,
+      "residual_icing_hours": 12,
+      "ice_power_factor": 0.5
+    },
+    "warning": "Wind/temperature thresholds are engineering scenarios, not observed blizzard or icing classification",
+    "access_blocked_hours": 370,
+    "icing_hours": 1073,
+    "protective_stop_hours": 1073
+  },
+  "policies": [
+    {
+      "name": "load_first_three_online",
+      "online_floor": 3,
+      "reserve_units": 0,
+      "recharge_soc": 0.8,
+      "recharge_kw": 100.0,
+      "heat_priority": false,
+      "keep_standby_warm": true,
+      "sha256": "c1b16c40e93d24d01996b4bd81ccf0b9d616e7bef83b01e34c8697540ee6de0f"
+    },
+    {
+      "name": "heat_first_four_online",
+      "online_floor": 4,
+      "reserve_units": 0,
+      "recharge_soc": 0.8,
+      "recharge_kw": 100.0,
+      "heat_priority": true,
+      "keep_standby_warm": true,
+      "sha256": "4f8d66c5b90cd2ccc8f0eb640842ec20c0a7e7211c020ae9c574584d137f6d1c"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "recovery_tests": {
+    "passed": 39,
+    "total": 39,
+    "command": "/home/yzk/cap_plan/venv/bin/python -m unittest discover -s recovery_tests -v",
+    "parallel_workflow_test": "1 integration test: 4 partition results merged; serial/full-grid optimum identical"
+  },
+  "legacy_tests": {
+    "passed": 60,
+    "total": 60,
+    "command": "/home/yzk/cap_plan/venv/bin/python -m unittest discover -s tests -v"
+  },
+  "preexisting_certified_tests": {
+    "passed": 70,
+    "total": 76,
+    "failures": 6,
+    "reason": "Seven tracked HEAD files already differ from legacy_sha256.json; all seven working files are byte-identical to HEAD; no old tracked code was modified in this task",
+    "audit": "reports/recovery_legacy_isolation_audit.json"
+  }
+}

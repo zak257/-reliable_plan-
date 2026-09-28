@@ -1,0 +1,24 @@
+{
+  "status": "finished",
+  "method": "gurobi",
+  "pid": 51374,
+  "cpu_affinity": [
+    0
+  ],
+  "started_at_utc": "2026-09-24T01:33:08.413083+00:00",
+  "result_status": "optimal_within_solver_gap_on_annual_scenario_tree",
+  "selected": {
+    "wind_kw": 0.0,
+    "pv_kw": 0.0,
+    "diesel_units": 0,
+    "battery_kwh": 0.0,
+    "pcs_kw": 0.0,
+    "ups_kwh": 100.0,
+    "ups_kw": 50.0
+  },
+  "has_audited_incumbent": true,
+  "objective_yuan": 141054.47680133278,
+  "mip_gap": 1.0000016674533804e-09,
+  "finished_at_utc": "2026-09-24T01:33:25.958270+00:00",
+  "process_wall_seconds": 17.54546072985977
+}

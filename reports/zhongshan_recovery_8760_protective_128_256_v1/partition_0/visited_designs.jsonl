@@ -1,0 +1,12 @@
+{"units": {"wind": 5, "pv": 2, "diesel": 4, "battery_energy": 20, "pcs": 4}, "scope": "finite_policy_library", "reason": "all_library_policies_resolved", "physical_infeasibility_proven": false}
+{"units": {"wind": 5, "pv": 2, "diesel": 4, "battery_energy": 20, "pcs": 6}, "scope": "finite_policy_library", "reason": "all_library_policies_resolved", "physical_infeasibility_proven": false}
+{"units": {"wind": 5, "pv": 2, "diesel": 5, "battery_energy": 20, "pcs": 4}, "scope": "finite_policy_library", "reason": "all_library_policies_resolved", "physical_infeasibility_proven": false}
+{"units": {"wind": 5, "pv": 2, "diesel": 5, "battery_energy": 20, "pcs": 6}, "scope": "finite_policy_library", "reason": "all_library_policies_resolved", "physical_infeasibility_proven": false}
+{"units": {"wind": 5, "pv": 2, "diesel": 6, "battery_energy": 20, "pcs": 4}, "scope": "finite_policy_library", "reason": "all_library_policies_resolved", "physical_infeasibility_proven": false}
+{"units": {"wind": 5, "pv": 2, "diesel": 6, "battery_energy": 20, "pcs": 6}, "scope": "finite_policy_library", "reason": "all_library_policies_resolved", "physical_infeasibility_proven": false}
+{"units": {"wind": 5, "pv": 2, "diesel": 4, "battery_energy": 40, "pcs": 4}, "scope": "finite_policy_library", "reason": "all_library_policies_resolved", "physical_infeasibility_proven": false}
+{"units": {"wind": 5, "pv": 2, "diesel": 4, "battery_energy": 40, "pcs": 6}, "scope": "finite_policy_library", "reason": "all_library_policies_resolved", "physical_infeasibility_proven": false}
+{"units": {"wind": 5, "pv": 2, "diesel": 5, "battery_energy": 40, "pcs": 4}, "scope": "finite_policy_library", "reason": "all_library_policies_resolved", "physical_infeasibility_proven": false}
+{"units": {"wind": 5, "pv": 2, "diesel": 5, "battery_energy": 40, "pcs": 6}, "scope": "finite_policy_library", "reason": "all_library_policies_resolved", "physical_infeasibility_proven": false}
+{"units": {"wind": 5, "pv": 2, "diesel": 6, "battery_energy": 40, "pcs": 4}, "scope": "finite_policy_library", "reason": "all_library_policies_resolved", "physical_infeasibility_proven": false}
+{"units": {"wind": 5, "pv": 2, "diesel": 6, "battery_energy": 40, "pcs": 6}, "scope": "finite_policy_library", "reason": "all_library_policies_resolved", "physical_infeasibility_proven": false}

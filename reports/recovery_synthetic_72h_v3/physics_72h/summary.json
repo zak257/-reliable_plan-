@@ -1,0 +1,142 @@
+{
+  "synthetic": true,
+  "loss_kwh": 0.0,
+  "operating_cost_yuan": 20611.93830454281,
+  "metrics": {
+    "shed_hours": 0.0,
+    "longest_shed_hours": 0.0,
+    "heater_kwh": 361.32169787455285,
+    "diesel_kwh": 6183.581491362847,
+    "diesel_fuel_kg": 1374.1292203028556,
+    "battery_discharge_kwh": 931.9397933643007,
+    "battery_charge_kwh": 1317.0710141584468,
+    "starts": 6.0,
+    "start_failures": 1.0,
+    "diesel_run_failures": 2.0,
+    "diesel_online_hours": 135.0,
+    "wind_failures": 1.0,
+    "pv_failures": 0.0,
+    "pcs_failures": 0.0,
+    "wind_protective_stop_hours": 32.0,
+    "wait_access_unit_hours": 19.0,
+    "wait_crew_unit_hours": 5.0,
+    "wait_prep_unit_hours": 12.0,
+    "wait_heat_unit_hours": 0.0,
+    "unserved_heater_command_kwh": 0.0,
+    "max_balance_residual_kw": 1.0658141036401503e-14,
+    "max_soc_residual_kwh": 1.1368683772161603e-13,
+    "initial_state": {
+      "energy_kwh": 1600.0,
+      "temperatures_c": [
+        -10.0,
+        -10.0,
+        -10.0
+      ],
+      "online": 0,
+      "diesel_states": [
+        {
+          "healthy": true,
+          "running": false,
+          "pending": false,
+          "onsite": false,
+          "prep": 0.0,
+          "min_up": 0,
+          "min_down": 0,
+          "repair_until": -1,
+          "runtime": 0,
+          "demands": 0
+        },
+        {
+          "healthy": true,
+          "running": false,
+          "pending": false,
+          "onsite": false,
+          "prep": 0.0,
+          "min_up": 0,
+          "min_down": 0,
+          "repair_until": -1,
+          "runtime": 0,
+          "demands": 0
+        },
+        {
+          "healthy": true,
+          "running": false,
+          "pending": false,
+          "onsite": false,
+          "prep": 0.0,
+          "min_up": 0,
+          "min_down": 0,
+          "repair_until": -1,
+          "runtime": 0,
+          "demands": 0
+        }
+      ]
+    },
+    "final_state": {
+      "energy_kwh": 1700.0,
+      "temperatures_c": [
+        5.000000000000001,
+        5.000000000000001,
+        5.000000000000001
+      ],
+      "online": 3,
+      "diesel_states": [
+        {
+          "healthy": true,
+          "running": true,
+          "pending": false,
+          "onsite": false,
+          "prep": 3,
+          "min_up": 0,
+          "min_down": 0,
+          "repair_until": 31,
+          "runtime": 56,
+          "demands": 2
+        },
+        {
+          "healthy": true,
+          "running": true,
+          "pending": false,
+          "onsite": false,
+          "prep": 3,
+          "min_up": 0,
+          "min_down": 0,
+          "repair_until": 55,
+          "runtime": 36,
+          "demands": 3
+        },
+        {
+          "healthy": true,
+          "running": true,
+          "pending": false,
+          "onsite": false,
+          "prep": 3,
+          "min_up": 0,
+          "min_down": 0,
+          "repair_until": -1,
+          "runtime": 43,
+          "demands": 2
+        }
+      ],
+      "other_repair_until": {
+        "wind": [
+          241
+        ],
+        "pv": [
+          -1000000000000000
+        ],
+        "pcs": [
+          -1000000000000000,
+          -1000000000000000,
+          -1000000000000000
+        ]
+      }
+    },
+    "energy_inventory_change_kwh": 100.0,
+    "forecast_basis": "current_measurements_only",
+    "dump_load_kw": 0,
+    "repair_clock": "calendar_reference",
+    "operating_cost_basis": "same_executed_policy"
+  },
+  "script": "access blocks 0:6,23:32,47:55; run failures at boundaries 25 and 49; residual ice retained"
+}

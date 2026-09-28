@@ -1,0 +1,46 @@
+{
+  "selected": null,
+  "modules": null,
+  "method": "capacity_search_bounds_joint_milp_adaptation",
+  "status": "time_limit_without_incumbent",
+  "stop_reason": "time_limit",
+  "fixed_modules": null,
+  "objective_yuan": null,
+  "objective_bound_yuan": 763627.9457019741,
+  "mip_gap": null,
+  "economic_domain_certified": false,
+  "economic_budget_yuan": 3000000.0,
+  "total_elapsed_seconds": 15002.584692413919,
+  "runtime_seconds": 14910.575394153595,
+  "build_seconds": 87.06906001782045,
+  "first_feasible_seconds": null,
+  "oracle_calls": 1,
+  "master_calls": 7,
+  "candidate_history": [
+    {
+      "call": 1,
+      "modules": {
+        "wind_kw": 0,
+        "pv_kw": 0,
+        "diesel_units": 4,
+        "battery_kwh": 74,
+        "pcs_kw": 7,
+        "ups_kwh": 8,
+        "ups_kw": 2
+      },
+      "solver_status": 9,
+      "runtime_seconds": 900.1289031505585,
+      "lower_yuan": 4259162.924321241,
+      "solution_count": 0
+    }
+  ],
+  "monotonicity_scope": "six non-diesel capacity coordinates within the same diesel-count slice and valid PCS/battery coupling",
+  "certificate_scope": "fixed weighted annual scenario tree; no population/DKW confidence claim",
+  "instance_sha256": "5f8dbfe35655bafb8a20277f097448f74a7bbaea25449f05cb3ef2aec65f6045",
+  "time_limit_seconds": 15000.0,
+  "threads": 4,
+  "gurobi_method": 3,
+  "hours": 8760,
+  "first_solver_feasible_seconds": null,
+  "synthetic": true
+}

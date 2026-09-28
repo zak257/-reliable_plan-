@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "violations": [],
+  "residuals": {
+    "power_kw": 1.0658141036401503e-14,
+    "soc_kwh": 0.0,
+    "thermal_c": 4.440892098500626e-16,
+    "state_continuity_kwh": 0.0
+  },
+  "checked_hours": 72,
+  "reconstructed_loss_kwh": 0.0,
+  "reconstructed_operating_cost_yuan": 20611.93830454281,
+  "coverage": "selected replay trace; all simulated paths also check power/SOC feasibility"
+}

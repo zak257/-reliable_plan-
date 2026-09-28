@@ -1,0 +1,3 @@
+# 开发核查历史文件
+
+本目录保留开发过程的求解记录。最终版本已进一步禁止通过主动停掉健康母线来获得UPS应急许可，并默认采用独立微电网；请勿将本目录作为最终版本的容量或最优性结论。最终物理/信息接入验证在 reports/resilience_milp_final_fixed_capacity_72h_audit，模型报告在 docs/resilience_milp_emergency_ups_model.md。

@@ -1,0 +1,54 @@
+{"stage": "optimizing", "elapsed_seconds": 45.603689812123775, "objective_yuan": null, "bound_yuan": 734851.5699158048}
+{"stage": "optimizing", "elapsed_seconds": 118.32440029410645, "objective_yuan": null, "bound_yuan": 1422489.3532566437}
+{"stage": "optimizing", "elapsed_seconds": 180.40553071396425, "objective_yuan": null, "bound_yuan": 1423415.3399894768}
+{"stage": "optimizing", "elapsed_seconds": 242.5147581701167, "objective_yuan": null, "bound_yuan": 1423415.3399894768}
+{"stage": "optimizing", "elapsed_seconds": 313.3544665053487, "objective_yuan": null, "bound_yuan": 1423492.7982959452}
+{"stage": "optimizing", "elapsed_seconds": 375.9922649790533, "objective_yuan": null, "bound_yuan": 1424065.7644347348}
+{"stage": "optimizing", "elapsed_seconds": 441.6109728203155, "objective_yuan": null, "bound_yuan": 1424081.192957684}
+{"stage": "optimizing", "elapsed_seconds": 502.3079002001323, "objective_yuan": null, "bound_yuan": 1424256.4586208055}
+{"stage": "optimizing", "elapsed_seconds": 564.8527442472987, "objective_yuan": null, "bound_yuan": 1424262.0809940603}
+{"stage": "optimizing", "elapsed_seconds": 634.5885736271739, "objective_yuan": null, "bound_yuan": 1424272.8489535402}
+{"stage": "optimizing", "elapsed_seconds": 728.2974806171842, "objective_yuan": null, "bound_yuan": 1424272.8489535402}
+{"stage": "optimizing", "elapsed_seconds": 809.7908488833345, "objective_yuan": null, "bound_yuan": 1424300.0667559667}
+{"stage": "optimizing", "elapsed_seconds": 879.6798632489517, "objective_yuan": null, "bound_yuan": 1428760.833243237}
+{"stage": "optimizing", "elapsed_seconds": 940.0380754363723, "objective_yuan": null, "bound_yuan": 1429903.2521386996}
+{"stage": "integer_incumbent", "elapsed_seconds": 957.5808319323696, "objective_yuan": 1781133.2462844206}
+{"stage": "integer_incumbent", "elapsed_seconds": 970.0626283129677, "objective_yuan": 1725898.0287896933}
+{"stage": "integer_incumbent", "elapsed_seconds": 985.5332883000374, "objective_yuan": 1704026.1126133085}
+{"stage": "integer_incumbent", "elapsed_seconds": 985.601271443069, "objective_yuan": 1671548.2823422637}
+{"stage": "integer_incumbent", "elapsed_seconds": 995.866220976226, "objective_yuan": 1671543.5323422637}
+{"stage": "optimizing", "elapsed_seconds": 1005.0179506563582, "objective_yuan": 1671543.5323422651, "bound_yuan": 1429903.2521386996}
+{"stage": "integer_incumbent", "elapsed_seconds": 1005.0352064911276, "objective_yuan": 1671543.5319897316}
+{"stage": "integer_incumbent", "elapsed_seconds": 1032.646938605234, "objective_yuan": 1670410.6855111697}
+{"stage": "optimizing", "elapsed_seconds": 1066.1977303302847, "objective_yuan": 1670410.6855111702, "bound_yuan": 1429903.2521386996}
+{"stage": "integer_incumbent", "elapsed_seconds": 1071.669946392998, "objective_yuan": 1670410.5487111697}
+{"stage": "optimizing", "elapsed_seconds": 1130.5718946382403, "objective_yuan": 1670410.5487111704, "bound_yuan": 1429903.2521386996}
+{"stage": "optimizing", "elapsed_seconds": 1211.6380975763313, "objective_yuan": 1670410.5487111704, "bound_yuan": 1429903.2521386996}
+{"stage": "optimizing", "elapsed_seconds": 1394.3830295000225, "objective_yuan": 1670410.5487111704, "bound_yuan": 1429903.2521386996}
+{"stage": "optimizing", "elapsed_seconds": 1457.0574828470126, "objective_yuan": 1670410.5487111704, "bound_yuan": 1429903.2521386996}
+{"stage": "optimizing", "elapsed_seconds": 1588.029178073164, "objective_yuan": 1670410.5487111704, "bound_yuan": 1429903.2521386996}
+{"stage": "optimizing", "elapsed_seconds": 1659.8411023360677, "objective_yuan": 1670410.5487111704, "bound_yuan": 1472353.7186956487}
+{"stage": "integer_incumbent", "elapsed_seconds": 1683.1738448841497, "objective_yuan": 1669428.163745776}
+{"stage": "integer_incumbent", "elapsed_seconds": 1687.4079311219975, "objective_yuan": 1669427.7199471418}
+{"stage": "integer_incumbent", "elapsed_seconds": 1690.2834570440464, "objective_yuan": 1669383.8450965928}
+{"stage": "integer_incumbent", "elapsed_seconds": 1709.4311055010185, "objective_yuan": 1645911.6941091681}
+{"stage": "integer_incumbent", "elapsed_seconds": 1715.8960423683748, "objective_yuan": 1642802.8608964065}
+{"stage": "integer_incumbent", "elapsed_seconds": 1718.240271258168, "objective_yuan": 1642403.4061761445}
+{"stage": "optimizing", "elapsed_seconds": 1721.4382076831535, "objective_yuan": 1642403.4061761447, "bound_yuan": 1472353.7186956487}
+{"stage": "integer_incumbent", "elapsed_seconds": 1721.4465429219417, "objective_yuan": 1604959.9323910454}
+{"stage": "integer_incumbent", "elapsed_seconds": 1728.2077754600905, "objective_yuan": 1603346.3496520529}
+{"stage": "integer_incumbent", "elapsed_seconds": 1738.3766803890467, "objective_yuan": 1562355.3877797604}
+{"stage": "integer_incumbent", "elapsed_seconds": 1740.4222556282766, "objective_yuan": 1506312.3486878425}
+{"stage": "integer_incumbent", "elapsed_seconds": 1740.4396643862128, "objective_yuan": 1494977.7099227263}
+{"stage": "integer_incumbent", "elapsed_seconds": 1754.862654011231, "objective_yuan": 1486593.8568052638}
+{"stage": "integer_incumbent", "elapsed_seconds": 1761.6963094859384, "objective_yuan": 1486474.1820168877}
+{"stage": "integer_incumbent", "elapsed_seconds": 1761.707864315249, "objective_yuan": 1486457.5426310496}
+{"stage": "integer_incumbent", "elapsed_seconds": 1761.7193650640547, "objective_yuan": 1486449.2340516015}
+{"stage": "integer_incumbent", "elapsed_seconds": 1774.4084447850473, "objective_yuan": 1486441.9118218434}
+{"stage": "optimizing", "elapsed_seconds": 1783.888530422002, "objective_yuan": 1486441.9118218438, "bound_yuan": 1472353.7186956487}
+{"stage": "integer_incumbent", "elapsed_seconds": 1826.4637699499726, "objective_yuan": 1486433.7853774542}
+{"stage": "optimizing", "elapsed_seconds": 1846.4303066693246, "objective_yuan": 1486433.7853774554, "bound_yuan": 1472353.7186956487}
+{"stage": "integer_incumbent", "elapsed_seconds": 1890.2321194340475, "objective_yuan": 1486431.223411452}
+{"stage": "integer_incumbent", "elapsed_seconds": 1890.2536951969378, "objective_yuan": 1486418.1084974352}
+{"stage": "optimizing", "elapsed_seconds": 1909.6907784109935, "objective_yuan": 1486418.1084974355, "bound_yuan": 1472353.7186956487}
+{"stage": "integer_incumbent", "elapsed_seconds": 1909.777550098952, "objective_yuan": 1486418.108497438}

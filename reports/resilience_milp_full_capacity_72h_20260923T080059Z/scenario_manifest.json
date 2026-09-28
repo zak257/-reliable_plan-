@@ -1,0 +1,222 @@
+[
+  {
+    "name": "normal_none",
+    "weight": 0.48,
+    "run_shocks": [],
+    "start_shocks": [],
+    "run_repair_hours": 6,
+    "start_repair_hours": 6
+  },
+  {
+    "name": "normal_renewable_bus",
+    "weight": 0.08000000000000002,
+    "run_shocks": [],
+    "start_shocks": [],
+    "run_repair_hours": 6,
+    "start_repair_hours": 6
+  },
+  {
+    "name": "normal_grid",
+    "weight": 0.08000000000000002,
+    "run_shocks": [],
+    "start_shocks": [],
+    "run_repair_hours": 6,
+    "start_repair_hours": 6
+  },
+  {
+    "name": "normal_compound",
+    "weight": 0.064,
+    "run_shocks": [],
+    "start_shocks": [],
+    "run_repair_hours": 6,
+    "start_repair_hours": 6
+  },
+  {
+    "name": "normal_grid_pcs",
+    "weight": 0.024,
+    "run_shocks": [],
+    "start_shocks": [],
+    "run_repair_hours": 6,
+    "start_repair_hours": 6
+  },
+  {
+    "name": "normal_grid_ups",
+    "weight": 0.024,
+    "run_shocks": [],
+    "start_shocks": [],
+    "run_repair_hours": 6,
+    "start_repair_hours": 6
+  },
+  {
+    "name": "normal_diesel_run",
+    "weight": 0.032,
+    "run_shocks": [
+      [
+        0,
+        35
+      ]
+    ],
+    "start_shocks": [],
+    "run_repair_hours": 6,
+    "start_repair_hours": 6
+  },
+  {
+    "name": "normal_diesel_start",
+    "weight": 0.016,
+    "run_shocks": [],
+    "start_shocks": [
+      [
+        0,
+        36
+      ],
+      [
+        0,
+        37
+      ],
+      [
+        0,
+        38
+      ],
+      [
+        0,
+        39
+      ],
+      [
+        0,
+        40
+      ],
+      [
+        0,
+        41
+      ],
+      [
+        0,
+        42
+      ],
+      [
+        0,
+        43
+      ]
+    ],
+    "run_repair_hours": 6,
+    "start_repair_hours": 6
+  },
+  {
+    "name": "storm_none",
+    "weight": 0.12,
+    "run_shocks": [],
+    "start_shocks": [],
+    "run_repair_hours": 6,
+    "start_repair_hours": 6
+  },
+  {
+    "name": "storm_renewable_bus",
+    "weight": 0.020000000000000004,
+    "run_shocks": [],
+    "start_shocks": [],
+    "run_repair_hours": 6,
+    "start_repair_hours": 6
+  },
+  {
+    "name": "storm_grid",
+    "weight": 0.020000000000000004,
+    "run_shocks": [],
+    "start_shocks": [],
+    "run_repair_hours": 6,
+    "start_repair_hours": 6
+  },
+  {
+    "name": "storm_compound",
+    "weight": 0.016,
+    "run_shocks": [],
+    "start_shocks": [],
+    "run_repair_hours": 6,
+    "start_repair_hours": 6
+  },
+  {
+    "name": "storm_grid_pcs",
+    "weight": 0.006,
+    "run_shocks": [],
+    "start_shocks": [],
+    "run_repair_hours": 6,
+    "start_repair_hours": 6
+  },
+  {
+    "name": "storm_grid_ups",
+    "weight": 0.006,
+    "run_shocks": [],
+    "start_shocks": [],
+    "run_repair_hours": 6,
+    "start_repair_hours": 6
+  },
+  {
+    "name": "storm_diesel_run",
+    "weight": 0.008,
+    "run_shocks": [
+      [
+        0,
+        35
+      ]
+    ],
+    "start_shocks": [],
+    "run_repair_hours": 6,
+    "start_repair_hours": 6
+  },
+  {
+    "name": "storm_diesel_start",
+    "weight": 0.004,
+    "run_shocks": [],
+    "start_shocks": [
+      [
+        0,
+        36
+      ],
+      [
+        0,
+        37
+      ],
+      [
+        0,
+        38
+      ],
+      [
+        0,
+        39
+      ],
+      [
+        0,
+        40
+      ],
+      [
+        0,
+        41
+      ],
+      [
+        0,
+        42
+      ],
+      [
+        0,
+        43
+      ],
+      [
+        0,
+        44
+      ],
+      [
+        0,
+        45
+      ],
+      [
+        0,
+        46
+      ],
+      [
+        0,
+        47
+      ]
+    ],
+    "run_repair_hours": 6,
+    "start_repair_hours": 6
+  }
+]

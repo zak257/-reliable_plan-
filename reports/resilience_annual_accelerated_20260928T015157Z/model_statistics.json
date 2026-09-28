@@ -1,0 +1,29 @@
+{
+  "variables": 2286838,
+  "binary_variables": 1231616,
+  "linear_constraints": 6245341,
+  "indicators": 545480,
+  "diesel_slots": 16,
+  "compression": {
+    "constant_entries_reused": 891584,
+    "static_na_edges_skipped": 4320
+  },
+  "all_capacity_types": {
+    "wind_kw": "I",
+    "pv_kw": "I",
+    "diesel_units": "I",
+    "battery_kwh": "I",
+    "pcs_kw": "I",
+    "ups_kwh": "I",
+    "ups_kw": "I"
+  },
+  "upper_module_bounds": {
+    "wind_kw": 20,
+    "pv_kw": 30,
+    "diesel_units": 16,
+    "battery_kwh": 244,
+    "pcs_kw": 152,
+    "ups_kwh": 92,
+    "ups_kw": 52
+  }
+}

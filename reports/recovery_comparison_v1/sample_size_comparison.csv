@@ -1,0 +1,4 @@
+wind_rule,wind,pv,diesel,battery_energy,pcs,policy,training_objective_yuan,training_eens_kwh,training_cvar_kwh,holdout_eens_kwh,holdout_cvar_kwh,holdout_status,elapsed_seconds,audit_passed
+protective,500.0,300.0,400.0,2000.0,200.0,load_first_three_online,5432377.925818869,13.341736111111123,213.46777777777797,136.55156381858973,2409.5031122302066,holdout_failed,292.4118724241853,True
+operating,500.0,300.0,400.0,1000.0,200.0,load_first_three_online,4651729.893541146,92.33076167083334,898.5416311777777,108.32808843554511,2070.243879917502,holdout_failed,385.8984289462678,True
+protective_128_training_256_holdout,500.0,300.0,500.0,1000.0,200.0,heat_first_four_online,5519867.489307738,0.6080989575520834,12.161979151041658,5.537066836935761,110.74133673871512,holdout_passed_empirically,,True

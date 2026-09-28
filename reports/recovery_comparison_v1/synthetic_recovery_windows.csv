@@ -1,0 +1,9 @@
+device,request_hour,arrival_hour,prep_complete_hour,temperature_ready_hour,wait_access_hours,wait_crew_hours,wait_prep_hours,wait_heat_hours,wait_min_down_hours,end_hour,outcome,elapsed_hours,battery_bridge_kwh,user_shed_kwh,heater_supply_kwh,quantity_scope
+2,0,,,4,6,1,0,0,0,7,cancelled_by_policy,7,858.8216978745529,0.0,68.82169787455283,whole-system flow during this request window; overlapping windows are not additive
+0,0,6.0,9.0,4,6,0,3,0,0,9,started,9,931.9397933643008,0.0,77.82169787455283,whole-system flow during this request window; overlapping windows are not additive
+1,0,10.0,13.0,4,6,4,3,0,0,13,start_failure,13,931.9397933643008,0.0,95.82169787455283,whole-system flow during this request window; overlapping windows are not additive
+2,14,14.0,17.0,14,0,0,3,0,0,17,started,3,0.0,0.0,13.500000000000004,whole-system flow during this request window; overlapping windows are not additive
+1,19,19.0,19.0,19,0,0,0,0,0,19,started,0,0.0,0.0,0.0,whole-system flow during this request window; overlapping windows are not additive
+0,31,32.0,31.0,31,1,0,0,0,0,32,started,1,0.0,0.0,4.500000000000001,whole-system flow during this request window; overlapping windows are not additive
+2,42,42.0,45.0,42,0,0,3,0,0,45,started,3,0.0,0.0,13.500000000000004,whole-system flow during this request window; overlapping windows are not additive
+1,66,66.0,66.0,66,0,0,0,0,0,66,started,0,0.0,0.0,0.0,whole-system flow during this request window; overlapping windows are not additive

@@ -1,0 +1,270 @@
+{
+  "run_sha256": "70a017d9b11364fb6e42c5edae9a0197e34c680fd5eb3713bcb35d3a437f1fa4",
+  "created_utc": "2026-09-17T08:24:21.499942+00:00",
+  "config": {
+    "schema_version": "recovery-v1",
+    "synthetic": true,
+    "objective_basis": "expected_causal_operation",
+    "data_root": "/home/yzk/cap_plan/data",
+    "case": "zhongshan",
+    "start_hour": 0,
+    "hours": 8760,
+    "load_scale": 1.0,
+    "data_contract": {
+      "load_basis": "assumed_bus_electricity",
+      "load_source": "assumed: CSV 用电功率(kW), metering scope to confirm",
+      "heater_accounting": "additional_auxiliary_assumption",
+      "timezone": "Etc/GMT-8",
+      "timezone_status": "assumed_UTC_plus_08_source_has_no_timezone",
+      "thermal_source": "assumed: sensitivity input, not station engineering data",
+      "container_mapping_source": "assumed: one independent container per diesel module",
+      "crew_source": "assumed: one startup crew, separate calendar repair process",
+      "diesel_rating_source": "assumed: user 100 kW research module",
+      "weather_label_source": "assumed: joint wind/temperature stress rule plus residual ice",
+      "fuel_source": "assumed: inherited cap_plan linear fuel conversion, not module-specific curve"
+    },
+    "modules": {
+      "wind": 100.0,
+      "pv": 100.0,
+      "diesel": 100.0,
+      "battery_energy": 50.0,
+      "pcs": 50.0
+    },
+    "grid": {
+      "wind": [
+        5,
+        7
+      ],
+      "pv": [
+        2,
+        3
+      ],
+      "diesel": [
+        4,
+        5,
+        6
+      ],
+      "battery_energy": [
+        20,
+        40
+      ],
+      "pcs": [
+        4,
+        6
+      ]
+    },
+    "planning": {
+      "early_risk_screen": true,
+      "investment_bound_pruning": true
+    },
+    "reliability": {
+      "samples": 16,
+      "seed": 2026091701,
+      "validation_samples": 128,
+      "validation_seed": 2026091702,
+      "eens_limit_kwh": 100.0,
+      "cvar_limit_kwh": 1000.0,
+      "alpha": 0.95
+    },
+    "recovery": {
+      "crews": 1,
+      "prep_hours": 3,
+      "personnel_mode": "arrival_only",
+      "container_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "remote_heat": false,
+      "repair_handover_prepared": true,
+      "initial_soc": 0.8,
+      "warmup_hours": 336,
+      "physical_mode": "R3"
+    },
+    "thermal": {
+      "ua_kw_per_k": 0.15,
+      "c_kwh_per_k": 1.5,
+      "heater_max_kw": 12.0,
+      "ready_temperature_c": 5.0,
+      "initial_temperature_c": -10.0,
+      "efficiency": 1.0,
+      "retained_generator_heat_kw": 0.0
+    },
+    "diesel": {
+      "rating_basis": "research_rating",
+      "mttf_hours": 1662.0,
+      "start_failure_probability": 0.0013,
+      "repair_mean_hours": 37.0,
+      "repair_distribution": "geometric",
+      "fuel_kwh_per_kg": 4.5
+    },
+    "unit_commitment": {
+      "min_output_fraction": 0.2,
+      "min_up_hours": 3,
+      "min_down_hours": 3,
+      "startup_cost_yuan": 0.0
+    },
+    "cost": {
+      "storage_cost_yuan_per_kwh": 0.0
+    },
+    "weather": {
+      "wind_curve_basis": "clean_power_curve",
+      "label_mode": "assumed_stress_case",
+      "wind_mode": "protective_shutdown",
+      "hazard_multiplier": 2.0,
+      "access_wind_threshold_ms": 15.0,
+      "icing_temperature_ceiling_c": 0.0,
+      "residual_icing_hours": 12,
+      "ice_power_factor": 0.5
+    },
+    "failures": {
+      "wind": {
+        "rate_per_hour": 0.0001326259946949602,
+        "repair_mean_hours": 87.0,
+        "source": "config/zhongshan_nonanticipative_2000.toml; literature reference"
+      },
+      "pv": {
+        "rate_per_hour": 7.407407407407407e-05,
+        "repair_mean_hours": 275.5102040816329,
+        "source": "config/zhongshan_nonanticipative_2000.toml; inverter assumption"
+      },
+      "pcs": {
+        "rate_per_hour": 1e-05,
+        "repair_mean_hours": 24.0,
+        "source": "config/zhongshan_nonanticipative_2000.toml; uncalibrated research assumption"
+      }
+    },
+    "policies": [
+      {
+        "name": "load_first_three_online",
+        "online_floor": 3,
+        "reserve_units": 0,
+        "recharge_soc": 0.8,
+        "recharge_kw": 100.0,
+        "heat_priority": false,
+        "keep_standby_warm": true
+      },
+      {
+        "name": "heat_first_four_online",
+        "online_floor": 4,
+        "reserve_units": 0,
+        "recharge_soc": 0.8,
+        "recharge_kw": 100.0,
+        "heat_priority": true,
+        "keep_standby_warm": true
+      }
+    ]
+  },
+  "input_manifest": [
+    {
+      "path": "/home/yzk/cap_plan/data/zhongshan/input/curve.csv",
+      "sha256": "4d58f2a72062c615af26e93c2e1a0c06d8f3dd50b97795fb899f85b520ec2348",
+      "rows": 8784
+    },
+    {
+      "path": "/home/yzk/cap_plan/data/zhongshan/input/es_para.csv",
+      "sha256": "8ba2e364b5631d010fa8b4d1f2e95d4f8b63085f4e092707d10601fed3cbac53",
+      "rows": 1
+    },
+    {
+      "path": "/home/yzk/cap_plan/data/zhongshan/input/pv_para.csv",
+      "sha256": "051621ced45a3f2df57236183029db6e66e6462f33eb510bfb10dcc568737cec",
+      "rows": 1
+    },
+    {
+      "path": "/home/yzk/cap_plan/data/zhongshan/input/ts_para.csv",
+      "sha256": "b5661bcb899dc0414500677b5d16e1bcce2e7c42c4f8b70d194c5c529fd1c25f",
+      "rows": 1
+    },
+    {
+      "path": "/home/yzk/cap_plan/data/zhongshan/input/wd_para.csv",
+      "sha256": "e7c44c38fb0e5668596e3e8a486c8b189b9aac80e208dea8fe3fd32750e4abd5",
+      "rows": 1
+    }
+  ],
+  "weather": {
+    "ambient_source": "/home/yzk/cap_plan/data/zhongshan/input/curve.csv",
+    "weather_label_status": "assumed_stress_case",
+    "timezone_status": "assumed_UTC_plus_08_source_has_no_timezone",
+    "available_source_hours": 8784,
+    "evaluated_hours": 8760,
+    "period_start": "2020-01-01T00:00:00+08:00",
+    "period_end": "2020-12-30T23:00:00+08:00",
+    "climate_scope": "conditional_on_this_weather_sequence",
+    "label_rules": {
+      "wind_curve_basis": "clean_power_curve",
+      "label_mode": "assumed_stress_case",
+      "wind_mode": "protective_shutdown",
+      "hazard_multiplier": 2.0,
+      "access_wind_threshold_ms": 15.0,
+      "icing_temperature_ceiling_c": 0.0,
+      "residual_icing_hours": 12,
+      "ice_power_factor": 0.5
+    },
+    "warning": "Wind/temperature thresholds are engineering scenarios, not observed blizzard or icing classification",
+    "access_blocked_hours": 370,
+    "icing_hours": 1073,
+    "protective_stop_hours": 1073
+  },
+  "source_sha256": {
+    "polar_reliability_planning/__init__.py": "ddc2fb446d598e657ea53205bc48ed69ffe8cafe010589ad1a0488afbd5da060",
+    "polar_reliability_planning/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "polar_reliability_planning/cli.py": "5eb7b0028f559afa092cd190a0328725f9d9b50063522fc27d99e7a70e86f60d",
+    "polar_reliability_planning/config.py": "1af1b94db1392b416e07590e91d9982f37842a5213f9e94b2c15cbecdf93f640",
+    "polar_reliability_planning/data/__init__.py": "07888c4f5e5b1375945b2866da08fd2390c6fce29b02bc5652790c0d49171b10",
+    "polar_reliability_planning/data/cap_plan_loader.py": "faeb2e4db486b45ff5ee6c1e1aade43c020806d7ecddf19bdfb431f842371cec",
+    "polar_reliability_planning/planning/__init__.py": "7830b6cf86e3f86ffd1970329dfac303757577b3e374a1eb39165d1fa06676c4",
+    "polar_reliability_planning/planning/master_milp.py": "3d6595bb5752b0c3859b66c51871610cb19b6f689fb1a602283dea63fd0c9752",
+    "polar_reliability_planning/planning/optimizer.py": "0972c2a14b0bf16279b5a4451e79b7a0af45a92c4c289b5c18ab12fa0df0cb29",
+    "polar_reliability_planning/planning/recovery_optimizer.py": "2fbabc3414c7e4c6107d53aa1f468a2a577652b63715cbd0436acf17075ab8b1",
+    "polar_reliability_planning/planning/reliability_cuts.py": "5124bd820b890e4eaa8fff736a9b7f5b0da4f69d4834ef5a73117f12c689d71b",
+    "polar_reliability_planning/recovery/__init__.py": "a4822f627012ed1cc55c8ff51fff3c46ccae1255cd3837760adb7beee9593886",
+    "polar_reliability_planning/recovery/config.py": "c5b0568c57fafb7c5c1fdbae14e27909cc47205614c055a6c3d2783967ec9af0",
+    "polar_reliability_planning/recovery/container_thermal.py": "6c562def4bd35bf7191649f7856e429c4bba157ff2a28e05429e333baac8e394",
+    "polar_reliability_planning/recovery/diesel_state_machine.py": "9fb8ad0e74a5d6ab984f9c796bfa89885446546e1ba684b0d1768d6d9e48fb79",
+    "polar_reliability_planning/recovery/personnel.py": "081875a254ba57fa34c73bfb0f81ef3fe14770dfac8e3816b6a4a2b493ab648d",
+    "polar_reliability_planning/recovery_cli.py": "9d8ce8b3aee82543953413f48331fb396b543fc22c5ecb7049d7d8dcb69a97d2",
+    "polar_reliability_planning/reliability/__init__.py": "94a0f8f1ea7885eab19a9b3d730efb783e24b061ce5e3c5a7d2b59fcdba69b23",
+    "polar_reliability_planning/reliability/causal_certificates.py": "2d20731952860aba1bf4e9d5fe38fb832e0afdc7bb3ad20e3da5d5bf28c12e12",
+    "polar_reliability_planning/reliability/causal_simulator.py": "832b57c7724dd9d0cbf1bb8a729a625a244d2cf2371ab77d5e670bdd6084f2cb",
+    "polar_reliability_planning/reliability/cvar_calculation.py": "4515e8113be545cb40e4fb39717a6fc876fa19eecdfb6d6adc702a1e59ee4f07",
+    "polar_reliability_planning/reliability/dispatch_audit.py": "09b096d21ac774543f3018d5722308bd3c99023787429d4389141669f6b40b18",
+    "polar_reliability_planning/reliability/eens_calculation.py": "783a6567939c9d990ce66bd842f71264d95b3dac63bd812acfd2612d7241e595",
+    "polar_reliability_planning/reliability/monte_carlo.py": "36bea860464f6ef628549f3b5d6584366cfd51a140c3ae6f85d8cc8b4a0ebbd9",
+    "polar_reliability_planning/reliability/nonanticipative.py": "b19fb7b4ee97c427cd389379b40ebd5ad71a8748db6e4dd286248e90e807428d",
+    "polar_reliability_planning/reliability/operation_model.py": "f91c50362cc46b8a460a580b1a0c87dd00e55601f6ab8c2c195f70192c984e8a",
+    "polar_reliability_planning/reliability/recovery_policy.py": "e7587fd998c385f32de6bae5c3858e12ec19f4275e4b563037a4bdfe74755fba",
+    "polar_reliability_planning/reliability/risk_bounds.py": "17a76945f73266ddb41ef601768d54020269d5a3337268c1ca96e5724e10d8d6",
+    "polar_reliability_planning/reliability/unit_commitment.py": "df8bd0efb4e0b758006caba28c191c76db96f8bcfeb0bd18e9a639dfe87dc332",
+    "polar_reliability_planning/reporting.py": "f443c5b914332274346a86379a6d3f86d3c1cab50f5053872b743ac09685a352",
+    "polar_reliability_planning/scenario_generation/__init__.py": "0a8baa89e9b9133b2145ab9d064ea838d0287040d14b0e908d0c1fab3f29cd2a",
+    "polar_reliability_planning/scenario_generation/climate_generator.py": "26600ab15b7e1f18891277b514351e9d03f033c77d9870cfc91b974111c68ebd",
+    "polar_reliability_planning/scenario_generation/failure_generator.py": "a90296829e5977c98a4f1802829898250e0ee88db224fdf71122318725d22b8d",
+    "polar_reliability_planning/scenario_generation/primitive_noise.py": "4754d060b495b1b99a01d20bad1f21fcce6c0de98f1039e614371ed07de7bdc5",
+    "polar_reliability_planning/scenario_generation/scenario_manager.py": "ed6adf98a9a6c0c31b71f6692885cddd4afb50c49e43c51e99ff83a6faa327d0",
+    "polar_reliability_planning/scenario_generation/weather_state.py": "aaf26615befb55dfc9d9236bad5cae0e2444d29a452c9f9674e4477ffab15ff5",
+    "polar_reliability_planning/validation/__init__.py": "e991e21aa80083e2ddc436cac733d4aacce1a6d3912f351fec4da93739ab11e5",
+    "polar_reliability_planning/validation/monte_carlo_validation.py": "f53018b29539e5114201239af5be56c222f6c64a0e383a144f405567da118368",
+    "polar_reliability_planning/validation/recovery_audit.py": "a957bb4c1b2ef080c8c8875b0066097db0004e18a66db4bd77d26b8ad29c9b12",
+    "polar_reliability_planning/validation/recovery_experiments.py": "fbe09d07ab471e847dd04845371d63aedc66b822df655c636584feaee0d7dadb",
+    "polar_reliability_planning/validation/sensitivity_analysis.py": "073575180887374e7033b4e1b7ec4e157a916c90f8b4fb9af733525f0571e971",
+    "polar_reliability_planning/validation/small_system.py": "76eb5ec3ad2c83f550fca8a92de452aa610a8c0052eb9c225e144f0dd2a7a326",
+    "polar_reliability_planning/weather/__init__.py": "8e6b5c8acbe1b1a0603b5cba78149bf2285d6921d6b71c93043dd9804756d0ec",
+    "polar_reliability_planning/weather/hourly_weather.py": "696c0642ebb559c58e534d63c675b656ad56714bdb757092710746031222f17e"
+  },
+  "noise_version": "philox-device-mechanism-hour-v1",
+  "numpy_version": "2.4.3",
+  "python_version": "3.12.3"
+}

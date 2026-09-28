@@ -1,0 +1,7 @@
+{
+  "supervisor_pid": 51227,
+  "workers": {
+    "gurobi": 51374,
+    "proposed": 51375
+  }
+}

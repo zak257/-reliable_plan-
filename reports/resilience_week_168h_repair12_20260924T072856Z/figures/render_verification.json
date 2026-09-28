@@ -1,0 +1,20 @@
+{
+  "images": [
+    {
+      "loaded": true,
+      "width": 2180,
+      "height": 1640
+    },
+    {
+      "loaded": true,
+      "width": 2000,
+      "height": 1550
+    }
+  ],
+  "formulas": 13,
+  "mathErrors": 0,
+  "fonts": "loaded",
+  "externalAssets": [],
+  "browserErrors": [],
+  "testedOffline": true
+}

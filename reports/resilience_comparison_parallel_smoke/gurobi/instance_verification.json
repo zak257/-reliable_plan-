@@ -1,0 +1,7 @@
+{
+  "instance_sha256": "7f540b9f0d4038d86ed319c3f0967e74fbee5ebf4f3a2dcfc68c265f13a9a88e",
+  "passed": true,
+  "hours": 120,
+  "window_count": 1,
+  "conditional_branch_count": 16
+}

@@ -1,0 +1,142 @@
+{
+  "input_file": "/home/yzk/reliable_plan/reports/resilience_joint_comparison_15000s_20260924T013515Z/shared_year.npz",
+  "input_sha256": "9e9b8d6a362c992e2f933e69cc9c77f99f69befa8576ed82d38250d589c0fee5",
+  "synthetic": true,
+  "hours": 8760,
+  "dt_hours": 1,
+  "seed": 20260923,
+  "loads": [
+    {
+      "key": "core_kw",
+      "label": "核心负荷",
+      "energy_kwh": 297840.51754837256,
+      "share_pct": 14.717606811513892,
+      "mean_kw": 34.000059080864446,
+      "min_kw": 28.36232395319211,
+      "max_kw": 39.827799866741685
+    },
+    {
+      "key": "rigid_kw",
+      "label": "常规刚性负荷",
+      "energy_kwh": 1209123.6966774,
+      "share_pct": 59.74810714358899,
+      "mean_kw": 138.02781925541098,
+      "min_kw": 111.14830472801191,
+      "max_kw": 166.7510310478389
+    },
+    {
+      "key": "flex_interruptible_kw",
+      "label": "可中断负荷",
+      "energy_kwh": 288977.8819286494,
+      "share_pct": 14.279665098819885,
+      "mean_kw": 32.98834268591888,
+      "min_kw": 22.922669600798663,
+      "max_kw": 43.456980683473034
+    },
+    {
+      "key": "flex_shiftable_kw",
+      "label": "可平移负荷",
+      "energy_kwh": 227760.0,
+      "share_pct": 11.254620946077255,
+      "mean_kw": 26.0,
+      "min_kw": 22.0,
+      "max_kw": 30.0
+    },
+    {
+      "key": "load_total_kw",
+      "label": "合计",
+      "energy_kwh": 2023702.0961544216,
+      "share_pct": 100.0,
+      "mean_kw": 231.01622102219423,
+      "min_kw": 192.28297394576512,
+      "max_kw": 267.9419787060778
+    }
+  ],
+  "annual_peak_hour": 1117,
+  "annual_peak": {
+    "core_kw": 35.51557535736943,
+    "rigid_kw": 164.12687163046064,
+    "flex_interruptible_kw": 39.47110459350157,
+    "flex_shiftable_kw": 28.82842712474619,
+    "ambient_c": 11.868117359710851,
+    "wind_clean_pu": 0.3072506615682285,
+    "pv_pu": 0.8400569095760294,
+    "timestamp": "2026-02-16 13:00:00+08:00",
+    "load_total_kw": 267.9419787060778
+  },
+  "core_hourly_share_min_pct": 12.666683730741223,
+  "core_hourly_share_max_pct": 17.18151000256065,
+  "regular_energy_kwh": 1725861.578606049,
+  "flexible_energy_share_pct": 25.53428604489714,
+  "required_ups_kwh": 361.24988541262303,
+  "required_ups_kw": 59.74169980011253,
+  "minimum_ups_energy_modules": 8,
+  "minimum_ups_power_modules": 2,
+  "main_bus_eens_floor_kwh": 86.10101446093745,
+  "sum_window_cvar_floor_kwh": 861.0101446093745,
+  "eens_remaining_kwh": 13.89898553906255,
+  "cvar_bound_remaining_kwh": 138.9898553906255,
+  "windows": [
+    {
+      "window": 1,
+      "start_hour": 816,
+      "end_hour": 888,
+      "start_time": "2026-02-04 00:00:00+08:00",
+      "end_time": "2026-02-07 00:00:00+08:00",
+      "event_time": "2026-02-05 12:00:00+08:00",
+      "core_kw": 37.418626095065356,
+      "forced_regular_loss_kwh": 223.515699158036,
+      "weighted_loss_kwh": 22.3515699158036
+    },
+    {
+      "window": 2,
+      "start_hour": 2496,
+      "end_hour": 2568,
+      "start_time": "2026-04-15 00:00:00+08:00",
+      "end_time": "2026-04-18 00:00:00+08:00",
+      "event_time": "2026-04-16 12:00:00+08:00",
+      "core_kw": 36.03409277250711,
+      "forced_regular_loss_kwh": 209.00849367968544,
+      "weighted_loss_kwh": 20.900849367968547
+    },
+    {
+      "window": 3,
+      "start_hour": 5616,
+      "end_hour": 5688,
+      "start_time": "2026-08-23 00:00:00+08:00",
+      "end_time": "2026-08-26 00:00:00+08:00",
+      "event_time": "2026-08-24 12:00:00+08:00",
+      "core_kw": 33.69370162128733,
+      "forced_regular_loss_kwh": 207.99892624449888,
+      "weighted_loss_kwh": 20.79989262444989
+    },
+    {
+      "window": 4,
+      "start_hour": 7536,
+      "end_hour": 7608,
+      "start_time": "2026-11-11 00:00:00+08:00",
+      "end_time": "2026-11-14 00:00:00+08:00",
+      "event_time": "2026-11-12 12:00:00+08:00",
+      "core_kw": 37.047146582099906,
+      "forced_regular_loss_kwh": 220.48702552715415,
+      "weighted_loss_kwh": 22.048702552715415
+    }
+  ],
+  "baseline_resource_stats": {
+    "wind_clean_pu": {
+      "mean": 0.43502484875487696,
+      "min": 0.0,
+      "max": 1.0
+    },
+    "pv_pu": {
+      "mean": 0.21873931656654932,
+      "min": 0.0,
+      "max": 0.9238250077543214
+    },
+    "ambient_c": {
+      "mean": 3.9021576559139004,
+      "min": -10.120883300694047,
+      "max": 19.362694943979225
+    }
+  }
+}

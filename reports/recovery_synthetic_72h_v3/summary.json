@@ -1,0 +1,144 @@
+{
+  "synthetic": true,
+  "physical_audit_passed": true,
+  "exhaustive_accelerated_same_optimum": true,
+  "cached_resume_same_optimum": true,
+  "exhaustive_seconds": 0.14594513503834605,
+  "accelerated_seconds": 0.07360951928421855,
+  "cached_resume_seconds": 0.0061129056848585606,
+  "grid_designs": 12,
+  "policies": 2,
+  "scenarios": 4,
+  "comparisons": [
+    {
+      "mode": "R0",
+      "units": {
+        "wind": 1,
+        "pv": 1,
+        "diesel": 2,
+        "battery_energy": 12,
+        "pcs": 3
+      },
+      "policy": "load_priority",
+      "own_model_cost_yuan": 21347.715379871584,
+      "own_model_risk": {
+        "eens_kwh": 0.0,
+        "cvar_kwh": 0.0,
+        "var_kwh": 0.0,
+        "positive_loss_fraction": 0.0,
+        "tail_effective_scenarios": 0.20000000000000018,
+        "zero_var_cvar_identity": true,
+        "samples": 4
+      },
+      "full_model_cost_yuan": 18835.059240687056,
+      "full_model_risk": {
+        "eens_kwh": 583.718095489748,
+        "cvar_kwh": 583.718095489748,
+        "var_kwh": 583.718095489748,
+        "positive_loss_fraction": 1.0,
+        "tail_effective_scenarios": 0.20000000000000018,
+        "zero_var_cvar_identity": false,
+        "samples": 4
+      },
+      "full_model_feasible": false
+    },
+    {
+      "mode": "R1",
+      "units": {
+        "wind": 1,
+        "pv": 1,
+        "diesel": 2,
+        "battery_energy": 12,
+        "pcs": 3
+      },
+      "policy": "load_priority",
+      "own_model_cost_yuan": 21112.013119476072,
+      "own_model_risk": {
+        "eens_kwh": 69.60000000000002,
+        "cvar_kwh": 69.60000000000002,
+        "var_kwh": 69.60000000000002,
+        "positive_loss_fraction": 1.0,
+        "tail_effective_scenarios": 0.20000000000000018,
+        "zero_var_cvar_identity": false,
+        "samples": 4
+      },
+      "full_model_cost_yuan": 18835.059240687056,
+      "full_model_risk": {
+        "eens_kwh": 583.718095489748,
+        "cvar_kwh": 583.718095489748,
+        "var_kwh": 583.718095489748,
+        "positive_loss_fraction": 1.0,
+        "tail_effective_scenarios": 0.20000000000000018,
+        "zero_var_cvar_identity": false,
+        "samples": 4
+      },
+      "full_model_feasible": false
+    },
+    {
+      "mode": "R2",
+      "units": {
+        "wind": 1,
+        "pv": 1,
+        "diesel": 2,
+        "battery_energy": 40,
+        "pcs": 3
+      },
+      "policy": "load_priority",
+      "own_model_cost_yuan": 23594.467901297674,
+      "own_model_risk": {
+        "eens_kwh": 0.0,
+        "cvar_kwh": 0.0,
+        "var_kwh": 0.0,
+        "positive_loss_fraction": 0.0,
+        "tail_effective_scenarios": 0.20000000000000018,
+        "zero_var_cvar_identity": true,
+        "samples": 4
+      },
+      "full_model_cost_yuan": 24307.78544570352,
+      "full_model_risk": {
+        "eens_kwh": 0.0,
+        "cvar_kwh": 0.0,
+        "var_kwh": 0.0,
+        "positive_loss_fraction": 0.0,
+        "tail_effective_scenarios": 0.20000000000000018,
+        "zero_var_cvar_identity": true,
+        "samples": 4
+      },
+      "full_model_feasible": true
+    },
+    {
+      "mode": "R3",
+      "units": {
+        "wind": 1,
+        "pv": 1,
+        "diesel": 2,
+        "battery_energy": 40,
+        "pcs": 3
+      },
+      "policy": "load_priority",
+      "own_model_cost_yuan": 24307.78544570352,
+      "own_model_risk": {
+        "eens_kwh": 0.0,
+        "cvar_kwh": 0.0,
+        "var_kwh": 0.0,
+        "positive_loss_fraction": 0.0,
+        "tail_effective_scenarios": 0.20000000000000018,
+        "zero_var_cvar_identity": true,
+        "samples": 4
+      },
+      "full_model_cost_yuan": 24307.78544570352,
+      "full_model_risk": {
+        "eens_kwh": 0.0,
+        "cvar_kwh": 0.0,
+        "var_kwh": 0.0,
+        "positive_loss_fraction": 0.0,
+        "tail_effective_scenarios": 0.20000000000000018,
+        "zero_var_cvar_identity": true,
+        "samples": 4
+      },
+      "full_model_feasible": true
+    }
+  ],
+  "cuts_generated": 0,
+  "advanced_lp_cuts": "not implemented; no claim of coupled-cut speedup"
+}

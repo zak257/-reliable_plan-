@@ -1,0 +1,19 @@
+{
+  "status": "finished",
+  "method": "proposed",
+  "pid": 56618,
+  "cpu_affinity": [
+    4,
+    5,
+    6,
+    7
+  ],
+  "started_at_utc": "2026-09-24T01:35:16.110719+00:00",
+  "result_status": "time_limit_without_incumbent",
+  "selected": null,
+  "has_audited_incumbent": false,
+  "objective_yuan": null,
+  "mip_gap": null,
+  "finished_at_utc": "2026-09-24T05:45:19.574351+00:00",
+  "process_wall_seconds": 15003.46387315914
+}

@@ -1,0 +1,41 @@
+{
+  "status": "preexisting_snapshot_mismatch",
+  "checked": 90,
+  "mismatches": [
+    {
+      "path": "README.md",
+      "working_file_equals_HEAD": true,
+      "HEAD_already_differs_from_certified_snapshot": true
+    },
+    {
+      "path": "docs/model.md",
+      "working_file_equals_HEAD": true,
+      "HEAD_already_differs_from_certified_snapshot": true
+    },
+    {
+      "path": "polar_reliability_planning/cli.py",
+      "working_file_equals_HEAD": true,
+      "HEAD_already_differs_from_certified_snapshot": true
+    },
+    {
+      "path": "polar_reliability_planning/planning/optimizer.py",
+      "working_file_equals_HEAD": true,
+      "HEAD_already_differs_from_certified_snapshot": true
+    },
+    {
+      "path": "polar_reliability_planning/planning/reliability_cuts.py",
+      "working_file_equals_HEAD": true,
+      "HEAD_already_differs_from_certified_snapshot": true
+    },
+    {
+      "path": "polar_reliability_planning/reliability/monte_carlo.py",
+      "working_file_equals_HEAD": true,
+      "HEAD_already_differs_from_certified_snapshot": true
+    },
+    {
+      "path": "polar_reliability_planning/validation/sensitivity_analysis.py",
+      "working_file_equals_HEAD": true,
+      "HEAD_already_differs_from_certified_snapshot": true
+    }
+  ]
+}

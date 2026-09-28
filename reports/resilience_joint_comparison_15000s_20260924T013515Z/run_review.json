@@ -1,0 +1,53 @@
+{
+  "instance_sha256": "5f8dbfe35655bafb8a20277f097448f74a7bbaea25449f05cb3ef2aec65f6045",
+  "input_is_synthetic": true,
+  "annual_hours": 8760,
+  "window_hours": 72,
+  "window_count": 4,
+  "window_branch_records": 64,
+  "weights_are_assumed_conditional_scenario_probabilities": true,
+  "outcome": "both_time_limit_without_integer_feasible_incumbent",
+  "methods": {
+    "gurobi": {
+      "same_instance": true,
+      "finished": true,
+      "solution_count_zero_in_final_log": true,
+      "build_seconds": 92.26566398655996,
+      "solver_runtime_seconds": 15242.975822210312,
+      "compute_wall_seconds": 15335.552597982809,
+      "process_wall_seconds": 15354.127637304831,
+      "post_compute_seconds": 18.57503932202235,
+      "compute_budget_overrun_seconds": 335.55259798280895,
+      "objective_lower_bound_yuan": 2013285.749551565,
+      "feasible_objective_yuan": null,
+      "selected": null,
+      "eens_kwh": null,
+      "cvar_upper_bound_kwh": null
+    },
+    "proposed": {
+      "same_instance": true,
+      "finished": true,
+      "solution_count_zero_in_final_log": true,
+      "build_seconds": 87.06906001782045,
+      "solver_runtime_seconds": 14910.575394153595,
+      "compute_wall_seconds": 15002.584692413919,
+      "process_wall_seconds": 15003.46387315914,
+      "post_compute_seconds": 0.8791807452216744,
+      "compute_budget_overrun_seconds": 2.584692413918674,
+      "objective_lower_bound_yuan": 763627.9457019741,
+      "feasible_objective_yuan": null,
+      "selected": null,
+      "eens_kwh": null,
+      "cvar_upper_bound_kwh": null
+    }
+  },
+  "direct_model_size": {
+    "variables": 3324596,
+    "binary_variables": 2148592,
+    "linear_constraints": 8586093,
+    "general_linear_constraints": 572928
+  },
+  "proposed_oracle_calls": 1,
+  "proposed_master_calls": 7,
+  "proposed_candidate_is_not_a_solution": true
+}

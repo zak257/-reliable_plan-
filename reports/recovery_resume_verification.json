@@ -1,0 +1,6 @@
+{
+  "incumbent_identical": true,
+  "validation_identical": true,
+  "scope": "full CLI fingerprint-checked resume; same seed and same failed holdout faithfully retained",
+  "resume_seconds": 1.3541299691423774
+}

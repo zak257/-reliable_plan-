@@ -1,0 +1,270 @@
+[
+  {
+    "name": "annual_normal",
+    "weight": 0.48,
+    "run_repair_hours": 12,
+    "start_repair_hours": 12,
+    "renewable_bus_outage_hours": [],
+    "main_bus_outage_hours": [],
+    "pcs_outage_hours": [],
+    "ups_outage_hours": []
+  },
+  {
+    "name": "w0_normal_renewable_bus",
+    "weight": 0.08000000000000002,
+    "run_repair_hours": 12,
+    "start_repair_hours": 12,
+    "renewable_bus_outage_hours": [
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71
+    ],
+    "main_bus_outage_hours": [],
+    "pcs_outage_hours": [],
+    "ups_outage_hours": []
+  },
+  {
+    "name": "w0_normal_main_bus",
+    "weight": 0.08000000000000002,
+    "run_repair_hours": 12,
+    "start_repair_hours": 12,
+    "renewable_bus_outage_hours": [],
+    "main_bus_outage_hours": [
+      60
+    ],
+    "pcs_outage_hours": [],
+    "ups_outage_hours": []
+  },
+  {
+    "name": "w0_normal_compound",
+    "weight": 0.064,
+    "run_repair_hours": 12,
+    "start_repair_hours": 12,
+    "renewable_bus_outage_hours": [
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71
+    ],
+    "main_bus_outage_hours": [],
+    "pcs_outage_hours": [],
+    "ups_outage_hours": []
+  },
+  {
+    "name": "w0_normal_pcs",
+    "weight": 0.024,
+    "run_repair_hours": 12,
+    "start_repair_hours": 12,
+    "renewable_bus_outage_hours": [],
+    "main_bus_outage_hours": [],
+    "pcs_outage_hours": [
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71
+    ],
+    "ups_outage_hours": []
+  },
+  {
+    "name": "w0_normal_ups",
+    "weight": 0.024,
+    "run_repair_hours": 12,
+    "start_repair_hours": 12,
+    "renewable_bus_outage_hours": [],
+    "main_bus_outage_hours": [],
+    "pcs_outage_hours": [],
+    "ups_outage_hours": [
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71
+    ]
+  },
+  {
+    "name": "w0_normal_diesel_run",
+    "weight": 0.032,
+    "run_repair_hours": 12,
+    "start_repair_hours": 12,
+    "renewable_bus_outage_hours": [],
+    "main_bus_outage_hours": [],
+    "pcs_outage_hours": [],
+    "ups_outage_hours": []
+  },
+  {
+    "name": "w0_normal_diesel_start",
+    "weight": 0.016,
+    "run_repair_hours": 12,
+    "start_repair_hours": 12,
+    "renewable_bus_outage_hours": [],
+    "main_bus_outage_hours": [],
+    "pcs_outage_hours": [],
+    "ups_outage_hours": []
+  },
+  {
+    "name": "w0_storm_none",
+    "weight": 0.12,
+    "run_repair_hours": 12,
+    "start_repair_hours": 12,
+    "renewable_bus_outage_hours": [],
+    "main_bus_outage_hours": [],
+    "pcs_outage_hours": [],
+    "ups_outage_hours": []
+  },
+  {
+    "name": "w0_storm_renewable_bus",
+    "weight": 0.020000000000000004,
+    "run_repair_hours": 12,
+    "start_repair_hours": 12,
+    "renewable_bus_outage_hours": [
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71
+    ],
+    "main_bus_outage_hours": [],
+    "pcs_outage_hours": [],
+    "ups_outage_hours": []
+  },
+  {
+    "name": "w0_storm_main_bus",
+    "weight": 0.020000000000000004,
+    "run_repair_hours": 12,
+    "start_repair_hours": 12,
+    "renewable_bus_outage_hours": [],
+    "main_bus_outage_hours": [
+      60
+    ],
+    "pcs_outage_hours": [],
+    "ups_outage_hours": []
+  },
+  {
+    "name": "w0_storm_compound",
+    "weight": 0.016,
+    "run_repair_hours": 12,
+    "start_repair_hours": 12,
+    "renewable_bus_outage_hours": [
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71
+    ],
+    "main_bus_outage_hours": [],
+    "pcs_outage_hours": [],
+    "ups_outage_hours": []
+  },
+  {
+    "name": "w0_storm_pcs",
+    "weight": 0.006,
+    "run_repair_hours": 12,
+    "start_repair_hours": 12,
+    "renewable_bus_outage_hours": [],
+    "main_bus_outage_hours": [],
+    "pcs_outage_hours": [
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71
+    ],
+    "ups_outage_hours": []
+  },
+  {
+    "name": "w0_storm_ups",
+    "weight": 0.006,
+    "run_repair_hours": 12,
+    "start_repair_hours": 12,
+    "renewable_bus_outage_hours": [],
+    "main_bus_outage_hours": [],
+    "pcs_outage_hours": [],
+    "ups_outage_hours": [
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71
+    ]
+  },
+  {
+    "name": "w0_storm_diesel_run",
+    "weight": 0.008,
+    "run_repair_hours": 12,
+    "start_repair_hours": 12,
+    "renewable_bus_outage_hours": [],
+    "main_bus_outage_hours": [],
+    "pcs_outage_hours": [],
+    "ups_outage_hours": []
+  },
+  {
+    "name": "w0_storm_diesel_start",
+    "weight": 0.004,
+    "run_repair_hours": 12,
+    "start_repair_hours": 12,
+    "renewable_bus_outage_hours": [],
+    "main_bus_outage_hours": [],
+    "pcs_outage_hours": [],
+    "ups_outage_hours": []
+  }
+]

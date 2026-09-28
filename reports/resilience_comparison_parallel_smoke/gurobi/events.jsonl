@@ -1,0 +1,4 @@
+{"action": "instance_verified", "elapsed_seconds": 0.0039008338935673237, "instance_sha256": "7f540b9f0d4038d86ed319c3f0967e74fbee5ebf4f3a2dcfc68c265f13a9a88e", "hours": 120}
+{"action": "solver_progress", "elapsed_seconds": 15.440971800126135, "stage": "joint", "solver_upper_yuan": null, "solver_lower_yuan": 138000.0, "nodes": 0.0}
+{"action": "solver_incumbent", "elapsed_seconds": 16.076411516871303, "stage": "joint", "objective_yuan": 141054.47680133255}
+{"action": "solver_incumbent", "elapsed_seconds": 16.102557111065835, "stage": "joint", "objective_yuan": 141054.47680133278}

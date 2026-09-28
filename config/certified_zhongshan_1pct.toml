@@ -1,0 +1,27 @@
+# Independent full-year Zhongshan run; legacy files remain read-only.
+system_config = "zhongshan_literature_2000.toml"
+seed = 20260910
+max_designs = 2000000
+
+[certification]
+delta = 0.05
+relative_gap = 0.01
+# Inactive as a stopping rule when relative_gap is configured.
+epsilon_cost = 1000.0
+initial_samples = 8
+max_samples = 128
+max_stages = 8
+max_oracle_calls = 2000
+max_economic_calls = 100
+max_seconds = 600.0
+base_call_seconds = 30.0
+max_call_seconds = 120.0
+fairness_interval = 4
+
+[solver]
+time_limit = 120.0
+oracle_time_limit = 30.0
+mip_gap = 0.01
+threads = 2
+seed = 0
+output_flag = false

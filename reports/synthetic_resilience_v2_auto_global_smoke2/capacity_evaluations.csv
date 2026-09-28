@@ -1,0 +1,2 @@
+wind_kw,pv_kw,diesel_units,battery_kwh,pcs_kw,ups_kwh,ups_kw,objective_yuan,investment_yuan,mean_operation_yuan,feasible,core_bridge_pass,required_ups_kwh,required_ups_kw,flex_adjusted_mean_kwh
+0.0,0.0,0,0.0,0.0,500.0,100.0,257568.21683302228,250000.0,7568.216833022265,True,True,308.6297097929724,57.86807058618233,0.0

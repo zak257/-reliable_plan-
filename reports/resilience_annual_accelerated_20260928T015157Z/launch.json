@@ -1,0 +1,25 @@
+{
+  "pid": 54869,
+  "output": "/home/yzk/reliable_plan/reports/resilience_annual_accelerated_20260928T015157Z",
+  "command": [
+    "/home/yzk/cap_plan/venv/bin/python",
+    "-u",
+    "-m",
+    "scripts.run_resilience_annual_accelerated",
+    "--output",
+    "/home/yzk/reliable_plan/reports/resilience_annual_accelerated_20260928T015157Z",
+    "--time-limit-seconds",
+    "15000",
+    "--seed-seconds",
+    "1200",
+    "--threads",
+    "8",
+    "--method",
+    "1",
+    "--mip-gap",
+    "0.01"
+  ],
+  "launched_at_utc": "2026-09-28T01:51:57.816607+00:00",
+  "supersedes_failed_run": "/home/yzk/reliable_plan/reports/resilience_annual_accelerated_20260928T014603Z",
+  "restart_reason": "fixed-policy indicators linearized exactly; previous thermal audit rejected its solution"
+}

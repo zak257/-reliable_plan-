@@ -1,0 +1,502 @@
+{
+  "synthetic": true,
+  "frozen_design": {
+    "units": {
+      "wind": 5,
+      "pv": 3,
+      "diesel": 4,
+      "battery_energy": 40,
+      "pcs": 4
+    },
+    "capacities": {
+      "wind": 500.0,
+      "pv": 300.0,
+      "diesel": 400.0,
+      "battery_energy": 2000.0,
+      "pcs": 200.0
+    },
+    "policy": {
+      "name": "load_first_three_online",
+      "online_floor": 3,
+      "reserve_units": 0,
+      "recharge_soc": 0.8,
+      "recharge_kw": 100.0,
+      "heat_priority": false,
+      "keep_standby_warm": true
+    },
+    "policy_sha256": "c1b16c40e93d24d01996b4bd81ccf0b9d616e7bef83b01e34c8697540ee6de0f",
+    "status": "evaluated",
+    "feasible": true,
+    "complete": true,
+    "risk": {
+      "eens_kwh": 13.341736111111123,
+      "cvar_kwh": 213.46777777777797,
+      "var_kwh": 213.46777777777797,
+      "positive_loss_fraction": 0.0625,
+      "tail_effective_scenarios": 0.8000000000000007,
+      "zero_var_cvar_identity": false,
+      "samples": 16
+    },
+    "investment_cost_yuan": 1410000.0,
+    "expected_operating_cost_yuan": 4022377.925818869,
+    "objective_yuan": 5432377.925818869
+  },
+  "sample_role": "training_primitives_descriptive_only",
+  "scenarios": 16,
+  "reselection": false,
+  "results": [
+    {
+      "case": "baseline",
+      "change": {},
+      "valid": true,
+      "seconds": 3.492273636162281,
+      "eens_kwh": 13.341736111111123,
+      "cvar_kwh": 213.46777777777797,
+      "var_kwh": 213.46777777777797,
+      "positive_loss_fraction": 0.0625,
+      "tail_effective_scenarios": 0.8000000000000007,
+      "zero_var_cvar_identity": false,
+      "samples": 16,
+      "heater_kwh": 70808.65736909032,
+      "diesel_fuel_kg": 268158.5283879349,
+      "battery_discharge_kwh": 990.368537183544,
+      "wait_access_unit_hours": 4.3125,
+      "wait_prep_unit_hours": 17.0625,
+      "wait_heat_unit_hours": 0.25,
+      "expected_operating_cost_yuan": 4022377.925818869
+    },
+    {
+      "case": "warmup_0h",
+      "change": {
+        "recovery": {
+          "warmup_hours": 0
+        }
+      },
+      "valid": true,
+      "seconds": 3.3194155152887106,
+      "eens_kwh": 13.341736111111123,
+      "cvar_kwh": 213.46777777777797,
+      "var_kwh": 213.46777777777797,
+      "positive_loss_fraction": 0.0625,
+      "tail_effective_scenarios": 0.8000000000000007,
+      "zero_var_cvar_identity": false,
+      "samples": 16,
+      "heater_kwh": 70606.73491468997,
+      "diesel_fuel_kg": 267855.5674597347,
+      "battery_discharge_kwh": 1312.7825365305391,
+      "wait_access_unit_hours": 4.3125,
+      "wait_prep_unit_hours": 27.375,
+      "wait_heat_unit_hours": 0.25,
+      "expected_operating_cost_yuan": 4017833.5118958647
+    },
+    {
+      "case": "warmup_168h",
+      "change": {
+        "recovery": {
+          "warmup_hours": 168
+        }
+      },
+      "valid": true,
+      "seconds": 3.4206577041186392,
+      "eens_kwh": 13.341736111111123,
+      "cvar_kwh": 213.46777777777797,
+      "var_kwh": 213.46777777777797,
+      "positive_loss_fraction": 0.0625,
+      "tail_effective_scenarios": 0.8000000000000007,
+      "zero_var_cvar_identity": false,
+      "samples": 16,
+      "heater_kwh": 70794.40044990761,
+      "diesel_fuel_kg": 268156.3966288861,
+      "battery_discharge_kwh": 990.368537183544,
+      "wait_access_unit_hours": 4.3125,
+      "wait_prep_unit_hours": 17.25,
+      "wait_heat_unit_hours": 0.25,
+      "expected_operating_cost_yuan": 4022345.9494331367
+    },
+    {
+      "case": "warmup_672h",
+      "change": {
+        "recovery": {
+          "warmup_hours": 672
+        }
+      },
+      "valid": true,
+      "seconds": 3.5681546861305833,
+      "eens_kwh": 13.341736111111123,
+      "cvar_kwh": 213.46777777777797,
+      "var_kwh": 213.46777777777797,
+      "positive_loss_fraction": 0.0625,
+      "tail_effective_scenarios": 0.8000000000000007,
+      "zero_var_cvar_identity": false,
+      "samples": 16,
+      "heater_kwh": 70833.86602907821,
+      "diesel_fuel_kg": 268162.84228595276,
+      "battery_discharge_kwh": 990.1819618680569,
+      "wait_access_unit_hours": 4.3125,
+      "wait_prep_unit_hours": 16.6875,
+      "wait_heat_unit_hours": 0.25,
+      "expected_operating_cost_yuan": 4022442.634289137
+    },
+    {
+      "case": "heater_3.0kW",
+      "change": {
+        "thermal": {
+          "heater_max_kw": 3.0
+        }
+      },
+      "valid": true,
+      "seconds": 3.4575593029148877,
+      "eens_kwh": 3435.1720427227133,
+      "cvar_kwh": 14656.519045963076,
+      "var_kwh": 14656.519045963076,
+      "positive_loss_fraction": 0.625,
+      "tail_effective_scenarios": 0.8000000000000007,
+      "zero_var_cvar_identity": false,
+      "samples": 16,
+      "heater_kwh": 66322.29994673005,
+      "diesel_fuel_kg": 266024.25863195217,
+      "battery_discharge_kwh": 3481.3836241173435,
+      "wait_access_unit_hours": 5.75,
+      "wait_prep_unit_hours": 9.5625,
+      "wait_heat_unit_hours": 155.25,
+      "expected_operating_cost_yuan": 3990363.8794791056
+    },
+    {
+      "case": "heater_6.0kW",
+      "change": {
+        "thermal": {
+          "heater_max_kw": 6.0
+        }
+      },
+      "valid": true,
+      "seconds": 3.462928465101868,
+      "eens_kwh": 29.870243059722235,
+      "cvar_kwh": 477.92388895555575,
+      "var_kwh": 477.92388895555575,
+      "positive_loss_fraction": 0.0625,
+      "tail_effective_scenarios": 0.8000000000000007,
+      "zero_var_cvar_identity": false,
+      "samples": 16,
+      "heater_kwh": 70806.53071559822,
+      "diesel_fuel_kg": 268152.63721905096,
+      "battery_discharge_kwh": 992.7743936279885,
+      "wait_access_unit_hours": 4.3125,
+      "wait_prep_unit_hours": 17.0625,
+      "wait_heat_unit_hours": 0.875,
+      "expected_operating_cost_yuan": 4022289.5582856094
+    },
+    {
+      "case": "heater_24.0kW",
+      "change": {
+        "thermal": {
+          "heater_max_kw": 24.0
+        }
+      },
+      "valid": true,
+      "seconds": 3.483210808131844,
+      "eens_kwh": 13.341736111111123,
+      "cvar_kwh": 213.46777777777797,
+      "var_kwh": 213.46777777777797,
+      "positive_loss_fraction": 0.0625,
+      "tail_effective_scenarios": 0.8000000000000007,
+      "zero_var_cvar_identity": false,
+      "samples": 16,
+      "heater_kwh": 70808.69257259394,
+      "diesel_fuel_kg": 268159.47057860985,
+      "battery_discharge_kwh": 990.368537183544,
+      "wait_access_unit_hours": 4.3125,
+      "wait_prep_unit_hours": 17.0625,
+      "wait_heat_unit_hours": 0.1875,
+      "expected_operating_cost_yuan": 4022392.058678993
+    },
+    {
+      "case": "mttf_1180.0h",
+      "change": {
+        "diesel": {
+          "mttf_hours": 1180.0
+        }
+      },
+      "valid": true,
+      "seconds": 3.485084026120603,
+      "eens_kwh": 92.28677083749997,
+      "cvar_kwh": 1263.1205556222217,
+      "var_kwh": 1263.1205556222217,
+      "positive_loss_fraction": 0.125,
+      "tail_effective_scenarios": 0.8000000000000007,
+      "zero_var_cvar_identity": false,
+      "samples": 16,
+      "heater_kwh": 70859.63021412473,
+      "diesel_fuel_kg": 268078.99000538647,
+      "battery_discharge_kwh": 1218.6607767731273,
+      "wait_access_unit_hours": 4.6875,
+      "wait_prep_unit_hours": 19.0,
+      "wait_heat_unit_hours": 1.9375,
+      "expected_operating_cost_yuan": 4021184.850080645
+    },
+    {
+      "case": "mttf_2410.0h",
+      "change": {
+        "diesel": {
+          "mttf_hours": 2410.0
+        }
+      },
+      "valid": true,
+      "seconds": 3.4517950513400137,
+      "eens_kwh": 0.0,
+      "cvar_kwh": 0.0,
+      "var_kwh": 0.0,
+      "positive_loss_fraction": 0.0,
+      "tail_effective_scenarios": 0.8000000000000007,
+      "zero_var_cvar_identity": true,
+      "samples": 16,
+      "heater_kwh": 70599.62922112357,
+      "diesel_fuel_kg": 268149.1772183615,
+      "battery_discharge_kwh": 929.285479168872,
+      "wait_access_unit_hours": 4.125,
+      "wait_prep_unit_hours": 17.4375,
+      "wait_heat_unit_hours": 0.0625,
+      "expected_operating_cost_yuan": 4022237.658275269
+    },
+    {
+      "case": "start_failure_0.001",
+      "change": {
+        "diesel": {
+          "start_failure_probability": 0.001
+        }
+      },
+      "valid": true,
+      "seconds": 3.497138125821948,
+      "eens_kwh": 13.341736111111123,
+      "cvar_kwh": 213.46777777777797,
+      "var_kwh": 213.46777777777797,
+      "positive_loss_fraction": 0.0625,
+      "tail_effective_scenarios": 0.8000000000000007,
+      "zero_var_cvar_identity": false,
+      "samples": 16,
+      "heater_kwh": 70808.65736909032,
+      "diesel_fuel_kg": 268160.89252373786,
+      "battery_discharge_kwh": 986.1409677370164,
+      "wait_access_unit_hours": 4.3125,
+      "wait_prep_unit_hours": 17.0625,
+      "wait_heat_unit_hours": 0.25,
+      "expected_operating_cost_yuan": 4022413.3878559126
+    },
+    {
+      "case": "start_failure_0.0017",
+      "change": {
+        "diesel": {
+          "start_failure_probability": 0.0017
+        }
+      },
+      "valid": true,
+      "seconds": 3.47524367691949,
+      "eens_kwh": 13.341736111111123,
+      "cvar_kwh": 213.46777777777797,
+      "var_kwh": 213.46777777777797,
+      "positive_loss_fraction": 0.0625,
+      "tail_effective_scenarios": 0.8000000000000007,
+      "zero_var_cvar_identity": false,
+      "samples": 16,
+      "heater_kwh": 70808.65736909032,
+      "diesel_fuel_kg": 268158.5283879349,
+      "battery_discharge_kwh": 990.368537183544,
+      "wait_access_unit_hours": 4.3125,
+      "wait_prep_unit_hours": 17.0625,
+      "wait_heat_unit_hours": 0.25,
+      "expected_operating_cost_yuan": 4022377.925818869
+    },
+    {
+      "case": "fixed_37h_repair",
+      "change": {
+        "diesel": {
+          "repair_distribution": "fixed"
+        }
+      },
+      "valid": true,
+      "seconds": 3.4783914289437234,
+      "eens_kwh": 30.09952197502652,
+      "cvar_kwh": 481.59235160042425,
+      "var_kwh": 481.5923516004243,
+      "positive_loss_fraction": 0.0625,
+      "tail_effective_scenarios": 0.8000000000000007,
+      "zero_var_cvar_identity": false,
+      "samples": 16,
+      "heater_kwh": 70807.20808346644,
+      "diesel_fuel_kg": 268153.3366997584,
+      "battery_discharge_kwh": 961.879796466851,
+      "wait_access_unit_hours": 4.375,
+      "wait_prep_unit_hours": 15.9375,
+      "wait_heat_unit_hours": 0.0,
+      "expected_operating_cost_yuan": 4022300.0504962215
+    },
+    {
+      "case": "two_startup_crews",
+      "change": {
+        "recovery": {
+          "crews": 2
+        }
+      },
+      "valid": true,
+      "seconds": 3.491395690012723,
+      "eens_kwh": 13.341736111111123,
+      "cvar_kwh": 213.46777777777797,
+      "var_kwh": 213.46777777777797,
+      "positive_loss_fraction": 0.0625,
+      "tail_effective_scenarios": 0.8000000000000007,
+      "zero_var_cvar_identity": false,
+      "samples": 16,
+      "heater_kwh": 70808.65736909032,
+      "diesel_fuel_kg": 268158.5283879349,
+      "battery_discharge_kwh": 990.368537183544,
+      "wait_access_unit_hours": 4.3125,
+      "wait_prep_unit_hours": 17.0625,
+      "wait_heat_unit_hours": 0.25,
+      "expected_operating_cost_yuan": 4022377.925818869
+    },
+    {
+      "case": "all_work_safe",
+      "change": {
+        "recovery": {
+          "personnel_mode": "all_work_safe"
+        }
+      },
+      "valid": true,
+      "seconds": 3.483075133059174,
+      "eens_kwh": 13.341736111111123,
+      "cvar_kwh": 213.46777777777797,
+      "var_kwh": 213.46777777777797,
+      "positive_loss_fraction": 0.0625,
+      "tail_effective_scenarios": 0.8000000000000007,
+      "zero_var_cvar_identity": false,
+      "samples": 16,
+      "heater_kwh": 70808.65736909032,
+      "diesel_fuel_kg": 268153.46307181637,
+      "battery_discharge_kwh": 1059.509683021044,
+      "wait_access_unit_hours": 4.3125,
+      "wait_prep_unit_hours": 18.1875,
+      "wait_heat_unit_hours": 0.25,
+      "expected_operating_cost_yuan": 4022301.9460770916
+    },
+    {
+      "case": "residual_ice_0h",
+      "change": {
+        "weather": {
+          "residual_icing_hours": 0
+        }
+      },
+      "valid": true,
+      "seconds": 3.466153176035732,
+      "eens_kwh": 13.341736111111123,
+      "cvar_kwh": 213.46777777777797,
+      "var_kwh": 213.46777777777797,
+      "positive_loss_fraction": 0.0625,
+      "tail_effective_scenarios": 0.8000000000000007,
+      "zero_var_cvar_identity": false,
+      "samples": 16,
+      "heater_kwh": 70808.65736909032,
+      "diesel_fuel_kg": 243558.55265059732,
+      "battery_discharge_kwh": 842.1253080752108,
+      "wait_access_unit_hours": 4.25,
+      "wait_prep_unit_hours": 15.75,
+      "wait_heat_unit_hours": 0.25,
+      "expected_operating_cost_yuan": 3653378.289758687
+    },
+    {
+      "case": "residual_ice_24h",
+      "change": {
+        "weather": {
+          "residual_icing_hours": 24
+        }
+      },
+      "valid": true,
+      "seconds": 3.4747464982792735,
+      "eens_kwh": 17.855335999999994,
+      "cvar_kwh": 285.6853759999999,
+      "var_kwh": 285.6853759999999,
+      "positive_loss_fraction": 0.0625,
+      "tail_effective_scenarios": 0.8000000000000007,
+      "zero_var_cvar_identity": false,
+      "samples": 16,
+      "heater_kwh": 70808.29302270393,
+      "diesel_fuel_kg": 281102.3670893399,
+      "battery_discharge_kwh": 1040.501673366183,
+      "wait_access_unit_hours": 4.3125,
+      "wait_prep_unit_hours": 18.9375,
+      "wait_heat_unit_hours": 0.25,
+      "expected_operating_cost_yuan": 4216535.506340107
+    },
+    {
+      "case": "physical_R0",
+      "change": {
+        "recovery": {
+          "physical_mode": "R0"
+        }
+      },
+      "valid": true,
+      "seconds": 3.002811553888023,
+      "eens_kwh": 0.0,
+      "cvar_kwh": 0.0,
+      "var_kwh": 0.0,
+      "positive_loss_fraction": 0.0,
+      "tail_effective_scenarios": 0.8000000000000007,
+      "zero_var_cvar_identity": true,
+      "samples": 16,
+      "heater_kwh": 0.0,
+      "diesel_fuel_kg": 258280.37931121184,
+      "battery_discharge_kwh": 231.84387153611388,
+      "wait_access_unit_hours": 0.0,
+      "wait_prep_unit_hours": 0.0,
+      "wait_heat_unit_hours": 0.0,
+      "expected_operating_cost_yuan": 3874205.689667943
+    },
+    {
+      "case": "physical_R1",
+      "change": {
+        "recovery": {
+          "physical_mode": "R1"
+        }
+      },
+      "valid": true,
+      "seconds": 2.9850067012012005,
+      "eens_kwh": 0.0,
+      "cvar_kwh": 0.0,
+      "var_kwh": 0.0,
+      "positive_loss_fraction": 0.0,
+      "tail_effective_scenarios": 0.8000000000000007,
+      "zero_var_cvar_identity": true,
+      "samples": 16,
+      "heater_kwh": 0.0,
+      "diesel_fuel_kg": 258238.59622525482,
+      "battery_discharge_kwh": 456.5028298465298,
+      "wait_access_unit_hours": 0.0,
+      "wait_prep_unit_hours": 14.625,
+      "wait_heat_unit_hours": 0.0,
+      "expected_operating_cost_yuan": 3873578.9433785877
+    },
+    {
+      "case": "physical_R2",
+      "change": {
+        "recovery": {
+          "physical_mode": "R2"
+        }
+      },
+      "valid": true,
+      "seconds": 2.990593669936061,
+      "eens_kwh": 0.0,
+      "cvar_kwh": 0.0,
+      "var_kwh": 0.0,
+      "positive_loss_fraction": 0.0,
+      "tail_effective_scenarios": 0.8000000000000007,
+      "zero_var_cvar_identity": true,
+      "samples": 16,
+      "heater_kwh": 0.0,
+      "diesel_fuel_kg": 258242.99409878228,
+      "battery_discharge_kwh": 594.7949826055576,
+      "wait_access_unit_hours": 4.3125,
+      "wait_prep_unit_hours": 13.6875,
+      "wait_heat_unit_hours": 0.0,
+      "expected_operating_cost_yuan": 3873644.9114815
+    }
+  ],
+  "source_run": "/home/yzk/reliable_plan/reports/zhongshan_recovery_8760_protective_16_128_v1"
+}

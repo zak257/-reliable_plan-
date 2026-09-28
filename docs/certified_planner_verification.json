@@ -1,0 +1,125 @@
+{
+  "verified_at": "2026-09-10T06:52:13.681447+00:00",
+  "legacy_isolation": {
+    "passed": true,
+    "checked_existing_files": 90,
+    "changed_or_missing": [],
+    "scope": "tracked files present before the independent planner was added"
+  },
+  "suites": {
+    "new_tests": {
+      "passed": true,
+      "tests": 53,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "elapsed_seconds": 0.6493198599200696,
+      "log": "outputs/certified/final_verification/new_tests.txt"
+    },
+    "tests": {
+      "passed": true,
+      "tests": 48,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "elapsed_seconds": 1.3835489267949015,
+      "log": "outputs/certified/final_verification/tests.txt"
+    }
+  },
+  "new_file_sha256": {
+    "certified_reliability_planning/planner.py": "09e99c3aa74aeafd9c0a3b881138a6255b548309af0547fce7847e3d5382bbdf",
+    "certified_reliability_planning/__init__.py": "ad1ea9aff351d35bc4256e0b190e27a2c4933d8992454bdc2cc981ed746be62d",
+    "certified_reliability_planning/oracles.py": "c9b6fa59da2c2aa716a261a0d5e35b41d206a7f7f0b676805168e78464328728",
+    "certified_reliability_planning/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "certified_reliability_planning/economic_search.py": "30aaeba7cf08709f7efc9af09803e02ba560ba0ff7e516c60f3d3a5fc052e18c",
+    "certified_reliability_planning/benchmarks.py": "ba28396b7ddf988ae95edf4b328eef02e81d5b4b6ebd4359b41267a2d48689d7",
+    "certified_reliability_planning/cli.py": "c9af370b3b206a18b650e211c20ad6c8b55e8e271dec92d1376989b6aadc03bf",
+    "certified_reliability_planning/risk.py": "50603e676ea4ced2470af5201cf20e123e6047199131d9451f98de21fdff6a06",
+    "certified_reliability_planning/sampling.py": "cf7ced59b24c0f60dcd32abc4ad53824a12a33347ea8574cc64a61ed6dd584da",
+    "new_tests/test_oracles.py": "2844d638d2c9ffdd29e338ef8acb79b95465be569001e9344299b63f108ead84",
+    "new_tests/test_region_search.py": "c4b98c715ccbff8f4c36a6443db17dc18f576e1c483d0934365f5c4d9e4a24b0",
+    "new_tests/test_planner.py": "235bf3f727a879081ef6fb68436f0498beec208c167667795aaf35cd17ceefa0",
+    "new_tests/__init__.py": "948bcc16fbf8b139e9e8bcfb72b2d0bf0e1b2c0329f7bf0d9c5652076f220a92",
+    "new_tests/test_cli.py": "23a09c3326acab11c07683437b53dc74489615574bee03bbd7f2cc496829c55b",
+    "new_tests/test_benchmarks.py": "279e36c5e381d274c66f22708535b312ce6abf4c3f612c7316b072fe469e5453",
+    "new_tests/test_risk.py": "02b25821bc989f01b53d5aace8c11af346648fc69bb45cbf680632eb327befcf",
+    "run_certified.sh": "6f0b6c95119fff5a1c43344472c4b13593d7e3efd6ea3acb4f779790a6ecfcb4",
+    "config/certified_zhongshan.toml": "6bdd82f43af839e851d8e7656a225e289edfb6e27607addf9ba87503af60848d",
+    "README_CERTIFIED.md": "e8c803184e2751cda0bc25bc46bd6b5154e8c907bc614fd124610f4d7bf0a84c"
+  },
+  "runs": {
+    "analytic": {
+      "summary": "outputs/certified/analytic_validation_final/summary.json",
+      "sha256": "97cfca3b10e41168b353d79d735671ae771e3e788288edf26a6996f46873d5a0",
+      "status": "certified_optimal",
+      "incumbent": [
+        2,
+        1
+      ],
+      "lower_bound_cost": 7.0,
+      "upper_bound_cost": 7.000078125,
+      "absolute_gap_cost": 7.812499999992895e-05,
+      "elapsed_seconds": 0.0705219900701195,
+      "counters": {
+        "annual_samples": 256,
+        "distinct_operation_pairs": 921,
+        "operation_calls": 926,
+        "economic_calls": 30,
+        "operation_work": 926.0,
+        "economic_work": 30.0,
+        "operation_seconds": 0.001549969194456935,
+        "economic_seconds": 4.887278191745281e-05,
+        "generation_seconds": 3.562308847904205e-05,
+        "fair_selections": 7,
+        "region_calls": 0
+      }
+    },
+    "zhongshan_24h": {
+      "summary": "outputs/certified/zhongshan_24h_smoke_v1/summary.json",
+      "sha256": "7bad58f89bda5165d918f3fe770263ef5bf70e27377d5c4d813e0a86a5d07156",
+      "status": "budget_exhausted",
+      "incumbent": null,
+      "lower_bound_cost": 8934.613837025976,
+      "upper_bound_cost": null,
+      "absolute_gap_cost": null,
+      "elapsed_seconds": 0.22579989302903414,
+      "counters": {
+        "annual_samples": 8,
+        "distinct_operation_pairs": 6,
+        "operation_calls": 6,
+        "economic_calls": 8,
+        "operation_work": 0.0,
+        "economic_work": 0.058215313135904403,
+        "operation_seconds": 0.0036385240964591503,
+        "economic_seconds": 0.1959501418750733,
+        "generation_seconds": 0.004964391002431512,
+        "fair_selections": 2,
+        "region_calls": 2
+      }
+    },
+    "zhongshan_8760h": {
+      "summary": "outputs/certified/zhongshan_8760h_smoke_v1/summary.json",
+      "sha256": "6c40ce51e9fae4208b579c7d657cf2750d06c23c75e9f7a6dc9a60e4179b2117",
+      "status": "budget_exhausted",
+      "incumbent": null,
+      "lower_bound_cost": 3157447.256017416,
+      "upper_bound_cost": null,
+      "absolute_gap_cost": null,
+      "elapsed_seconds": 70.09622810501605,
+      "counters": {
+        "annual_samples": 8,
+        "distinct_operation_pairs": 2,
+        "operation_calls": 2,
+        "economic_calls": 6,
+        "operation_work": 0.0,
+        "economic_work": 68.51297332847571,
+        "operation_seconds": 0.005620370153337717,
+        "economic_seconds": 69.57419323292561,
+        "generation_seconds": 0.03093923395499587,
+        "fair_selections": 1,
+        "region_calls": 2
+      }
+    }
+  },
+  "passed": true
+}

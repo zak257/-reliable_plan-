@@ -1,0 +1,24 @@
+{
+  "status": "finished",
+  "method": "proposed",
+  "pid": 51375,
+  "cpu_affinity": [
+    1
+  ],
+  "started_at_utc": "2026-09-24T01:33:08.415603+00:00",
+  "result_status": "optimal_within_gap",
+  "selected": {
+    "wind_kw": 0.0,
+    "pv_kw": 0.0,
+    "diesel_units": 0,
+    "battery_kwh": 0.0,
+    "pcs_kw": 0.0,
+    "ups_kwh": 100.0,
+    "ups_kw": 50.0
+  },
+  "has_audited_incumbent": true,
+  "objective_yuan": 141054.4768013327,
+  "mip_gap": 2.0000070488544515e-09,
+  "finished_at_utc": "2026-09-24T01:33:18.462169+00:00",
+  "process_wall_seconds": 10.046792569104582
+}

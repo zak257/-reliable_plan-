@@ -1,0 +1,350 @@
+[
+  {
+    "window": 0,
+    "start_hour": 816,
+    "stop_hour": 888,
+    "branches": [
+      {
+        "block": 0,
+        "name": "annual_normal",
+        "conditional_weight": 0.48
+      },
+      {
+        "block": 1,
+        "name": "w0_normal_renewable_bus",
+        "conditional_weight": 0.08000000000000002
+      },
+      {
+        "block": 2,
+        "name": "w0_normal_main_bus",
+        "conditional_weight": 0.08000000000000002
+      },
+      {
+        "block": 3,
+        "name": "w0_normal_compound",
+        "conditional_weight": 0.064
+      },
+      {
+        "block": 4,
+        "name": "w0_normal_pcs",
+        "conditional_weight": 0.024
+      },
+      {
+        "block": 5,
+        "name": "w0_normal_ups",
+        "conditional_weight": 0.024
+      },
+      {
+        "block": 6,
+        "name": "w0_normal_diesel_run",
+        "conditional_weight": 0.032
+      },
+      {
+        "block": 7,
+        "name": "w0_normal_diesel_start",
+        "conditional_weight": 0.016
+      },
+      {
+        "block": 8,
+        "name": "w0_storm_none",
+        "conditional_weight": 0.12
+      },
+      {
+        "block": 9,
+        "name": "w0_storm_renewable_bus",
+        "conditional_weight": 0.020000000000000004
+      },
+      {
+        "block": 10,
+        "name": "w0_storm_main_bus",
+        "conditional_weight": 0.020000000000000004
+      },
+      {
+        "block": 11,
+        "name": "w0_storm_compound",
+        "conditional_weight": 0.016
+      },
+      {
+        "block": 12,
+        "name": "w0_storm_pcs",
+        "conditional_weight": 0.006
+      },
+      {
+        "block": 13,
+        "name": "w0_storm_ups",
+        "conditional_weight": 0.006
+      },
+      {
+        "block": 14,
+        "name": "w0_storm_diesel_run",
+        "conditional_weight": 0.008
+      },
+      {
+        "block": 15,
+        "name": "w0_storm_diesel_start",
+        "conditional_weight": 0.004
+      }
+    ]
+  },
+  {
+    "window": 1,
+    "start_hour": 2496,
+    "stop_hour": 2568,
+    "branches": [
+      {
+        "block": 0,
+        "name": "annual_normal",
+        "conditional_weight": 0.48
+      },
+      {
+        "block": 16,
+        "name": "w1_normal_renewable_bus",
+        "conditional_weight": 0.08000000000000002
+      },
+      {
+        "block": 17,
+        "name": "w1_normal_main_bus",
+        "conditional_weight": 0.08000000000000002
+      },
+      {
+        "block": 18,
+        "name": "w1_normal_compound",
+        "conditional_weight": 0.064
+      },
+      {
+        "block": 19,
+        "name": "w1_normal_pcs",
+        "conditional_weight": 0.024
+      },
+      {
+        "block": 20,
+        "name": "w1_normal_ups",
+        "conditional_weight": 0.024
+      },
+      {
+        "block": 21,
+        "name": "w1_normal_diesel_run",
+        "conditional_weight": 0.032
+      },
+      {
+        "block": 22,
+        "name": "w1_normal_diesel_start",
+        "conditional_weight": 0.016
+      },
+      {
+        "block": 23,
+        "name": "w1_storm_none",
+        "conditional_weight": 0.12
+      },
+      {
+        "block": 24,
+        "name": "w1_storm_renewable_bus",
+        "conditional_weight": 0.020000000000000004
+      },
+      {
+        "block": 25,
+        "name": "w1_storm_main_bus",
+        "conditional_weight": 0.020000000000000004
+      },
+      {
+        "block": 26,
+        "name": "w1_storm_compound",
+        "conditional_weight": 0.016
+      },
+      {
+        "block": 27,
+        "name": "w1_storm_pcs",
+        "conditional_weight": 0.006
+      },
+      {
+        "block": 28,
+        "name": "w1_storm_ups",
+        "conditional_weight": 0.006
+      },
+      {
+        "block": 29,
+        "name": "w1_storm_diesel_run",
+        "conditional_weight": 0.008
+      },
+      {
+        "block": 30,
+        "name": "w1_storm_diesel_start",
+        "conditional_weight": 0.004
+      }
+    ]
+  },
+  {
+    "window": 2,
+    "start_hour": 5616,
+    "stop_hour": 5688,
+    "branches": [
+      {
+        "block": 0,
+        "name": "annual_normal",
+        "conditional_weight": 0.48
+      },
+      {
+        "block": 31,
+        "name": "w2_normal_renewable_bus",
+        "conditional_weight": 0.08000000000000002
+      },
+      {
+        "block": 32,
+        "name": "w2_normal_main_bus",
+        "conditional_weight": 0.08000000000000002
+      },
+      {
+        "block": 33,
+        "name": "w2_normal_compound",
+        "conditional_weight": 0.064
+      },
+      {
+        "block": 34,
+        "name": "w2_normal_pcs",
+        "conditional_weight": 0.024
+      },
+      {
+        "block": 35,
+        "name": "w2_normal_ups",
+        "conditional_weight": 0.024
+      },
+      {
+        "block": 36,
+        "name": "w2_normal_diesel_run",
+        "conditional_weight": 0.032
+      },
+      {
+        "block": 37,
+        "name": "w2_normal_diesel_start",
+        "conditional_weight": 0.016
+      },
+      {
+        "block": 38,
+        "name": "w2_storm_none",
+        "conditional_weight": 0.12
+      },
+      {
+        "block": 39,
+        "name": "w2_storm_renewable_bus",
+        "conditional_weight": 0.020000000000000004
+      },
+      {
+        "block": 40,
+        "name": "w2_storm_main_bus",
+        "conditional_weight": 0.020000000000000004
+      },
+      {
+        "block": 41,
+        "name": "w2_storm_compound",
+        "conditional_weight": 0.016
+      },
+      {
+        "block": 42,
+        "name": "w2_storm_pcs",
+        "conditional_weight": 0.006
+      },
+      {
+        "block": 43,
+        "name": "w2_storm_ups",
+        "conditional_weight": 0.006
+      },
+      {
+        "block": 44,
+        "name": "w2_storm_diesel_run",
+        "conditional_weight": 0.008
+      },
+      {
+        "block": 45,
+        "name": "w2_storm_diesel_start",
+        "conditional_weight": 0.004
+      }
+    ]
+  },
+  {
+    "window": 3,
+    "start_hour": 7536,
+    "stop_hour": 7608,
+    "branches": [
+      {
+        "block": 0,
+        "name": "annual_normal",
+        "conditional_weight": 0.48
+      },
+      {
+        "block": 46,
+        "name": "w3_normal_renewable_bus",
+        "conditional_weight": 0.08000000000000002
+      },
+      {
+        "block": 47,
+        "name": "w3_normal_main_bus",
+        "conditional_weight": 0.08000000000000002
+      },
+      {
+        "block": 48,
+        "name": "w3_normal_compound",
+        "conditional_weight": 0.064
+      },
+      {
+        "block": 49,
+        "name": "w3_normal_pcs",
+        "conditional_weight": 0.024
+      },
+      {
+        "block": 50,
+        "name": "w3_normal_ups",
+        "conditional_weight": 0.024
+      },
+      {
+        "block": 51,
+        "name": "w3_normal_diesel_run",
+        "conditional_weight": 0.032
+      },
+      {
+        "block": 52,
+        "name": "w3_normal_diesel_start",
+        "conditional_weight": 0.016
+      },
+      {
+        "block": 53,
+        "name": "w3_storm_none",
+        "conditional_weight": 0.12
+      },
+      {
+        "block": 54,
+        "name": "w3_storm_renewable_bus",
+        "conditional_weight": 0.020000000000000004
+      },
+      {
+        "block": 55,
+        "name": "w3_storm_main_bus",
+        "conditional_weight": 0.020000000000000004
+      },
+      {
+        "block": 56,
+        "name": "w3_storm_compound",
+        "conditional_weight": 0.016
+      },
+      {
+        "block": 57,
+        "name": "w3_storm_pcs",
+        "conditional_weight": 0.006
+      },
+      {
+        "block": 58,
+        "name": "w3_storm_ups",
+        "conditional_weight": 0.006
+      },
+      {
+        "block": 59,
+        "name": "w3_storm_diesel_run",
+        "conditional_weight": 0.008
+      },
+      {
+        "block": 60,
+        "name": "w3_storm_diesel_start",
+        "conditional_weight": 0.004
+      }
+    ]
+  }
+]

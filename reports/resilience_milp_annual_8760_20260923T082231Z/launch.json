@@ -1,0 +1,43 @@
+{
+  "created_at_utc": "2026-09-23T08:22:31.977058+00:00",
+  "cwd": "/home/yzk/reliable_plan",
+  "command": [
+    "/home/yzk/cap_plan/venv/bin/python",
+    "-u",
+    "-m",
+    "scripts.run_resilience_milp",
+    "--mode",
+    "annual",
+    "--hours",
+    "8760",
+    "--time-limit-seconds",
+    "10000",
+    "--mip-gap",
+    "0.001",
+    "--threads",
+    "4",
+    "--output",
+    "/home/yzk/reliable_plan/reports/resilience_milp_annual_8760_20260923T082231Z"
+  ],
+  "annual_hours": 8760,
+  "stress_window_hours": 72,
+  "stress_start_days_zero_based": [
+    34,
+    104,
+    234,
+    314
+  ],
+  "conditional_branches_per_window": 16,
+  "window_count": 4,
+  "all_capacities_optimized": true,
+  "data_basis": "user-authorized synthetic annual load and weather; weighted seasonal stress windows",
+  "time_budget_seconds": 10000,
+  "mip_gap_target": 0.001,
+  "source_sha256": {
+    "/home/yzk/reliable_plan/scripts/run_resilience_milp.py": "7232215138717bc8e9036f66f59ca2d2d98c24bacc684428b7de585e2642a61b",
+    "/home/yzk/reliable_plan/polar_reliability_planning/resilience_milp/model.py": "cb2941fe9dcda8c4512c01202851ca2fba6a0ba58961a7a0c3de1f4731da71d9",
+    "/home/yzk/reliable_plan/polar_reliability_planning/resilience_milp/annual.py": "c37ea76931bb76abe06b66b79dd8a6dcee053f0fdfca6bd38342c0150df29c8d",
+    "/home/yzk/reliable_plan/polar_reliability_planning/resilience_v2/model.py": "a2e3a3c62b58a3df53f9ed6a04b8e06224e07c3aba2cf0a2cf4c7224f7bc38ba"
+  },
+  "supervisor_pid": 9073
+}

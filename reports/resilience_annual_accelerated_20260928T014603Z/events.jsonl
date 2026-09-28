@@ -1,0 +1,5 @@
+{"action": "seed_building", "elapsed_seconds": 5.461781254038215, "modules": {"wind_kw": 2, "pv_kw": 0, "diesel_units": 4, "battery_kwh": 41, "pcs_kw": 6, "ups_kwh": 11, "ups_kw": 2}}
+{"action": "seed_built", "elapsed_seconds": 47.60408399999142, "variables": 937006, "binaries": 331316, "constraints": 1998080, "compression": {"constant_entries_reused": 291392, "static_na_edges_skipped": 4320}, "fixed_variables": 652681, "scope": "warm-start policy only; no restrictions transferred to final planning"}
+{"action": "solver_progress", "elapsed_seconds": 48.056000197306275, "stage": "seed", "callback_location": 1}
+{"action": "solver_incumbent", "elapsed_seconds": 61.0561265242286, "stage": "seed", "objective_yuan": 3591998.116169665}
+{"action": "solver_incumbent", "elapsed_seconds": 61.40840247506276, "stage": "seed", "objective_yuan": 3591998.116168597}

@@ -1,0 +1,8 @@
+{
+  "action": "solver_progress",
+  "elapsed_seconds": 10365.353690392803,
+  "stage": "joint",
+  "solver_upper_yuan": null,
+  "solver_lower_yuan": 2013285.7515648506,
+  "nodes": 0.0
+}

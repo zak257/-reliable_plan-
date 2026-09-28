@@ -1,0 +1,32 @@
+{
+  "created_at_utc": "2026-09-23T08:00:59.489386+00:00",
+  "cwd": "/home/yzk/reliable_plan",
+  "command": [
+    "/home/yzk/cap_plan/venv/bin/python",
+    "-u",
+    "-m",
+    "scripts.run_resilience_milp",
+    "--hours",
+    "72",
+    "--time-limit-seconds",
+    "10000",
+    "--mip-gap",
+    "0.001",
+    "--threads",
+    "4",
+    "--output",
+    "/home/yzk/reliable_plan/reports/resilience_milp_full_capacity_72h_20260923T080059Z"
+  ],
+  "hours": 72,
+  "scenario_count": 16,
+  "all_capacities_optimized": true,
+  "data_basis": "synthetic finite scenario tree",
+  "time_budget_seconds": 10000,
+  "mip_gap_target": 0.001,
+  "source_sha256": {
+    "/home/yzk/reliable_plan/scripts/run_resilience_milp.py": "428c2d696b4f09d7cb4053cb6c366441469ac7b6632981682a1b2f7f80fae510",
+    "/home/yzk/reliable_plan/polar_reliability_planning/resilience_milp/model.py": "6a60c2714ad45877a7f91f8022190c24629bcbab8def56902b541a179a55471e",
+    "/home/yzk/reliable_plan/polar_reliability_planning/resilience_v2/model.py": "a2e3a3c62b58a3df53f9ed6a04b8e06224e07c3aba2cf0a2cf4c7224f7bc38ba"
+  },
+  "supervisor_pid": 51996
+}

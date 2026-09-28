@@ -1,0 +1,299 @@
+{
+  "status": "sample_optimal_within_policy_library_gap",
+  "incumbent": {
+    "units": {
+      "wind": 5,
+      "pv": 3,
+      "diesel": 4,
+      "battery_energy": 40,
+      "pcs": 4
+    },
+    "capacities": {
+      "wind": 500.0,
+      "pv": 300.0,
+      "diesel": 400.0,
+      "battery_energy": 2000.0,
+      "pcs": 200.0
+    },
+    "policy": {
+      "name": "load_first_three_online",
+      "online_floor": 3,
+      "reserve_units": 0,
+      "recharge_soc": 0.8,
+      "recharge_kw": 100.0,
+      "heat_priority": false,
+      "keep_standby_warm": true
+    },
+    "policy_sha256": "c1b16c40e93d24d01996b4bd81ccf0b9d616e7bef83b01e34c8697540ee6de0f",
+    "status": "evaluated",
+    "feasible": true,
+    "complete": true,
+    "risk": {
+      "eens_kwh": 0.0,
+      "cvar_kwh": 0.0,
+      "var_kwh": 0.0,
+      "positive_loss_fraction": 0.0,
+      "tail_effective_scenarios": 0.20000000000000018,
+      "zero_var_cvar_identity": true,
+      "samples": 4
+    },
+    "investment_cost_yuan": 1410000.0,
+    "expected_operating_cost_yuan": 3998006.526144487,
+    "objective_yuan": 5408006.526144487
+  },
+  "objective_lower_bound_yuan": 5408006.526144487,
+  "relative_gap": 0.0,
+  "gap_scope": "fixed_grid_fixed_samples_frozen_policy_library",
+  "population_certified": false,
+  "pruned_by_investment_bound": [],
+  "unresolved_designs": [],
+  "total_designs": 48,
+  "training_seconds": 55.891555178910494,
+  "bound_model_assumptions": [
+    "All operation costs nonnegative",
+    "Investment lower bound only",
+    "No capacity-monotonicity or legacy availability cut"
+  ],
+  "advanced_recovery_lp_cuts_implemented": false,
+  "schema_version": "recovery-v1",
+  "synthetic": true,
+  "result_kind": "synthetic_test_only",
+  "objective_basis": "expected_causal_operation",
+  "weather_scope": {
+    "ambient_source": "/home/yzk/cap_plan/data/zhongshan/input/curve.csv",
+    "weather_label_status": "assumed_stress_case",
+    "timezone_status": "assumed_UTC_plus_08_source_has_no_timezone",
+    "available_source_hours": 8784,
+    "evaluated_hours": 8760,
+    "period_start": "2020-01-01T00:00:00+08:00",
+    "period_end": "2020-12-30T23:00:00+08:00",
+    "climate_scope": "conditional_on_this_weather_sequence",
+    "label_rules": {
+      "wind_curve_basis": "clean_power_curve",
+      "label_mode": "assumed_stress_case",
+      "wind_mode": "protective_shutdown",
+      "hazard_multiplier": 2.0,
+      "access_wind_threshold_ms": 15.0,
+      "icing_temperature_ceiling_c": 0.0,
+      "residual_icing_hours": 12,
+      "ice_power_factor": 0.5
+    },
+    "warning": "Wind/temperature thresholds are engineering scenarios, not observed blizzard or icing classification",
+    "access_blocked_hours": 370,
+    "icing_hours": 1028,
+    "protective_stop_hours": 1028
+  },
+  "validation_status": "not_requested",
+  "terminal_inventory": "continuous_state_no_free_reset",
+  "audit_passed": true,
+  "selected_trace_metrics": {
+    "shed_hours": 0.0,
+    "longest_shed_hours": 0.0,
+    "heater_kwh": 70714.31203289526,
+    "diesel_kwh": 1198231.7146695005,
+    "diesel_fuel_kg": 266273.71437101066,
+    "battery_discharge_kwh": 2484.9129828255745,
+    "battery_charge_kwh": 3208.8235831941784,
+    "starts": 26.0,
+    "start_failures": 0.0,
+    "diesel_run_failures": 19.0,
+    "diesel_online_hours": 26240.0,
+    "wind_failures": 5.0,
+    "pv_failures": 3.0,
+    "pcs_failures": 0.0,
+    "wind_protective_stop_hours": 1028.0,
+    "wait_access_unit_hours": 10.0,
+    "wait_crew_unit_hours": 0.0,
+    "wait_prep_unit_hours": 24.0,
+    "wait_heat_unit_hours": 0.0,
+    "unserved_heater_command_kwh": 0.0,
+    "max_balance_residual_kw": 2.842170943040401e-14,
+    "max_soc_residual_kwh": 1.1368683772161603e-13,
+    "initial_state": {
+      "energy_kwh": 1700.0,
+      "temperatures_c": [
+        5.0,
+        5.0,
+        5.0,
+        -0.4917950249892792
+      ],
+      "online": 3,
+      "diesel_states": [
+        {
+          "healthy": true,
+          "running": true,
+          "pending": false,
+          "onsite": false,
+          "prep": 3,
+          "min_up": 0,
+          "min_down": 0,
+          "repair_until": -1,
+          "runtime": 333,
+          "demands": 1
+        },
+        {
+          "healthy": true,
+          "running": true,
+          "pending": false,
+          "onsite": false,
+          "prep": 3,
+          "min_up": 0,
+          "min_down": 0,
+          "repair_until": -1,
+          "runtime": 329,
+          "demands": 1
+        },
+        {
+          "healthy": true,
+          "running": true,
+          "pending": false,
+          "onsite": false,
+          "prep": 3,
+          "min_up": 0,
+          "min_down": 0,
+          "repair_until": -1,
+          "runtime": 325,
+          "demands": 1
+        },
+        {
+          "healthy": true,
+          "running": false,
+          "pending": false,
+          "onsite": false,
+          "prep": 0.0,
+          "min_up": 0,
+          "min_down": 0,
+          "repair_until": -1,
+          "runtime": 0,
+          "demands": 0
+        }
+      ]
+    },
+    "final_state": {
+      "energy_kwh": 1700.0,
+      "temperatures_c": [
+        5.0,
+        5.0,
+        5.0,
+        5.0
+      ],
+      "online": 3,
+      "diesel_states": [
+        {
+          "healthy": true,
+          "running": true,
+          "pending": false,
+          "onsite": false,
+          "prep": 3,
+          "min_up": 0,
+          "min_down": 0,
+          "repair_until": 6471,
+          "runtime": 7594,
+          "demands": 5
+        },
+        {
+          "healthy": true,
+          "running": true,
+          "pending": false,
+          "onsite": false,
+          "prep": 3,
+          "min_up": 0,
+          "min_down": 0,
+          "repair_until": 7132,
+          "runtime": 8223,
+          "demands": 6
+        },
+        {
+          "healthy": true,
+          "running": true,
+          "pending": false,
+          "onsite": false,
+          "prep": 3,
+          "min_up": 0,
+          "min_down": 0,
+          "repair_until": 6192,
+          "runtime": 6228,
+          "demands": 8
+        },
+        {
+          "healthy": true,
+          "running": false,
+          "pending": false,
+          "onsite": false,
+          "prep": 3,
+          "min_up": 0,
+          "min_down": 0,
+          "repair_until": 7610,
+          "runtime": 5182,
+          "demands": 10
+        }
+      ],
+      "other_repair_until": {
+        "wind": [
+          -1000000000000000,
+          -1000000000000000,
+          -1000000000000000,
+          7749,
+          5514
+        ],
+        "pv": [
+          3932,
+          6599,
+          -1000000000000000
+        ],
+        "pcs": [
+          -1000000000000000,
+          -1000000000000000,
+          -1000000000000000,
+          -1000000000000000
+        ]
+      }
+    },
+    "energy_inventory_change_kwh": 0.0,
+    "forecast_basis": "current_measurements_only",
+    "dump_load_kw": 0,
+    "repair_clock": "calendar_reference",
+    "operating_cost_basis": "same_executed_policy"
+  },
+  "mean_diagnostics": {
+    "training": {
+      "battery_charge_kwh": 1461.2381573989228,
+      "battery_discharge_kwh": 1131.582829089728,
+      "diesel_fuel_kg": 266533.7684096435,
+      "diesel_kwh": 1199401.9578433488,
+      "diesel_online_hours": 26248.75,
+      "diesel_run_failures": 15.0,
+      "dump_load_kw": 0.0,
+      "energy_inventory_change_kwh": 0.0,
+      "heater_kwh": 70866.77614032642,
+      "longest_shed_hours": 0.0,
+      "max_balance_residual_kw": 2.842170943040401e-14,
+      "max_soc_residual_kwh": 1.1368683772161603e-13,
+      "pcs_failures": 0.0,
+      "pv_failures": 2.5,
+      "shed_hours": 0.0,
+      "start_failures": 0.0,
+      "starts": 20.0,
+      "unserved_heater_command_kwh": 0.0,
+      "wait_access_unit_hours": 4.75,
+      "wait_crew_unit_hours": 0.0,
+      "wait_heat_unit_hours": 0.0,
+      "wait_prep_unit_hours": 16.5,
+      "wind_failures": 7.5,
+      "wind_protective_stop_hours": 1028.0,
+      "initial_energy_kwh": [
+        1700.0,
+        1700.0,
+        1700.0,
+        1700.0
+      ],
+      "final_energy_kwh": [
+        1700.0,
+        1700.0,
+        1700.0,
+        1700.0
+      ]
+    }
+  },
+  "elapsed_seconds": 56.89054778078571
+}

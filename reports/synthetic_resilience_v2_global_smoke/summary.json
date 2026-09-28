@@ -1,0 +1,2795 @@
+{
+  "status": "global_optimal_within_declared_synthetic_grid",
+  "selected": {
+    "capacity": {
+      "wind_kw": 0.0,
+      "pv_kw": 0.0,
+      "diesel_units": 0,
+      "battery_kwh": 0.0,
+      "pcs_kw": 0.0,
+      "ups_kwh": 500.0,
+      "ups_kw": 100.0
+    },
+    "investment_yuan": 250000.0,
+    "mean_operation_yuan": 7568.216833022265,
+    "objective_yuan": 257568.21683302228,
+    "feasible": true,
+    "core_bridge_pass": true,
+    "required_ups_kwh": 308.6297097929724,
+    "required_ups_kw": 57.86807058618233,
+    "core_risk": {
+      "eens_kwh": 0.0,
+      "cvar_kwh": 0.0,
+      "max_kwh": 0.0,
+      "positive_fraction": 0.0,
+      "samples": 2
+    },
+    "rigid_risk": {
+      "eens_kwh": 0.0,
+      "cvar_kwh": 0.0,
+      "max_kwh": 0.0,
+      "positive_fraction": 0.0,
+      "samples": 2
+    },
+    "flex_adjusted_mean_kwh": 0.0,
+    "scenario_metrics": [
+      {
+        "core_unserved_kwh": 0.0,
+        "rigid_unserved_kwh": 0.0,
+        "flex_adjusted_kwh": 0.0,
+        "starts": 0,
+        "start_failures": 0,
+        "diesel_run_failures": 0,
+        "bus_fault_hours": 0,
+        "renewable_bus_fault_hours": 0,
+        "battery_discharge_kwh": 0.0,
+        "battery_charge_kwh": 0.0,
+        "ups_discharge_kwh": 1697.6200847739133,
+        "ups_charge_kwh": 0.0,
+        "final_battery_kwh": 0.0,
+        "final_ups_kwh": 250.0,
+        "gfm_all_resources": true
+      },
+      {
+        "core_unserved_kwh": 0.0,
+        "rigid_unserved_kwh": 0.0,
+        "flex_adjusted_kwh": 0.0,
+        "starts": 0,
+        "start_failures": 0,
+        "diesel_run_failures": 0,
+        "bus_fault_hours": 0,
+        "renewable_bus_fault_hours": 0,
+        "battery_discharge_kwh": 0.0,
+        "battery_charge_kwh": 0.0,
+        "ups_discharge_kwh": 1697.6200847739133,
+        "ups_charge_kwh": 0.0,
+        "final_battery_kwh": 0.0,
+        "final_ups_kwh": 250.0,
+        "gfm_all_resources": true
+      }
+    ]
+  },
+  "validation": {
+    "capacity": {
+      "wind_kw": 0.0,
+      "pv_kw": 0.0,
+      "diesel_units": 0,
+      "battery_kwh": 0.0,
+      "pcs_kw": 0.0,
+      "ups_kwh": 500.0,
+      "ups_kw": 100.0
+    },
+    "investment_yuan": 250000.0,
+    "mean_operation_yuan": 7568.216833022265,
+    "objective_yuan": 257568.21683302228,
+    "feasible": true,
+    "core_bridge_pass": true,
+    "required_ups_kwh": 308.6297097929724,
+    "required_ups_kw": 57.86807058618233,
+    "core_risk": {
+      "eens_kwh": 0.0,
+      "cvar_kwh": 0.0,
+      "max_kwh": 0.0,
+      "positive_fraction": 0.0,
+      "samples": 2
+    },
+    "rigid_risk": {
+      "eens_kwh": 0.0,
+      "cvar_kwh": 0.0,
+      "max_kwh": 0.0,
+      "positive_fraction": 0.0,
+      "samples": 2
+    },
+    "flex_adjusted_mean_kwh": 0.0,
+    "scenario_metrics": [
+      {
+        "core_unserved_kwh": 0.0,
+        "rigid_unserved_kwh": 0.0,
+        "flex_adjusted_kwh": 0.0,
+        "starts": 0,
+        "start_failures": 0,
+        "diesel_run_failures": 0,
+        "bus_fault_hours": 0,
+        "renewable_bus_fault_hours": 0,
+        "battery_discharge_kwh": 0.0,
+        "battery_charge_kwh": 0.0,
+        "ups_discharge_kwh": 1697.6200847739133,
+        "ups_charge_kwh": 0.0,
+        "final_battery_kwh": 0.0,
+        "final_ups_kwh": 250.0,
+        "gfm_all_resources": true
+      },
+      {
+        "core_unserved_kwh": 0.0,
+        "rigid_unserved_kwh": 0.0,
+        "flex_adjusted_kwh": 0.0,
+        "starts": 0,
+        "start_failures": 0,
+        "diesel_run_failures": 0,
+        "bus_fault_hours": 0,
+        "renewable_bus_fault_hours": 0,
+        "battery_discharge_kwh": 0.0,
+        "battery_charge_kwh": 0.0,
+        "ups_discharge_kwh": 1697.6200847739133,
+        "ups_charge_kwh": 0.0,
+        "final_battery_kwh": 0.0,
+        "final_ups_kwh": 250.0,
+        "gfm_all_resources": true
+      }
+    ],
+    "role": "validation",
+    "scenario_class_metrics": {
+      "weather": {
+        "capacity": {
+          "wind_kw": 0.0,
+          "pv_kw": 0.0,
+          "diesel_units": 0,
+          "battery_kwh": 0.0,
+          "pcs_kw": 0.0,
+          "ups_kwh": 500.0,
+          "ups_kw": 100.0
+        },
+        "investment_yuan": 250000.0,
+        "mean_operation_yuan": 7568.216833022265,
+        "objective_yuan": 257568.21683302228,
+        "feasible": true,
+        "core_bridge_pass": true,
+        "required_ups_kwh": 308.6297097929724,
+        "required_ups_kw": 57.86807058618233,
+        "core_risk": {
+          "eens_kwh": 0.0,
+          "cvar_kwh": 0.0,
+          "max_kwh": 0.0,
+          "positive_fraction": 0.0,
+          "samples": 4
+        },
+        "rigid_risk": {
+          "eens_kwh": 0.0,
+          "cvar_kwh": 0.0,
+          "max_kwh": 0.0,
+          "positive_fraction": 0.0,
+          "samples": 4
+        },
+        "flex_adjusted_mean_kwh": 0.0,
+        "scenario_metrics": [
+          {
+            "core_unserved_kwh": 0.0,
+            "rigid_unserved_kwh": 0.0,
+            "flex_adjusted_kwh": 0.0,
+            "starts": 0,
+            "start_failures": 0,
+            "diesel_run_failures": 0,
+            "bus_fault_hours": 0,
+            "renewable_bus_fault_hours": 0,
+            "battery_discharge_kwh": 0.0,
+            "battery_charge_kwh": 0.0,
+            "ups_discharge_kwh": 1697.6200847739133,
+            "ups_charge_kwh": 0.0,
+            "final_battery_kwh": 0.0,
+            "final_ups_kwh": 250.0,
+            "gfm_all_resources": true
+          },
+          {
+            "core_unserved_kwh": 0.0,
+            "rigid_unserved_kwh": 0.0,
+            "flex_adjusted_kwh": 0.0,
+            "starts": 0,
+            "start_failures": 0,
+            "diesel_run_failures": 0,
+            "bus_fault_hours": 0,
+            "renewable_bus_fault_hours": 0,
+            "battery_discharge_kwh": 0.0,
+            "battery_charge_kwh": 0.0,
+            "ups_discharge_kwh": 1697.6200847739133,
+            "ups_charge_kwh": 0.0,
+            "final_battery_kwh": 0.0,
+            "final_ups_kwh": 250.0,
+            "gfm_all_resources": true
+          },
+          {
+            "core_unserved_kwh": 0.0,
+            "rigid_unserved_kwh": 0.0,
+            "flex_adjusted_kwh": 0.0,
+            "starts": 0,
+            "start_failures": 0,
+            "diesel_run_failures": 0,
+            "bus_fault_hours": 0,
+            "renewable_bus_fault_hours": 0,
+            "battery_discharge_kwh": 0.0,
+            "battery_charge_kwh": 0.0,
+            "ups_discharge_kwh": 1697.6200847739133,
+            "ups_charge_kwh": 0.0,
+            "final_battery_kwh": 0.0,
+            "final_ups_kwh": 250.0,
+            "gfm_all_resources": true
+          },
+          {
+            "core_unserved_kwh": 0.0,
+            "rigid_unserved_kwh": 0.0,
+            "flex_adjusted_kwh": 0.0,
+            "starts": 0,
+            "start_failures": 0,
+            "diesel_run_failures": 0,
+            "bus_fault_hours": 0,
+            "renewable_bus_fault_hours": 0,
+            "battery_discharge_kwh": 0.0,
+            "battery_charge_kwh": 0.0,
+            "ups_discharge_kwh": 1697.6200847739133,
+            "ups_charge_kwh": 0.0,
+            "final_battery_kwh": 0.0,
+            "final_ups_kwh": 250.0,
+            "gfm_all_resources": true
+          }
+        ]
+      },
+      "random": {
+        "capacity": {
+          "wind_kw": 0.0,
+          "pv_kw": 0.0,
+          "diesel_units": 0,
+          "battery_kwh": 0.0,
+          "pcs_kw": 0.0,
+          "ups_kwh": 500.0,
+          "ups_kw": 100.0
+        },
+        "investment_yuan": 250000.0,
+        "mean_operation_yuan": 7568.216833022265,
+        "objective_yuan": 257568.21683302228,
+        "feasible": true,
+        "core_bridge_pass": true,
+        "required_ups_kwh": 308.6297097929724,
+        "required_ups_kw": 57.86807058618233,
+        "core_risk": {
+          "eens_kwh": 0.0,
+          "cvar_kwh": 0.0,
+          "max_kwh": 0.0,
+          "positive_fraction": 0.0,
+          "samples": 4
+        },
+        "rigid_risk": {
+          "eens_kwh": 0.0,
+          "cvar_kwh": 0.0,
+          "max_kwh": 0.0,
+          "positive_fraction": 0.0,
+          "samples": 4
+        },
+        "flex_adjusted_mean_kwh": 0.0,
+        "scenario_metrics": [
+          {
+            "core_unserved_kwh": 0.0,
+            "rigid_unserved_kwh": 0.0,
+            "flex_adjusted_kwh": 0.0,
+            "starts": 0,
+            "start_failures": 0,
+            "diesel_run_failures": 0,
+            "bus_fault_hours": 0,
+            "renewable_bus_fault_hours": 11,
+            "battery_discharge_kwh": 0.0,
+            "battery_charge_kwh": 0.0,
+            "ups_discharge_kwh": 1697.6200847739133,
+            "ups_charge_kwh": 0.0,
+            "final_battery_kwh": 0.0,
+            "final_ups_kwh": 250.0,
+            "gfm_all_resources": true
+          },
+          {
+            "core_unserved_kwh": 0.0,
+            "rigid_unserved_kwh": 0.0,
+            "flex_adjusted_kwh": 0.0,
+            "starts": 0,
+            "start_failures": 0,
+            "diesel_run_failures": 0,
+            "bus_fault_hours": 0,
+            "renewable_bus_fault_hours": 0,
+            "battery_discharge_kwh": 0.0,
+            "battery_charge_kwh": 0.0,
+            "ups_discharge_kwh": 1697.6200847739133,
+            "ups_charge_kwh": 0.0,
+            "final_battery_kwh": 0.0,
+            "final_ups_kwh": 250.0,
+            "gfm_all_resources": true
+          },
+          {
+            "core_unserved_kwh": 0.0,
+            "rigid_unserved_kwh": 0.0,
+            "flex_adjusted_kwh": 0.0,
+            "starts": 0,
+            "start_failures": 0,
+            "diesel_run_failures": 0,
+            "bus_fault_hours": 0,
+            "renewable_bus_fault_hours": 0,
+            "battery_discharge_kwh": 0.0,
+            "battery_charge_kwh": 0.0,
+            "ups_discharge_kwh": 1697.6200847739133,
+            "ups_charge_kwh": 0.0,
+            "final_battery_kwh": 0.0,
+            "final_ups_kwh": 250.0,
+            "gfm_all_resources": true
+          },
+          {
+            "core_unserved_kwh": 0.0,
+            "rigid_unserved_kwh": 0.0,
+            "flex_adjusted_kwh": 0.0,
+            "starts": 0,
+            "start_failures": 0,
+            "diesel_run_failures": 0,
+            "bus_fault_hours": 0,
+            "renewable_bus_fault_hours": 0,
+            "battery_discharge_kwh": 0.0,
+            "battery_charge_kwh": 0.0,
+            "ups_discharge_kwh": 1697.6200847739133,
+            "ups_charge_kwh": 0.0,
+            "final_battery_kwh": 0.0,
+            "final_ups_kwh": 250.0,
+            "gfm_all_resources": true
+          }
+        ]
+      },
+      "joint": {
+        "capacity": {
+          "wind_kw": 0.0,
+          "pv_kw": 0.0,
+          "diesel_units": 0,
+          "battery_kwh": 0.0,
+          "pcs_kw": 0.0,
+          "ups_kwh": 500.0,
+          "ups_kw": 100.0
+        },
+        "investment_yuan": 250000.0,
+        "mean_operation_yuan": 7531.4827348913495,
+        "objective_yuan": 257531.48273489135,
+        "feasible": true,
+        "core_bridge_pass": true,
+        "required_ups_kwh": 308.6297097929724,
+        "required_ups_kw": 57.86807058618233,
+        "core_risk": {
+          "eens_kwh": 0.0,
+          "cvar_kwh": 0.0,
+          "max_kwh": 0.0,
+          "positive_fraction": 0.0,
+          "samples": 4
+        },
+        "rigid_risk": {
+          "eens_kwh": 34.79423326728425,
+          "cvar_kwh": 139.176933069137,
+          "max_kwh": 139.176933069137,
+          "positive_fraction": 0.25,
+          "samples": 4
+        },
+        "flex_adjusted_mean_kwh": 12.996548482985775,
+        "scenario_metrics": [
+          {
+            "core_unserved_kwh": 0.0,
+            "rigid_unserved_kwh": 0.0,
+            "flex_adjusted_kwh": 0.0,
+            "starts": 0,
+            "start_failures": 0,
+            "diesel_run_failures": 0,
+            "bus_fault_hours": 0,
+            "renewable_bus_fault_hours": 0,
+            "battery_discharge_kwh": 0.0,
+            "battery_charge_kwh": 0.0,
+            "ups_discharge_kwh": 1697.6200847739133,
+            "ups_charge_kwh": 0.0,
+            "final_battery_kwh": 0.0,
+            "final_ups_kwh": 250.0,
+            "gfm_all_resources": true
+          },
+          {
+            "core_unserved_kwh": 0.0,
+            "rigid_unserved_kwh": 139.176933069137,
+            "flex_adjusted_kwh": 51.9861939319431,
+            "starts": 0,
+            "start_failures": 0,
+            "diesel_run_failures": 0,
+            "bus_fault_hours": 1,
+            "renewable_bus_fault_hours": 0,
+            "battery_discharge_kwh": 0.0,
+            "battery_charge_kwh": 0.0,
+            "ups_discharge_kwh": 1697.6200847739133,
+            "ups_charge_kwh": 0.0,
+            "final_battery_kwh": 0.0,
+            "final_ups_kwh": 250.0,
+            "gfm_all_resources": true
+          },
+          {
+            "core_unserved_kwh": 0.0,
+            "rigid_unserved_kwh": 0.0,
+            "flex_adjusted_kwh": 0.0,
+            "starts": 0,
+            "start_failures": 0,
+            "diesel_run_failures": 0,
+            "bus_fault_hours": 0,
+            "renewable_bus_fault_hours": 0,
+            "battery_discharge_kwh": 0.0,
+            "battery_charge_kwh": 0.0,
+            "ups_discharge_kwh": 1697.6200847739133,
+            "ups_charge_kwh": 0.0,
+            "final_battery_kwh": 0.0,
+            "final_ups_kwh": 250.0,
+            "gfm_all_resources": true
+          },
+          {
+            "core_unserved_kwh": 0.0,
+            "rigid_unserved_kwh": 0.0,
+            "flex_adjusted_kwh": 0.0,
+            "starts": 0,
+            "start_failures": 0,
+            "diesel_run_failures": 0,
+            "bus_fault_hours": 0,
+            "renewable_bus_fault_hours": 0,
+            "battery_discharge_kwh": 0.0,
+            "battery_charge_kwh": 0.0,
+            "ups_discharge_kwh": 949.9504916708313,
+            "ups_charge_kwh": 0.0,
+            "final_battery_kwh": 0.0,
+            "final_ups_kwh": 250.0,
+            "gfm_all_resources": true
+          }
+        ]
+      }
+    }
+  },
+  "metadata": {
+    "model": "resilience-v2-synthetic",
+    "synthetic": true,
+    "hours": 48,
+    "candidate_capacity_count": 20480,
+    "evaluated_capacity_count": 33,
+    "skipped_by_investment_bound": 20447,
+    "planning_complete": true,
+    "time_limit_seconds": 10000.0,
+    "planning_elapsed_seconds": 0.054309454280883074,
+    "all_pcs_grid_forming": true,
+    "all_diesel_grid_forming": true,
+    "resilience_metric_load": "rigid_regular_only",
+    "core_load_rule": "zero_unserved_in_all_evaluated_scenarios",
+    "flexible_load_rule": "curtailment_and_shift_are_excluded_from_rigid_risk",
+    "scenario_weather": "forecastable_stress_windows",
+    "scenario_faults": "unpredictable_grid_bus_renewable_bus_and_equipment_faults",
+    "capacity_grid": {
+      "wind_kw": [
+        0.0,
+        200.0,
+        400.0,
+        600.0
+      ],
+      "pv_kw": [
+        0.0,
+        200.0,
+        400.0,
+        600.0
+      ],
+      "diesel_units": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "battery_kwh": [
+        0.0,
+        1500.0,
+        2500.0,
+        3500.0
+      ],
+      "pcs_kw": [
+        0.0,
+        200.0,
+        400.0,
+        600.0
+      ],
+      "ups_kwh": [
+        0.0,
+        300.0,
+        500.0,
+        700.0
+      ],
+      "ups_kw": [
+        0.0,
+        50.0,
+        100.0,
+        150.0
+      ]
+    }
+  },
+  "evaluations": [
+    {
+      "capacity": {
+        "wind_kw": 0.0,
+        "pv_kw": 0.0,
+        "diesel_units": 0,
+        "battery_kwh": 0.0,
+        "pcs_kw": 0.0,
+        "ups_kwh": 0.0,
+        "ups_kw": 0.0
+      },
+      "investment_yuan": 0.0,
+      "mean_operation_yuan": 7568.216833022265,
+      "objective_yuan": 7568.216833022265,
+      "feasible": false,
+      "core_bridge_pass": false,
+      "required_ups_kwh": 308.6297097929724,
+      "required_ups_kw": 57.86807058618233,
+      "core_risk": {
+        "eens_kwh": 0.0,
+        "cvar_kwh": 0.0,
+        "max_kwh": 0.0,
+        "positive_fraction": 0.0,
+        "samples": 2
+      },
+      "rigid_risk": {
+        "eens_kwh": 0.0,
+        "cvar_kwh": 0.0,
+        "max_kwh": 0.0,
+        "positive_fraction": 0.0,
+        "samples": 2
+      },
+      "flex_adjusted_mean_kwh": 0.0,
+      "scenario_metrics": [
+        {
+          "core_unserved_kwh": 0.0,
+          "rigid_unserved_kwh": 0.0,
+          "flex_adjusted_kwh": 0.0,
+          "starts": 0,
+          "start_failures": 0,
+          "diesel_run_failures": 0,
+          "bus_fault_hours": 0,
+          "renewable_bus_fault_hours": 0,
+          "battery_discharge_kwh": 0.0,
+          "battery_charge_kwh": 0.0,
+          "ups_discharge_kwh": 0.0,
+          "ups_charge_kwh": 0.0,
+          "final_battery_kwh": 0.0,
+          "final_ups_kwh": 0.0,
+          "gfm_all_resources": true
+        },
+        {
+          "core_unserved_kwh": 0.0,
+          "rigid_unserved_kwh": 0.0,
+          "flex_adjusted_kwh": 0.0,
+          "starts": 0,
+          "start_failures": 0,
+          "diesel_run_failures": 0,
+          "bus_fault_hours": 0,
+          "renewable_bus_fault_hours": 0,
+          "battery_discharge_kwh": 0.0,
+          "battery_charge_kwh": 0.0,
+          "ups_discharge_kwh": 0.0,
+          "ups_charge_kwh": 0.0,
+          "final_battery_kwh": 0.0,
+          "final_ups_kwh": 0.0,
+          "gfm_all_resources": true
+        }
+      ]
+    },
+    {
+      "capacity": {
+        "wind_kw": 0.0,
+        "pv_kw": 0.0,
+        "diesel_units": 0,
+        "battery_kwh": 0.0,
+        "pcs_kw": 0.0,
+        "ups_kwh": 0.0,
+        "ups_kw": 50.0
+      },
+      "investment_yuan": 12500.0,
+      "mean_operation_yuan": 7568.216833022265,
+      "objective_yuan": 20068.216833022263,
+      "feasible": false,
+      "core_bridge_pass": false,
+      "required_ups_kwh": 308.6297097929724,
+      "required_ups_kw": 57.86807058618233,
+      "core_risk": {
+        "eens_kwh": 0.0,
+        "cvar_kwh": 0.0,
+        "max_kwh": 0.0,
+        "positive_fraction": 0.0,
+        "samples": 2
+      },
+      "rigid_risk": {
+        "eens_kwh": 0.0,
+        "cvar_kwh": 0.0,
+        "max_kwh": 0.0,
+        "positive_fraction": 0.0,
+        "samples": 2
+      },
+      "flex_adjusted_mean_kwh": 0.0,
+      "scenario_metrics": [
+        {
+          "core_unserved_kwh": 0.0,
+          "rigid_unserved_kwh": 0.0,
+          "flex_adjusted_kwh": 0.0,
+          "starts": 0,
+          "start_failures": 0,
+          "diesel_run_failures": 0,
+          "bus_fault_hours": 0,
+          "renewable_bus_fault_hours": 0,
+          "battery_discharge_kwh": 0.0,
+          "battery_charge_kwh": 0.0,
+          "ups_discharge_kwh": 0.0,
+          "ups_charge_kwh": 0.0,
+          "final_battery_kwh": 0.0,
+          "final_ups_kwh": 0.0,
+          "gfm_all_resources": true
+        },
+        {
+          "core_unserved_kwh": 0.0,
+          "rigid_unserved_kwh": 0.0,
+          "flex_adjusted_kwh": 0.0,
+          "starts": 0,
+          "start_failures": 0,
+          "diesel_run_failures": 0,
+          "bus_fault_hours": 0,
+          "renewable_bus_fault_hours": 0,
+          "battery_discharge_kwh": 0.0,
+          "battery_charge_kwh": 0.0,
+          "ups_discharge_kwh": 0.0,
+          "ups_charge_kwh": 0.0,
+          "final_battery_kwh": 0.0,
+          "final_ups_kwh": 0.0,
+          "gfm_all_resources": true
+        }
+      ]
+    },
+    {
+      "capacity": {
+        "wind_kw": 0.0,
+        "pv_kw": 0.0,
+        "diesel_units": 0,
+        "battery_kwh": 0.0,
+        "pcs_kw": 0.0,
+        "ups_kwh": 0.0,
+        "ups_kw": 100.0
+      },
+      "investment_yuan": 25000.0,
+      "mean_operation_yuan": 7568.216833022265,
+      "objective_yuan": 32568.216833022263,
+      "feasible": false,
+      "core_bridge_pass": false,
+      "required_ups_kwh": 308.6297097929724,
+      "required_ups_kw": 57.86807058618233,
+      "core_risk": {
+        "eens_kwh": 0.0,
+        "cvar_kwh": 0.0,
+        "max_kwh": 0.0,
+        "positive_fraction": 0.0,
+        "samples": 2
+      },
+      "rigid_risk": {
+        "eens_kwh": 0.0,
+        "cvar_kwh": 0.0,
+        "max_kwh": 0.0,
+        "positive_fraction": 0.0,
+        "samples": 2
+      },
+      "flex_adjusted_mean_kwh": 0.0,
+      "scenario_metrics": [
+        {
+          "core_unserved_kwh": 0.0,
+          "rigid_unserved_kwh": 0.0,
+          "flex_adjusted_kwh": 0.0,
+          "starts": 0,
+          "start_failures": 0,
+          "diesel_run_failures": 0,
+          "bus_fault_hours": 0,
+          "renewable_bus_fault_hours": 0,
+          "battery_discharge_kwh": 0.0,
+          "battery_charge_kwh": 0.0,
+          "ups_discharge_kwh": 0.0,
+          "ups_charge_kwh": 0.0,
+          "final_battery_kwh": 0.0,
+          "final_ups_kwh": 0.0,
+          "gfm_all_resources": true
+        },
+        {
+          "core_unserved_kwh": 0.0,
+          "rigid_unserved_kwh": 0.0,
+          "flex_adjusted_kwh": 0.0,
+          "starts": 0,
+          "start_failures": 0,
+          "diesel_run_failures": 0,
+          "bus_fault_hours": 0,
+          "renewable_bus_fault_hours": 0,
+          "battery_discharge_kwh": 0.0,
+          "battery_charge_kwh": 0.0,
+          "ups_discharge_kwh": 0.0,
+          "ups_charge_kwh": 0.0,
+          "final_battery_kwh": 0.0,
+          "final_ups_kwh": 0.0,
+          "gfm_all_resources": true
+        }
+      ]
+    },
+    {
+      "capacity": {
+        "wind_kw": 0.0,
+        "pv_kw": 0.0,
+        "diesel_units": 0,
+        "battery_kwh": 0.0,
+        "pcs_kw": 0.0,
+        "ups_kwh": 0.0,
+        "ups_kw": 150.0
+      },
+      "investment_yuan": 37500.0,
+      "mean_operation_yuan": 7568.216833022265,
+      "objective_yuan": 45068.21683302226,
+      "feasible": false,
+      "core_bridge_pass": false,
+      "required_ups_kwh": 308.6297097929724,
+      "required_ups_kw": 57.86807058618233,
+      "core_risk": {
+        "eens_kwh": 0.0,
+        "cvar_kwh": 0.0,
+        "max_kwh": 0.0,
+        "positive_fraction": 0.0,
+        "samples": 2
+      },
+      "rigid_risk": {
+        "eens_kwh": 0.0,
+        "cvar_kwh": 0.0,
+        "max_kwh": 0.0,
+        "positive_fraction": 0.0,
+        "samples": 2
+      },
+      "flex_adjusted_mean_kwh": 0.0,
+      "scenario_metrics": [
+        {
+          "core_unserved_kwh": 0.0,
+          "rigid_unserved_kwh": 0.0,
+          "flex_adjusted_kwh": 0.0,
+          "starts": 0,
+          "start_failures": 0,
+          "diesel_run_failures": 0,
+          "bus_fault_hours": 0,
+          "renewable_bus_fault_hours": 0,
+          "battery_discharge_kwh": 0.0,
+          "battery_charge_kwh": 0.0,
+          "ups_discharge_kwh": 0.0,
+          "ups_charge_kwh": 0.0,
+          "final_battery_kwh": 0.0,
+          "final_ups_kwh": 0.0,
+          "gfm_all_resources": true
+        },
+        {
+          "core_unserved_kwh": 0.0,
+          "rigid_unserved_kwh": 0.0,
+          "flex_adjusted_kwh": 0.0,
+          "starts": 0,
+          "start_failures": 0,
+          "diesel_run_failures": 0,
+          "bus_fault_hours": 0,
+          "renewable_bus_fault_hours": 0,
+          "battery_discharge_kwh": 0.0,
+          "battery_charge_kwh": 0.0,
+          "ups_discharge_kwh": 0.0,
+          "ups_charge_kwh": 0.0,
+          "final_battery_kwh": 0.0,
+          "final_ups_kwh": 0.0,
+          "gfm_all_resources": true
+        }
+      ]
+    },
+    {
+      "capacity": {
+        "wind_kw": 0.0,
+        "pv_kw": 0.0,
+        "diesel_units": 0,
+        "battery_kwh": 0.0,
+        "pcs_kw": 200.0,
+        "ups_kwh": 0.0,
+        "ups_kw": 0.0
+      },
+      "investment_yuan": 80000.0,
+      "mean_operation_yuan": 7568.216833022265,
+      "objective_yuan": 87568.21683302226,
+      "feasible": false,
+      "core_bridge_pass": false,
+      "required_ups_kwh": 308.6297097929724,
+      "required_ups_kw": 57.86807058618233,
+      "core_risk": {
+        "eens_kwh": 0.0,
+        "cvar_kwh": 0.0,
+        "max_kwh": 0.0,
+        "positive_fraction": 0.0,
+        "samples": 2
+      },
+      "rigid_risk": {
+        "eens_kwh": 0.0,
+        "cvar_kwh": 0.0,
+        "max_kwh": 0.0,
+        "positive_fraction": 0.0,
+        "samples": 2
+      },
+      "flex_adjusted_mean_kwh": 0.0,
+      "scenario_metrics": [
+        {
+          "core_unserved_kwh": 0.0,
+          "rigid_unserved_kwh": 0.0,
+          "flex_adjusted_kwh": 0.0,
+          "starts": 0,
+          "start_failures": 0,
+          "diesel_run_failures": 0,
+          "bus_fault_hours": 0,
+          "renewable_bus_fault_hours": 0,
+          "battery_discharge_kwh": 0.0,
+          "battery_charge_kwh": 0.0,
+          "ups_discharge_kwh": 0.0,
+          "ups_charge_kwh": 0.0,
+          "final_battery_kwh": 0.0,
+          "final_ups_kwh": 0.0,
+          "gfm_all_resources": true
+        },
+        {
+          "core_unserved_kwh": 0.0,
+          "rigid_unserved_kwh": 0.0,
+          "flex_adjusted_kwh": 0.0,
+          "starts": 0,
+          "start_failures": 0,
+          "diesel_run_failures": 0,
+          "bus_fault_hours": 0,
+          "renewable_bus_fault_hours": 0,
+          "battery_discharge_kwh": 0.0,
+          "battery_charge_kwh": 0.0,
+          "ups_discharge_kwh": 0.0,
+          "ups_charge_kwh": 0.0,
+          "final_battery_kwh": 0.0,
+          "final_ups_kwh": 0.0,
+          "gfm_all_resources": true
+        }
+      ]
+    },
+    {
+      "capacity": {
+        "wind_kw": 0.0,
+        "pv_kw": 0.0,
+        "diesel_units": 0,
+        "battery_kwh": 0.0,
+        "pcs_kw": 200.0,
+        "ups_kwh": 0.0,
+        "ups_kw": 50.0
+      },
+      "investment_yuan": 92500.0,
+      "mean_operation_yuan": 7568.216833022265,
+      "objective_yuan": 100068.21683302226,
+      "feasible": false,
+      "core_bridge_pass": false,
+      "required_ups_kwh": 308.6297097929724,
+      "required_ups_kw": 57.86807058618233,
+      "core_risk": {
+        "eens_kwh": 0.0,
+        "cvar_kwh": 0.0,
+        "max_kwh": 0.0,
+        "positive_fraction": 0.0,
+        "samples": 2
+      },
+      "rigid_risk": {
+        "eens_kwh": 0.0,
+        "cvar_kwh": 0.0,
+        "max_kwh": 0.0,
+        "positive_fraction": 0.0,
+        "samples": 2
+      },
+      "flex_adjusted_mean_kwh": 0.0,
+      "scenario_metrics": [
+        {
+          "core_unserved_kwh": 0.0,
+          "rigid_unserved_kwh": 0.0,
+          "flex_adjusted_kwh": 0.0,
+          "starts": 0,
+          "start_failures": 0,
+          "diesel_run_failures": 0,
+          "bus_fault_hours": 0,
+          "renewable_bus_fault_hours": 0,
+          "battery_discharge_kwh": 0.0,
+          "battery_charge_kwh": 0.0,
+          "ups_discharge_kwh": 0.0,
+          "ups_charge_kwh": 0.0,
+          "final_battery_kwh": 0.0,
+          "final_ups_kwh": 0.0,
+          "gfm_all_resources": true
+        },
+        {
+          "core_unserved_kwh": 0.0,
+          "rigid_unserved_kwh": 0.0,
+          "flex_adjusted_kwh": 0.0,
+          "starts": 0,
+          "start_failures": 0,
+          "diesel_run_failures": 0,
+          "bus_fault_hours": 0,
+          "renewable_bus_fault_hours": 0,
+          "battery_discharge_kwh": 0.0,
+          "battery_charge_kwh": 0.0,
+          "ups_discharge_kwh": 0.0,
+          "ups_charge_kwh": 0.0,
+          "final_battery_kwh": 0.0,
+          "final_ups_kwh": 0.0,
+          "gfm_all_resources": true
+        }
+      ]
+    },
+    {
+      "capacity": {
+        "wind_kw": 0.0,
+        "pv_kw": 0.0,
+        "diesel_units": 0,
+        "battery_kwh": 0.0,
+        "pcs_kw": 200.0,
+        "ups_kwh": 0.0,
+        "ups_kw": 100.0
+      },
+      "investment_yuan": 105000.0,
+      "mean_operation_yuan": 7568.216833022265,
+      "objective_yuan": 112568.21683302226,
+      "feasible": false,
+      "core_bridge_pass": false,
+      "required_ups_kwh": 308.6297097929724,
+      "required_ups_kw": 57.86807058618233,
+      "core_risk": {
+        "eens_kwh": 0.0,
+        "cvar_kwh": 0.0,
+        "max_kwh": 0.0,
+        "positive_fraction": 0.0,
+        "samples": 2
+      },
+      "rigid_risk": {
+        "eens_kwh": 0.0,
+        "cvar_kwh": 0.0,
+        "max_kwh": 0.0,
+        "positive_fraction": 0.0,
+        "samples": 2
+      },
+      "flex_adjusted_mean_kwh": 0.0,
+      "scenario_metrics": [
+        {
+          "core_unserved_kwh": 0.0,
+          "rigid_unserved_kwh": 0.0,
+          "flex_adjusted_kwh": 0.0,
+          "starts": 0,
+          "start_failures": 0,
+          "diesel_run_failures": 0,
+          "bus_fault_hours": 0,
+          "renewable_bus_fault_hours": 0,
+          "battery_discharge_kwh": 0.0,
+          "battery_charge_kwh": 0.0,
+          "ups_discharge_kwh": 0.0,
+          "ups_charge_kwh": 0.0,
+          "final_battery_kwh": 0.0,
+          "final_ups_kwh": 0.0,
+          "gfm_all_resources": true
+        },
+        {
+          "core_unserved_kwh": 0.0,
+          "rigid_unserved_kwh": 0.0,
+          "flex_adjusted_kwh": 0.0,
+          "starts": 0,
+          "start_failures": 0,
+          "diesel_run_failures": 0,
+          "bus_fault_hours": 0,
+          "renewable_bus_fault_hours": 0,
+          "battery_discharge_kwh": 0.0,
+          "battery_charge_kwh": 0.0,
+          "ups_discharge_kwh": 0.0,
+          "ups_charge_kwh": 0.0,
+          "final_battery_kwh": 0.0,
+          "final_ups_kwh": 0.0,
+          "gfm_all_resources": true
+        }
+      ]
+    },
+    {
+      "capacity": {
+        "wind_kw": 0.0,
+        "pv_kw": 0.0,
+        "diesel_units": 0,
+        "battery_kwh": 0.0,
+        "pcs_kw": 200.0,
+        "ups_kwh": 0.0,
+        "ups_kw": 150.0
+      },
+      "investment_yuan": 117500.0,
+      "mean_operation_yuan": 7568.216833022265,
+      "objective_yuan": 125068.21683302226,
+      "feasible": false,
+      "core_bridge_pass": false,
+      "required_ups_kwh": 308.6297097929724,
+      "required_ups_kw": 57.86807058618233,
+      "core_risk": {
+        "eens_kwh": 0.0,
+        "cvar_kwh": 0.0,
+        "max_kwh": 0.0,
+        "positive_fraction": 0.0,
+        "samples": 2
+      },
+      "rigid_risk": {
+        "eens_kwh": 0.0,
+        "cvar_kwh": 0.0,
+        "max_kwh": 0.0,
+        "positive_fraction": 0.0,
+        "samples": 2
+      },
+      "flex_adjusted_mean_kwh": 0.0,
+      "scenario_metrics": [
+        {
+          "core_unserved_kwh": 0.0,
+          "rigid_unserved_kwh": 0.0,
+          "flex_adjusted_kwh": 0.0,
+          "starts": 0,
+          "start_failures": 0,
+          "diesel_run_failures": 0,
+          "bus_fault_hours": 0,
+          "renewable_bus_fault_hours": 0,
+          "battery_discharge_kwh": 0.0,
+          "battery_charge_kwh": 0.0,
+          "ups_discharge_kwh": 0.0,
+          "ups_charge_kwh": 0.0,
+          "final_battery_kwh": 0.0,
+          "final_ups_kwh": 0.0,
+          "gfm_all_resources": true
+        },
+        {
+          "core_unserved_kwh": 0.0,
+          "rigid_unserved_kwh": 0.0,
+          "flex_adjusted_kwh": 0.0,
+          "starts": 0,
+          "start_failures": 0,
+          "diesel_run_failures": 0,
+          "bus_fault_hours": 0,
+          "renewable_bus_fault_hours": 0,
+          "battery_discharge_kwh": 0.0,
+          "battery_charge_kwh": 0.0,
+          "ups_discharge_kwh": 0.0,
+          "ups_charge_kwh": 0.0,
+          "final_battery_kwh": 0.0,
+          "final_ups_kwh": 0.0,
+          "gfm_all_resources": true
+        }
+      ]
+    },
+    {
+      "capacity": {
+        "wind_kw": 0.0,
+        "pv_kw": 0.0,
+        "diesel_units": 0,
+        "battery_kwh": 0.0,
+        "pcs_kw": 0.0,
+        "ups_kwh": 300.0,
+        "ups_kw": 0.0
+      },
+      "investment_yuan": 135000.0,
+      "mean_operation_yuan": 7568.216833022265,
+      "objective_yuan": 142568.21683302228,
+      "feasible": false,
+      "core_bridge_pass": false,
+      "required_ups_kwh": 308.6297097929724,
+      "required_ups_kw": 57.86807058618233,
+      "core_risk": {
+        "eens_kwh": 0.0,
+        "cvar_kwh": 0.0,
+        "max_kwh": 0.0,
+        "positive_fraction": 0.0,
+        "samples": 2
+      },
+      "rigid_risk": {
+        "eens_kwh": 0.0,
+        "cvar_kwh": 0.0,
+        "max_kwh": 0.0,
+        "positive_fraction": 0.0,
+        "samples": 2
+      },
+      "flex_adjusted_mean_kwh": 0.0,
+      "scenario_metrics": [
+        {
+          "core_unserved_kwh": 0.0,
+          "rigid_unserved_kwh": 0.0,
+          "flex_adjusted_kwh": 0.0,
+          "starts": 0,
+          "start_failures": 0,
+          "diesel_run_failures": 0,
+          "bus_fault_hours": 0,
+          "renewable_bus_fault_hours": 0,
+          "battery_discharge_kwh": 0.0,
+          "battery_charge_kwh": 0.0,
+          "ups_discharge_kwh": 0.0,
+          "ups_charge_kwh": 0.0,
+          "final_battery_kwh": 0.0,
+          "final_ups_kwh": 150.0,
+          "gfm_all_resources": true
+        },
+        {
+          "core_unserved_kwh": 0.0,
+          "rigid_unserved_kwh": 0.0,
+          "flex_adjusted_kwh": 0.0,
+          "starts": 0,
+          "start_failures": 0,
+          "diesel_run_failures": 0,
+          "bus_fault_hours": 0,
+          "renewable_bus_fault_hours": 0,
+          "battery_discharge_kwh": 0.0,
+          "battery_charge_kwh": 0.0,
+          "ups_discharge_kwh": 0.0,
+          "ups_charge_kwh": 0.0,
+          "final_battery_kwh": 0.0,
+          "final_ups_kwh": 150.0,
+          "gfm_all_resources": true
+        }
+      ]
+    },
+    {
+      "capacity": {
+        "wind_kw": 0.0,
+        "pv_kw": 0.0,
+        "diesel_units": 0,
+        "battery_kwh": 0.0,
+        "pcs_kw": 0.0,
+        "ups_kwh": 300.0,
+        "ups_kw": 50.0
+      },
+      "investment_yuan": 147500.0,
+      "mean_operation_yuan": 7568.216833022265,
+      "objective_yuan": 155068.21683302228,
+      "feasible": false,
+      "core_bridge_pass": false,
+      "required_ups_kwh": 308.6297097929724,
+      "required_ups_kw": 57.86807058618233,
+      "core_risk": {
+        "eens_kwh": 0.0,
+        "cvar_kwh": 0.0,
+        "max_kwh": 0.0,
+        "positive_fraction": 0.0,
+        "samples": 2
+      },
+      "rigid_risk": {
+        "eens_kwh": 0.0,
+        "cvar_kwh": 0.0,
+        "max_kwh": 0.0,
+        "positive_fraction": 0.0,
+        "samples": 2
+      },
+      "flex_adjusted_mean_kwh": 0.0,
+      "scenario_metrics": [
+        {
+          "core_unserved_kwh": 0.0,
+          "rigid_unserved_kwh": 0.0,
+          "flex_adjusted_kwh": 0.0,
+          "starts": 0,
+          "start_failures": 0,
+          "diesel_run_failures": 0,
+          "bus_fault_hours": 0,
+          "renewable_bus_fault_hours": 0,
+          "battery_discharge_kwh": 0.0,
+          "battery_charge_kwh": 0.0,
+          "ups_discharge_kwh": 1697.6200847739133,
+          "ups_charge_kwh": 0.0,
+          "final_battery_kwh": 0.0,
+          "final_ups_kwh": 150.0,
+          "gfm_all_resources": true
+        },
+        {
+          "core_unserved_kwh": 0.0,
+          "rigid_unserved_kwh": 0.0,
+          "flex_adjusted_kwh": 0.0,
+          "starts": 0,
+          "start_failures": 0,
+          "diesel_run_failures": 0,
+          "bus_fault_hours": 0,
+          "renewable_bus_fault_hours": 0,
+          "battery_discharge_kwh": 0.0,
+          "battery_charge_kwh": 0.0,
+          "ups_discharge_kwh": 1697.6200847739133,
+          "ups_charge_kwh": 0.0,
+          "final_battery_kwh": 0.0,
+          "final_ups_kwh": 150.0,
+          "gfm_all_resources": true
+        }
+      ]
+    },
+    {
+      "capacity": {
+        "wind_kw": 0.0,
+        "pv_kw": 0.0,
+        "diesel_units": 0,
+        "battery_kwh": 0.0,
+        "pcs_kw": 0.0,
+        "ups_kwh": 300.0,
+        "ups_kw": 100.0
+      },
+      "investment_yuan": 160000.0,
+      "mean_operation_yuan": 7568.216833022265,
+      "objective_yuan": 167568.21683302228,
+      "feasible": false,
+      "core_bridge_pass": false,
+      "required_ups_kwh": 308.6297097929724,
+      "required_ups_kw": 57.86807058618233,
+      "core_risk": {
+        "eens_kwh": 0.0,
+        "cvar_kwh": 0.0,
+        "max_kwh": 0.0,
+        "positive_fraction": 0.0,
+        "samples": 2
+      },
+      "rigid_risk": {
+        "eens_kwh": 0.0,
+        "cvar_kwh": 0.0,
+        "max_kwh": 0.0,
+        "positive_fraction": 0.0,
+        "samples": 2
+      },
+      "flex_adjusted_mean_kwh": 0.0,
+      "scenario_metrics": [
+        {
+          "core_unserved_kwh": 0.0,
+          "rigid_unserved_kwh": 0.0,
+          "flex_adjusted_kwh": 0.0,
+          "starts": 0,
+          "start_failures": 0,
+          "diesel_run_failures": 0,
+          "bus_fault_hours": 0,
+          "renewable_bus_fault_hours": 0,
+          "battery_discharge_kwh": 0.0,
+          "battery_charge_kwh": 0.0,
+          "ups_discharge_kwh": 1697.6200847739133,
+          "ups_charge_kwh": 0.0,
+          "final_battery_kwh": 0.0,
+          "final_ups_kwh": 150.0,
+          "gfm_all_resources": true
+        },
+        {
+          "core_unserved_kwh": 0.0,
+          "rigid_unserved_kwh": 0.0,
+          "flex_adjusted_kwh": 0.0,
+          "starts": 0,
+          "start_failures": 0,
+          "diesel_run_failures": 0,
+          "bus_fault_hours": 0,
+          "renewable_bus_fault_hours": 0,
+          "battery_discharge_kwh": 0.0,
+          "battery_charge_kwh": 0.0,
+          "ups_discharge_kwh": 1697.6200847739133,
+          "ups_charge_kwh": 0.0,
+          "final_battery_kwh": 0.0,
+          "final_ups_kwh": 150.0,
+          "gfm_all_resources": true
+        }
+      ]
+    },
+    {
+      "capacity": {
+        "wind_kw": 0.0,
+        "pv_kw": 0.0,
+        "diesel_units": 0,
+        "battery_kwh": 0.0,
+        "pcs_kw": 400.0,
+        "ups_kwh": 0.0,
+        "ups_kw": 0.0
+      },
+      "investment_yuan": 160000.0,
+      "mean_operation_yuan": 7568.216833022265,
+      "objective_yuan": 167568.21683302228,
+      "feasible": false,
+      "core_bridge_pass": false,
+      "required_ups_kwh": 308.6297097929724,
+      "required_ups_kw": 57.86807058618233,
+      "core_risk": {
+        "eens_kwh": 0.0,
+        "cvar_kwh": 0.0,
+        "max_kwh": 0.0,
+        "positive_fraction": 0.0,
+        "samples": 2
+      },
+      "rigid_risk": {
+        "eens_kwh": 0.0,
+        "cvar_kwh": 0.0,
+        "max_kwh": 0.0,
+        "positive_fraction": 0.0,
+        "samples": 2
+      },
+      "flex_adjusted_mean_kwh": 0.0,
+      "scenario_metrics": [
+        {
+          "core_unserved_kwh": 0.0,
+          "rigid_unserved_kwh": 0.0,
+          "flex_adjusted_kwh": 0.0,
+          "starts": 0,
+          "start_failures": 0,
+          "diesel_run_failures": 0,
+          "bus_fault_hours": 0,
+          "renewable_bus_fault_hours": 0,
+          "battery_discharge_kwh": 0.0,
+          "battery_charge_kwh": 0.0,
+          "ups_discharge_kwh": 0.0,
+          "ups_charge_kwh": 0.0,
+          "final_battery_kwh": 0.0,
+          "final_ups_kwh": 0.0,
+          "gfm_all_resources": true
+        },
+        {
+          "core_unserved_kwh": 0.0,
+          "rigid_unserved_kwh": 0.0,
+          "flex_adjusted_kwh": 0.0,
+          "starts": 0,
+          "start_failures": 0,
+          "diesel_run_failures": 0,
+          "bus_fault_hours": 0,
+          "renewable_bus_fault_hours": 0,
+          "battery_discharge_kwh": 0.0,
+          "battery_charge_kwh": 0.0,
+          "ups_discharge_kwh": 0.0,
+          "ups_charge_kwh": 0.0,
+          "final_battery_kwh": 0.0,
+          "final_ups_kwh": 0.0,
+          "gfm_all_resources": true
+        }
+      ]
+    },
+    {
+      "capacity": {
+        "wind_kw": 0.0,
+        "pv_kw": 0.0,
+        "diesel_units": 0,
+        "battery_kwh": 0.0,
+        "pcs_kw": 0.0,
+        "ups_kwh": 300.0,
+        "ups_kw": 150.0
+      },
+      "investment_yuan": 172500.0,
+      "mean_operation_yuan": 7568.216833022265,
+      "objective_yuan": 180068.21683302228,
+      "feasible": false,
+      "core_bridge_pass": false,
+      "required_ups_kwh": 308.6297097929724,
+      "required_ups_kw": 57.86807058618233,
+      "core_risk": {
+        "eens_kwh": 0.0,
+        "cvar_kwh": 0.0,
+        "max_kwh": 0.0,
+        "positive_fraction": 0.0,
+        "samples": 2
+      },
+      "rigid_risk": {
+        "eens_kwh": 0.0,
+        "cvar_kwh": 0.0,
+        "max_kwh": 0.0,
+        "positive_fraction": 0.0,
+        "samples": 2
+      },
+      "flex_adjusted_mean_kwh": 0.0,
+      "scenario_metrics": [
+        {
+          "core_unserved_kwh": 0.0,
+          "rigid_unserved_kwh": 0.0,
+          "flex_adjusted_kwh": 0.0,
+          "starts": 0,
+          "start_failures": 0,
+          "diesel_run_failures": 0,
+          "bus_fault_hours": 0,
+          "renewable_bus_fault_hours": 0,
+          "battery_discharge_kwh": 0.0,
+          "battery_charge_kwh": 0.0,
+          "ups_discharge_kwh": 1697.6200847739133,
+          "ups_charge_kwh": 0.0,
+          "final_battery_kwh": 0.0,
+          "final_ups_kwh": 150.0,
+          "gfm_all_resources": true
+        },
+        {
+          "core_unserved_kwh": 0.0,
+          "rigid_unserved_kwh": 0.0,
+          "flex_adjusted_kwh": 0.0,
+          "starts": 0,
+          "start_failures": 0,
+          "diesel_run_failures": 0,
+          "bus_fault_hours": 0,
+          "renewable_bus_fault_hours": 0,
+          "battery_discharge_kwh": 0.0,
+          "battery_charge_kwh": 0.0,
+          "ups_discharge_kwh": 1697.6200847739133,
+          "ups_charge_kwh": 0.0,
+          "final_battery_kwh": 0.0,
+          "final_ups_kwh": 150.0,
+          "gfm_all_resources": true
+        }
+      ]
+    },
+    {
+      "capacity": {
+        "wind_kw": 0.0,
+        "pv_kw": 0.0,
+        "diesel_units": 0,
+        "battery_kwh": 0.0,
+        "pcs_kw": 400.0,
+        "ups_kwh": 0.0,
+        "ups_kw": 50.0
+      },
+      "investment_yuan": 172500.0,
+      "mean_operation_yuan": 7568.216833022265,
+      "objective_yuan": 180068.21683302228,
+      "feasible": false,
+      "core_bridge_pass": false,
+      "required_ups_kwh": 308.6297097929724,
+      "required_ups_kw": 57.86807058618233,
+      "core_risk": {
+        "eens_kwh": 0.0,
+        "cvar_kwh": 0.0,
+        "max_kwh": 0.0,
+        "positive_fraction": 0.0,
+        "samples": 2
+      },
+      "rigid_risk": {
+        "eens_kwh": 0.0,
+        "cvar_kwh": 0.0,
+        "max_kwh": 0.0,
+        "positive_fraction": 0.0,
+        "samples": 2
+      },
+      "flex_adjusted_mean_kwh": 0.0,
+      "scenario_metrics": [
+        {
+          "core_unserved_kwh": 0.0,
+          "rigid_unserved_kwh": 0.0,
+          "flex_adjusted_kwh": 0.0,
+          "starts": 0,
+          "start_failures": 0,
+          "diesel_run_failures": 0,
+          "bus_fault_hours": 0,
+          "renewable_bus_fault_hours": 0,
+          "battery_discharge_kwh": 0.0,
+          "battery_charge_kwh": 0.0,
+          "ups_discharge_kwh": 0.0,
+          "ups_charge_kwh": 0.0,
+          "final_battery_kwh": 0.0,
+          "final_ups_kwh": 0.0,
+          "gfm_all_resources": true
+        },
+        {
+          "core_unserved_kwh": 0.0,
+          "rigid_unserved_kwh": 0.0,
+          "flex_adjusted_kwh": 0.0,
+          "starts": 0,
+          "start_failures": 0,
+          "diesel_run_failures": 0,
+          "bus_fault_hours": 0,
+          "renewable_bus_fault_hours": 0,
+          "battery_discharge_kwh": 0.0,
+          "battery_charge_kwh": 0.0,
+          "ups_discharge_kwh": 0.0,
+          "ups_charge_kwh": 0.0,
+          "final_battery_kwh": 0.0,
+          "final_ups_kwh": 0.0,
+          "gfm_all_resources": true
+        }
+      ]
+    },
+    {
+      "capacity": {
+        "wind_kw": 0.0,
+        "pv_kw": 0.0,
+        "diesel_units": 1,
+        "battery_kwh": 0.0,
+        "pcs_kw": 0.0,
+        "ups_kwh": 0.0,
+        "ups_kw": 0.0
+      },
+      "investment_yuan": 180000.0,
+      "mean_operation_yuan": 7568.216833022265,
+      "objective_yuan": 187568.21683302228,
+      "feasible": false,
+      "core_bridge_pass": false,
+      "required_ups_kwh": 308.6297097929724,
+      "required_ups_kw": 57.86807058618233,
+      "core_risk": {
+        "eens_kwh": 0.0,
+        "cvar_kwh": 0.0,
+        "max_kwh": 0.0,
+        "positive_fraction": 0.0,
+        "samples": 2
+      },
+      "rigid_risk": {
+        "eens_kwh": 0.0,
+        "cvar_kwh": 0.0,
+        "max_kwh": 0.0,
+        "positive_fraction": 0.0,
+        "samples": 2
+      },
+      "flex_adjusted_mean_kwh": 0.0,
+      "scenario_metrics": [
+        {
+          "core_unserved_kwh": 0.0,
+          "rigid_unserved_kwh": 0.0,
+          "flex_adjusted_kwh": 0.0,
+          "starts": 0,
+          "start_failures": 0,
+          "diesel_run_failures": 0,
+          "bus_fault_hours": 0,
+          "renewable_bus_fault_hours": 0,
+          "battery_discharge_kwh": 0.0,
+          "battery_charge_kwh": 0.0,
+          "ups_discharge_kwh": 0.0,
+          "ups_charge_kwh": 0.0,
+          "final_battery_kwh": 0.0,
+          "final_ups_kwh": 0.0,
+          "gfm_all_resources": true
+        },
+        {
+          "core_unserved_kwh": 0.0,
+          "rigid_unserved_kwh": 0.0,
+          "flex_adjusted_kwh": 0.0,
+          "starts": 0,
+          "start_failures": 0,
+          "diesel_run_failures": 0,
+          "bus_fault_hours": 0,
+          "renewable_bus_fault_hours": 0,
+          "battery_discharge_kwh": 0.0,
+          "battery_charge_kwh": 0.0,
+          "ups_discharge_kwh": 0.0,
+          "ups_charge_kwh": 0.0,
+          "final_battery_kwh": 0.0,
+          "final_ups_kwh": 0.0,
+          "gfm_all_resources": true
+        }
+      ]
+    },
+    {
+      "capacity": {
+        "wind_kw": 0.0,
+        "pv_kw": 0.0,
+        "diesel_units": 0,
+        "battery_kwh": 0.0,
+        "pcs_kw": 400.0,
+        "ups_kwh": 0.0,
+        "ups_kw": 100.0
+      },
+      "investment_yuan": 185000.0,
+      "mean_operation_yuan": 7568.216833022265,
+      "objective_yuan": 192568.21683302228,
+      "feasible": false,
+      "core_bridge_pass": false,
+      "required_ups_kwh": 308.6297097929724,
+      "required_ups_kw": 57.86807058618233,
+      "core_risk": {
+        "eens_kwh": 0.0,
+        "cvar_kwh": 0.0,
+        "max_kwh": 0.0,
+        "positive_fraction": 0.0,
+        "samples": 2
+      },
+      "rigid_risk": {
+        "eens_kwh": 0.0,
+        "cvar_kwh": 0.0,
+        "max_kwh": 0.0,
+        "positive_fraction": 0.0,
+        "samples": 2
+      },
+      "flex_adjusted_mean_kwh": 0.0,
+      "scenario_metrics": [
+        {
+          "core_unserved_kwh": 0.0,
+          "rigid_unserved_kwh": 0.0,
+          "flex_adjusted_kwh": 0.0,
+          "starts": 0,
+          "start_failures": 0,
+          "diesel_run_failures": 0,
+          "bus_fault_hours": 0,
+          "renewable_bus_fault_hours": 0,
+          "battery_discharge_kwh": 0.0,
+          "battery_charge_kwh": 0.0,
+          "ups_discharge_kwh": 0.0,
+          "ups_charge_kwh": 0.0,
+          "final_battery_kwh": 0.0,
+          "final_ups_kwh": 0.0,
+          "gfm_all_resources": true
+        },
+        {
+          "core_unserved_kwh": 0.0,
+          "rigid_unserved_kwh": 0.0,
+          "flex_adjusted_kwh": 0.0,
+          "starts": 0,
+          "start_failures": 0,
+          "diesel_run_failures": 0,
+          "bus_fault_hours": 0,
+          "renewable_bus_fault_hours": 0,
+          "battery_discharge_kwh": 0.0,
+          "battery_charge_kwh": 0.0,
+          "ups_discharge_kwh": 0.0,
+          "ups_charge_kwh": 0.0,
+          "final_battery_kwh": 0.0,
+          "final_ups_kwh": 0.0,
+          "gfm_all_resources": true
+        }
+      ]
+    },
+    {
+      "capacity": {
+        "wind_kw": 0.0,
+        "pv_kw": 0.0,
+        "diesel_units": 1,
+        "battery_kwh": 0.0,
+        "pcs_kw": 0.0,
+        "ups_kwh": 0.0,
+        "ups_kw": 50.0
+      },
+      "investment_yuan": 192500.0,
+      "mean_operation_yuan": 7568.216833022265,
+      "objective_yuan": 200068.21683302228,
+      "feasible": false,
+      "core_bridge_pass": false,
+      "required_ups_kwh": 308.6297097929724,
+      "required_ups_kw": 57.86807058618233,
+      "core_risk": {
+        "eens_kwh": 0.0,
+        "cvar_kwh": 0.0,
+        "max_kwh": 0.0,
+        "positive_fraction": 0.0,
+        "samples": 2
+      },
+      "rigid_risk": {
+        "eens_kwh": 0.0,
+        "cvar_kwh": 0.0,
+        "max_kwh": 0.0,
+        "positive_fraction": 0.0,
+        "samples": 2
+      },
+      "flex_adjusted_mean_kwh": 0.0,
+      "scenario_metrics": [
+        {
+          "core_unserved_kwh": 0.0,
+          "rigid_unserved_kwh": 0.0,
+          "flex_adjusted_kwh": 0.0,
+          "starts": 0,
+          "start_failures": 0,
+          "diesel_run_failures": 0,
+          "bus_fault_hours": 0,
+          "renewable_bus_fault_hours": 0,
+          "battery_discharge_kwh": 0.0,
+          "battery_charge_kwh": 0.0,
+          "ups_discharge_kwh": 0.0,
+          "ups_charge_kwh": 0.0,
+          "final_battery_kwh": 0.0,
+          "final_ups_kwh": 0.0,
+          "gfm_all_resources": true
+        },
+        {
+          "core_unserved_kwh": 0.0,
+          "rigid_unserved_kwh": 0.0,
+          "flex_adjusted_kwh": 0.0,
+          "starts": 0,
+          "start_failures": 0,
+          "diesel_run_failures": 0,
+          "bus_fault_hours": 0,
+          "renewable_bus_fault_hours": 0,
+          "battery_discharge_kwh": 0.0,
+          "battery_charge_kwh": 0.0,
+          "ups_discharge_kwh": 0.0,
+          "ups_charge_kwh": 0.0,
+          "final_battery_kwh": 0.0,
+          "final_ups_kwh": 0.0,
+          "gfm_all_resources": true
+        }
+      ]
+    },
+    {
+      "capacity": {
+        "wind_kw": 0.0,
+        "pv_kw": 0.0,
+        "diesel_units": 0,
+        "battery_kwh": 0.0,
+        "pcs_kw": 400.0,
+        "ups_kwh": 0.0,
+        "ups_kw": 150.0
+      },
+      "investment_yuan": 197500.0,
+      "mean_operation_yuan": 7568.216833022265,
+      "objective_yuan": 205068.21683302228,
+      "feasible": false,
+      "core_bridge_pass": false,
+      "required_ups_kwh": 308.6297097929724,
+      "required_ups_kw": 57.86807058618233,
+      "core_risk": {
+        "eens_kwh": 0.0,
+        "cvar_kwh": 0.0,
+        "max_kwh": 0.0,
+        "positive_fraction": 0.0,
+        "samples": 2
+      },
+      "rigid_risk": {
+        "eens_kwh": 0.0,
+        "cvar_kwh": 0.0,
+        "max_kwh": 0.0,
+        "positive_fraction": 0.0,
+        "samples": 2
+      },
+      "flex_adjusted_mean_kwh": 0.0,
+      "scenario_metrics": [
+        {
+          "core_unserved_kwh": 0.0,
+          "rigid_unserved_kwh": 0.0,
+          "flex_adjusted_kwh": 0.0,
+          "starts": 0,
+          "start_failures": 0,
+          "diesel_run_failures": 0,
+          "bus_fault_hours": 0,
+          "renewable_bus_fault_hours": 0,
+          "battery_discharge_kwh": 0.0,
+          "battery_charge_kwh": 0.0,
+          "ups_discharge_kwh": 0.0,
+          "ups_charge_kwh": 0.0,
+          "final_battery_kwh": 0.0,
+          "final_ups_kwh": 0.0,
+          "gfm_all_resources": true
+        },
+        {
+          "core_unserved_kwh": 0.0,
+          "rigid_unserved_kwh": 0.0,
+          "flex_adjusted_kwh": 0.0,
+          "starts": 0,
+          "start_failures": 0,
+          "diesel_run_failures": 0,
+          "bus_fault_hours": 0,
+          "renewable_bus_fault_hours": 0,
+          "battery_discharge_kwh": 0.0,
+          "battery_charge_kwh": 0.0,
+          "ups_discharge_kwh": 0.0,
+          "ups_charge_kwh": 0.0,
+          "final_battery_kwh": 0.0,
+          "final_ups_kwh": 0.0,
+          "gfm_all_resources": true
+        }
+      ]
+    },
+    {
+      "capacity": {
+        "wind_kw": 0.0,
+        "pv_kw": 200.0,
+        "diesel_units": 0,
+        "battery_kwh": 0.0,
+        "pcs_kw": 0.0,
+        "ups_kwh": 0.0,
+        "ups_kw": 0.0
+      },
+      "investment_yuan": 200000.0,
+      "mean_operation_yuan": 5873.771540892587,
+      "objective_yuan": 205873.7715408926,
+      "feasible": false,
+      "core_bridge_pass": false,
+      "required_ups_kwh": 308.6297097929724,
+      "required_ups_kw": 57.86807058618233,
+      "core_risk": {
+        "eens_kwh": 0.0,
+        "cvar_kwh": 0.0,
+        "max_kwh": 0.0,
+        "positive_fraction": 0.0,
+        "samples": 2
+      },
+      "rigid_risk": {
+        "eens_kwh": 0.0,
+        "cvar_kwh": 0.0,
+        "max_kwh": 0.0,
+        "positive_fraction": 0.0,
+        "samples": 2
+      },
+      "flex_adjusted_mean_kwh": 0.0,
+      "scenario_metrics": [
+        {
+          "core_unserved_kwh": 0.0,
+          "rigid_unserved_kwh": 0.0,
+          "flex_adjusted_kwh": 0.0,
+          "starts": 0,
+          "start_failures": 0,
+          "diesel_run_failures": 0,
+          "bus_fault_hours": 0,
+          "renewable_bus_fault_hours": 0,
+          "battery_discharge_kwh": 0.0,
+          "battery_charge_kwh": 0.0,
+          "ups_discharge_kwh": 0.0,
+          "ups_charge_kwh": 0.0,
+          "final_battery_kwh": 0.0,
+          "final_ups_kwh": 0.0,
+          "gfm_all_resources": true
+        },
+        {
+          "core_unserved_kwh": 0.0,
+          "rigid_unserved_kwh": 0.0,
+          "flex_adjusted_kwh": 0.0,
+          "starts": 0,
+          "start_failures": 0,
+          "diesel_run_failures": 0,
+          "bus_fault_hours": 0,
+          "renewable_bus_fault_hours": 0,
+          "battery_discharge_kwh": 0.0,
+          "battery_charge_kwh": 0.0,
+          "ups_discharge_kwh": 0.0,
+          "ups_charge_kwh": 0.0,
+          "final_battery_kwh": 0.0,
+          "final_ups_kwh": 0.0,
+          "gfm_all_resources": true
+        }
+      ]
+    },
+    {
+      "capacity": {
+        "wind_kw": 0.0,
+        "pv_kw": 0.0,
+        "diesel_units": 1,
+        "battery_kwh": 0.0,
+        "pcs_kw": 0.0,
+        "ups_kwh": 0.0,
+        "ups_kw": 100.0
+      },
+      "investment_yuan": 205000.0,
+      "mean_operation_yuan": 7568.216833022265,
+      "objective_yuan": 212568.21683302228,
+      "feasible": false,
+      "core_bridge_pass": false,
+      "required_ups_kwh": 308.6297097929724,
+      "required_ups_kw": 57.86807058618233,
+      "core_risk": {
+        "eens_kwh": 0.0,
+        "cvar_kwh": 0.0,
+        "max_kwh": 0.0,
+        "positive_fraction": 0.0,
+        "samples": 2
+      },
+      "rigid_risk": {
+        "eens_kwh": 0.0,
+        "cvar_kwh": 0.0,
+        "max_kwh": 0.0,
+        "positive_fraction": 0.0,
+        "samples": 2
+      },
+      "flex_adjusted_mean_kwh": 0.0,
+      "scenario_metrics": [
+        {
+          "core_unserved_kwh": 0.0,
+          "rigid_unserved_kwh": 0.0,
+          "flex_adjusted_kwh": 0.0,
+          "starts": 0,
+          "start_failures": 0,
+          "diesel_run_failures": 0,
+          "bus_fault_hours": 0,
+          "renewable_bus_fault_hours": 0,
+          "battery_discharge_kwh": 0.0,
+          "battery_charge_kwh": 0.0,
+          "ups_discharge_kwh": 0.0,
+          "ups_charge_kwh": 0.0,
+          "final_battery_kwh": 0.0,
+          "final_ups_kwh": 0.0,
+          "gfm_all_resources": true
+        },
+        {
+          "core_unserved_kwh": 0.0,
+          "rigid_unserved_kwh": 0.0,
+          "flex_adjusted_kwh": 0.0,
+          "starts": 0,
+          "start_failures": 0,
+          "diesel_run_failures": 0,
+          "bus_fault_hours": 0,
+          "renewable_bus_fault_hours": 0,
+          "battery_discharge_kwh": 0.0,
+          "battery_charge_kwh": 0.0,
+          "ups_discharge_kwh": 0.0,
+          "ups_charge_kwh": 0.0,
+          "final_battery_kwh": 0.0,
+          "final_ups_kwh": 0.0,
+          "gfm_all_resources": true
+        }
+      ]
+    },
+    {
+      "capacity": {
+        "wind_kw": 0.0,
+        "pv_kw": 200.0,
+        "diesel_units": 0,
+        "battery_kwh": 0.0,
+        "pcs_kw": 0.0,
+        "ups_kwh": 0.0,
+        "ups_kw": 50.0
+      },
+      "investment_yuan": 212500.0,
+      "mean_operation_yuan": 5873.771540892587,
+      "objective_yuan": 218373.7715408926,
+      "feasible": false,
+      "core_bridge_pass": false,
+      "required_ups_kwh": 308.6297097929724,
+      "required_ups_kw": 57.86807058618233,
+      "core_risk": {
+        "eens_kwh": 0.0,
+        "cvar_kwh": 0.0,
+        "max_kwh": 0.0,
+        "positive_fraction": 0.0,
+        "samples": 2
+      },
+      "rigid_risk": {
+        "eens_kwh": 0.0,
+        "cvar_kwh": 0.0,
+        "max_kwh": 0.0,
+        "positive_fraction": 0.0,
+        "samples": 2
+      },
+      "flex_adjusted_mean_kwh": 0.0,
+      "scenario_metrics": [
+        {
+          "core_unserved_kwh": 0.0,
+          "rigid_unserved_kwh": 0.0,
+          "flex_adjusted_kwh": 0.0,
+          "starts": 0,
+          "start_failures": 0,
+          "diesel_run_failures": 0,
+          "bus_fault_hours": 0,
+          "renewable_bus_fault_hours": 0,
+          "battery_discharge_kwh": 0.0,
+          "battery_charge_kwh": 0.0,
+          "ups_discharge_kwh": 0.0,
+          "ups_charge_kwh": 0.0,
+          "final_battery_kwh": 0.0,
+          "final_ups_kwh": 0.0,
+          "gfm_all_resources": true
+        },
+        {
+          "core_unserved_kwh": 0.0,
+          "rigid_unserved_kwh": 0.0,
+          "flex_adjusted_kwh": 0.0,
+          "starts": 0,
+          "start_failures": 0,
+          "diesel_run_failures": 0,
+          "bus_fault_hours": 0,
+          "renewable_bus_fault_hours": 0,
+          "battery_discharge_kwh": 0.0,
+          "battery_charge_kwh": 0.0,
+          "ups_discharge_kwh": 0.0,
+          "ups_charge_kwh": 0.0,
+          "final_battery_kwh": 0.0,
+          "final_ups_kwh": 0.0,
+          "gfm_all_resources": true
+        }
+      ]
+    },
+    {
+      "capacity": {
+        "wind_kw": 0.0,
+        "pv_kw": 0.0,
+        "diesel_units": 0,
+        "battery_kwh": 0.0,
+        "pcs_kw": 200.0,
+        "ups_kwh": 300.0,
+        "ups_kw": 0.0
+      },
+      "investment_yuan": 215000.0,
+      "mean_operation_yuan": 7568.216833022265,
+      "objective_yuan": 222568.21683302228,
+      "feasible": false,
+      "core_bridge_pass": false,
+      "required_ups_kwh": 308.6297097929724,
+      "required_ups_kw": 57.86807058618233,
+      "core_risk": {
+        "eens_kwh": 0.0,
+        "cvar_kwh": 0.0,
+        "max_kwh": 0.0,
+        "positive_fraction": 0.0,
+        "samples": 2
+      },
+      "rigid_risk": {
+        "eens_kwh": 0.0,
+        "cvar_kwh": 0.0,
+        "max_kwh": 0.0,
+        "positive_fraction": 0.0,
+        "samples": 2
+      },
+      "flex_adjusted_mean_kwh": 0.0,
+      "scenario_metrics": [
+        {
+          "core_unserved_kwh": 0.0,
+          "rigid_unserved_kwh": 0.0,
+          "flex_adjusted_kwh": 0.0,
+          "starts": 0,
+          "start_failures": 0,
+          "diesel_run_failures": 0,
+          "bus_fault_hours": 0,
+          "renewable_bus_fault_hours": 0,
+          "battery_discharge_kwh": 0.0,
+          "battery_charge_kwh": 0.0,
+          "ups_discharge_kwh": 0.0,
+          "ups_charge_kwh": 0.0,
+          "final_battery_kwh": 0.0,
+          "final_ups_kwh": 150.0,
+          "gfm_all_resources": true
+        },
+        {
+          "core_unserved_kwh": 0.0,
+          "rigid_unserved_kwh": 0.0,
+          "flex_adjusted_kwh": 0.0,
+          "starts": 0,
+          "start_failures": 0,
+          "diesel_run_failures": 0,
+          "bus_fault_hours": 0,
+          "renewable_bus_fault_hours": 0,
+          "battery_discharge_kwh": 0.0,
+          "battery_charge_kwh": 0.0,
+          "ups_discharge_kwh": 0.0,
+          "ups_charge_kwh": 0.0,
+          "final_battery_kwh": 0.0,
+          "final_ups_kwh": 150.0,
+          "gfm_all_resources": true
+        }
+      ]
+    },
+    {
+      "capacity": {
+        "wind_kw": 0.0,
+        "pv_kw": 0.0,
+        "diesel_units": 1,
+        "battery_kwh": 0.0,
+        "pcs_kw": 0.0,
+        "ups_kwh": 0.0,
+        "ups_kw": 150.0
+      },
+      "investment_yuan": 217500.0,
+      "mean_operation_yuan": 7568.216833022265,
+      "objective_yuan": 225068.21683302228,
+      "feasible": false,
+      "core_bridge_pass": false,
+      "required_ups_kwh": 308.6297097929724,
+      "required_ups_kw": 57.86807058618233,
+      "core_risk": {
+        "eens_kwh": 0.0,
+        "cvar_kwh": 0.0,
+        "max_kwh": 0.0,
+        "positive_fraction": 0.0,
+        "samples": 2
+      },
+      "rigid_risk": {
+        "eens_kwh": 0.0,
+        "cvar_kwh": 0.0,
+        "max_kwh": 0.0,
+        "positive_fraction": 0.0,
+        "samples": 2
+      },
+      "flex_adjusted_mean_kwh": 0.0,
+      "scenario_metrics": [
+        {
+          "core_unserved_kwh": 0.0,
+          "rigid_unserved_kwh": 0.0,
+          "flex_adjusted_kwh": 0.0,
+          "starts": 0,
+          "start_failures": 0,
+          "diesel_run_failures": 0,
+          "bus_fault_hours": 0,
+          "renewable_bus_fault_hours": 0,
+          "battery_discharge_kwh": 0.0,
+          "battery_charge_kwh": 0.0,
+          "ups_discharge_kwh": 0.0,
+          "ups_charge_kwh": 0.0,
+          "final_battery_kwh": 0.0,
+          "final_ups_kwh": 0.0,
+          "gfm_all_resources": true
+        },
+        {
+          "core_unserved_kwh": 0.0,
+          "rigid_unserved_kwh": 0.0,
+          "flex_adjusted_kwh": 0.0,
+          "starts": 0,
+          "start_failures": 0,
+          "diesel_run_failures": 0,
+          "bus_fault_hours": 0,
+          "renewable_bus_fault_hours": 0,
+          "battery_discharge_kwh": 0.0,
+          "battery_charge_kwh": 0.0,
+          "ups_discharge_kwh": 0.0,
+          "ups_charge_kwh": 0.0,
+          "final_battery_kwh": 0.0,
+          "final_ups_kwh": 0.0,
+          "gfm_all_resources": true
+        }
+      ]
+    },
+    {
+      "capacity": {
+        "wind_kw": 0.0,
+        "pv_kw": 0.0,
+        "diesel_units": 0,
+        "battery_kwh": 0.0,
+        "pcs_kw": 0.0,
+        "ups_kwh": 500.0,
+        "ups_kw": 0.0
+      },
+      "investment_yuan": 225000.0,
+      "mean_operation_yuan": 7568.216833022265,
+      "objective_yuan": 232568.21683302228,
+      "feasible": false,
+      "core_bridge_pass": false,
+      "required_ups_kwh": 308.6297097929724,
+      "required_ups_kw": 57.86807058618233,
+      "core_risk": {
+        "eens_kwh": 0.0,
+        "cvar_kwh": 0.0,
+        "max_kwh": 0.0,
+        "positive_fraction": 0.0,
+        "samples": 2
+      },
+      "rigid_risk": {
+        "eens_kwh": 0.0,
+        "cvar_kwh": 0.0,
+        "max_kwh": 0.0,
+        "positive_fraction": 0.0,
+        "samples": 2
+      },
+      "flex_adjusted_mean_kwh": 0.0,
+      "scenario_metrics": [
+        {
+          "core_unserved_kwh": 0.0,
+          "rigid_unserved_kwh": 0.0,
+          "flex_adjusted_kwh": 0.0,
+          "starts": 0,
+          "start_failures": 0,
+          "diesel_run_failures": 0,
+          "bus_fault_hours": 0,
+          "renewable_bus_fault_hours": 0,
+          "battery_discharge_kwh": 0.0,
+          "battery_charge_kwh": 0.0,
+          "ups_discharge_kwh": 0.0,
+          "ups_charge_kwh": 0.0,
+          "final_battery_kwh": 0.0,
+          "final_ups_kwh": 250.0,
+          "gfm_all_resources": true
+        },
+        {
+          "core_unserved_kwh": 0.0,
+          "rigid_unserved_kwh": 0.0,
+          "flex_adjusted_kwh": 0.0,
+          "starts": 0,
+          "start_failures": 0,
+          "diesel_run_failures": 0,
+          "bus_fault_hours": 0,
+          "renewable_bus_fault_hours": 0,
+          "battery_discharge_kwh": 0.0,
+          "battery_charge_kwh": 0.0,
+          "ups_discharge_kwh": 0.0,
+          "ups_charge_kwh": 0.0,
+          "final_battery_kwh": 0.0,
+          "final_ups_kwh": 250.0,
+          "gfm_all_resources": true
+        }
+      ]
+    },
+    {
+      "capacity": {
+        "wind_kw": 0.0,
+        "pv_kw": 200.0,
+        "diesel_units": 0,
+        "battery_kwh": 0.0,
+        "pcs_kw": 0.0,
+        "ups_kwh": 0.0,
+        "ups_kw": 100.0
+      },
+      "investment_yuan": 225000.0,
+      "mean_operation_yuan": 5873.771540892587,
+      "objective_yuan": 230873.7715408926,
+      "feasible": false,
+      "core_bridge_pass": false,
+      "required_ups_kwh": 308.6297097929724,
+      "required_ups_kw": 57.86807058618233,
+      "core_risk": {
+        "eens_kwh": 0.0,
+        "cvar_kwh": 0.0,
+        "max_kwh": 0.0,
+        "positive_fraction": 0.0,
+        "samples": 2
+      },
+      "rigid_risk": {
+        "eens_kwh": 0.0,
+        "cvar_kwh": 0.0,
+        "max_kwh": 0.0,
+        "positive_fraction": 0.0,
+        "samples": 2
+      },
+      "flex_adjusted_mean_kwh": 0.0,
+      "scenario_metrics": [
+        {
+          "core_unserved_kwh": 0.0,
+          "rigid_unserved_kwh": 0.0,
+          "flex_adjusted_kwh": 0.0,
+          "starts": 0,
+          "start_failures": 0,
+          "diesel_run_failures": 0,
+          "bus_fault_hours": 0,
+          "renewable_bus_fault_hours": 0,
+          "battery_discharge_kwh": 0.0,
+          "battery_charge_kwh": 0.0,
+          "ups_discharge_kwh": 0.0,
+          "ups_charge_kwh": 0.0,
+          "final_battery_kwh": 0.0,
+          "final_ups_kwh": 0.0,
+          "gfm_all_resources": true
+        },
+        {
+          "core_unserved_kwh": 0.0,
+          "rigid_unserved_kwh": 0.0,
+          "flex_adjusted_kwh": 0.0,
+          "starts": 0,
+          "start_failures": 0,
+          "diesel_run_failures": 0,
+          "bus_fault_hours": 0,
+          "renewable_bus_fault_hours": 0,
+          "battery_discharge_kwh": 0.0,
+          "battery_charge_kwh": 0.0,
+          "ups_discharge_kwh": 0.0,
+          "ups_charge_kwh": 0.0,
+          "final_battery_kwh": 0.0,
+          "final_ups_kwh": 0.0,
+          "gfm_all_resources": true
+        }
+      ]
+    },
+    {
+      "capacity": {
+        "wind_kw": 0.0,
+        "pv_kw": 0.0,
+        "diesel_units": 0,
+        "battery_kwh": 0.0,
+        "pcs_kw": 200.0,
+        "ups_kwh": 300.0,
+        "ups_kw": 50.0
+      },
+      "investment_yuan": 227500.0,
+      "mean_operation_yuan": 7568.216833022265,
+      "objective_yuan": 235068.21683302228,
+      "feasible": false,
+      "core_bridge_pass": false,
+      "required_ups_kwh": 308.6297097929724,
+      "required_ups_kw": 57.86807058618233,
+      "core_risk": {
+        "eens_kwh": 0.0,
+        "cvar_kwh": 0.0,
+        "max_kwh": 0.0,
+        "positive_fraction": 0.0,
+        "samples": 2
+      },
+      "rigid_risk": {
+        "eens_kwh": 0.0,
+        "cvar_kwh": 0.0,
+        "max_kwh": 0.0,
+        "positive_fraction": 0.0,
+        "samples": 2
+      },
+      "flex_adjusted_mean_kwh": 0.0,
+      "scenario_metrics": [
+        {
+          "core_unserved_kwh": 0.0,
+          "rigid_unserved_kwh": 0.0,
+          "flex_adjusted_kwh": 0.0,
+          "starts": 0,
+          "start_failures": 0,
+          "diesel_run_failures": 0,
+          "bus_fault_hours": 0,
+          "renewable_bus_fault_hours": 0,
+          "battery_discharge_kwh": 0.0,
+          "battery_charge_kwh": 0.0,
+          "ups_discharge_kwh": 1697.6200847739133,
+          "ups_charge_kwh": 0.0,
+          "final_battery_kwh": 0.0,
+          "final_ups_kwh": 150.0,
+          "gfm_all_resources": true
+        },
+        {
+          "core_unserved_kwh": 0.0,
+          "rigid_unserved_kwh": 0.0,
+          "flex_adjusted_kwh": 0.0,
+          "starts": 0,
+          "start_failures": 0,
+          "diesel_run_failures": 0,
+          "bus_fault_hours": 0,
+          "renewable_bus_fault_hours": 0,
+          "battery_discharge_kwh": 0.0,
+          "battery_charge_kwh": 0.0,
+          "ups_discharge_kwh": 1697.6200847739133,
+          "ups_charge_kwh": 0.0,
+          "final_battery_kwh": 0.0,
+          "final_ups_kwh": 150.0,
+          "gfm_all_resources": true
+        }
+      ]
+    },
+    {
+      "capacity": {
+        "wind_kw": 0.0,
+        "pv_kw": 0.0,
+        "diesel_units": 0,
+        "battery_kwh": 0.0,
+        "pcs_kw": 0.0,
+        "ups_kwh": 500.0,
+        "ups_kw": 50.0
+      },
+      "investment_yuan": 237500.0,
+      "mean_operation_yuan": 7568.216833022265,
+      "objective_yuan": 245068.21683302228,
+      "feasible": false,
+      "core_bridge_pass": false,
+      "required_ups_kwh": 308.6297097929724,
+      "required_ups_kw": 57.86807058618233,
+      "core_risk": {
+        "eens_kwh": 0.0,
+        "cvar_kwh": 0.0,
+        "max_kwh": 0.0,
+        "positive_fraction": 0.0,
+        "samples": 2
+      },
+      "rigid_risk": {
+        "eens_kwh": 0.0,
+        "cvar_kwh": 0.0,
+        "max_kwh": 0.0,
+        "positive_fraction": 0.0,
+        "samples": 2
+      },
+      "flex_adjusted_mean_kwh": 0.0,
+      "scenario_metrics": [
+        {
+          "core_unserved_kwh": 0.0,
+          "rigid_unserved_kwh": 0.0,
+          "flex_adjusted_kwh": 0.0,
+          "starts": 0,
+          "start_failures": 0,
+          "diesel_run_failures": 0,
+          "bus_fault_hours": 0,
+          "renewable_bus_fault_hours": 0,
+          "battery_discharge_kwh": 0.0,
+          "battery_charge_kwh": 0.0,
+          "ups_discharge_kwh": 1697.6200847739133,
+          "ups_charge_kwh": 0.0,
+          "final_battery_kwh": 0.0,
+          "final_ups_kwh": 250.0,
+          "gfm_all_resources": true
+        },
+        {
+          "core_unserved_kwh": 0.0,
+          "rigid_unserved_kwh": 0.0,
+          "flex_adjusted_kwh": 0.0,
+          "starts": 0,
+          "start_failures": 0,
+          "diesel_run_failures": 0,
+          "bus_fault_hours": 0,
+          "renewable_bus_fault_hours": 0,
+          "battery_discharge_kwh": 0.0,
+          "battery_charge_kwh": 0.0,
+          "ups_discharge_kwh": 1697.6200847739133,
+          "ups_charge_kwh": 0.0,
+          "final_battery_kwh": 0.0,
+          "final_ups_kwh": 250.0,
+          "gfm_all_resources": true
+        }
+      ]
+    },
+    {
+      "capacity": {
+        "wind_kw": 0.0,
+        "pv_kw": 200.0,
+        "diesel_units": 0,
+        "battery_kwh": 0.0,
+        "pcs_kw": 0.0,
+        "ups_kwh": 0.0,
+        "ups_kw": 150.0
+      },
+      "investment_yuan": 237500.0,
+      "mean_operation_yuan": 5873.771540892587,
+      "objective_yuan": 243373.7715408926,
+      "feasible": false,
+      "core_bridge_pass": false,
+      "required_ups_kwh": 308.6297097929724,
+      "required_ups_kw": 57.86807058618233,
+      "core_risk": {
+        "eens_kwh": 0.0,
+        "cvar_kwh": 0.0,
+        "max_kwh": 0.0,
+        "positive_fraction": 0.0,
+        "samples": 2
+      },
+      "rigid_risk": {
+        "eens_kwh": 0.0,
+        "cvar_kwh": 0.0,
+        "max_kwh": 0.0,
+        "positive_fraction": 0.0,
+        "samples": 2
+      },
+      "flex_adjusted_mean_kwh": 0.0,
+      "scenario_metrics": [
+        {
+          "core_unserved_kwh": 0.0,
+          "rigid_unserved_kwh": 0.0,
+          "flex_adjusted_kwh": 0.0,
+          "starts": 0,
+          "start_failures": 0,
+          "diesel_run_failures": 0,
+          "bus_fault_hours": 0,
+          "renewable_bus_fault_hours": 0,
+          "battery_discharge_kwh": 0.0,
+          "battery_charge_kwh": 0.0,
+          "ups_discharge_kwh": 0.0,
+          "ups_charge_kwh": 0.0,
+          "final_battery_kwh": 0.0,
+          "final_ups_kwh": 0.0,
+          "gfm_all_resources": true
+        },
+        {
+          "core_unserved_kwh": 0.0,
+          "rigid_unserved_kwh": 0.0,
+          "flex_adjusted_kwh": 0.0,
+          "starts": 0,
+          "start_failures": 0,
+          "diesel_run_failures": 0,
+          "bus_fault_hours": 0,
+          "renewable_bus_fault_hours": 0,
+          "battery_discharge_kwh": 0.0,
+          "battery_charge_kwh": 0.0,
+          "ups_discharge_kwh": 0.0,
+          "ups_charge_kwh": 0.0,
+          "final_battery_kwh": 0.0,
+          "final_ups_kwh": 0.0,
+          "gfm_all_resources": true
+        }
+      ]
+    },
+    {
+      "capacity": {
+        "wind_kw": 0.0,
+        "pv_kw": 0.0,
+        "diesel_units": 0,
+        "battery_kwh": 0.0,
+        "pcs_kw": 200.0,
+        "ups_kwh": 300.0,
+        "ups_kw": 100.0
+      },
+      "investment_yuan": 240000.0,
+      "mean_operation_yuan": 7568.216833022265,
+      "objective_yuan": 247568.21683302228,
+      "feasible": false,
+      "core_bridge_pass": false,
+      "required_ups_kwh": 308.6297097929724,
+      "required_ups_kw": 57.86807058618233,
+      "core_risk": {
+        "eens_kwh": 0.0,
+        "cvar_kwh": 0.0,
+        "max_kwh": 0.0,
+        "positive_fraction": 0.0,
+        "samples": 2
+      },
+      "rigid_risk": {
+        "eens_kwh": 0.0,
+        "cvar_kwh": 0.0,
+        "max_kwh": 0.0,
+        "positive_fraction": 0.0,
+        "samples": 2
+      },
+      "flex_adjusted_mean_kwh": 0.0,
+      "scenario_metrics": [
+        {
+          "core_unserved_kwh": 0.0,
+          "rigid_unserved_kwh": 0.0,
+          "flex_adjusted_kwh": 0.0,
+          "starts": 0,
+          "start_failures": 0,
+          "diesel_run_failures": 0,
+          "bus_fault_hours": 0,
+          "renewable_bus_fault_hours": 0,
+          "battery_discharge_kwh": 0.0,
+          "battery_charge_kwh": 0.0,
+          "ups_discharge_kwh": 1697.6200847739133,
+          "ups_charge_kwh": 0.0,
+          "final_battery_kwh": 0.0,
+          "final_ups_kwh": 150.0,
+          "gfm_all_resources": true
+        },
+        {
+          "core_unserved_kwh": 0.0,
+          "rigid_unserved_kwh": 0.0,
+          "flex_adjusted_kwh": 0.0,
+          "starts": 0,
+          "start_failures": 0,
+          "diesel_run_failures": 0,
+          "bus_fault_hours": 0,
+          "renewable_bus_fault_hours": 0,
+          "battery_discharge_kwh": 0.0,
+          "battery_charge_kwh": 0.0,
+          "ups_discharge_kwh": 1697.6200847739133,
+          "ups_charge_kwh": 0.0,
+          "final_battery_kwh": 0.0,
+          "final_ups_kwh": 150.0,
+          "gfm_all_resources": true
+        }
+      ]
+    },
+    {
+      "capacity": {
+        "wind_kw": 0.0,
+        "pv_kw": 0.0,
+        "diesel_units": 0,
+        "battery_kwh": 0.0,
+        "pcs_kw": 600.0,
+        "ups_kwh": 0.0,
+        "ups_kw": 0.0
+      },
+      "investment_yuan": 240000.0,
+      "mean_operation_yuan": 7568.216833022265,
+      "objective_yuan": 247568.21683302228,
+      "feasible": false,
+      "core_bridge_pass": false,
+      "required_ups_kwh": 308.6297097929724,
+      "required_ups_kw": 57.86807058618233,
+      "core_risk": {
+        "eens_kwh": 0.0,
+        "cvar_kwh": 0.0,
+        "max_kwh": 0.0,
+        "positive_fraction": 0.0,
+        "samples": 2
+      },
+      "rigid_risk": {
+        "eens_kwh": 0.0,
+        "cvar_kwh": 0.0,
+        "max_kwh": 0.0,
+        "positive_fraction": 0.0,
+        "samples": 2
+      },
+      "flex_adjusted_mean_kwh": 0.0,
+      "scenario_metrics": [
+        {
+          "core_unserved_kwh": 0.0,
+          "rigid_unserved_kwh": 0.0,
+          "flex_adjusted_kwh": 0.0,
+          "starts": 0,
+          "start_failures": 0,
+          "diesel_run_failures": 0,
+          "bus_fault_hours": 0,
+          "renewable_bus_fault_hours": 0,
+          "battery_discharge_kwh": 0.0,
+          "battery_charge_kwh": 0.0,
+          "ups_discharge_kwh": 0.0,
+          "ups_charge_kwh": 0.0,
+          "final_battery_kwh": 0.0,
+          "final_ups_kwh": 0.0,
+          "gfm_all_resources": true
+        },
+        {
+          "core_unserved_kwh": 0.0,
+          "rigid_unserved_kwh": 0.0,
+          "flex_adjusted_kwh": 0.0,
+          "starts": 0,
+          "start_failures": 0,
+          "diesel_run_failures": 0,
+          "bus_fault_hours": 0,
+          "renewable_bus_fault_hours": 0,
+          "battery_discharge_kwh": 0.0,
+          "battery_charge_kwh": 0.0,
+          "ups_discharge_kwh": 0.0,
+          "ups_charge_kwh": 0.0,
+          "final_battery_kwh": 0.0,
+          "final_ups_kwh": 0.0,
+          "gfm_all_resources": true
+        }
+      ]
+    },
+    {
+      "capacity": {
+        "wind_kw": 0.0,
+        "pv_kw": 0.0,
+        "diesel_units": 0,
+        "battery_kwh": 0.0,
+        "pcs_kw": 0.0,
+        "ups_kwh": 500.0,
+        "ups_kw": 100.0
+      },
+      "investment_yuan": 250000.0,
+      "mean_operation_yuan": 7568.216833022265,
+      "objective_yuan": 257568.21683302228,
+      "feasible": true,
+      "core_bridge_pass": true,
+      "required_ups_kwh": 308.6297097929724,
+      "required_ups_kw": 57.86807058618233,
+      "core_risk": {
+        "eens_kwh": 0.0,
+        "cvar_kwh": 0.0,
+        "max_kwh": 0.0,
+        "positive_fraction": 0.0,
+        "samples": 2
+      },
+      "rigid_risk": {
+        "eens_kwh": 0.0,
+        "cvar_kwh": 0.0,
+        "max_kwh": 0.0,
+        "positive_fraction": 0.0,
+        "samples": 2
+      },
+      "flex_adjusted_mean_kwh": 0.0,
+      "scenario_metrics": [
+        {
+          "core_unserved_kwh": 0.0,
+          "rigid_unserved_kwh": 0.0,
+          "flex_adjusted_kwh": 0.0,
+          "starts": 0,
+          "start_failures": 0,
+          "diesel_run_failures": 0,
+          "bus_fault_hours": 0,
+          "renewable_bus_fault_hours": 0,
+          "battery_discharge_kwh": 0.0,
+          "battery_charge_kwh": 0.0,
+          "ups_discharge_kwh": 1697.6200847739133,
+          "ups_charge_kwh": 0.0,
+          "final_battery_kwh": 0.0,
+          "final_ups_kwh": 250.0,
+          "gfm_all_resources": true
+        },
+        {
+          "core_unserved_kwh": 0.0,
+          "rigid_unserved_kwh": 0.0,
+          "flex_adjusted_kwh": 0.0,
+          "starts": 0,
+          "start_failures": 0,
+          "diesel_run_failures": 0,
+          "bus_fault_hours": 0,
+          "renewable_bus_fault_hours": 0,
+          "battery_discharge_kwh": 0.0,
+          "battery_charge_kwh": 0.0,
+          "ups_discharge_kwh": 1697.6200847739133,
+          "ups_charge_kwh": 0.0,
+          "final_battery_kwh": 0.0,
+          "final_ups_kwh": 250.0,
+          "gfm_all_resources": true
+        }
+      ]
+    },
+    {
+      "capacity": {
+        "wind_kw": 0.0,
+        "pv_kw": 0.0,
+        "diesel_units": 0,
+        "battery_kwh": 0.0,
+        "pcs_kw": 200.0,
+        "ups_kwh": 300.0,
+        "ups_kw": 150.0
+      },
+      "investment_yuan": 252500.0,
+      "mean_operation_yuan": 7568.216833022265,
+      "objective_yuan": 260068.21683302228,
+      "feasible": false,
+      "core_bridge_pass": false,
+      "required_ups_kwh": 308.6297097929724,
+      "required_ups_kw": 57.86807058618233,
+      "core_risk": {
+        "eens_kwh": 0.0,
+        "cvar_kwh": 0.0,
+        "max_kwh": 0.0,
+        "positive_fraction": 0.0,
+        "samples": 2
+      },
+      "rigid_risk": {
+        "eens_kwh": 0.0,
+        "cvar_kwh": 0.0,
+        "max_kwh": 0.0,
+        "positive_fraction": 0.0,
+        "samples": 2
+      },
+      "flex_adjusted_mean_kwh": 0.0,
+      "scenario_metrics": [
+        {
+          "core_unserved_kwh": 0.0,
+          "rigid_unserved_kwh": 0.0,
+          "flex_adjusted_kwh": 0.0,
+          "starts": 0,
+          "start_failures": 0,
+          "diesel_run_failures": 0,
+          "bus_fault_hours": 0,
+          "renewable_bus_fault_hours": 0,
+          "battery_discharge_kwh": 0.0,
+          "battery_charge_kwh": 0.0,
+          "ups_discharge_kwh": 1697.6200847739133,
+          "ups_charge_kwh": 0.0,
+          "final_battery_kwh": 0.0,
+          "final_ups_kwh": 150.0,
+          "gfm_all_resources": true
+        },
+        {
+          "core_unserved_kwh": 0.0,
+          "rigid_unserved_kwh": 0.0,
+          "flex_adjusted_kwh": 0.0,
+          "starts": 0,
+          "start_failures": 0,
+          "diesel_run_failures": 0,
+          "bus_fault_hours": 0,
+          "renewable_bus_fault_hours": 0,
+          "battery_discharge_kwh": 0.0,
+          "battery_charge_kwh": 0.0,
+          "ups_discharge_kwh": 1697.6200847739133,
+          "ups_charge_kwh": 0.0,
+          "final_battery_kwh": 0.0,
+          "final_ups_kwh": 150.0,
+          "gfm_all_resources": true
+        }
+      ]
+    },
+    {
+      "capacity": {
+        "wind_kw": 0.0,
+        "pv_kw": 0.0,
+        "diesel_units": 0,
+        "battery_kwh": 0.0,
+        "pcs_kw": 600.0,
+        "ups_kwh": 0.0,
+        "ups_kw": 50.0
+      },
+      "investment_yuan": 252500.0,
+      "mean_operation_yuan": 7568.216833022265,
+      "objective_yuan": 260068.21683302228,
+      "feasible": false,
+      "core_bridge_pass": false,
+      "required_ups_kwh": 308.6297097929724,
+      "required_ups_kw": 57.86807058618233,
+      "core_risk": {
+        "eens_kwh": 0.0,
+        "cvar_kwh": 0.0,
+        "max_kwh": 0.0,
+        "positive_fraction": 0.0,
+        "samples": 2
+      },
+      "rigid_risk": {
+        "eens_kwh": 0.0,
+        "cvar_kwh": 0.0,
+        "max_kwh": 0.0,
+        "positive_fraction": 0.0,
+        "samples": 2
+      },
+      "flex_adjusted_mean_kwh": 0.0,
+      "scenario_metrics": [
+        {
+          "core_unserved_kwh": 0.0,
+          "rigid_unserved_kwh": 0.0,
+          "flex_adjusted_kwh": 0.0,
+          "starts": 0,
+          "start_failures": 0,
+          "diesel_run_failures": 0,
+          "bus_fault_hours": 0,
+          "renewable_bus_fault_hours": 0,
+          "battery_discharge_kwh": 0.0,
+          "battery_charge_kwh": 0.0,
+          "ups_discharge_kwh": 0.0,
+          "ups_charge_kwh": 0.0,
+          "final_battery_kwh": 0.0,
+          "final_ups_kwh": 0.0,
+          "gfm_all_resources": true
+        },
+        {
+          "core_unserved_kwh": 0.0,
+          "rigid_unserved_kwh": 0.0,
+          "flex_adjusted_kwh": 0.0,
+          "starts": 0,
+          "start_failures": 0,
+          "diesel_run_failures": 0,
+          "bus_fault_hours": 0,
+          "renewable_bus_fault_hours": 0,
+          "battery_discharge_kwh": 0.0,
+          "battery_charge_kwh": 0.0,
+          "ups_discharge_kwh": 0.0,
+          "ups_charge_kwh": 0.0,
+          "final_battery_kwh": 0.0,
+          "final_ups_kwh": 0.0,
+          "gfm_all_resources": true
+        }
+      ]
+    }
+  ]
+}

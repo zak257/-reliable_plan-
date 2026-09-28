@@ -1,0 +1,15 @@
+{
+  "renderer": "/home/yzk/.vscode-server/cli/servers/Stable-7debcd0e2acdea1c52de81bf9ee1620444407dda/server/extensions/markdown-math/dist/extension.js",
+  "reports": [
+    {
+      "file": "/home/yzk/reliable_plan/docs/resilience_model_group_meeting.md",
+      "rendered_formulas": 149,
+      "formula_errors": 0,
+      "internal_group_error": false,
+      "errors": []
+    }
+  ],
+  "embedded_images": 6,
+  "html_file": "/home/yzk/reliable_plan/docs/resilience_model_group_meeting.html",
+  "html_bytes": 2255148
+}

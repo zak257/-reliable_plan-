@@ -1,0 +1,52 @@
+{
+  "instance_sha256": "7f540b9f0d4038d86ed319c3f0967e74fbee5ebf4f3a2dcfc68c265f13a9a88e",
+  "time_limit_seconds_per_method": 30.0,
+  "results": [
+    {
+      "method": "gurobi",
+      "status": "optimal_within_solver_gap_on_annual_scenario_tree",
+      "selected": {
+        "wind_kw": 0.0,
+        "pv_kw": 0.0,
+        "diesel_units": 0,
+        "battery_kwh": 0.0,
+        "pcs_kw": 0.0,
+        "ups_kwh": 100.0,
+        "ups_kw": 50.0
+      },
+      "objective_yuan": 141054.47680133278,
+      "objective_bound_yuan": 141054.47666027807,
+      "mip_gap": 1.0000016674533804e-09,
+      "first_solver_feasible_seconds": 16.076364886946976,
+      "total_elapsed_seconds": 16.538720692973584,
+      "process_wall_seconds": 17.54546072985977,
+      "eens_kwh": 3.0000000000000004,
+      "cvar_upper_bound_kwh": 30.0,
+      "audit_passed": true,
+      "economic_domain_certified": true
+    },
+    {
+      "method": "proposed",
+      "status": "optimal_within_gap",
+      "selected": {
+        "wind_kw": 0.0,
+        "pv_kw": 0.0,
+        "diesel_units": 0,
+        "battery_kwh": 0.0,
+        "pcs_kw": 0.0,
+        "ups_kwh": 100.0,
+        "ups_kw": 50.0
+      },
+      "objective_yuan": 141054.4768013327,
+      "objective_bound_yuan": 141054.47651922275,
+      "mip_gap": 2.0000070488544515e-09,
+      "first_solver_feasible_seconds": 3.2561618317849934,
+      "total_elapsed_seconds": 10.028547256719321,
+      "process_wall_seconds": 10.046792569104582,
+      "eens_kwh": 3.0000000000000004,
+      "cvar_upper_bound_kwh": 30.0,
+      "audit_passed": true,
+      "economic_domain_certified": true
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+[
+  {
+    "method": 1,
+    "seconds": 45.682688721921295,
+    "status": 9,
+    "variables": 173758,
+    "binaries": 89885,
+    "constraints": 505197,
+    "indicators": 71864,
+    "objective_yuan": 1486418.1084974357,
+    "bound_yuan": 714218.9983791282,
+    "audit": {
+      "passed": true,
+      "max_violation": 1.1714291758835316e-09,
+      "violations": {
+        "solver_constraints": 1.0444534126463623e-11,
+        "solver_bounds": 0.0,
+        "solver_integrality": 0.0,
+        "integer_modules": 0.0,
+        "power_balance": 6.16751094639767e-12,
+        "core_loss": 0.0,
+        "battery_transition": 1.3429257705865894e-12,
+        "ups_transition": 7.958078640513122e-13,
+        "thermal_transition": 6.2867488992424114e-12,
+        "gfm_without_power": 0.0,
+        "annual_window_link": 0.0,
+        "shift_energy": 1.7550405573274475e-12,
+        "nonanticipativity": 3.739231146937527e-13,
+        "annual_cost_accounting": 1.1714291758835316e-09
+      },
+      "scope": "annual and window algebra, state links, finite-tree information; no transient stability proof"
+    },
+    "compression": {
+      "constant_entries_reused": 64064,
+      "static_na_edges_skipped": 1080
+    }
+  },
+  {
+    "method": 2,
+    "seconds": 45.88546937284991,
+    "status": 9,
+    "variables": 173758,
+    "binaries": 89885,
+    "constraints": 505197,
+    "indicators": 71864,
+    "objective_yuan": 1486418.1084974357,
+    "bound_yuan": 714218.9983791282,
+    "audit": {
+      "passed": true,
+      "max_violation": 1.1714291758835316e-09,
+      "violations": {
+        "solver_constraints": 1.0444534126463623e-11,
+        "solver_bounds": 0.0,
+        "solver_integrality": 0.0,
+        "integer_modules": 0.0,
+        "power_balance": 6.16751094639767e-12,
+        "core_loss": 0.0,
+        "battery_transition": 1.3429257705865894e-12,
+        "ups_transition": 7.958078640513122e-13,
+        "thermal_transition": 6.2867488992424114e-12,
+        "gfm_without_power": 0.0,
+        "annual_window_link": 0.0,
+        "shift_energy": 1.7550405573274475e-12,
+        "nonanticipativity": 3.739231146937527e-13,
+        "annual_cost_accounting": 1.1714291758835316e-09
+      },
+      "scope": "annual and window algebra, state links, finite-tree information; no transient stability proof"
+    },
+    "compression": {
+      "constant_entries_reused": 64064,
+      "static_na_edges_skipped": 1080
+    }
+  }
+]

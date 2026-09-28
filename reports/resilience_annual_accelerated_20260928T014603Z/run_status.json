@@ -1,0 +1,9 @@
+{
+  "status": "error",
+  "stage": "solver_incumbent",
+  "pid": 31664,
+  "started_at_utc": "2026-09-28T01:46:03.974866+00:00",
+  "elapsed_seconds": 61.40840247506276,
+  "error": "Traceback (most recent call last):\n  File \"/home/yzk/reliable_plan/scripts/run_resilience_annual_accelerated.py\", line 141, in main\n    candidate=seed.result()\n              ^^^^^^^^^^^^^\n  File \"/home/yzk/reliable_plan/polar_reliability_planning/resilience_milp/annual.py\", line 249, in result\n    if not audit['passed']: raise RuntimeError(f'Annual MILP audit failed: {audit}')\n                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: Annual MILP audit failed: {'passed': False, 'max_violation': 4.061742854607916, 'violations': {'solver_constraints': 4.061742854607916, 'solver_bounds': 0.0, 'solver_integrality': 0.0, 'integer_modules': 0.0, 'power_balance': 9.90673839851297e-07, 'core_loss': 9.219046361863548e-07, 'battery_transition': 3.509939006107743e-09, 'ups_transition': 1.4210854715202004e-14, 'thermal_transition': 4.061742854607916, 'gfm_without_power': 0.0, 'annual_window_link': 0.0, 'shift_energy': 0.0, 'nonanticipativity': 2.8421709430404007e-13, 'annual_cost_accounting': 1.5902332961559296e-07}, 'scope': 'annual and window algebra, state links, finite-tree information; no transient stability proof'}\n",
+  "process_wall_seconds": 64.40300623513758
+}

@@ -1,0 +1,40 @@
+{
+  "images": [
+    {
+      "loaded": true,
+      "width": 2025,
+      "height": 1277
+    },
+    {
+      "loaded": true,
+      "width": 2492,
+      "height": 1542
+    },
+    {
+      "loaded": true,
+      "width": 2112,
+      "height": 934
+    },
+    {
+      "loaded": true,
+      "width": 2492,
+      "height": 1428
+    },
+    {
+      "loaded": true,
+      "width": 2492,
+      "height": 1732
+    },
+    {
+      "loaded": true,
+      "width": 2112,
+      "height": 972
+    }
+  ],
+  "formulas": 149,
+  "mathErrors": 0,
+  "fonts": "loaded",
+  "externalAssets": [],
+  "browserErrors": [],
+  "testedOffline": true
+}

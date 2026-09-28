@@ -1,0 +1,10 @@
+{
+  "workers": 4,
+  "partitions": 4,
+  "cached_training_paths": 8750,
+  "partition_training_wall_seconds": 562.6274144253694,
+  "total_wall_seconds": 628.2400781493634,
+  "exit_code": 0,
+  "final_result": "/home/yzk/reliable_plan/reports/zhongshan_recovery_8760_protective_128_256_v1/full_grid/capacity_result.json",
+  "scope": "same full grid, same training primitives, same frozen library; disjoint capacity partitioning"
+}

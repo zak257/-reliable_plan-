@@ -1,0 +1,13 @@
+{
+  "mode": "annual",
+  "hours": 8760,
+  "stress_window_hours": 72,
+  "stress_start_days": [
+    34,
+    104,
+    234,
+    314
+  ],
+  "all_capacities_optimized": true,
+  "synthetic_data": true
+}

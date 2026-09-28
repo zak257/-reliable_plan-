@@ -1,0 +1,19 @@
+{
+  "status": "finished",
+  "method": "gurobi",
+  "pid": 56617,
+  "cpu_affinity": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "started_at_utc": "2026-09-24T01:35:16.110562+00:00",
+  "result_status": "unresolved_without_incumbent",
+  "selected": null,
+  "has_audited_incumbent": false,
+  "objective_yuan": null,
+  "mip_gap": null,
+  "finished_at_utc": "2026-09-24T05:51:10.237962+00:00",
+  "process_wall_seconds": 15354.127637304831
+}

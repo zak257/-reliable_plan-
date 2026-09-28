@@ -1,0 +1,27 @@
+{
+  "pid": 65179,
+  "output": "/home/yzk/reliable_plan/reports/resilience_week_168h_repair12_20260924T072856Z",
+  "command": [
+    "/home/yzk/cap_plan/venv/bin/python",
+    "-u",
+    "-m",
+    "scripts.run_resilience_week",
+    "--output",
+    "/home/yzk/reliable_plan/reports/resilience_week_168h_repair12_20260924T072856Z",
+    "--start-hour",
+    "792",
+    "--stress-start-hour",
+    "24",
+    "--recovery-hours",
+    "12",
+    "--main-bus-hours",
+    "1",
+    "--ups-bridge-hours",
+    "12",
+    "--time-limit-seconds",
+    "15000",
+    "--threads",
+    "4"
+  ],
+  "started_at_utc": "2026-09-24T07:28:56.462164+00:00"
+}

@@ -1,0 +1,52 @@
+[
+  {
+    "wind_rule": "protective",
+    "wind": 500.0,
+    "pv": 300.0,
+    "diesel": 400.0,
+    "battery_energy": 2000.0,
+    "pcs": 200.0,
+    "policy": "load_first_three_online",
+    "training_objective_yuan": 5432377.925818869,
+    "training_eens_kwh": 13.341736111111123,
+    "training_cvar_kwh": 213.46777777777797,
+    "holdout_eens_kwh": 136.55156381858973,
+    "holdout_cvar_kwh": 2409.5031122302066,
+    "holdout_status": "holdout_failed",
+    "elapsed_seconds": 292.4118724241853,
+    "audit_passed": true
+  },
+  {
+    "wind_rule": "operating",
+    "wind": 500.0,
+    "pv": 300.0,
+    "diesel": 400.0,
+    "battery_energy": 1000.0,
+    "pcs": 200.0,
+    "policy": "load_first_three_online",
+    "training_objective_yuan": 4651729.893541146,
+    "training_eens_kwh": 92.33076167083334,
+    "training_cvar_kwh": 898.5416311777777,
+    "holdout_eens_kwh": 108.32808843554511,
+    "holdout_cvar_kwh": 2070.243879917502,
+    "holdout_status": "holdout_failed",
+    "elapsed_seconds": 385.8984289462678,
+    "audit_passed": true
+  },
+  {
+    "wind_rule": "protective_128_training_256_holdout",
+    "wind": 500.0,
+    "pv": 300.0,
+    "diesel": 500.0,
+    "battery_energy": 1000.0,
+    "pcs": 200.0,
+    "policy": "heat_first_four_online",
+    "training_objective_yuan": 5519867.489307738,
+    "training_eens_kwh": 0.6080989575520834,
+    "training_cvar_kwh": 12.161979151041658,
+    "holdout_eens_kwh": 5.537066836935761,
+    "holdout_cvar_kwh": 110.74133673871512,
+    "holdout_status": "holdout_passed_empirically",
+    "audit_passed": true
+  }
+]

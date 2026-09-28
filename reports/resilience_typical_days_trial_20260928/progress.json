@@ -1,0 +1,13 @@
+{
+  "stage": "seed_building",
+  "elapsed_seconds": 0.3320864988490939,
+  "modules": {
+    "wind_kw": 2,
+    "pv_kw": 0,
+    "diesel_units": 4,
+    "battery_kwh": 41,
+    "pcs_kw": 6,
+    "ups_kwh": 11,
+    "ups_kw": 2
+  }
+}

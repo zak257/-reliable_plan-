@@ -1,0 +1,21 @@
+{"action": "instance_verified", "elapsed_seconds": 0.003692653961479664, "instance_sha256": "7f540b9f0d4038d86ed319c3f0967e74fbee5ebf4f3a2dcfc68c265f13a9a88e", "hours": 120}
+{"action": "candidate", "elapsed_seconds": 0.01225398201495409, "call": 1, "origin": "reference_candidate", "modules": {"wind_kw": 0, "pv_kw": 0, "diesel_units": 2, "battery_kwh": 9, "pcs_kw": 2, "ups_kwh": 2, "ups_kw": 1}, "visit": 1, "lower_yuan": 0.0}
+{"action": "solver_incumbent", "elapsed_seconds": 3.2562149427831173, "stage": "oracle", "objective_yuan": 654309.5929600828}
+{"action": "solver_progress", "elapsed_seconds": 4.069792696740478, "stage": "oracle", "solver_upper_yuan": 654309.5929600828, "solver_lower_yuan": 650500.0, "nodes": 0.0}
+{"action": "solver_incumbent", "elapsed_seconds": 6.2711902149021626, "stage": "oracle", "objective_yuan": 654281.0929600828}
+{"action": "solver_incumbent", "elapsed_seconds": 6.332623432856053, "stage": "oracle", "objective_yuan": 653570.6925945015}
+{"action": "solver_incumbent", "elapsed_seconds": 6.340207661036402, "stage": "oracle", "objective_yuan": 653570.6925945019}
+{"action": "audited_incumbent", "elapsed_seconds": 6.867346279788762, "objective_yuan": 653570.6925945019, "modules": {"wind_kw": 0, "pv_kw": 0, "diesel_units": 2, "battery_kwh": 9, "pcs_kw": 2, "ups_kwh": 2, "ups_kw": 1}, "first_feasible_seconds": 6.7137869768776}
+{"action": "point_cost_lower_bound", "elapsed_seconds": 7.1268117618747056, "modules": {"wind_kw": 0, "pv_kw": 0, "diesel_units": 2, "battery_kwh": 9, "pcs_kw": 2, "ups_kwh": 2, "ups_kw": 1}, "lower_yuan": 653564.2295105559}
+{"action": "solver_progress", "elapsed_seconds": 7.48145701084286, "stage": "master", "solver_upper_yuan": null, "solver_lower_yuan": 137999.99999999997, "nodes": 0.0}
+{"action": "solver_incumbent", "elapsed_seconds": 7.491844752803445, "stage": "master", "objective_yuan": 905112.7179999999}
+{"action": "solver_incumbent", "elapsed_seconds": 7.501548434142023, "stage": "master", "objective_yuan": 888000.0}
+{"action": "solver_incumbent", "elapsed_seconds": 7.513507327064872, "stage": "master", "objective_yuan": 738000.0}
+{"action": "solver_incumbent", "elapsed_seconds": 7.578697401098907, "stage": "master", "objective_yuan": 140070.55720000045}
+{"action": "candidate", "elapsed_seconds": 7.579778561834246, "call": 2, "origin": "master", "modules": {"wind_kw": 0, "pv_kw": 0, "diesel_units": 0, "battery_kwh": 0, "pcs_kw": 0, "ups_kwh": 2, "ups_kw": 1}, "visit": 1, "lower_yuan": 140070.55705992988}
+{"action": "solver_incumbent", "elapsed_seconds": 9.207525704987347, "stage": "oracle", "objective_yuan": 141054.4768013317}
+{"action": "solver_incumbent", "elapsed_seconds": 9.211101418826729, "stage": "oracle", "objective_yuan": 141054.4768013327}
+{"action": "audited_incumbent", "elapsed_seconds": 9.605930048041046, "objective_yuan": 141054.4768013327, "modules": {"wind_kw": 0, "pv_kw": 0, "diesel_units": 0, "battery_kwh": 0, "pcs_kw": 0, "ups_kwh": 2, "ups_kw": 1}, "first_feasible_seconds": 6.7137869768776}
+{"action": "point_cost_lower_bound", "elapsed_seconds": 9.606531058903784, "modules": {"wind_kw": 0, "pv_kw": 0, "diesel_units": 0, "battery_kwh": 0, "pcs_kw": 0, "ups_kwh": 2, "ups_kw": 1}, "lower_yuan": 141054.47666027723}
+{"action": "solver_incumbent", "elapsed_seconds": 9.675091090146452, "stage": "master", "objective_yuan": 141054.47666027723}
+{"action": "solver_incumbent", "elapsed_seconds": 9.67637891182676, "stage": "master", "objective_yuan": 141054.47666027723}

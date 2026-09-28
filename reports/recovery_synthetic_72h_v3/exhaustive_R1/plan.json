@@ -1,0 +1,830 @@
+{
+  "status": "sample_optimal_within_policy_library_gap",
+  "incumbent": {
+    "units": {
+      "wind": 1,
+      "pv": 1,
+      "diesel": 2,
+      "battery_energy": 12,
+      "pcs": 3
+    },
+    "capacities": {
+      "wind": 100.0,
+      "pv": 100.0,
+      "diesel": 200.0,
+      "battery_energy": 600.0,
+      "pcs": 150.0
+    },
+    "policy": {
+      "name": "load_priority",
+      "online_floor": 2,
+      "reserve_units": 0,
+      "recharge_soc": 0.8,
+      "recharge_kw": 50.0,
+      "heat_priority": false,
+      "keep_standby_warm": true
+    },
+    "policy_sha256": "32e4ae8981d08f38f32537693b5f9b56a1206ac41de48dd8a25f177feaec0c7b",
+    "status": "evaluated",
+    "feasible": true,
+    "complete": true,
+    "risk": {
+      "eens_kwh": 69.60000000000002,
+      "cvar_kwh": 69.60000000000002,
+      "var_kwh": 69.60000000000002,
+      "positive_loss_fraction": 1.0,
+      "tail_effective_scenarios": 0.20000000000000018,
+      "zero_var_cvar_identity": false,
+      "samples": 4
+    },
+    "investment_cost_yuan": 3503.4246575343286,
+    "expected_operating_cost_yuan": 17608.588461941745,
+    "objective_yuan": 21112.013119476072
+  },
+  "objective_lower_bound_yuan": 21112.013119476072,
+  "relative_gap": 0.0,
+  "gap_scope": "fixed_grid_fixed_samples_frozen_policy_library",
+  "population_certified": false,
+  "visited": [
+    {
+      "units": {
+        "wind": 0,
+        "pv": 1,
+        "diesel": 2,
+        "battery_energy": 12,
+        "pcs": 3
+      },
+      "scope": "finite_policy_library",
+      "reason": "all_library_policies_resolved",
+      "physical_infeasibility_proven": false
+    },
+    {
+      "units": {
+        "wind": 0,
+        "pv": 1,
+        "diesel": 3,
+        "battery_energy": 12,
+        "pcs": 3
+      },
+      "scope": "finite_policy_library",
+      "reason": "all_library_policies_resolved",
+      "physical_infeasibility_proven": false
+    },
+    {
+      "units": {
+        "wind": 1,
+        "pv": 1,
+        "diesel": 2,
+        "battery_energy": 12,
+        "pcs": 3
+      },
+      "scope": "finite_policy_library",
+      "reason": "all_library_policies_resolved",
+      "physical_infeasibility_proven": false
+    },
+    {
+      "units": {
+        "wind": 0,
+        "pv": 1,
+        "diesel": 2,
+        "battery_energy": 24,
+        "pcs": 3
+      },
+      "scope": "finite_policy_library",
+      "reason": "all_library_policies_resolved",
+      "physical_infeasibility_proven": false
+    },
+    {
+      "units": {
+        "wind": 1,
+        "pv": 1,
+        "diesel": 3,
+        "battery_energy": 12,
+        "pcs": 3
+      },
+      "scope": "finite_policy_library",
+      "reason": "all_library_policies_resolved",
+      "physical_infeasibility_proven": false
+    },
+    {
+      "units": {
+        "wind": 0,
+        "pv": 1,
+        "diesel": 3,
+        "battery_energy": 24,
+        "pcs": 3
+      },
+      "scope": "finite_policy_library",
+      "reason": "all_library_policies_resolved",
+      "physical_infeasibility_proven": false
+    },
+    {
+      "units": {
+        "wind": 1,
+        "pv": 1,
+        "diesel": 2,
+        "battery_energy": 24,
+        "pcs": 3
+      },
+      "scope": "finite_policy_library",
+      "reason": "all_library_policies_resolved",
+      "physical_infeasibility_proven": false
+    },
+    {
+      "units": {
+        "wind": 1,
+        "pv": 1,
+        "diesel": 3,
+        "battery_energy": 24,
+        "pcs": 3
+      },
+      "scope": "finite_policy_library",
+      "reason": "all_library_policies_resolved",
+      "physical_infeasibility_proven": false
+    },
+    {
+      "units": {
+        "wind": 0,
+        "pv": 1,
+        "diesel": 2,
+        "battery_energy": 40,
+        "pcs": 3
+      },
+      "scope": "finite_policy_library",
+      "reason": "all_library_policies_resolved",
+      "physical_infeasibility_proven": false
+    },
+    {
+      "units": {
+        "wind": 0,
+        "pv": 1,
+        "diesel": 3,
+        "battery_energy": 40,
+        "pcs": 3
+      },
+      "scope": "finite_policy_library",
+      "reason": "all_library_policies_resolved",
+      "physical_infeasibility_proven": false
+    },
+    {
+      "units": {
+        "wind": 1,
+        "pv": 1,
+        "diesel": 2,
+        "battery_energy": 40,
+        "pcs": 3
+      },
+      "scope": "finite_policy_library",
+      "reason": "all_library_policies_resolved",
+      "physical_infeasibility_proven": false
+    },
+    {
+      "units": {
+        "wind": 1,
+        "pv": 1,
+        "diesel": 3,
+        "battery_energy": 40,
+        "pcs": 3
+      },
+      "scope": "finite_policy_library",
+      "reason": "all_library_policies_resolved",
+      "physical_infeasibility_proven": false
+    }
+  ],
+  "pruned_by_investment_bound": [],
+  "evaluations": [
+    {
+      "units": {
+        "wind": 0,
+        "pv": 1,
+        "diesel": 2,
+        "battery_energy": 12,
+        "pcs": 3
+      },
+      "policy": "load_priority",
+      "status": "evaluated",
+      "feasible": true,
+      "complete": true,
+      "risk": {
+        "eens_kwh": 69.60000000000002,
+        "cvar_kwh": 69.60000000000002,
+        "var_kwh": 69.60000000000002,
+        "positive_loss_fraction": 1.0,
+        "tail_effective_scenarios": 0.20000000000000018,
+        "zero_var_cvar_identity": false,
+        "samples": 4
+      },
+      "investment_cost_yuan": 2681.5068493151507,
+      "expected_operating_cost_yuan": 21896.139879493705,
+      "objective_yuan": 24577.646728808857,
+      "scenarios_completed": 4
+    },
+    {
+      "units": {
+        "wind": 0,
+        "pv": 1,
+        "diesel": 2,
+        "battery_energy": 12,
+        "pcs": 3
+      },
+      "policy": "heat_priority",
+      "status": "evaluated",
+      "feasible": true,
+      "complete": true,
+      "risk": {
+        "eens_kwh": 69.60000000000002,
+        "cvar_kwh": 69.60000000000002,
+        "var_kwh": 69.60000000000002,
+        "positive_loss_fraction": 1.0,
+        "tail_effective_scenarios": 0.20000000000000018,
+        "zero_var_cvar_identity": false,
+        "samples": 4
+      },
+      "investment_cost_yuan": 2681.5068493151507,
+      "expected_operating_cost_yuan": 21896.139879493705,
+      "objective_yuan": 24577.646728808857,
+      "scenarios_completed": 4
+    },
+    {
+      "units": {
+        "wind": 0,
+        "pv": 1,
+        "diesel": 3,
+        "battery_energy": 12,
+        "pcs": 3
+      },
+      "policy": "load_priority",
+      "status": "evaluated",
+      "feasible": true,
+      "complete": true,
+      "risk": {
+        "eens_kwh": 69.60000000000002,
+        "cvar_kwh": 69.60000000000002,
+        "var_kwh": 69.60000000000002,
+        "positive_loss_fraction": 1.0,
+        "tail_effective_scenarios": 0.20000000000000018,
+        "zero_var_cvar_identity": false,
+        "samples": 4
+      },
+      "investment_cost_yuan": 3092.4657534247394,
+      "expected_operating_cost_yuan": 21896.139879493705,
+      "objective_yuan": 24988.605632918443,
+      "scenarios_completed": 4
+    },
+    {
+      "units": {
+        "wind": 0,
+        "pv": 1,
+        "diesel": 3,
+        "battery_energy": 12,
+        "pcs": 3
+      },
+      "policy": "heat_priority",
+      "status": "evaluated",
+      "feasible": true,
+      "complete": true,
+      "risk": {
+        "eens_kwh": 69.60000000000002,
+        "cvar_kwh": 69.60000000000002,
+        "var_kwh": 69.60000000000002,
+        "positive_loss_fraction": 1.0,
+        "tail_effective_scenarios": 0.20000000000000018,
+        "zero_var_cvar_identity": false,
+        "samples": 4
+      },
+      "investment_cost_yuan": 3092.4657534247394,
+      "expected_operating_cost_yuan": 21896.139879493705,
+      "objective_yuan": 24988.605632918443,
+      "scenarios_completed": 4
+    },
+    {
+      "units": {
+        "wind": 1,
+        "pv": 1,
+        "diesel": 2,
+        "battery_energy": 12,
+        "pcs": 3
+      },
+      "policy": "load_priority",
+      "status": "evaluated",
+      "feasible": true,
+      "complete": true,
+      "risk": {
+        "eens_kwh": 69.60000000000002,
+        "cvar_kwh": 69.60000000000002,
+        "var_kwh": 69.60000000000002,
+        "positive_loss_fraction": 1.0,
+        "tail_effective_scenarios": 0.20000000000000018,
+        "zero_var_cvar_identity": false,
+        "samples": 4
+      },
+      "investment_cost_yuan": 3503.4246575343286,
+      "expected_operating_cost_yuan": 17608.588461941745,
+      "objective_yuan": 21112.013119476072,
+      "scenarios_completed": 4
+    },
+    {
+      "units": {
+        "wind": 1,
+        "pv": 1,
+        "diesel": 2,
+        "battery_energy": 12,
+        "pcs": 3
+      },
+      "policy": "heat_priority",
+      "status": "evaluated",
+      "feasible": true,
+      "complete": true,
+      "risk": {
+        "eens_kwh": 69.60000000000002,
+        "cvar_kwh": 69.60000000000002,
+        "var_kwh": 69.60000000000002,
+        "positive_loss_fraction": 1.0,
+        "tail_effective_scenarios": 0.20000000000000018,
+        "zero_var_cvar_identity": false,
+        "samples": 4
+      },
+      "investment_cost_yuan": 3503.4246575343286,
+      "expected_operating_cost_yuan": 17608.588461941745,
+      "objective_yuan": 21112.013119476072,
+      "scenarios_completed": 4
+    },
+    {
+      "units": {
+        "wind": 0,
+        "pv": 1,
+        "diesel": 2,
+        "battery_energy": 24,
+        "pcs": 3
+      },
+      "policy": "load_priority",
+      "status": "evaluated",
+      "feasible": true,
+      "complete": true,
+      "risk": {
+        "eens_kwh": 0.0,
+        "cvar_kwh": 0.0,
+        "var_kwh": 0.0,
+        "positive_loss_fraction": 0.0,
+        "tail_effective_scenarios": 0.20000000000000018,
+        "zero_var_cvar_identity": true,
+        "samples": 4
+      },
+      "investment_cost_yuan": 3914.383561643918,
+      "expected_operating_cost_yuan": 22090.831270730683,
+      "objective_yuan": 26005.2148323746,
+      "scenarios_completed": 4
+    },
+    {
+      "units": {
+        "wind": 0,
+        "pv": 1,
+        "diesel": 2,
+        "battery_energy": 24,
+        "pcs": 3
+      },
+      "policy": "heat_priority",
+      "status": "evaluated",
+      "feasible": true,
+      "complete": true,
+      "risk": {
+        "eens_kwh": 0.0,
+        "cvar_kwh": 0.0,
+        "var_kwh": 0.0,
+        "positive_loss_fraction": 0.0,
+        "tail_effective_scenarios": 0.20000000000000018,
+        "zero_var_cvar_identity": true,
+        "samples": 4
+      },
+      "investment_cost_yuan": 3914.383561643918,
+      "expected_operating_cost_yuan": 22090.831270730683,
+      "objective_yuan": 26005.2148323746,
+      "scenarios_completed": 4
+    },
+    {
+      "units": {
+        "wind": 1,
+        "pv": 1,
+        "diesel": 3,
+        "battery_energy": 12,
+        "pcs": 3
+      },
+      "policy": "load_priority",
+      "status": "evaluated",
+      "feasible": true,
+      "complete": true,
+      "risk": {
+        "eens_kwh": 69.60000000000002,
+        "cvar_kwh": 69.60000000000002,
+        "var_kwh": 69.60000000000002,
+        "positive_loss_fraction": 1.0,
+        "tail_effective_scenarios": 0.20000000000000018,
+        "zero_var_cvar_identity": false,
+        "samples": 4
+      },
+      "investment_cost_yuan": 3914.383561643918,
+      "expected_operating_cost_yuan": 17608.588461941745,
+      "objective_yuan": 21522.972023585662,
+      "scenarios_completed": 4
+    },
+    {
+      "units": {
+        "wind": 1,
+        "pv": 1,
+        "diesel": 3,
+        "battery_energy": 12,
+        "pcs": 3
+      },
+      "policy": "heat_priority",
+      "status": "evaluated",
+      "feasible": true,
+      "complete": true,
+      "risk": {
+        "eens_kwh": 69.60000000000002,
+        "cvar_kwh": 69.60000000000002,
+        "var_kwh": 69.60000000000002,
+        "positive_loss_fraction": 1.0,
+        "tail_effective_scenarios": 0.20000000000000018,
+        "zero_var_cvar_identity": false,
+        "samples": 4
+      },
+      "investment_cost_yuan": 3914.383561643918,
+      "expected_operating_cost_yuan": 17608.588461941745,
+      "objective_yuan": 21522.972023585662,
+      "scenarios_completed": 4
+    },
+    {
+      "units": {
+        "wind": 0,
+        "pv": 1,
+        "diesel": 3,
+        "battery_energy": 24,
+        "pcs": 3
+      },
+      "policy": "load_priority",
+      "status": "evaluated",
+      "feasible": true,
+      "complete": true,
+      "risk": {
+        "eens_kwh": 0.0,
+        "cvar_kwh": 0.0,
+        "var_kwh": 0.0,
+        "positive_loss_fraction": 0.0,
+        "tail_effective_scenarios": 0.20000000000000018,
+        "zero_var_cvar_identity": true,
+        "samples": 4
+      },
+      "investment_cost_yuan": 4325.342465753507,
+      "expected_operating_cost_yuan": 22090.831270730683,
+      "objective_yuan": 26416.17373648419,
+      "scenarios_completed": 4
+    },
+    {
+      "units": {
+        "wind": 0,
+        "pv": 1,
+        "diesel": 3,
+        "battery_energy": 24,
+        "pcs": 3
+      },
+      "policy": "heat_priority",
+      "status": "evaluated",
+      "feasible": true,
+      "complete": true,
+      "risk": {
+        "eens_kwh": 0.0,
+        "cvar_kwh": 0.0,
+        "var_kwh": 0.0,
+        "positive_loss_fraction": 0.0,
+        "tail_effective_scenarios": 0.20000000000000018,
+        "zero_var_cvar_identity": true,
+        "samples": 4
+      },
+      "investment_cost_yuan": 4325.342465753507,
+      "expected_operating_cost_yuan": 22090.831270730683,
+      "objective_yuan": 26416.17373648419,
+      "scenarios_completed": 4
+    },
+    {
+      "units": {
+        "wind": 1,
+        "pv": 1,
+        "diesel": 2,
+        "battery_energy": 24,
+        "pcs": 3
+      },
+      "policy": "load_priority",
+      "status": "evaluated",
+      "feasible": true,
+      "complete": true,
+      "risk": {
+        "eens_kwh": 0.0,
+        "cvar_kwh": 0.0,
+        "var_kwh": 0.0,
+        "positive_loss_fraction": 0.0,
+        "tail_effective_scenarios": 0.20000000000000018,
+        "zero_var_cvar_identity": true,
+        "samples": 4
+      },
+      "investment_cost_yuan": 4736.301369863096,
+      "expected_operating_cost_yuan": 17608.588461941745,
+      "objective_yuan": 22344.88983180484,
+      "scenarios_completed": 4
+    },
+    {
+      "units": {
+        "wind": 1,
+        "pv": 1,
+        "diesel": 2,
+        "battery_energy": 24,
+        "pcs": 3
+      },
+      "policy": "heat_priority",
+      "status": "evaluated",
+      "feasible": true,
+      "complete": true,
+      "risk": {
+        "eens_kwh": 0.0,
+        "cvar_kwh": 0.0,
+        "var_kwh": 0.0,
+        "positive_loss_fraction": 0.0,
+        "tail_effective_scenarios": 0.20000000000000018,
+        "zero_var_cvar_identity": true,
+        "samples": 4
+      },
+      "investment_cost_yuan": 4736.301369863096,
+      "expected_operating_cost_yuan": 17608.588461941745,
+      "objective_yuan": 22344.88983180484,
+      "scenarios_completed": 4
+    },
+    {
+      "units": {
+        "wind": 1,
+        "pv": 1,
+        "diesel": 3,
+        "battery_energy": 24,
+        "pcs": 3
+      },
+      "policy": "load_priority",
+      "status": "evaluated",
+      "feasible": true,
+      "complete": true,
+      "risk": {
+        "eens_kwh": 0.0,
+        "cvar_kwh": 0.0,
+        "var_kwh": 0.0,
+        "positive_loss_fraction": 0.0,
+        "tail_effective_scenarios": 0.20000000000000018,
+        "zero_var_cvar_identity": true,
+        "samples": 4
+      },
+      "investment_cost_yuan": 5147.260273972684,
+      "expected_operating_cost_yuan": 17608.588461941745,
+      "objective_yuan": 22755.848735914427,
+      "scenarios_completed": 4
+    },
+    {
+      "units": {
+        "wind": 1,
+        "pv": 1,
+        "diesel": 3,
+        "battery_energy": 24,
+        "pcs": 3
+      },
+      "policy": "heat_priority",
+      "status": "evaluated",
+      "feasible": true,
+      "complete": true,
+      "risk": {
+        "eens_kwh": 0.0,
+        "cvar_kwh": 0.0,
+        "var_kwh": 0.0,
+        "positive_loss_fraction": 0.0,
+        "tail_effective_scenarios": 0.20000000000000018,
+        "zero_var_cvar_identity": true,
+        "samples": 4
+      },
+      "investment_cost_yuan": 5147.260273972684,
+      "expected_operating_cost_yuan": 17608.588461941745,
+      "objective_yuan": 22755.848735914427,
+      "scenarios_completed": 4
+    },
+    {
+      "units": {
+        "wind": 0,
+        "pv": 1,
+        "diesel": 2,
+        "battery_energy": 40,
+        "pcs": 3
+      },
+      "policy": "load_priority",
+      "status": "evaluated",
+      "feasible": true,
+      "complete": true,
+      "risk": {
+        "eens_kwh": 0.0,
+        "cvar_kwh": 0.0,
+        "var_kwh": 0.0,
+        "positive_loss_fraction": 0.0,
+        "tail_effective_scenarios": 0.20000000000000018,
+        "zero_var_cvar_identity": true,
+        "samples": 4
+      },
+      "investment_cost_yuan": 5558.219178082273,
+      "expected_operating_cost_yuan": 22090.831270730683,
+      "objective_yuan": 27649.050448812955,
+      "scenarios_completed": 4
+    },
+    {
+      "units": {
+        "wind": 0,
+        "pv": 1,
+        "diesel": 2,
+        "battery_energy": 40,
+        "pcs": 3
+      },
+      "policy": "heat_priority",
+      "status": "evaluated",
+      "feasible": true,
+      "complete": true,
+      "risk": {
+        "eens_kwh": 0.0,
+        "cvar_kwh": 0.0,
+        "var_kwh": 0.0,
+        "positive_loss_fraction": 0.0,
+        "tail_effective_scenarios": 0.20000000000000018,
+        "zero_var_cvar_identity": true,
+        "samples": 4
+      },
+      "investment_cost_yuan": 5558.219178082273,
+      "expected_operating_cost_yuan": 22090.831270730683,
+      "objective_yuan": 27649.050448812955,
+      "scenarios_completed": 4
+    },
+    {
+      "units": {
+        "wind": 0,
+        "pv": 1,
+        "diesel": 3,
+        "battery_energy": 40,
+        "pcs": 3
+      },
+      "policy": "load_priority",
+      "status": "evaluated",
+      "feasible": true,
+      "complete": true,
+      "risk": {
+        "eens_kwh": 0.0,
+        "cvar_kwh": 0.0,
+        "var_kwh": 0.0,
+        "positive_loss_fraction": 0.0,
+        "tail_effective_scenarios": 0.20000000000000018,
+        "zero_var_cvar_identity": true,
+        "samples": 4
+      },
+      "investment_cost_yuan": 5969.178082191863,
+      "expected_operating_cost_yuan": 22090.831270730683,
+      "objective_yuan": 28060.009352922545,
+      "scenarios_completed": 4
+    },
+    {
+      "units": {
+        "wind": 0,
+        "pv": 1,
+        "diesel": 3,
+        "battery_energy": 40,
+        "pcs": 3
+      },
+      "policy": "heat_priority",
+      "status": "evaluated",
+      "feasible": true,
+      "complete": true,
+      "risk": {
+        "eens_kwh": 0.0,
+        "cvar_kwh": 0.0,
+        "var_kwh": 0.0,
+        "positive_loss_fraction": 0.0,
+        "tail_effective_scenarios": 0.20000000000000018,
+        "zero_var_cvar_identity": true,
+        "samples": 4
+      },
+      "investment_cost_yuan": 5969.178082191863,
+      "expected_operating_cost_yuan": 22090.831270730683,
+      "objective_yuan": 28060.009352922545,
+      "scenarios_completed": 4
+    },
+    {
+      "units": {
+        "wind": 1,
+        "pv": 1,
+        "diesel": 2,
+        "battery_energy": 40,
+        "pcs": 3
+      },
+      "policy": "load_priority",
+      "status": "evaluated",
+      "feasible": true,
+      "complete": true,
+      "risk": {
+        "eens_kwh": 0.0,
+        "cvar_kwh": 0.0,
+        "var_kwh": 0.0,
+        "positive_loss_fraction": 0.0,
+        "tail_effective_scenarios": 0.20000000000000018,
+        "zero_var_cvar_identity": true,
+        "samples": 4
+      },
+      "investment_cost_yuan": 6380.1369863014515,
+      "expected_operating_cost_yuan": 17608.588461941745,
+      "objective_yuan": 23988.725448243196,
+      "scenarios_completed": 4
+    },
+    {
+      "units": {
+        "wind": 1,
+        "pv": 1,
+        "diesel": 2,
+        "battery_energy": 40,
+        "pcs": 3
+      },
+      "policy": "heat_priority",
+      "status": "evaluated",
+      "feasible": true,
+      "complete": true,
+      "risk": {
+        "eens_kwh": 0.0,
+        "cvar_kwh": 0.0,
+        "var_kwh": 0.0,
+        "positive_loss_fraction": 0.0,
+        "tail_effective_scenarios": 0.20000000000000018,
+        "zero_var_cvar_identity": true,
+        "samples": 4
+      },
+      "investment_cost_yuan": 6380.1369863014515,
+      "expected_operating_cost_yuan": 17608.588461941745,
+      "objective_yuan": 23988.725448243196,
+      "scenarios_completed": 4
+    },
+    {
+      "units": {
+        "wind": 1,
+        "pv": 1,
+        "diesel": 3,
+        "battery_energy": 40,
+        "pcs": 3
+      },
+      "policy": "load_priority",
+      "status": "evaluated",
+      "feasible": true,
+      "complete": true,
+      "risk": {
+        "eens_kwh": 0.0,
+        "cvar_kwh": 0.0,
+        "var_kwh": 0.0,
+        "positive_loss_fraction": 0.0,
+        "tail_effective_scenarios": 0.20000000000000018,
+        "zero_var_cvar_identity": true,
+        "samples": 4
+      },
+      "investment_cost_yuan": 6791.09589041104,
+      "expected_operating_cost_yuan": 17608.588461941745,
+      "objective_yuan": 24399.684352352786,
+      "scenarios_completed": 4
+    },
+    {
+      "units": {
+        "wind": 1,
+        "pv": 1,
+        "diesel": 3,
+        "battery_energy": 40,
+        "pcs": 3
+      },
+      "policy": "heat_priority",
+      "status": "evaluated",
+      "feasible": true,
+      "complete": true,
+      "risk": {
+        "eens_kwh": 0.0,
+        "cvar_kwh": 0.0,
+        "var_kwh": 0.0,
+        "positive_loss_fraction": 0.0,
+        "tail_effective_scenarios": 0.20000000000000018,
+        "zero_var_cvar_identity": true,
+        "samples": 4
+      },
+      "investment_cost_yuan": 6791.09589041104,
+      "expected_operating_cost_yuan": 17608.588461941745,
+      "objective_yuan": 24399.684352352786,
+      "scenarios_completed": 4
+    }
+  ],
+  "unresolved_designs": [],
+  "total_designs": 12,
+  "training_seconds": 0.1253172168508172,
+  "bound_model_assumptions": [
+    "All operation costs nonnegative",
+    "Investment lower bound only",
+    "No capacity-monotonicity or legacy availability cut"
+  ],
+  "advanced_recovery_lp_cuts_implemented": false
+}
