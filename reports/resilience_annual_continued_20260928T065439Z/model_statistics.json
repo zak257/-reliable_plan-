@@ -1,0 +1,25 @@
+{
+  "variables": 1836894,
+  "binary_variables": 931516,
+  "linear_constraints": 4829585,
+  "indicators": 449480,
+  "diesel_slots": 12,
+  "upper_module_bounds": {
+    "wind_kw": 14,
+    "pv_kw": 21,
+    "diesel_units": 12,
+    "battery_kwh": 172,
+    "pcs_kw": 108,
+    "ups_kwh": 68,
+    "ups_kw": 38
+  },
+  "all_capacity_types": {
+    "wind_kw": "I",
+    "pv_kw": "I",
+    "diesel_units": "I",
+    "battery_kwh": "I",
+    "pcs_kw": "I",
+    "ups_kwh": "I",
+    "ups_kw": "I"
+  }
+}

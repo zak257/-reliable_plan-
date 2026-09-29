@@ -1,6 +1,9 @@
 {
   "action": "solver_progress",
-  "elapsed_seconds": 272.36266314517707,
+  "elapsed_seconds": 13456.802402379923,
   "stage": "joint",
-  "callback_location": 1
+  "callback_location": 3,
+  "objective_yuan": 3591982.693782524,
+  "bound_yuan": 2132397.1741338926,
+  "nodes": 0.0
 }

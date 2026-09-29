@@ -1,0 +1,16 @@
+{
+  "action": "solver_incumbent",
+  "elapsed_seconds": 60000.9457219881,
+  "stage": "joint",
+  "objective_yuan": 2694403.311783595,
+  "modules": {
+    "wind_kw": 5.0,
+    "pv_kw": 0.0,
+    "diesel_units": 4.0,
+    "battery_kwh": 4.0,
+    "pcs_kw": 2.0,
+    "ups_kwh": 11.0,
+    "ups_kw": 2.0
+  },
+  "audit_status": "pending_full_audit"
+}

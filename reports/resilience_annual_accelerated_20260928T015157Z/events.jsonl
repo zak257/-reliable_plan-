@@ -12,3 +12,16 @@
 {"action": "solver_progress", "elapsed_seconds": 182.21587081393227, "stage": "joint", "callback_location": 1}
 {"action": "solver_progress", "elapsed_seconds": 227.28911862708628, "stage": "joint", "callback_location": 1}
 {"action": "solver_progress", "elapsed_seconds": 272.36266314517707, "stage": "joint", "callback_location": 1}
+{"action": "solver_progress", "elapsed_seconds": 317.3993035671301, "stage": "joint", "callback_location": 1}
+{"action": "solver_progress", "elapsed_seconds": 362.4346672850661, "stage": "joint", "callback_location": 1}
+{"action": "solver_progress", "elapsed_seconds": 407.50421236502007, "stage": "joint", "callback_location": 1}
+{"action": "solver_progress", "elapsed_seconds": 452.5304347802885, "stage": "joint", "callback_location": 1}
+{"action": "solver_progress", "elapsed_seconds": 497.54427822493017, "stage": "joint", "callback_location": 1}
+{"action": "solver_progress", "elapsed_seconds": 542.5546088293195, "stage": "joint", "callback_location": 1}
+{"action": "solver_progress", "elapsed_seconds": 587.5711765442975, "stage": "joint", "callback_location": 1}
+{"action": "solver_progress", "elapsed_seconds": 632.5831257971004, "stage": "joint", "callback_location": 1}
+{"action": "solver_progress", "elapsed_seconds": 677.6225477750413, "stage": "joint", "callback_location": 1}
+{"action": "solver_progress", "elapsed_seconds": 722.6234409720637, "stage": "joint", "callback_location": 1}
+{"action": "solver_progress", "elapsed_seconds": 784.2100803009234, "stage": "joint", "callback_location": 3, "objective_yuan": 3591982.693782524, "bound_yuan": 705880.1182052498, "nodes": 0.0}
+{"action": "solver_progress", "elapsed_seconds": 12430.947872184217, "stage": "joint", "callback_location": 3, "objective_yuan": 3591982.693782524, "bound_yuan": 2132397.174133891, "nodes": 0.0}
+{"action": "solver_progress", "elapsed_seconds": 13456.802402379923, "stage": "joint", "callback_location": 3, "objective_yuan": 3591982.693782524, "bound_yuan": 2132397.1741338926, "nodes": 0.0}

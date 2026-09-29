@@ -1,0 +1,30 @@
+{
+  "scope": "Independent single-module marginal screens; no optimization or full-model audit. Do not add the two savings together.",
+  "unchanged": "All startup/stress-window decisions, engine commitment, storage, loads, UPS and temperatures.",
+  "screened_hours": 8424,
+  "cases": [
+    {
+      "device": "wind",
+      "added_integer_modules": 1,
+      "added_capacity_kw": 100,
+      "avoided_diesel_kwh": 348373.4101740087,
+      "added_capex_yuan": 150000.0,
+      "annual_fuel_savings_yuan": 330954.73966530827,
+      "net_objective_reduction_yuan": 180954.73966530827
+    },
+    {
+      "device": "pv",
+      "added_integer_modules": 1,
+      "added_capacity_kw": 100,
+      "avoided_diesel_kwh": 183500.95723051397,
+      "added_capex_yuan": 100000.0,
+      "annual_fuel_savings_yuan": 174325.90936898827,
+      "net_objective_reduction_yuan": 74325.90936898827
+    }
+  ],
+  "clean_profile_equivalent_hours": {
+    "wind_clean_pu": 3810.8176750927223,
+    "pv_pu": 1916.156413122972
+  },
+  "local_power_checks_passed": true
+}

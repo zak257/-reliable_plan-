@@ -1,0 +1,706 @@
+[
+  {
+    "window": 0,
+    "representative": "annual_normal",
+    "members": [
+      {
+        "name": "annual_normal",
+        "weight": 0.48
+      }
+    ],
+    "merged_weight": 0.48,
+    "physics_information_sha256": "9d4dda923e74229c26406cee3a0b066f011e63402e4f0d5b6412868c33a21934"
+  },
+  {
+    "window": 0,
+    "representative": "w0_normal_renewable_bus",
+    "members": [
+      {
+        "name": "w0_normal_renewable_bus",
+        "weight": 0.08000000000000002
+      },
+      {
+        "name": "w0_normal_compound",
+        "weight": 0.064
+      }
+    ],
+    "merged_weight": 0.14400000000000002,
+    "physics_information_sha256": "77bda784b6e17b2d690daa1bf6362e655852d7d49d266f804cf796d2362f3cf1"
+  },
+  {
+    "window": 0,
+    "representative": "w0_normal_main_bus",
+    "members": [
+      {
+        "name": "w0_normal_main_bus",
+        "weight": 0.08000000000000002
+      }
+    ],
+    "merged_weight": 0.08000000000000002,
+    "physics_information_sha256": "9feb2630ddbdc226eaed1cee39f3e05e646660775f89aae9ce6f102471832de0"
+  },
+  {
+    "window": 0,
+    "representative": "w0_normal_pcs",
+    "members": [
+      {
+        "name": "w0_normal_pcs",
+        "weight": 0.024
+      }
+    ],
+    "merged_weight": 0.024,
+    "physics_information_sha256": "8d4225cfd25603f754e78a219aa1bc32180794d8090babc0c21a441d20103a7d"
+  },
+  {
+    "window": 0,
+    "representative": "w0_normal_ups",
+    "members": [
+      {
+        "name": "w0_normal_ups",
+        "weight": 0.024
+      }
+    ],
+    "merged_weight": 0.024,
+    "physics_information_sha256": "8b3e6ba2e7659bddfabe96f0c5c719a76810bcfd157f5ba49027cc322d313832"
+  },
+  {
+    "window": 0,
+    "representative": "w0_normal_diesel_run",
+    "members": [
+      {
+        "name": "w0_normal_diesel_run",
+        "weight": 0.032
+      }
+    ],
+    "merged_weight": 0.032,
+    "physics_information_sha256": "fd9f281bb77a17a8e54b146e83d8037d95fb93904abcef3da6fe581de0b8db9e"
+  },
+  {
+    "window": 0,
+    "representative": "w0_normal_diesel_start",
+    "members": [
+      {
+        "name": "w0_normal_diesel_start",
+        "weight": 0.016
+      }
+    ],
+    "merged_weight": 0.016,
+    "physics_information_sha256": "d61204d52a4c2d8db49a4e14855759099bf067a3ed719e16703b11a8bb6bc26e"
+  },
+  {
+    "window": 0,
+    "representative": "w0_storm_none",
+    "members": [
+      {
+        "name": "w0_storm_none",
+        "weight": 0.12
+      }
+    ],
+    "merged_weight": 0.12,
+    "physics_information_sha256": "27f34a9229e856c71a07239ff65ef017605c15d468397b8dec72bb46af70ebf9"
+  },
+  {
+    "window": 0,
+    "representative": "w0_storm_renewable_bus",
+    "members": [
+      {
+        "name": "w0_storm_renewable_bus",
+        "weight": 0.020000000000000004
+      },
+      {
+        "name": "w0_storm_compound",
+        "weight": 0.016
+      }
+    ],
+    "merged_weight": 0.036000000000000004,
+    "physics_information_sha256": "7ba6b0b0f11212c9047e5de9041851ee5307c9eb7d4ac4df5e2e82b4bb282d28"
+  },
+  {
+    "window": 0,
+    "representative": "w0_storm_main_bus",
+    "members": [
+      {
+        "name": "w0_storm_main_bus",
+        "weight": 0.020000000000000004
+      }
+    ],
+    "merged_weight": 0.020000000000000004,
+    "physics_information_sha256": "4f3ea1b9fcb21b0b7ed0d4d0261708e21cb2056e469fde97d5794fb9a8191102"
+  },
+  {
+    "window": 0,
+    "representative": "w0_storm_pcs",
+    "members": [
+      {
+        "name": "w0_storm_pcs",
+        "weight": 0.006
+      }
+    ],
+    "merged_weight": 0.006,
+    "physics_information_sha256": "967936497e6cf001f2579cdab253cddd0fc70c1897c1730e9f2be0b67d629815"
+  },
+  {
+    "window": 0,
+    "representative": "w0_storm_ups",
+    "members": [
+      {
+        "name": "w0_storm_ups",
+        "weight": 0.006
+      }
+    ],
+    "merged_weight": 0.006,
+    "physics_information_sha256": "77935be3ff3791c0d1bcdf5c9b7654febdc40ddb4514d44de5565e3ebb6c6354"
+  },
+  {
+    "window": 0,
+    "representative": "w0_storm_diesel_run",
+    "members": [
+      {
+        "name": "w0_storm_diesel_run",
+        "weight": 0.008
+      }
+    ],
+    "merged_weight": 0.008,
+    "physics_information_sha256": "7bccb5ed1b6ec8f47ffbe50ae2cd27bfff8cf6c2dcd25b3ccfe169e329e453d0"
+  },
+  {
+    "window": 0,
+    "representative": "w0_storm_diesel_start",
+    "members": [
+      {
+        "name": "w0_storm_diesel_start",
+        "weight": 0.004
+      }
+    ],
+    "merged_weight": 0.004,
+    "physics_information_sha256": "d72f3e585e132327fa53d00a7a3852767619e5781c1e765e2b4ec89c21f8a284"
+  },
+  {
+    "window": 1,
+    "representative": "annual_normal",
+    "members": [
+      {
+        "name": "annual_normal",
+        "weight": 0.48
+      }
+    ],
+    "merged_weight": 0.48,
+    "physics_information_sha256": "9d4dda923e74229c26406cee3a0b066f011e63402e4f0d5b6412868c33a21934"
+  },
+  {
+    "window": 1,
+    "representative": "w1_normal_renewable_bus",
+    "members": [
+      {
+        "name": "w1_normal_renewable_bus",
+        "weight": 0.08000000000000002
+      },
+      {
+        "name": "w1_normal_compound",
+        "weight": 0.064
+      }
+    ],
+    "merged_weight": 0.14400000000000002,
+    "physics_information_sha256": "5b97cdd187d341394eca5ca5004c472246b6ab5c8ffee378225e14f42adcb324"
+  },
+  {
+    "window": 1,
+    "representative": "w1_normal_main_bus",
+    "members": [
+      {
+        "name": "w1_normal_main_bus",
+        "weight": 0.08000000000000002
+      }
+    ],
+    "merged_weight": 0.08000000000000002,
+    "physics_information_sha256": "96848be3f72e7509ad5a3433b864f0ef0878162911b7c4d435c13a4f27213b2d"
+  },
+  {
+    "window": 1,
+    "representative": "w1_normal_pcs",
+    "members": [
+      {
+        "name": "w1_normal_pcs",
+        "weight": 0.024
+      }
+    ],
+    "merged_weight": 0.024,
+    "physics_information_sha256": "ccc3a3396685c3f6124a0010ae2fc5b49aab68eaf3b340ee77f77cd5b4a51af7"
+  },
+  {
+    "window": 1,
+    "representative": "w1_normal_ups",
+    "members": [
+      {
+        "name": "w1_normal_ups",
+        "weight": 0.024
+      }
+    ],
+    "merged_weight": 0.024,
+    "physics_information_sha256": "07b7222603f384db2438214be2a96ba2852c61ac55140e5a4c46a657cc1bc272"
+  },
+  {
+    "window": 1,
+    "representative": "w1_normal_diesel_run",
+    "members": [
+      {
+        "name": "w1_normal_diesel_run",
+        "weight": 0.032
+      }
+    ],
+    "merged_weight": 0.032,
+    "physics_information_sha256": "794b4977e5da3fceacbd0a92985953a8911c240aaf687d32b40f86eeed94af5d"
+  },
+  {
+    "window": 1,
+    "representative": "w1_normal_diesel_start",
+    "members": [
+      {
+        "name": "w1_normal_diesel_start",
+        "weight": 0.016
+      }
+    ],
+    "merged_weight": 0.016,
+    "physics_information_sha256": "0caa0257c5740e9dbc0f32b4431e8a79e05de2c3c13437552645c20d62f45772"
+  },
+  {
+    "window": 1,
+    "representative": "w1_storm_none",
+    "members": [
+      {
+        "name": "w1_storm_none",
+        "weight": 0.12
+      }
+    ],
+    "merged_weight": 0.12,
+    "physics_information_sha256": "97d076de7e27e3dbb746f9fdbdf74bc9f6c9cac61e09fd77f315e9e702e845de"
+  },
+  {
+    "window": 1,
+    "representative": "w1_storm_renewable_bus",
+    "members": [
+      {
+        "name": "w1_storm_renewable_bus",
+        "weight": 0.020000000000000004
+      },
+      {
+        "name": "w1_storm_compound",
+        "weight": 0.016
+      }
+    ],
+    "merged_weight": 0.036000000000000004,
+    "physics_information_sha256": "47667781189f2e6aec393f06637d514be38274b35127187d84d21003d1c9182b"
+  },
+  {
+    "window": 1,
+    "representative": "w1_storm_main_bus",
+    "members": [
+      {
+        "name": "w1_storm_main_bus",
+        "weight": 0.020000000000000004
+      }
+    ],
+    "merged_weight": 0.020000000000000004,
+    "physics_information_sha256": "e01ad73edc26773e11249416cfcd469c842285e8ba53413a78d4a6ae5d223925"
+  },
+  {
+    "window": 1,
+    "representative": "w1_storm_pcs",
+    "members": [
+      {
+        "name": "w1_storm_pcs",
+        "weight": 0.006
+      }
+    ],
+    "merged_weight": 0.006,
+    "physics_information_sha256": "b0fb7f11604832a5440ecca2f355b5c1a5b6b5cc18125f6a4450cd5b7d8f4077"
+  },
+  {
+    "window": 1,
+    "representative": "w1_storm_ups",
+    "members": [
+      {
+        "name": "w1_storm_ups",
+        "weight": 0.006
+      }
+    ],
+    "merged_weight": 0.006,
+    "physics_information_sha256": "9a904f117fc30dba653597ac0b0ffdb08cb2eb4e58070ae5938a6b3dc4a4af99"
+  },
+  {
+    "window": 1,
+    "representative": "w1_storm_diesel_run",
+    "members": [
+      {
+        "name": "w1_storm_diesel_run",
+        "weight": 0.008
+      }
+    ],
+    "merged_weight": 0.008,
+    "physics_information_sha256": "8cb379c2ce3fb69312c29116a9e34746fde30452f71f4440ebe050cbe7052ad8"
+  },
+  {
+    "window": 1,
+    "representative": "w1_storm_diesel_start",
+    "members": [
+      {
+        "name": "w1_storm_diesel_start",
+        "weight": 0.004
+      }
+    ],
+    "merged_weight": 0.004,
+    "physics_information_sha256": "5958bfce0fa38ad28745ab9865adc22f768c615a7f6ea50164d515ea593e58f9"
+  },
+  {
+    "window": 2,
+    "representative": "annual_normal",
+    "members": [
+      {
+        "name": "annual_normal",
+        "weight": 0.48
+      }
+    ],
+    "merged_weight": 0.48,
+    "physics_information_sha256": "9d4dda923e74229c26406cee3a0b066f011e63402e4f0d5b6412868c33a21934"
+  },
+  {
+    "window": 2,
+    "representative": "w2_normal_renewable_bus",
+    "members": [
+      {
+        "name": "w2_normal_renewable_bus",
+        "weight": 0.08000000000000002
+      },
+      {
+        "name": "w2_normal_compound",
+        "weight": 0.064
+      }
+    ],
+    "merged_weight": 0.14400000000000002,
+    "physics_information_sha256": "3731168133359537111dac0654079d3b9c164ca71c66f3f3527b00f35ba3399e"
+  },
+  {
+    "window": 2,
+    "representative": "w2_normal_main_bus",
+    "members": [
+      {
+        "name": "w2_normal_main_bus",
+        "weight": 0.08000000000000002
+      }
+    ],
+    "merged_weight": 0.08000000000000002,
+    "physics_information_sha256": "3d4a7e6e6c27b6419bbfd18cb8f9e50b42da0bdf06dc42316dba5170d4fe3395"
+  },
+  {
+    "window": 2,
+    "representative": "w2_normal_pcs",
+    "members": [
+      {
+        "name": "w2_normal_pcs",
+        "weight": 0.024
+      }
+    ],
+    "merged_weight": 0.024,
+    "physics_information_sha256": "a2711352f0c3bf45616598f32f9e1f0c18e3ba826e95e73dfede159e55e1be1b"
+  },
+  {
+    "window": 2,
+    "representative": "w2_normal_ups",
+    "members": [
+      {
+        "name": "w2_normal_ups",
+        "weight": 0.024
+      }
+    ],
+    "merged_weight": 0.024,
+    "physics_information_sha256": "df82ef32c63f61e1e771320f3e01f3b7e97ad65d5f74f6147d376396a06770a9"
+  },
+  {
+    "window": 2,
+    "representative": "w2_normal_diesel_run",
+    "members": [
+      {
+        "name": "w2_normal_diesel_run",
+        "weight": 0.032
+      }
+    ],
+    "merged_weight": 0.032,
+    "physics_information_sha256": "004666fa96c95bfb984398384dd738e7e7b3d06627526a130183a37812aa5e0c"
+  },
+  {
+    "window": 2,
+    "representative": "w2_normal_diesel_start",
+    "members": [
+      {
+        "name": "w2_normal_diesel_start",
+        "weight": 0.016
+      }
+    ],
+    "merged_weight": 0.016,
+    "physics_information_sha256": "b8312a69e77b85bb2cf2a38faf3546e72bcc70710ab26bf83b06438d36f9aa6c"
+  },
+  {
+    "window": 2,
+    "representative": "w2_storm_none",
+    "members": [
+      {
+        "name": "w2_storm_none",
+        "weight": 0.12
+      }
+    ],
+    "merged_weight": 0.12,
+    "physics_information_sha256": "6239cfee2aa7ba906761184348d1f6a8c9de069838710dd9cf45427eb68a188e"
+  },
+  {
+    "window": 2,
+    "representative": "w2_storm_renewable_bus",
+    "members": [
+      {
+        "name": "w2_storm_renewable_bus",
+        "weight": 0.020000000000000004
+      },
+      {
+        "name": "w2_storm_compound",
+        "weight": 0.016
+      }
+    ],
+    "merged_weight": 0.036000000000000004,
+    "physics_information_sha256": "dc135666f51e1cfb28866317efff9f63ebc03a7c93731e4727c668d37375d2c6"
+  },
+  {
+    "window": 2,
+    "representative": "w2_storm_main_bus",
+    "members": [
+      {
+        "name": "w2_storm_main_bus",
+        "weight": 0.020000000000000004
+      }
+    ],
+    "merged_weight": 0.020000000000000004,
+    "physics_information_sha256": "6868841939446c86cae3789c2084826aa25fc75a7a3b0cbcf6c0a5fc1bab78a9"
+  },
+  {
+    "window": 2,
+    "representative": "w2_storm_pcs",
+    "members": [
+      {
+        "name": "w2_storm_pcs",
+        "weight": 0.006
+      }
+    ],
+    "merged_weight": 0.006,
+    "physics_information_sha256": "6c2810dfb20bf876756b026416e05f0b6a933444ba05515736e9ea27eaf87de5"
+  },
+  {
+    "window": 2,
+    "representative": "w2_storm_ups",
+    "members": [
+      {
+        "name": "w2_storm_ups",
+        "weight": 0.006
+      }
+    ],
+    "merged_weight": 0.006,
+    "physics_information_sha256": "229ff81da856ed977b972f5152de193c1d86f38a89ac491374a3838e20add209"
+  },
+  {
+    "window": 2,
+    "representative": "w2_storm_diesel_run",
+    "members": [
+      {
+        "name": "w2_storm_diesel_run",
+        "weight": 0.008
+      }
+    ],
+    "merged_weight": 0.008,
+    "physics_information_sha256": "059b7102d0381b9c34238a8ed25dd2a0655c06d8918dbbce39cd92271a356b5d"
+  },
+  {
+    "window": 2,
+    "representative": "w2_storm_diesel_start",
+    "members": [
+      {
+        "name": "w2_storm_diesel_start",
+        "weight": 0.004
+      }
+    ],
+    "merged_weight": 0.004,
+    "physics_information_sha256": "56407d2c4c519da567aa85f01b4f8a9b1f5c88326de84425046f110c52e9aa2f"
+  },
+  {
+    "window": 3,
+    "representative": "annual_normal",
+    "members": [
+      {
+        "name": "annual_normal",
+        "weight": 0.48
+      }
+    ],
+    "merged_weight": 0.48,
+    "physics_information_sha256": "9d4dda923e74229c26406cee3a0b066f011e63402e4f0d5b6412868c33a21934"
+  },
+  {
+    "window": 3,
+    "representative": "w3_normal_renewable_bus",
+    "members": [
+      {
+        "name": "w3_normal_renewable_bus",
+        "weight": 0.08000000000000002
+      },
+      {
+        "name": "w3_normal_compound",
+        "weight": 0.064
+      }
+    ],
+    "merged_weight": 0.14400000000000002,
+    "physics_information_sha256": "80398caa5acbbac8d19453dd2f952d02ba88355652df791be7f58c4659357388"
+  },
+  {
+    "window": 3,
+    "representative": "w3_normal_main_bus",
+    "members": [
+      {
+        "name": "w3_normal_main_bus",
+        "weight": 0.08000000000000002
+      }
+    ],
+    "merged_weight": 0.08000000000000002,
+    "physics_information_sha256": "9b9f774320a7a4a9ba2180ae34eec649d8797f183546524519f441f4539aed0b"
+  },
+  {
+    "window": 3,
+    "representative": "w3_normal_pcs",
+    "members": [
+      {
+        "name": "w3_normal_pcs",
+        "weight": 0.024
+      }
+    ],
+    "merged_weight": 0.024,
+    "physics_information_sha256": "de9346f96674e477503657b08a074daa623451e47af7675711cf99da4cc1a5f0"
+  },
+  {
+    "window": 3,
+    "representative": "w3_normal_ups",
+    "members": [
+      {
+        "name": "w3_normal_ups",
+        "weight": 0.024
+      }
+    ],
+    "merged_weight": 0.024,
+    "physics_information_sha256": "ca86a568b8a4192e6e68a80586bc49874f8f156d1594b444b71494183fb2f041"
+  },
+  {
+    "window": 3,
+    "representative": "w3_normal_diesel_run",
+    "members": [
+      {
+        "name": "w3_normal_diesel_run",
+        "weight": 0.032
+      }
+    ],
+    "merged_weight": 0.032,
+    "physics_information_sha256": "9025d3c4794e9ef2f9e82f152bd2518675e526dd28ab5fe74d8f008f35941d79"
+  },
+  {
+    "window": 3,
+    "representative": "w3_normal_diesel_start",
+    "members": [
+      {
+        "name": "w3_normal_diesel_start",
+        "weight": 0.016
+      }
+    ],
+    "merged_weight": 0.016,
+    "physics_information_sha256": "0f889647b19103500afe1dc82cff43d8b3c3a2125efb602bd3f61ef58a1711bf"
+  },
+  {
+    "window": 3,
+    "representative": "w3_storm_none",
+    "members": [
+      {
+        "name": "w3_storm_none",
+        "weight": 0.12
+      }
+    ],
+    "merged_weight": 0.12,
+    "physics_information_sha256": "d1423cd0f221b09bcfa24083f3cbe21f7350aeb4c588a688b47c4e898c797bc3"
+  },
+  {
+    "window": 3,
+    "representative": "w3_storm_renewable_bus",
+    "members": [
+      {
+        "name": "w3_storm_renewable_bus",
+        "weight": 0.020000000000000004
+      },
+      {
+        "name": "w3_storm_compound",
+        "weight": 0.016
+      }
+    ],
+    "merged_weight": 0.036000000000000004,
+    "physics_information_sha256": "3539b598669cceaccbe76f3a4bd51d4956e898626e436856d97458c15dd349e4"
+  },
+  {
+    "window": 3,
+    "representative": "w3_storm_main_bus",
+    "members": [
+      {
+        "name": "w3_storm_main_bus",
+        "weight": 0.020000000000000004
+      }
+    ],
+    "merged_weight": 0.020000000000000004,
+    "physics_information_sha256": "c1a8f25a6511d0781d3d61130150f548a6a6b813f3d8510ea6151501a56e86d0"
+  },
+  {
+    "window": 3,
+    "representative": "w3_storm_pcs",
+    "members": [
+      {
+        "name": "w3_storm_pcs",
+        "weight": 0.006
+      }
+    ],
+    "merged_weight": 0.006,
+    "physics_information_sha256": "865d92323417cbfdb22a9edb6821e9c6370c77f92d82321f65227c4695fd18bc"
+  },
+  {
+    "window": 3,
+    "representative": "w3_storm_ups",
+    "members": [
+      {
+        "name": "w3_storm_ups",
+        "weight": 0.006
+      }
+    ],
+    "merged_weight": 0.006,
+    "physics_information_sha256": "324368d4e8adb537fb306fe8bae7fda771755fbc59651d98966991874883c124"
+  },
+  {
+    "window": 3,
+    "representative": "w3_storm_diesel_run",
+    "members": [
+      {
+        "name": "w3_storm_diesel_run",
+        "weight": 0.008
+      }
+    ],
+    "merged_weight": 0.008,
+    "physics_information_sha256": "d4327db32f78c1509a005cb9447eca0c3810a331fe9e96bf3fdf5df958f7836d"
+  },
+  {
+    "window": 3,
+    "representative": "w3_storm_diesel_start",
+    "members": [
+      {
+        "name": "w3_storm_diesel_start",
+        "weight": 0.004
+      }
+    ],
+    "merged_weight": 0.004,
+    "physics_information_sha256": "02657f3dfc3bce0da3684e7aabade2ed091d057253b79453b6917db065f8f622"
+  }
+]

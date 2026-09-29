@@ -1,0 +1,23 @@
+{
+  "status": "finished",
+  "stage": "finished",
+  "pid": 29251,
+  "started_at_utc": "2026-09-28T06:54:39.461822+00:00",
+  "previous_run": "/home/yzk/reliable_plan/reports/resilience_annual_accelerated_20260928T015157Z",
+  "time_limit_seconds": 60000.0,
+  "search_tree_restored": false,
+  "elapsed_seconds": 60000.9457219881,
+  "finished_at_utc": "2026-09-28T23:34:51.226309+00:00",
+  "objective_yuan": 2694403.311783595,
+  "mip_gap": 0.20794342729719337,
+  "selected": {
+    "wind_kw": 500.0,
+    "pv_kw": 0.0,
+    "diesel_units": 4,
+    "battery_kwh": 200.0,
+    "pcs_kw": 100.0,
+    "ups_kwh": 550.0,
+    "ups_kw": 100.0
+  },
+  "process_wall_seconds": 60011.848269441165
+}

@@ -1,5 +1,6 @@
 """Chronology, weighting and independent full-input semantics of aggregation."""
 from dataclasses import replace
+import json
 import unittest
 
 import gurobipy as gp
@@ -94,6 +95,35 @@ class TypicalDayTests(unittest.TestCase):
             temp = model.blocks[0]['temperature'][0, 0]
             self.assertEqual(temp.LB, cfg.initial_temperature_c)
             self.assertGreaterEqual(temp.UB, 10+cfg.heater_kw/(ua or cfg.thermal_c_kwh_per_k))
+
+    def test_full_calendar_warm_start_expands_aliases(self):
+        from scripts.run_resilience_typical_days import transfer_calendar_start
+        reduced = self.fixture(); reduced.optimize()
+        original = self.fixture(False)
+        transfer = transfer_calendar_start(reduced, original)
+        self.assertEqual(transfer['missing_count'], 0)
+        self.assertAlmostEqual(original.blocks[0]['wind'][168].Start, reduced.blocks[0]['wind'][48].X)
+        self.assertAlmostEqual(original.blocks[0]['battery_energy'][168].Start,
+                               reduced.blocks[0]['battery_energy'][168].X)
+        result = original.optimize()
+        self.assertTrue(result['audit']['passed'])
+
+    def test_incumbent_without_finite_dual_bound_can_be_exported(self):
+        original = self.fixture(False)
+        original.optimize()
+        class PresolveTimeoutView:
+            def __init__(self, model): self.model = model
+            def __getattr__(self, name):
+                if name == 'ObjBound': return -float('inf')
+                if name == 'MIPGap': return float('inf')
+                if name == 'Status': return GRB.TIME_LIMIT
+                return getattr(self.model, name)
+        original.model = PresolveTimeoutView(original.model)
+        result = original.result()
+        self.assertTrue(result['audit']['passed'])
+        self.assertIsNone(result['objective_bound_yuan'])
+        self.assertIsNone(result['mip_gap'])
+        json.dumps(result, allow_nan=False)
 
 
 if __name__ == '__main__': unittest.main()

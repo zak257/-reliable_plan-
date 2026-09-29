@@ -1,0 +1,12 @@
+TimeLimit  5.9605087648863904e+04
+FeasibilityTol  1e-07
+IntFeasTol  1e-08
+MIPGap  0.01
+Method  3
+Heuristics  0.2
+MIPFocus  1
+LicenseID  2859951
+DualReductions  0
+LogToConsole  0
+Seed  20260923
+Threads  8

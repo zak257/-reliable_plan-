@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "test_count": 81,
+  "full_year_audits_passed": 2,
+  "source_sha256": {
+    "polar_reliability_planning/resilience_milp/model.py": "21059e4e8c2c3f14b0b4ae4a5cdd0e7341c5c0ef704e40316917d63dffe18811",
+    "polar_reliability_planning/resilience_milp/annual.py": "00f5d2b325b91ef4d5f5a010e06aa0ffe3600c8f522ba6fd43e2e17f5e025d81",
+    "polar_reliability_planning/resilience_milp/typical_days.py": "cc09920c403bef4a71c761f00bb8a72fb52144529d900687a917f895a98cc9c1",
+    "scripts/run_resilience_typical_days.py": "921f1eae944dc13d7d6b3fa94f3202ffa5538f30c543d21fae815a8587fc5574",
+    "resilience_tests/test_typical_days.py": "df501275197327329685c0e5c03e040605701b94b71328f69d1e539fde7fc810",
+    "docs/resilience_typical_days.md": "a9b01f90320925a041377dd02b4751ee353d981a1f6beb72b78ccab60d59b168"
+  }
+}

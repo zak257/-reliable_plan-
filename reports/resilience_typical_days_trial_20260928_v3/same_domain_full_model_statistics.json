@@ -1,0 +1,11 @@
+{
+  "scope": "same free capacity domains, same 17 diesel slots, original annual inputs; construction only, no optimization",
+  "economic_budget_yuan": 3593948.58012314,
+  "diesel_slots": 17,
+  "variables": 2399324,
+  "binary_variables": 1306641,
+  "linear_constraints": 6599280,
+  "general_constraints": 569480,
+  "build_seconds": 74.94362048618495,
+  "model_scope": "original_full_8760_with_merged_stress_branches"
+}

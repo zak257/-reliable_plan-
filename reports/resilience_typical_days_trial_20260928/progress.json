@@ -1,13 +1,5 @@
 {
-  "stage": "seed_building",
-  "elapsed_seconds": 0.3320864988490939,
-  "modules": {
-    "wind_kw": 2,
-    "pv_kw": 0,
-    "diesel_units": 4,
-    "battery_kwh": 41,
-    "pcs_kw": 6,
-    "ups_kwh": 11,
-    "ups_kw": 2
-  }
+  "stage": "error",
+  "elapsed_seconds": 454.60966067481786,
+  "error": "Traceback (most recent call last):\n  File \"/home/yzk/reliable_plan/scripts/run_resilience_typical_days.py\", line 197, in main\n    planner.save(directory/'planning', result, write_model=False)\n  File \"/home/yzk/reliable_plan/polar_reliability_planning/resilience_milp/annual.py\", line 283, in save\n    (output/'summary.json').write_text(json.dumps(summary,ensure_ascii=False,indent=2,allow_nan=False)+'\\n')\n                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.12/json/__init__.py\", line 238, in dumps\n    **kw).encode(obj)\n          ^^^^^^^^^^^\n  File \"/usr/lib/python3.12/json/encoder.py\", line 202, in encode\n    chunks = list(chunks)\n             ^^^^^^^^^^^^\n  File \"/usr/lib/python3.12/json/encoder.py\", line 432, in _iterencode\n    yield from _iterencode_dict(o, _current_indent_level)\n  File \"/usr/lib/python3.12/json/encoder.py\", line 398, in _iterencode_dict\n    yield _floatstr(value)\n          ^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.12/json/encoder.py\", line 240, in floatstr\n    raise ValueError(\nValueError: Out of range float values are not JSON compliant: -inf\n"
 }

@@ -47,6 +47,7 @@ def transfer_calendar_start(source, target):
             else: missing.append(var.VarName); value = GRB.UNDEFINED
         starts.append(value)
     target.model.setAttr('Start', target.model.getVars(), starts)
+    target.model.update()
     return dict(missing_count=len(missing), missing_examples=missing[:20])
 
 
@@ -55,6 +56,9 @@ def solve_and_audit(planner, seconds, log, callback=None):
     m = planner.model
     m.Params.OutputFlag = 1; m.Params.LogToConsole = 0; m.Params.LogFile = str(log)
     m.Params.Method = 1; m.Params.NumericFocus = 2
+    # Bound preprocessing work on the millions of repeated chronological rows.
+    # An unrestricted presolve consumed the entire first 300-second trial.
+    m.Params.Presolve = 1; m.Params.PrePasses = 1
     m.Params.TimeLimit = max(.01, seconds)
     m.optimize(callback)
     try:
@@ -76,6 +80,26 @@ def report(output, summary):
         '聚类同时近似了输入并限制了日内策略，其最优性下界不能用于原始全年问题。', '',
         '| 典型日 | 保留日 | 压缩规划费用/元 | 原始全年费用/元 | 全年EENS/kWh | 全年CVaR上界/kWh | 原始全年审计 |',
         '|---|---:|---:|---:|---:|---:|---|']
+    statistics_file = output/'same_domain_full_model_statistics.json'
+    if statistics_file.exists() and summary.get('runs'):
+        baseline = json.loads(statistics_file.read_text())
+        reduced = summary['runs'][0]['planning']
+        if (baseline['diesel_slots'] == reduced.get('pre_dedup_statistics', {}).get('diesel_slots')
+                and abs(baseline['economic_budget_yuan']-reduced['economic_budget_yuan']) < 1e-6):
+            comparison = ['', '## 相同容量边界的规模对照', '',
+                '以下两者使用相同预算和柴油机槽位数；全年模型仅构建，没有运行同预算的自由容量求解时间对照。', '',
+                f"| 指标 | 原始全年模型 | {summary['runs'][0]['aggregation']['ordinary_typical_days']}典型日模型 | 减少比例 |",
+                '|---|---:|---:|---:|']
+            for label, key in [('全部变量', 'variables'), ('二进制变量', 'binary_variables'),
+                               ('线性约束', 'linear_constraints')]:
+                comparison.append(f"| {label} | {baseline[key]:,} | {reduced[key]:,} | "
+                                  f"{100*(1-reduced[key]/baseline[key]):.2f}% |")
+            comparison += ['', f"原始模型建模{baseline['build_seconds']:.1f}秒；典型日模型建模"
+                f"{reduced['build_seconds']:.1f}秒，另用{reduced['deduplication']['seconds']:.1f}秒删除完全重复的线性约束。",
+                '日内变量共享确实降低了规模；当前实现仍先展开全年状态和约束，尚未证明求解耗时按同样比例下降。']
+        else: comparison = []
+    else: comparison = []
+    details = []
     for run in summary.get('runs', []):
         plan, reduced, full = run['aggregation'], run['planning'], run.get('validation', {})
         def value(data, key):
@@ -85,16 +109,20 @@ def report(output, summary):
                      f"{value(full,'objective_yuan')} | {value(full,'eens_kwh')} | {value(full,'cvar_upper_bound_kwh')} | "
                      f"{full.get('audit',{}).get('passed',False)} |")
         if reduced.get('modules'):
-            lines += ['', f"## {plan['ordinary_typical_days']}个普通典型日", '',
+            gap = reduced.get('mip_gap'); full_gap = full.get('mip_gap')
+            gap_text = '尚无有限下界' if gap is None else f'{100*gap:.2f}%'
+            full_gap_text = '尚无有限下界' if full_gap is None else f'{100*full_gap:.2f}%'
+            details += ['', f"## {plan['ordinary_typical_days']}个普通典型日", '',
                 f"容量模块：`{json.dumps(reduced['modules'],ensure_ascii=False)}`。",
-                f"规划状态：{reduced['status']}；压缩模型gap：{reduced.get('mip_gap')}。",
-                f"原始全年复核状态：{full.get('status','未执行')}；固定容量调度gap：{full.get('mip_gap')}。",
+                f"规划状态：{reduced['status']}；压缩模型gap：{gap_text}。",
+                f"原始全年复核状态：{full.get('status','未执行')}；固定容量调度gap：{full_gap_text}。",
                 f"压缩模型变量：{reduced.get('variables')}；二进制变量：{reduced.get('binary_variables')}；"
                 f"线性约束：{reduced.get('linear_constraints')}。",
                 f"原始全年固定容量变量：{full.get('variables')}；二进制变量：{full.get('binary_variables')}；"
                 f"线性约束：{full.get('linear_constraints')}。两者柴油槽位数不同，不作为严格等条件规模对比。",
                 f"详情：[压缩规划](k{plan['ordinary_typical_days']}/planning/summary.json)、"
                 f"[全年复核](k{plan['ordinary_typical_days']}/validation/summary.json)。"]
+    lines += comparison+details
     lines += ['', '全年复核通过仅证明候选容量在原始全年有限场景模型内可行。',
         '固定容量复核的gap只衡量该容量下的调度费用；不证明全年容量规划全局最优。',
         '计算时长为本次实现、求解参数与预算下的实测值；没有同条件全年自由容量对照时不报告求解加速倍数。', '']

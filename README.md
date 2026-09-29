@@ -1,5 +1,7 @@
 # 可靠性边界识别容量规划：UC + EENS/CVaR
 
+新增[典型日规划与原始全年复核](docs/resilience_typical_days.md)：按月选择24/36个普通典型日，保留极端连续时段和事故窗口；日内决策共用，电量、温度及跨日约束保持全年连续。入口为 `python -m scripts.run_resilience_typical_days --output 新目录`。压缩容量必须经过原始8760小时模型复核，近似模型gap不代表原始全年容量规划的最优性差距。
+
 新增[同一全年联合MILP的两种方法对照](docs/resilience_milp_method_comparison.md)：直接Gurobi与改进后的单调容量搜索＋上下界证书适配版，共享8760小时输入及全部韧性约束，每组15000秒、4个独立CPU核心，同时运行。入口为 `python -m scripts.run_resilience_comparison --output 新目录 --time-limit-seconds 15000 --threads 4`。最终解均由完整年度联合模型校验，原总体统计证书不混用于本次固定场景问题。
 
 2026-09-23 全年时域更正：当前MILP默认执行 [8760小时全年规划＋72小时韧性子场景](docs/resilience_annual_with_stress_windows.md)。全年与子场景共享容量、边界电量、柴发状态及跨边界柔性任务；四个季节的子场景费用替代对应正常运行费用。命令为 `python -m scripts.run_resilience_milp --mode annual --hours 8760 --time-limit-seconds 10000 --output 新目录`。独立短时验证需显式指定 `--mode demo --hours 72`，其容量不能代表全年规划结果。

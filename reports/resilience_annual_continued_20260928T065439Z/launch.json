@@ -1,0 +1,33 @@
+{
+  "pid": 29251,
+  "output": "/home/yzk/reliable_plan/reports/resilience_annual_continued_20260928T065439Z",
+  "previous": "/home/yzk/reliable_plan/reports/resilience_annual_accelerated_20260928T015157Z",
+  "command": [
+    "/home/yzk/cap_plan/venv/bin/python",
+    "-u",
+    "-m",
+    "scripts.continue_resilience_annual",
+    "--previous",
+    "/home/yzk/reliable_plan/reports/resilience_annual_accelerated_20260928T015157Z",
+    "--output",
+    "/home/yzk/reliable_plan/reports/resilience_annual_continued_20260928T065439Z",
+    "--time-limit-seconds",
+    "60000",
+    "--capacity-polish-seconds",
+    "300",
+    "--storage-polish-seconds",
+    "600",
+    "--threads",
+    "8",
+    "--method",
+    "3",
+    "--mip-gap",
+    "0.01"
+  ],
+  "launched_at_utc": "2026-09-28T06:54:39.174618+00:00",
+  "nominal_budget_end_utc": "2026-09-28T23:34:39.174618+00:00",
+  "new_budget_seconds": 60000,
+  "search_tree_restored": false,
+  "extra_diesel_constraint": false,
+  "extra_renewable_constraint": false
+}

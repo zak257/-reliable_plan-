@@ -1,0 +1,1 @@
+本次在初始策略设置阶段被主动中止，用于补充Gurobi Start属性提交后的update调用。没有接受或发布容量结果。后续完整试验见 ../resilience_typical_days_trial_20260928_v3/。

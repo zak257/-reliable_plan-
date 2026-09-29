@@ -1,7 +1,22 @@
 {
-  "status": "running",
-  "stage": "solver_progress",
+  "status": "finished",
+  "stage": "finished",
   "pid": 54869,
   "started_at_utc": "2026-09-28T01:51:58.014759+00:00",
-  "elapsed_seconds": 272.36266314517707
+  "elapsed_seconds": 13456.802402379923,
+  "result_status": "feasible_incumbent_not_proven_optimal",
+  "has_feasible_solution": true,
+  "selected": {
+    "wind_kw": 200.0,
+    "pv_kw": 0.0,
+    "diesel_units": 4,
+    "battery_kwh": 2050.0,
+    "pcs_kw": 300.0,
+    "ups_kwh": 550.0,
+    "ups_kw": 100.0
+  },
+  "objective_yuan": 3591982.693782524,
+  "mip_gap": 0.40634536583582964,
+  "finished_at_utc": "2026-09-28T06:02:47.947815+00:00",
+  "process_wall_seconds": 15049.933145858347
 }

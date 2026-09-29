@@ -1,0 +1,70 @@
+{
+  "completed": true,
+  "runs": [
+    {
+      "typical_days": 24,
+      "protected_days": 44,
+      "modules": {
+        "wind_kw": 2,
+        "pv_kw": 0,
+        "diesel_units": 4,
+        "battery_kwh": 41,
+        "pcs_kw": 5,
+        "ups_kwh": 11,
+        "ups_kw": 2
+      },
+      "approximate_cost_yuan": 3573947.580123148,
+      "full_year_feasible_cost_yuan": 3571980.748546375,
+      "cost_change_percent": -0.05503246851497057,
+      "planning_gap_percent": 76.74557346383078,
+      "fixed_capacity_dispatch_gap_percent": 36.97891441948525,
+      "eens_kwh": 86.10101446093746,
+      "cvar_upper_bound_kwh": 861.0101446093745
+    },
+    {
+      "typical_days": 36,
+      "protected_days": 44,
+      "modules": {
+        "wind_kw": 2,
+        "pv_kw": 0,
+        "diesel_units": 4,
+        "battery_kwh": 41,
+        "pcs_kw": 5,
+        "ups_kwh": 11,
+        "ups_kw": 2
+      },
+      "approximate_cost_yuan": 3562404.926830195,
+      "full_year_feasible_cost_yuan": 3571980.748546375,
+      "cost_change_percent": 0.26880216912064103,
+      "planning_gap_percent": 76.67022611041459,
+      "fixed_capacity_dispatch_gap_percent": 36.97891441948525,
+      "eens_kwh": 86.10101446093746,
+      "cvar_upper_bound_kwh": 861.0101446093745
+    }
+  ],
+  "same_domain_size_comparison": {
+    "variables": {
+      "original": 2399324,
+      "typical_days": 1173308,
+      "reduction_percent": 51.09839271394776
+    },
+    "binary_variables": {
+      "original": 1306641,
+      "typical_days": 565329,
+      "reduction_percent": 56.73417564579712
+    },
+    "linear_constraints": {
+      "original": 6599280,
+      "typical_days": 3075099,
+      "reduction_percent": 53.402507546277775
+    }
+  },
+  "tests_passed": 81,
+  "test_logs": [
+    "verification_tests.log",
+    "export_regression_test.log"
+  ],
+  "full_year_capacity_optimality_certified": false,
+  "limitation": "feasible candidates only; large planning and fixed-capacity dispatch gaps; no matched solve-time speedup experiment",
+  "total_main_experiment_seconds": 1338.7860982152633
+}
